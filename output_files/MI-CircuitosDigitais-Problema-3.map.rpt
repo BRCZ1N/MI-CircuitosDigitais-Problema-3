@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Sun Dec 10 16:40:13 2023
+Sun Dec 10 17:38:32 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,26 +15,26 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Port Connectivity Checks: "modulo_ff_d:ff_1"
- 10. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19"
- 11. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18"
- 12. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17"
- 13. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16"
- 14. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15"
- 15. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14"
- 16. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13"
- 17. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12"
- 18. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11"
- 19. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10"
- 20. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9"
- 21. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8"
- 22. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7"
- 23. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6"
- 24. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5"
- 25. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4"
- 26. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3"
- 27. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2"
- 28. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1"
- 29. Port Connectivity Checks: "modulo_divisor_frequencia:comb_4"
+ 10. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19"
+ 11. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18"
+ 12. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17"
+ 13. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16"
+ 14. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15"
+ 15. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14"
+ 16. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13"
+ 17. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12"
+ 18. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11"
+ 19. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10"
+ 20. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9"
+ 21. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8"
+ 22. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7"
+ 23. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6"
+ 24. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5"
+ 25. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4"
+ 26. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3"
+ 27. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2"
+ 28. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1"
+ 29. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3"
  30. Analysis & Synthesis Messages
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Dec 10 16:40:13 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Dec 10 17:38:32 2023       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; LevelToPulseMealy                           ;
@@ -212,26 +212,26 @@ refer to the applicable agreement for further details.
 ; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                   ; Entity Name               ; Library Name ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+---------------------------+--------------+
 ; |LevelToPulseMealy                    ; 21 (1)      ; 20           ; 0          ; 4    ; 0            ; 1 (1)        ; 0 (0)             ; 20 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy                                                    ; LevelToPulseMealy         ; work         ;
-;    |modulo_divisor_frequencia:comb_4| ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4                   ; modulo_divisor_frequencia ; work         ;
-;       |modulo_ff_t:ff_10|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_11|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_12|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_13|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_14|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_15|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_16|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_17|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_18|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_19|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_6|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_7|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_8|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_9|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9  ; modulo_ff_t               ; work         ;
+;    |modulo_divisor_frequencia:comb_3| ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3                   ; modulo_divisor_frequencia ; work         ;
+;       |modulo_ff_t:ff_10|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_11|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_12|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_13|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_14|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_15|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_16|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_17|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_18|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_19|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_6|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_7|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_8|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_9|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9  ; modulo_ff_t               ; work         ;
 ;    |modulo_ff_d:ff_1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_ff_d:ff_1                                   ; modulo_ff_d               ; work         ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -262,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -271,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -280,7 +280,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -289,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -298,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -307,7 +307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -316,7 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -325,7 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -334,7 +334,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -343,7 +343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10" ;
 +------+-------+----------+------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                              ;
 +------+-------+----------+------------------------------------------------------+
@@ -352,7 +352,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -361,7 +361,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -370,7 +370,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -379,7 +379,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -388,7 +388,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -397,7 +397,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -406,7 +406,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -415,7 +415,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -424,7 +424,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1" ;
 +------+-------+----------+-----------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                             ;
 +------+-------+----------+-----------------------------------------------------+
@@ -433,7 +433,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:comb_4" ;
+; Port Connectivity Checks: "modulo_divisor_frequencia:comb_3" ;
 +------+-------+----------+------------------------------------+
 ; Port ; Type  ; Severity ; Details                            ;
 +------+-------+----------+------------------------------------+
@@ -447,7 +447,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Dec 10 16:40:07 2023
+    Info: Processing started: Sun Dec 10 17:38:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -482,23 +482,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_divisor_frequencia File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(73): created implicit net for "Qi0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 73
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(78): created implicit net for "Qi1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 78
-Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(69): created implicit net for "clk_div_r" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
-Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(71): created implicit net for "Qi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 71
-Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(73): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(65): created implicit net for "clk_div_r" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(67): created implicit net for "Qi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 67
+Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(69): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(76): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 76
-Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(69): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
+Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(65): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
 Info (12127): Elaborating entity "LevelToPulseMealy" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at LevelToPulseMealy.v(59): object "D" assigned a value but never read File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 59
-Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:comb_4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
-Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 10
-Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "modulo_ff_d:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 71
+Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:comb_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
+Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 10
+Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "modulo_ff_d:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 67
 Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 21 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
     Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Sun Dec 10 16:40:13 2023
+    Info: Processing ended: Sun Dec 10 17:38:32 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 

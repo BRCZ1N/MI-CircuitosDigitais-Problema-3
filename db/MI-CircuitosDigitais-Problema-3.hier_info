@@ -2,142 +2,142 @@
 Clock => Clock.IN1
 Reset => Reset.IN1
 Level => Level.IN1
-Pulse << comb.DB_MAX_OUTPUT_PORT_TYPE
+Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3
 clr => clr.IN19
 clk_div <= modulo_ff_t:ff_19.q
 clk => clk.IN1
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19
+|LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT

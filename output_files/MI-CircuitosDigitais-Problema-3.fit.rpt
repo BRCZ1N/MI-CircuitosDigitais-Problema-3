@@ -1,5 +1,5 @@
 Fitter report for MI-CircuitosDigitais-Problema-3
-Sun Dec 10 16:40:15 2023
+Sun Dec 10 17:38:35 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sun Dec 10 16:40:15 2023       ;
+; Fitter Status         ; Successful - Sun Dec 10 17:38:35 2023       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name ; LevelToPulseMealy                           ;
@@ -131,7 +131,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
+;     Processor 2            ;   1.0%      ;
 ;     Processors 3-16        ;   0.7%      ;
 +----------------------------+-------------+
 
@@ -364,26 +364,26 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                   ; Entity Name               ; Library Name ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+---------------------------+--------------+
 ; |LevelToPulseMealy                    ; 21 (1)      ; 20           ; 0          ; 4    ; 0            ; 1 (1)        ; 0 (0)             ; 20 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy                                                    ; LevelToPulseMealy         ; work         ;
-;    |modulo_divisor_frequencia:comb_4| ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4                   ; modulo_divisor_frequencia ; work         ;
-;       |modulo_ff_t:ff_10|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_11|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_12|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_13|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_14|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_15|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_16|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_17|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_18|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_19|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19 ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_6|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_7|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_8|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8  ; modulo_ff_t               ; work         ;
-;       |modulo_ff_t:ff_9|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9  ; modulo_ff_t               ; work         ;
+;    |modulo_divisor_frequencia:comb_3| ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3                   ; modulo_divisor_frequencia ; work         ;
+;       |modulo_ff_t:ff_10|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_11|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_12|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_13|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_14|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_15|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_16|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_17|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_18|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_19|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19 ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_6|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_7|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_8|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8  ; modulo_ff_t               ; work         ;
+;       |modulo_ff_t:ff_9|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9  ; modulo_ff_t               ; work         ;
 ;    |modulo_ff_d:ff_1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |LevelToPulseMealy|modulo_ff_d:ff_1                                   ; modulo_ff_d               ; work         ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -407,25 +407,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                 ; Location    ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
 +------------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 ; Clock                                                ; PIN_54      ; 1       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10|q ; LC_X3_Y4_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11|q ; LC_X3_Y3_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12|q ; LC_X3_Y3_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13|q ; LC_X4_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14|q ; LC_X4_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15|q ; LC_X5_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16|q ; LC_X5_Y3_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17|q ; LC_X6_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18|q ; LC_X6_Y3_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19|q ; LC_X7_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1|q  ; LC_X7_Y1_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2|q  ; LC_X7_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3|q  ; LC_X6_Y1_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4|q  ; LC_X6_Y1_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5|q  ; LC_X5_Y4_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6|q  ; LC_X5_Y4_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7|q  ; LC_X4_Y4_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8|q  ; LC_X4_Y4_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
-; modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9|q  ; LC_X3_Y4_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10|q ; LC_X3_Y4_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11|q ; LC_X3_Y3_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12|q ; LC_X3_Y3_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13|q ; LC_X4_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14|q ; LC_X4_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15|q ; LC_X5_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16|q ; LC_X5_Y3_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17|q ; LC_X6_Y3_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18|q ; LC_X6_Y3_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19|q ; LC_X7_Y3_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1|q  ; LC_X7_Y1_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2|q  ; LC_X7_Y1_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3|q  ; LC_X6_Y1_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4|q  ; LC_X6_Y1_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5|q  ; LC_X5_Y4_N4 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6|q  ; LC_X5_Y4_N2 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7|q  ; LC_X4_Y4_N8 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8|q  ; LC_X4_Y4_N9 ; 2       ; Clock ; no     ; --                   ; --               ;
+; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9|q  ; LC_X3_Y4_N3 ; 2       ; Clock ; no     ; --                   ; --               ;
 +------------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 
 
@@ -544,25 +544,25 @@ Info (332111): Found 20 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):    1.000        Clock
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_1|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_2|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_3|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_4|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_5|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_6|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_7|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_8|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_9|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_10|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_11|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_12|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_13|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_14|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_15|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_16|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_17|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_18|q
-    Info (332111):    1.000 modulo_divisor_frequencia:comb_4|modulo_ff_t:ff_19|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18|q
+    Info (332111):    1.000 modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19|q
 Info (186079): Completed User Assigned Global Signals Promotion Operation
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
@@ -595,9 +595,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/output_files/MI-CircuitosDigitais-Problema-3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6176 megabytes
-    Info: Processing ended: Sun Dec 10 16:40:15 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 6173 megabytes
+    Info: Processing ended: Sun Dec 10 17:38:35 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
