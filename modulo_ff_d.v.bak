@@ -8,11 +8,11 @@ module modulo_ff_d(d,clk,clr,q,nq);
 	
 	begin 
 	
-		if(clr == 1'b1) 
+		if(clr == 1'b0) 
 		
 		begin 
 	
-			q <= 1'b0;
+			q <= 1'b1;
 	
 		end 
 		
