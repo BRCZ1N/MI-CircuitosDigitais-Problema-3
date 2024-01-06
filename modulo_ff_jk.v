@@ -1,0 +1,25 @@
+module modulo_ff_jk (
+  input clk, rst, enable,
+  input j, k,
+  output reg q,
+  output wire q_bar
+);
+
+  // Sempre sincronizado ao clock, com reset síncrono
+  always @(negedge clk) begin
+    if (enable) begin
+      case ({j, k})
+        2'b00: q <= q;    // Sem mudança
+        2'b01: q <= 1'b0;  // Reset
+        2'b10: q <= 1'b1;  // Set
+        2'b11: q <= ~q;    // Toggle
+      endcase
+    end
+    else if (rst) 
+      q <= 1'b0;
+  end
+
+  // Atribuição contínua para q_bar deve ser feita fora do bloco always
+  assign q_bar = ~q;
+
+endmodule
