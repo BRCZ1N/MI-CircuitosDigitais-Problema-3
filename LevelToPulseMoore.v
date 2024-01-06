@@ -1,13 +1,3 @@
-//------------------------------------------------------------------------------
-//	Module:		LevelToPulse
-//	Desc:		This module provides a 1-cycle output based on a push button
-//				raw input source.
-//	Params:		This module is not parameterized.
-//	Inputs:		See Lab2 document
-//	Outputs:	See Lab2 document
-//
-//	Author:     YOUR NAME GOES HERE
-//------------------------------------------------------------------------------
 module	LevelToPulseMoore(
 			//------------------------------------------------------------------
 			//	Clock & Reset Inputs

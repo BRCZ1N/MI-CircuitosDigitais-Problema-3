@@ -1,110 +1,91 @@
-|modulo_MEF_Enchimento_Vedacao
-enable => ~NO_FANOUT~
-pg => pg.IN2
-ch => ch.IN2
-ro => ro.IN2
-eb => Neb.IN3
-clk => clk.IN2
-m <= and_gate_4_inputs:gate_11.S
-ve <= and_gate_3_inputs:gate_10.S
-al <= and_gate_3_inputs:gate_9.S
-ev <= or_gate_3_inputs:gate_8.S
-q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
-q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits
+clr => clr.IN7
+clk => clk.IN7
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= modulo_ff_t:ff_7.q
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_2_inputs:gate_1
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|modulo_MEF_Enchimento_Vedacao|modulo_ff_jk:jk_1
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_1
+t => q.OUTPUTSELECT
 clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-enable => q.OUTPUTSELECT
-j => Mux0.IN2
-k => Mux0.IN3
+clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|modulo_MEF_Enchimento_Vedacao|and_gate_2_inputs:gate_3
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|modulo_MEF_Enchimento_Vedacao|or_gate_2_inputs:gate_4
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|modulo_MEF_Enchimento_Vedacao|or_gate_2_inputs:gate_5
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|modulo_MEF_Enchimento_Vedacao|modulo_ff_jk:jk_2
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_2
+t => q.OUTPUTSELECT
 clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-enable => q.OUTPUTSELECT
-j => Mux0.IN2
-k => Mux0.IN3
+clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_4_inputs:gate_6
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_7
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_3
+t => q.OUTPUTSELECT
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|or_gate_3_inputs:gate_8
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|and_gate_2_inputs:gate_2
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_9
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_4
+t => q.OUTPUTSELECT
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_10
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|and_gate_2_inputs:gate_3
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|modulo_MEF_Enchimento_Vedacao|and_gate_4_inputs:gate_11
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_5
+t => q.OUTPUTSELECT
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_contador_sync_7_bits|and_gate_2_inputs:gate_4
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_6
+t => q.OUTPUTSELECT
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_contador_sync_7_bits|and_gate_2_inputs:gate_5
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_contador_sync_7_bits|modulo_ff_t:ff_7
+t => q.OUTPUTSELECT
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

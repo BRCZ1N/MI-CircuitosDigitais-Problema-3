@@ -1,0 +1,18 @@
+module modulo_contador_sync_4_bits(clr, clk, q);
+	
+	input clk, clr;
+	output [3:0] q;
+	wire [1:0] ff_inputs;
+	
+	modulo_ff_t ff_1(.t(1'b1),.clk(clk),.clr(clr),.q(q[0]));
+	modulo_ff_t ff_2(.t(q[0]),.clk(clk),.clr(clr),.q(q[1]));
+	
+	and(ff_inputs[0], q[1],q[0]);
+	
+	modulo_ff_t ff_3(.t(ff_inputs[0]),.clk(clk),.clr(clr),.q(q[2]));
+	
+	and(ff_inputs[1], ff_inputs[0], q[2]);
+	
+	modulo_ff_t ff_4(.t(ff_inputs[1]),.clk(clk),.clr(clr),.q(q[3]));
+	
+endmodule

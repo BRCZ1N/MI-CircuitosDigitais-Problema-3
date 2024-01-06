@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_MEF_Enchimento_Vedacao
+set_global_assignment -name TOP_LEVEL_ENTITY modulo_contador_sync_7_bits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -48,14 +48,16 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-set_global_assignment -name VERILOG_FILE module_gates.v
+set_global_assignment -name VERILOG_FILE modulo_reset_contador_dd.v
+set_global_assignment -name VERILOG_FILE modulo_reset_contador_d.v
+set_global_assignment -name VERILOG_FILE modulo_mef_enchimento_vedacao.v
 set_global_assignment -name VERILOG_FILE modulo_ff_t.v
-set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
-set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
+set_global_assignment -name VERILOG_FILE modulo_ff_jk.v
 set_global_assignment -name VERILOG_FILE modulo_ff_d.v
 set_global_assignment -name VERILOG_FILE modulo_divisor_frequencia.v
-set_global_assignment -name VERILOG_FILE modulo_MEF_Enchimento_Vedacao.v
-set_global_assignment -name VERILOG_FILE modulo_ff_jk.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VERILOG_FILE modulo_reset_count_d.v
-set_global_assignment -name TEXT_FILE modulo_mef_enchimento_vedacao.txt
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits.v
+set_global_assignment -name VERILOG_FILE module_gates.v
+set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
+set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits.v
