@@ -1,4 +1,4 @@
-module modulo_MEF_Enchimento_Vedacao(enable,pg,ch,ro,eb,clk,m,ve,al,ev,q0,q1);
+module modulo_mef_enchimento_vedacao(enable,pg,ch,ro,eb,clk,m,ve,al,ev,q0,q1);
 
 	input enable,pg,ch,ro,eb,clk;
 	output m,ve,al,ev,q0,q1;

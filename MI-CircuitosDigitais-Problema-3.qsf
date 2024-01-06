@@ -57,3 +57,5 @@ set_global_assignment -name VERILOG_FILE modulo_divisor_frequencia.v
 set_global_assignment -name VERILOG_FILE modulo_MEF_Enchimento_Vedacao.v
 set_global_assignment -name VERILOG_FILE modulo_ff_jk.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VERILOG_FILE modulo_reset_count_d.v
+set_global_assignment -name TEXT_FILE modulo_mef_enchimento_vedacao.txt
