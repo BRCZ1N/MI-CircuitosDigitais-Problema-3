@@ -1,0 +1,110 @@
+|modulo_MEF_Enchimento_Vedacao
+enable => ~NO_FANOUT~
+pg => pg.IN2
+ch => ch.IN2
+ro => ro.IN2
+eb => Neb.IN3
+clk => clk.IN2
+m <= and_gate_4_inputs:gate_11.S
+ve <= and_gate_3_inputs:gate_10.S
+al <= and_gate_3_inputs:gate_9.S
+ev <= or_gate_3_inputs:gate_8.S
+q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|modulo_ff_jk:jk_1
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+j => Mux0.IN2
+k => Mux0.IN3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_2_inputs:gate_3
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|or_gate_2_inputs:gate_4
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|or_gate_2_inputs:gate_5
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|modulo_ff_jk:jk_2
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+j => Mux0.IN2
+k => Mux0.IN3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_4_inputs:gate_6
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd0.IN3
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|or_gate_3_inputs:gate_8
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_MEF_Enchimento_Vedacao|and_gate_4_inputs:gate_11
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd0.IN3
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
