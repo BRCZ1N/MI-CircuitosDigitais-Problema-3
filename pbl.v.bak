@@ -1,0 +1,11 @@
+module pbl(start/stop,pg,ch,ro,eb,clk,m,ve,al,ev,mef_state);
+	
+	
+	input start/stop,pg,ch,ro,eb,clk;
+	output m,ve,al,ev;
+	output [1:0] mef_state;
+
+	modulo_mef_enchimento_vedacao mef_1(enable(start/stop),.pg(pg),.ch(ch),.ro(ro),.eb(eb),.clk(clk),.m(m),.ve(ve),.al(al),.ev(ev),.q0(mef_state[0]),.q1(mef_state[1]))
+	
+	
+endmodule 

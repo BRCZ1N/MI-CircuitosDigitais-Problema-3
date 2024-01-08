@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_reset_contador_dd
+set_global_assignment -name TOP_LEVEL_ENTITY pbl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -62,3 +62,11 @@ set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE pbl.v
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER start_stop -section_id mef_inputs
+set_location_assignment PIN_35 -to start_stop
+set_location_assignment PIN_33 -to pg
+set_location_assignment PIN_30 -to eb
+set_location_assignment PIN_36 -to ro
+set_location_assignment PIN_34 -to ch
+set_location_assignment PIN_12 -to clk
