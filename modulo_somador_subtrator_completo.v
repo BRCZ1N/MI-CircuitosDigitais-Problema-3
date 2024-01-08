@@ -7,8 +7,8 @@ module modulo_somador_subtrator_completo(m,a,b,Te,S,Ts);
 	wire [4:0] Ts_aux;
 	
 	not (nm, m);
-	not (na, na);
-	not (nb, nb);
+	not (na, a);
+	not (nb, b);
 	not (NTe, Te);
 	
 	and_gate_3_inputs gate_1(.A(na),.B(nb),.C(Te),.S(S_aux[3]));
