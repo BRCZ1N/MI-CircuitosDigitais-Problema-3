@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Sun Jan 07 18:51:54 2024
+Mon Jan 08 13:06:04 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,33 +16,34 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Port Connectivity Checks: "modulo_contador_sync_4_bits:contador_dezenas_duzias"
- 12. Port Connectivity Checks: "modulo_contador_sync_4_bits:contador_duzias"
- 13. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8"
- 14. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2"
- 15. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1"
- 16. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1"
- 17. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19"
- 18. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18"
- 19. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17"
- 20. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16"
- 21. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15"
- 22. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14"
- 23. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13"
- 24. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12"
- 25. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11"
- 26. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10"
- 27. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9"
- 28. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8"
- 29. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7"
- 30. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6"
- 31. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5"
- 32. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4"
- 33. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3"
- 34. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2"
- 35. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1"
- 36. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3"
- 37. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "modulo_contador_sync_7_bits:comb_6|modulo_ff_t:ff_1"
+ 12. Port Connectivity Checks: "modulo_contador_sync_7_bits:comb_6"
+ 13. Port Connectivity Checks: "or_gate_2_inputs:comb_5"
+ 14. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8"
+ 15. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2"
+ 16. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1"
+ 17. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1"
+ 18. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19"
+ 19. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18"
+ 20. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17"
+ 21. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_16"
+ 22. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_15"
+ 23. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_14"
+ 24. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_13"
+ 25. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_12"
+ 26. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_11"
+ 27. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_10"
+ 28. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_9"
+ 29. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_8"
+ 30. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_7"
+ 31. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_6"
+ 32. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_5"
+ 33. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_4"
+ 34. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_3"
+ 35. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_2"
+ 36. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1"
+ 37. Port Connectivity Checks: "modulo_divisor_frequencia:comb_3"
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -68,13 +69,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Jan 07 18:51:54 2024       ;
+; Analysis & Synthesis Status ; Successful - Mon Jan 08 13:06:04 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
 ; Total logic elements        ; 0                                           ;
-; Total pins                  ; 13                                          ;
+; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -172,6 +173,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; modulo_reset_contador_dd.v       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_dd.v      ;         ;
 ; modulo_reset_contador_d.v        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_d.v       ;         ;
 ; modulo_mef_enchimento_vedacao.v  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v ;         ;
 ; modulo_ff_t.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_t.v                   ;         ;
@@ -179,6 +181,7 @@ refer to the applicable agreement for further details.
 ; modulo_divisor_frequencia.v      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v     ;         ;
 ; modulo_contador_sync_4_bits.v    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_4_bits.v   ;         ;
 ; module_gates.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v                  ;         ;
+; modulo_contador_sync_7_bits.v    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits.v   ;         ;
 ; pbl.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                           ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
@@ -209,11 +212,11 @@ refer to the applicable agreement for further details.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 13    ;
+; I/O pins                                    ; 11    ;
 ; Maximum fan-out node                        ; pg    ;
 ; Maximum fan-out                             ; 2     ;
 ; Total fan-out                               ; 2     ;
-; Average fan-out                             ; 0.15  ;
+; Average fan-out                             ; 0.18  ;
 +---------------------------------------------+-------+
 
 
@@ -222,7 +225,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |pbl                       ; 0 (0)       ; 0            ; 0          ; 13   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                ; pbl         ; work         ;
+; |pbl                       ; 0 (0)       ; 0            ; 0          ; 11   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl                ; pbl         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,12 +235,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------+----------------------------------------------------------------------------+
 ; Register name                                                  ; Reason for Removal                                                         ;
 +----------------------------------------------------------------+----------------------------------------------------------------------------+
-; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1|q        ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1|q ;
-; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2|q        ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1|q ;
 ; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1|q ; Stuck at GND due to stuck port data_in                                     ;
-; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ; Stuck at GND due to stuck port clock_enable                                ;
-; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_3|q ; Stuck at GND due to stuck port clock_enable                                ;
-; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_2|q ; Stuck at GND due to stuck port clock_enable                                ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_3|q ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_2|q ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ;
+; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1|q        ; Merged with modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2|q        ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ; Lost fanout                                                                ;
+; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2|q        ; Stuck at GND due to stuck port data_in                                     ;
 ; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_19|q           ; Lost fanout                                                                ;
 ; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_18|q           ; Lost fanout                                                                ;
 ; modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_17|q           ; Lost fanout                                                                ;
@@ -304,23 +307,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_7_bits:comb_6|modulo_ff_t:ff_1" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_7_bits:comb_6" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; clr  ; Input  ; Info     ; Stuck at GND                        ;
+; q    ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_contador_sync_4_bits:contador_dezenas_duzias"                                ;
+; Port Connectivity Checks: "or_gate_2_inputs:comb_5"                                                            ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; clr  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_contador_sync_4_bits:contador_duzias" ;
-+------+-------+----------+-----------------------------------------------+
-; Port ; Type  ; Severity ; Details                                       ;
-+------+-------+----------+-----------------------------------------------+
-; clr  ; Input ; Info     ; Stuck at GND                                  ;
-+------+-------+----------+-----------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -547,10 +559,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jan 07 18:51:42 2024
+    Info: Processing started: Mon Jan 08 13:05:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_somador_subtrator_completo.v
+    Info (12023): Found entity 1: somador_subtrator_completo File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_registrador_rolhas.v
+    Info (12023): Found entity 1: modulo_registrador_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_registrador_rolhas.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at modulo_demux1_4.v(11): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v Line: 11
+Warning (10275): Verilog HDL Module Instantiation warning at modulo_demux1_4.v(12): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v Line: 12
+Warning (10275): Verilog HDL Module Instantiation warning at modulo_demux1_4.v(13): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v Line: 13
+Warning (10275): Verilog HDL Module Instantiation warning at modulo_demux1_4.v(14): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_demux1_4.v
+    Info (12023): Found entity 1: modulo_demux1_4 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_reset_contador_dd.v
     Info (12023): Found entity 1: modulo_reset_contador_dd File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_dd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_reset_contador_d.v
@@ -592,12 +614,17 @@ Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(68): cr
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(65): created implicit net for "clk_div_r" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(67): created implicit net for "Qi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 67
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(69): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at pbl.v(22): created implicit net for "sinal_dezenas_duzias_reset" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at pbl.v(25): created implicit net for "sinal_duzias_dezenas_reset" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at pbl.v(29): created implicit net for "OP_C_Deboucing" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 29
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(66): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 66
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(65): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(10): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 10
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(18): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(11): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(17): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(25): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(29): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 29
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:comb_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 10
+Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:comb_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 11
 Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:comb_3|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 10
 Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 13
 Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 16
@@ -608,27 +635,27 @@ Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "modulo_mef_e
 Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 40
 Info (12128): Elaborating entity "modulo_contador_sync_4_bits" for hierarchy "modulo_contador_sync_4_bits:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 19
 Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 20
+Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 23
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits" for hierarchy "modulo_contador_sync_7_bits:comb_6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 29
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ve" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 5
     Warning (13410): Pin "al" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 5
     Warning (13410): Pin "mef_estado[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
     Warning (13410): Pin "mef_estado[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
-Info (17049): 19 registers lost all their fanouts during netlist optimizations.
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Info (17049): 20 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "start_stop" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
     Warning (15610): No output dependent on input pin "ch" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "ro" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
-    Warning (15610): No output dependent on input pin "eb" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
     Warning (15610): No output dependent on input pin "cq" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
     Warning (15610): No output dependent on input pin "clock_50mhz" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 6 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Sun Jan 07 18:51:54 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4705 megabytes
+    Info: Processing ended: Mon Jan 08 13:06:04 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

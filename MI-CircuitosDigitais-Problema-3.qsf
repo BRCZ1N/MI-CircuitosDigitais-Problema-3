@@ -48,6 +48,17 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER start_stop -section_id mef_inputs
+set_location_assignment PIN_35 -to start_stop
+set_location_assignment PIN_33 -to pg
+set_location_assignment PIN_30 -to eb
+set_location_assignment PIN_36 -to ro
+set_location_assignment PIN_34 -to ch
+set_location_assignment PIN_12 -to clk
+set_global_assignment -name VERILOG_FILE modulo_mux4_1.v
+set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo.v
+set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
+set_global_assignment -name VERILOG_FILE modulo_demux1_4.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_dd.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_d.v
 set_global_assignment -name VERILOG_FILE modulo_mef_enchimento_vedacao.v
@@ -63,10 +74,3 @@ set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE pbl.v
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER start_stop -section_id mef_inputs
-set_location_assignment PIN_35 -to start_stop
-set_location_assignment PIN_33 -to pg
-set_location_assignment PIN_30 -to eb
-set_location_assignment PIN_36 -to ro
-set_location_assignment PIN_34 -to ch
-set_location_assignment PIN_12 -to clk
