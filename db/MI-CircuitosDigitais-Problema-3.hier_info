@@ -4,12 +4,12 @@ pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
 clock_50mhz => clock_50mhz.IN1
-m <= modulo_mef_enchimento_vedacao:mef_1.m
-ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
-al <= modulo_mef_enchimento_vedacao:mef_1.al
-ev <= modulo_mef_enchimento_vedacao:mef_1.ev
-mef_estado[0] <= modulo_mef_enchimento_vedacao:mef_1.q0
-mef_estado[1] <= modulo_mef_enchimento_vedacao:mef_1.q1
+m << modulo_mef_enchimento_vedacao:mef_1.m
+ve << ve.DB_MAX_OUTPUT_PORT_TYPE
+al << modulo_mef_enchimento_vedacao:mef_1.al
+ev << modulo_mef_enchimento_vedacao:mef_1.ev
+mef_estado[0] << modulo_mef_enchimento_vedacao:mef_1.q0
+mef_estado[1] << modulo_mef_enchimento_vedacao:mef_1.q1
 op_c_deboucing => op_c_deboucing.IN1
 op_deboucing => op_deboucing.IN1
 
