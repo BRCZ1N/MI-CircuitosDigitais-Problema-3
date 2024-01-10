@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Wed Jan 10 13:16:36 2024
+Wed Jan 10 17:26:01 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,8 +13,60 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "modulo_demux1_4:comb_15"
+ 12. Port Connectivity Checks: "modulo_mux4_1:mux_11"
+ 13. Port Connectivity Checks: "modulo_mux4_1:mux_10"
+ 14. Port Connectivity Checks: "modulo_mux4_1:mux_9"
+ 15. Port Connectivity Checks: "modulo_mux4_1:mux_8"
+ 16. Port Connectivity Checks: "modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_1"
+ 17. Port Connectivity Checks: "modulo_contador_sync_2_bits:contador_display"
+ 18. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[6]"
+ 19. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[5]"
+ 20. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[4]"
+ 21. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[3]"
+ 22. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[2]"
+ 23. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[1]"
+ 24. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[0]"
+ 25. Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas"
+ 26. Port Connectivity Checks: "modulo_somador_subtrator_completo:somador_subtrator_1"
+ 27. Port Connectivity Checks: "modulo_mux4_1:mux_7"
+ 28. Port Connectivity Checks: "modulo_mux4_1:mux_6"
+ 29. Port Connectivity Checks: "modulo_mux4_1:mux_5"
+ 30. Port Connectivity Checks: "modulo_mux4_1:mux_4"
+ 31. Port Connectivity Checks: "modulo_mux4_1:mux_3"
+ 32. Port Connectivity Checks: "modulo_mux4_1:mux_2"
+ 33. Port Connectivity Checks: "modulo_mux4_1:mux_1"
+ 34. Port Connectivity Checks: "modulo_seletor_permissoes:seletor_1"
+ 35. Port Connectivity Checks: "modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_1"
+ 36. Port Connectivity Checks: "modulo_contador_sync_7_bits:contador_entrada_rolhas"
+ 37. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8"
+ 38. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2"
+ 39. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1"
+ 40. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1"
+ 41. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19"
+ 42. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18"
+ 43. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17"
+ 44. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16"
+ 45. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15"
+ 46. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14"
+ 47. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13"
+ 48. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12"
+ 49. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11"
+ 50. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10"
+ 51. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9"
+ 52. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8"
+ 53. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7"
+ 54. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6"
+ 55. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5"
+ 56. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4"
+ 57. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3"
+ 58. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2"
+ 59. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1"
+ 60. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f"
+ 61. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +92,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jan 10 13:16:36 2024       ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 10 17:26:01 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
-; Top-level Entity Name       ; cod_7segments                               ;
+; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 7                                           ;
-; Total pins                  ; 11                                          ;
+; Total logic elements        ; 25                                          ;
+; Total pins                  ; 24                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -58,7 +110,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value                   ;
 +------------------------------------------------------------------+--------------------+---------------------------------+
 ; Device                                                           ; EPM240T100C5       ;                                 ;
-; Top-level entity name                                            ; cod_7segments      ; MI-CircuitosDigitais-Problema-3 ;
+; Top-level entity name                                            ; pbl                ; MI-CircuitosDigitais-Problema-3 ;
 ; Family name                                                      ; MAX II             ; Cyclone V                       ;
 ; Use smart compilation                                            ; Off                ; Off                             ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                              ;
@@ -139,65 +191,126 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
-; cod_7segments.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v ;         ;
-; module_gates.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v  ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                   ; Library ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; decodificadorBCD_7Segmentos.v        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/decodificadorBCD_7Segmentos.v        ;         ;
+; modulo_seletor_operacao_aritmetica.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_operacao_aritmetica.v ;         ;
+; modulo_mux4_1.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux4_1.v                      ;         ;
+; modulo_somador_subtrator_completo.v  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v  ;         ;
+; modulo_registrador_rolhas.v          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_registrador_rolhas.v          ;         ;
+; modulo_demux1_4.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v                    ;         ;
+; modulo_reset_contador_dd.v           ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_dd.v           ;         ;
+; modulo_reset_contador_d.v            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_d.v            ;         ;
+; modulo_mef_enchimento_vedacao.v      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v      ;         ;
+; modulo_ff_t.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_t.v                        ;         ;
+; modulo_ff_jk.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_jk.v                       ;         ;
+; modulo_ff_d.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_d.v                        ;         ;
+; modulo_divisor_frequencia.v          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v          ;         ;
+; modulo_contador_sync_4_bits.v        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_4_bits.v        ;         ;
+; modulo_contador_sync_2_bits.v        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_2_bits.v        ;         ;
+; module_gates.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v                       ;         ;
+; modulo_contador_sync_7_bits.v        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits.v        ;         ;
+; pbl.v                                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                                ;         ;
+; modulo_seletor_permissoes.v          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_permissoes.v          ;         ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Total logic elements                        ; 7       ;
-;     -- Combinational with no register       ; 7       ;
-;     -- Register only                        ; 0       ;
-;     -- Combinational with a register        ; 0       ;
-;                                             ;         ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 4       ;
-;     -- 3 input functions                    ; 3       ;
-;     -- 2 input functions                    ; 0       ;
-;     -- 1 input functions                    ; 0       ;
-;     -- 0 input functions                    ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 7       ;
-;     -- arithmetic mode                      ; 0       ;
-;     -- qfbk mode                            ; 0       ;
-;     -- register cascade mode                ; 0       ;
-;     -- synchronous clear/load mode          ; 0       ;
-;     -- asynchronous clear/load mode         ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-; I/O pins                                    ; 11      ;
-; Maximum fan-out node                        ; ABCD[2] ;
-; Maximum fan-out                             ; 7       ;
-; Total fan-out                               ; 32      ;
-; Average fan-out                             ; 1.78    ;
-+---------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                   ;
++---------------------------------------------+-----------------------------------------------------------------+
+; Resource                                    ; Usage                                                           ;
++---------------------------------------------+-----------------------------------------------------------------+
+; Total logic elements                        ; 25                                                              ;
+;     -- Combinational with no register       ; 4                                                               ;
+;     -- Register only                        ; 0                                                               ;
+;     -- Combinational with a register        ; 21                                                              ;
+;                                             ;                                                                 ;
+; Logic element usage by number of LUT inputs ;                                                                 ;
+;     -- 4 input functions                    ; 0                                                               ;
+;     -- 3 input functions                    ; 0                                                               ;
+;     -- 2 input functions                    ; 5                                                               ;
+;     -- 1 input functions                    ; 20                                                              ;
+;     -- 0 input functions                    ; 0                                                               ;
+;                                             ;                                                                 ;
+; Logic elements by mode                      ;                                                                 ;
+;     -- normal mode                          ; 25                                                              ;
+;     -- arithmetic mode                      ; 0                                                               ;
+;     -- qfbk mode                            ; 0                                                               ;
+;     -- register cascade mode                ; 0                                                               ;
+;     -- synchronous clear/load mode          ; 0                                                               ;
+;     -- asynchronous clear/load mode         ; 0                                                               ;
+;                                             ;                                                                 ;
+; Total registers                             ; 21                                                              ;
+; I/O pins                                    ; 24                                                              ;
+; Maximum fan-out node                        ; modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_1|q ;
+; Maximum fan-out                             ; 6                                                               ;
+; Total fan-out                               ; 57                                                              ;
+; Average fan-out                             ; 1.16                                                            ;
++---------------------------------------------+-----------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
-+-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name      ; Library Name ;
-+-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+------------------+--------------+
-; |cod_7segments                ; 7 (0)       ; 0            ; 0          ; 11   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments                          ; cod_7segments    ; work         ;
-;    |or_gate_2_inputs:gate_15| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_2_inputs:gate_15 ; or_gate_2_inputs ; work         ;
-;    |or_gate_3_inputs:gate_6|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_3_inputs:gate_6  ; or_gate_3_inputs ; work         ;
-;    |or_gate_3_inputs:gate_7|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_3_inputs:gate_7  ; or_gate_3_inputs ; work         ;
-;    |or_gate_4_inputs:gate_19| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_4_inputs:gate_19 ; or_gate_4_inputs ; work         ;
-;    |or_gate_4_inputs:gate_23| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_4_inputs:gate_23 ; or_gate_4_inputs ; work         ;
-;    |or_gate_4_inputs:gate_3|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_4_inputs:gate_3  ; or_gate_4_inputs ; work         ;
-;    |or_gate_5_inputs:gate_12| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cod_7segments|or_gate_5_inputs:gate_12 ; or_gate_5_inputs ; work         ;
-+-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                ; Entity Name                 ; Library Name ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------+-----------------------------+--------------+
+; |pbl                                              ; 25 (0)      ; 21           ; 0          ; 24   ; 0            ; 4 (0)        ; 0 (0)             ; 21 (0)           ; 0 (0)           ; 0 (0)      ; |pbl                                                               ; pbl                         ; work         ;
+;    |modulo_contador_sync_2_bits:contador_display| ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits:contador_display                  ; modulo_contador_sync_2_bits ; work         ;
+;       |modulo_ff_t:ff_1|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_1 ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_2|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_2 ; modulo_ff_t                 ; work         ;
+;    |modulo_demux1_4:comb_15|                      ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:comb_15                                       ; modulo_demux1_4             ; work         ;
+;       |and_gate_3_inputs:gate_1|                  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_1              ; and_gate_3_inputs           ; work         ;
+;       |and_gate_3_inputs:gate_3|                  ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_3              ; and_gate_3_inputs           ; work         ;
+;    |modulo_divisor_frequencia:divisor_f|          ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f                           ; modulo_divisor_frequencia   ; work         ;
+;       |modulo_ff_t:ff_10|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_11|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_12|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_13|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_14|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_15|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_16|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_17|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_18|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_19|                         ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19         ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_1|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_2|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_3|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_4|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_5|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_6|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_7|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_8|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8          ; modulo_ff_t                 ; work         ;
+;       |modulo_ff_t:ff_9|                          ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9          ; modulo_ff_t                 ; work         ;
++---------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                          ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                         ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1|q ; Stuck at GND due to stuck port data_in                                     ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_3|q ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_2|q ; Merged with modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ;
+; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1|q        ; Merged with modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2|q        ;
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ; Lost fanout                                                                ;
+; modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2|q        ; Stuck at GND due to stuck port data_in                                     ;
+; Total Number of Removed Registers = 6                          ;                                                                            ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                         ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1|q ; Stuck at GND              ; modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_4|q ;
+;                                                                ; due to stuck port data_in ;                                                                ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -205,7 +318,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 21    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -215,18 +328,496 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------+
+; Port Connectivity Checks: "modulo_demux1_4:comb_15" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; A    ; Input ; Info     ; Stuck at VCC              ;
++------+-------+----------+---------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_11" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; A    ; Input ; Info     ; Explicitly unconnected ;
+; B    ; Input ; Info     ; Explicitly unconnected ;
+; C    ; Input ; Info     ; Explicitly unconnected ;
+; D    ; Input ; Info     ; Explicitly unconnected ;
++------+-------+----------+------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_10" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; A    ; Input ; Info     ; Explicitly unconnected ;
+; B    ; Input ; Info     ; Explicitly unconnected ;
+; C    ; Input ; Info     ; Explicitly unconnected ;
+; D    ; Input ; Info     ; Explicitly unconnected ;
++------+-------+----------+------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_9"  ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; A    ; Input ; Info     ; Explicitly unconnected ;
+; B    ; Input ; Info     ; Explicitly unconnected ;
+; C    ; Input ; Info     ; Explicitly unconnected ;
+; D    ; Input ; Info     ; Explicitly unconnected ;
++------+-------+----------+------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_8"  ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; A    ; Input ; Info     ; Explicitly unconnected ;
+; B    ; Input ; Info     ; Explicitly unconnected ;
+; C    ; Input ; Info     ; Explicitly unconnected ;
+; D    ; Input ; Info     ; Explicitly unconnected ;
++------+-------+----------+------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_1" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_2_bits:contador_display" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; clr  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[6]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[5]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[4]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[3]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[2]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[1]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[0]" ;
++------+--------+----------+------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                    ;
++------+--------+----------+------------------------------------------------------------+
+; nq   ; Output ; Info     ; Explicitly unconnected                                     ;
++------+--------+----------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_registrador_rolhas:buffer_rolhas" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; clr  ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_somador_subtrator_completo:somador_subtrator_1" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; Te   ; Input ; Info     ; Stuck at GND                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_7" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at VCC          ;
+; C    ; Input ; Info     ; Stuck at GND          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_6" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at GND          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_5" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at VCC          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_4" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at GND          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_3" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at VCC          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_2" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at GND          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "modulo_mux4_1:mux_1" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; A    ; Input ; Info     ; Stuck at GND          ;
+; C    ; Input ; Info     ; Stuck at GND          ;
+; D    ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_seletor_permissoes:seletor_1" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; min_r ; Input ; Info     ; Explicitly unconnected               ;
++-------+-------+----------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_1" ;
++------+-------+----------+------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                ;
++------+-------+----------+------------------------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                                           ;
++------+-------+----------+------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_7_bits:contador_entrada_rolhas" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; clr  ; Input ; Info     ; Stuck at GND                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8"                                                                                ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2" ;
++--------+-------+----------+-------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                               ;
++--------+-------+----------+-------------------------------------------------------+
+; rst    ; Input ; Info     ; Explicitly unconnected                                ;
+; enable ; Input ; Info     ; Explicitly unconnected                                ;
++--------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1" ;
++--------+-------+----------+-------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                               ;
++--------+-------+----------+-------------------------------------------------------+
+; rst    ; Input ; Info     ; Explicitly unconnected                                ;
+; enable ; Input ; Info     ; Explicitly unconnected                                ;
++--------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; ro   ; Input ; Info     ; Explicitly unconnected                ;
++------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10" ;
++------+-------+----------+---------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                 ;
++------+-------+----------+---------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                            ;
++------+-------+----------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; clr  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 10 13:16:30 2024
+    Info: Processing started: Wed Jan 10 17:25:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file cod_7segments.v
-    Info (12023): Found entity 1: cod_7segments File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decodificadorbcd_7segmentos.v
+    Info (12023): Found entity 1: decodificadorBCD_7Segmentos File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/decodificadorBCD_7Segmentos.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_seletor_operacao_aritmetica.v
     Info (12023): Found entity 1: modulo_seletor_operacao_aritmetica File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_operacao_aritmetica.v Line: 1
 Warning (10275): Verilog HDL Module Instantiation warning at modulo_mux4_1.v(12): ignored dangling comma in List of Port Connections File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux4_1.v Line: 12
@@ -291,22 +882,61 @@ Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(67): cr
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(69): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(66): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 66
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(65): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(44): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 44
-Info (12127): Elaborating entity "cod_7segments" for the top level hierarchy
-Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 17
-Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "or_gate_4_inputs:gate_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 20
-Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "or_gate_3_inputs:gate_6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 28
-Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "and_gate_3_inputs:gate_11" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 42
-Info (12128): Elaborating entity "or_gate_5_inputs" for hierarchy "or_gate_5_inputs:gate_12" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 44
-Info (12128): Elaborating entity "or_gate_2_inputs" for hierarchy "or_gate_2_inputs:gate_15" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/cod_7segments.v Line: 52
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4708 megabytes
-    Info: Processing ended: Wed Jan 10 13:16:36 2024
-    Info: Elapsed time: 00:00:06
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(57): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 57
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(76): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 76
+Info (12127): Elaborating entity "pbl" for the top level hierarchy
+Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 27
+Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 10
+Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 29
+Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 16
+Info (12128): Elaborating entity "modulo_ff_jk" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 20
+Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 24
+Info (12128): Elaborating entity "or_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|or_gate_2_inputs:gate_4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 27
+Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_4_inputs:gate_6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 36
+Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|or_gate_3_inputs:gate_8" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 40
+Info (12128): Elaborating entity "modulo_contador_sync_4_bits" for hierarchy "modulo_contador_sync_4_bits:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 35
+Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 36
+Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 39
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits" for hierarchy "modulo_contador_sync_7_bits:contador_entrada_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 45
+Info (12128): Elaborating entity "modulo_seletor_permissoes" for hierarchy "modulo_seletor_permissoes:seletor_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 47
+Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 49
+Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "modulo_mux4_1:mux_1|or_gate_4_inputs:gate_5" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux4_1.v Line: 18
+Info (12128): Elaborating entity "modulo_seletor_operacao_aritmetica" for hierarchy "modulo_seletor_operacao_aritmetica:comb_14" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 57
+Info (12128): Elaborating entity "modulo_somador_subtrator_completo" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 59
+Info (12128): Elaborating entity "or_gate_5_inputs" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_5_inputs:gate_11" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 27
+Info (12128): Elaborating entity "modulo_registrador_rolhas" for hierarchy "modulo_registrador_rolhas:buffer_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 67
+Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "modulo_registrador_rolhas:buffer_rolhas|modulo_ff_d:ff[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_registrador_rolhas.v Line: 14
+Info (12128): Elaborating entity "modulo_contador_sync_2_bits" for hierarchy "modulo_contador_sync_2_bits:contador_display" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 69
+Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:comb_15" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 76
+Info (12128): Elaborating entity "decodificadorBCD_7Segmentos" for hierarchy "decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 78
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ve" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
+    Warning (13410): Pin "al" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
+    Warning (13410): Pin "mef_estado[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 5
+    Warning (13410): Pin "mef_estado[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 5
+    Warning (13410): Pin "Nout_7seg[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[1]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[2]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[3]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[4]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[5]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+    Warning (13410): Pin "Nout_7seg[6]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 6
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "start_stop" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 3
+    Warning (15610): No output dependent on input pin "ch" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 3
+    Warning (15610): No output dependent on input pin "cq" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 3
+    Warning (15610): No output dependent on input pin "op_c_deboucing" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 3
+    Warning (15610): No output dependent on input pin "op_deboucing" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 3
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Wed Jan 10 17:26:01 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 
 
