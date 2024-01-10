@@ -3,7 +3,7 @@ $comment
 		vcd file MI-CircuitosDigitais-Problema-3.msim.vcd -direction
 $end
 $date
-	Sat Jan 06 05:31:21 2024
+	Wed Jan 10 13:17:09 2024
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,110 +12,202 @@ $timescale
 	1ps
 $end
 
-$scope module modulo_reset_contador_dd_vlg_vec_tst $end
-$var reg 4 ! cdd [3:0] $end
-$var wire 1 " rst_cdd $end
+$scope module cod_7segments_vlg_vec_tst $end
+$var reg 4 ! ABCD [3:0] $end
+$var wire 1 " ABCDEFG [6] $end
+$var wire 1 # ABCDEFG [5] $end
+$var wire 1 $ ABCDEFG [4] $end
+$var wire 1 % ABCDEFG [3] $end
+$var wire 1 & ABCDEFG [2] $end
+$var wire 1 ' ABCDEFG [1] $end
+$var wire 1 ( ABCDEFG [0] $end
 
 $scope module i1 $end
-$var wire 1 # gnd $end
-$var wire 1 $ vcc $end
-$var wire 1 % unknown $end
-$var tri1 1 & devclrn $end
-$var tri1 1 ' devpor $end
-$var tri1 1 ( devoe $end
-$var wire 1 ) gate_1|WideAnd0~0_combout $end
-$var wire 1 * cdd~combout [3] $end
-$var wire 1 + cdd~combout [2] $end
-$var wire 1 , cdd~combout [1] $end
-$var wire 1 - cdd~combout [0] $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / gate_23|WideOr0~0_combout $end
+$var wire 1 0 gate_19|WideOr0~0_combout $end
+$var wire 1 1 gate_15|S~0_combout $end
+$var wire 1 2 gate_12|WideOr0~0_combout $end
+$var wire 1 3 gate_7|WideOr0~combout $end
+$var wire 1 4 gate_6|WideOr0~combout $end
+$var wire 1 5 gate_3|WideOr0~0_combout $end
+$var wire 1 6 ABCD~combout [3] $end
+$var wire 1 7 ABCD~combout [2] $end
+$var wire 1 8 ABCD~combout [1] $end
+$var wire 1 9 ABCD~combout [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 b0 !
-0"
-0#
-1$
-x%
-1&
+0(
 1'
-1(
+1&
+1%
+1$
+1#
+1"
 0)
-0-
-0,
-0+
-0*
+1*
+x+
+1,
+1-
+1.
+0/
+10
+11
+12
+13
+14
+15
+09
+08
+07
+06
 $end
 #10000
 b1 !
-1-
+19
+05
+02
+01
+00
+0"
+0%
+0&
+0'
 #20000
 b11 !
 b10 !
-0-
-1,
+09
+18
+15
+03
+12
+11
+1/
+1"
+0$
+1%
+1&
+1(
 #30000
 b11 !
-1-
+19
+13
+01
+1$
+0&
 #40000
 b111 !
 b101 !
 b100 !
-0-
-0,
-1+
+09
+08
+17
+05
+02
+10
+0"
+0%
+1'
 #50000
 b101 !
-1-
+19
+15
+04
+12
+1"
+0#
+1%
 #60000
 b111 !
 b110 !
-0-
-1,
+09
+18
+11
+1&
 #70000
 b111 !
-1-
+19
+14
+02
+01
+00
+0/
+1#
+0%
+0&
+0'
+0(
 #80000
 b1111 !
 b1011 !
 b1001 !
 b1000 !
-0-
-0,
-0+
-1*
+09
+08
+07
+16
+12
+11
+10
+1/
+1%
+1&
+1'
+1(
 #90000
 b1001 !
-1-
+19
+01
+0&
 #100000
 b1011 !
 b1010 !
-0-
-1,
-1)
-1"
+09
+18
+03
+11
+0$
+1&
 #110000
 b1011 !
-1-
-0)
-0"
+19
+13
+01
+1$
+0&
 #120000
 b1111 !
 b1101 !
 b1100 !
-0-
-0,
-1+
+09
+08
+17
 #130000
 b1101 !
-1-
+19
+04
+0#
 #140000
 b1111 !
 b1110 !
-0-
-1,
+09
+18
+11
+1&
 #150000
 b1111 !
-1-
+19
+14
+01
+1#
+0&
 #160000

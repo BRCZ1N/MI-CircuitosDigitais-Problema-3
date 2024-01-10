@@ -1,6 +1,6 @@
-// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
-// and other software and tools, and any partner logic 
+// and other software and tools, and its AMPP partner logic 
 // functions, and any output files from any of the foregoing 
 // (including device programming or simulation files), and any 
 // associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
 // agreement, including, without limitation, that your use is for
 // the sole purpose of programming logic devices manufactured by
 // Intel and sold by Intel or its authorized distributors.  Please
-// refer to the applicable agreement for further details, at
-// https://fpgasoftware.intel.com/eula.
+// refer to the applicable agreement for further details.
 
 // *****************************************************************************
 // This file contains a Verilog test bench with test vectors .The test vectors  
@@ -19,87 +18,57 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/05/2024 21:59:31"
+// Generated on "01/10/2024 13:17:08"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_MEF_Enchimento_Vedacao
+// Verilog Test Bench (with test vectors) for design :                          cod_7segments
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_MEF_Enchimento_Vedacao_vlg_vec_tst();
+module cod_7segments_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg ch;
-reg clk;
-reg eb;
-reg enable;
-reg pg;
-reg ro;
+reg [3:0] ABCD;
 // wires                                               
-wire al;
-wire ev;
-wire m;
-wire q0;
-wire q1;
-wire ve;
+wire [6:0] ABCDEFG;
 
 // assign statements (if any)                          
-modulo_MEF_Enchimento_Vedacao i1 (
+cod_7segments i1 (
 // port map - connection between master ports and signals/registers   
-	.al(al),
-	.ch(ch),
-	.clk(clk),
-	.eb(eb),
-	.enable(enable),
-	.ev(ev),
-	.m(m),
-	.pg(pg),
-	.q0(q0),
-	.q1(q1),
-	.ro(ro),
-	.ve(ve)
+	.ABCD(ABCD),
+	.ABCDEFG(ABCDEFG)
 );
 initial 
 begin 
-#1000000 $finish;
+#160000 $finish;
 end 
-
-// pg
-initial
-begin
-	pg = 1'b0;
-end 
-
-// eb
-initial
-begin
-	eb = 1'b0;
-end 
-
-// ch
-initial
-begin
-	ch = 1'b0;
-end 
-
-// ro
-initial
-begin
-	ro = 1'b0;
-end 
-
-// enable
-initial
-begin
-	enable = 1'b1;
-end 
-
-// clk
+// ABCD[ 3 ]
 always
 begin
-	clk = 1'b0;
-	clk = #10000 1'b1;
+	ABCD[3] = 1'b0;
+	ABCD[3] = #80000 1'b1;
+	#80000;
+end 
+// ABCD[ 2 ]
+always
+begin
+	ABCD[2] = 1'b0;
+	ABCD[2] = #40000 1'b1;
+	#40000;
+end 
+// ABCD[ 1 ]
+always
+begin
+	ABCD[1] = 1'b0;
+	ABCD[1] = #20000 1'b1;
+	#20000;
+end 
+// ABCD[ 0 ]
+always
+begin
+	ABCD[0] = 1'b0;
+	ABCD[0] = #10000 1'b1;
 	#10000;
 end 
 endmodule
