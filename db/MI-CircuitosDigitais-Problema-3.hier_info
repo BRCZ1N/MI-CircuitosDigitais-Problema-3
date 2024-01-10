@@ -7,20 +7,22 @@ clock_50mhz => clock_50mhz.IN1
 m <= modulo_mef_enchimento_vedacao:mef_1.m
 ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
 al <= modulo_mef_enchimento_vedacao:mef_1.al
+Nal <= <GND>
 ev <= modulo_mef_enchimento_vedacao:mef_1.ev
 mef_estado[0] <= modulo_mef_enchimento_vedacao:mef_1.q0
 mef_estado[1] <= modulo_mef_enchimento_vedacao:mef_1.q1
-Nout_7seg[0] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[1] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[2] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[3] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[4] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[5] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nout_7seg[6] <= decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
-Nac_7segmentos[0] <= modulo_demux1_4:comb_15.out
-Nac_7segmentos[1] <= modulo_demux1_4:comb_15.out
-Nac_7segmentos[2] <= modulo_demux1_4:comb_15.out
-Nac_7segmentos[3] <= modulo_demux1_4:comb_15.out
+Nout_7seg[0] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[1] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[2] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[3] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[4] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[5] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[6] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nout_7seg[7] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFG
+Nac_7segmentos[0] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[1] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c_deboucing => op_c_deboucing.IN1
 op_deboucing => op_deboucing.IN1
 
@@ -839,13 +841,13 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_seletor_operacao_aritmetica:comb_14
+|pbl|modulo_seletor_operacao_aritmetica:seletor_op
 smx[0] => ~NO_FANOUT~
 smx[1] => Nsmx[1].IN2
 operacao_a <= and_gate_2_inputs:gate_1.S
 
 
-|pbl|modulo_seletor_operacao_aritmetica:comb_14|and_gate_2_inputs:gate_1
+|pbl|modulo_seletor_operacao_aritmetica:seletor_op|and_gate_2_inputs:gate_1
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
@@ -1794,7 +1796,7 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_demux1_4:comb_15
+|pbl|modulo_demux1_4:demux_1
 A => A.IN4
 input_sel[0] => input_sel[0].IN2
 input_sel[1] => input_sel[1].IN2
@@ -1804,61 +1806,62 @@ out[2] <= and_gate_3_inputs:gate_2.S
 out[3] <= and_gate_3_inputs:gate_1.S
 
 
-|pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_1
+|pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_2
+|pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_2
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_3
+|pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_demux1_4:comb_15|and_gate_3_inputs:gate_4
+|pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_4
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1
 ABCD[0] => ABCD[0].IN4
 ABCD[1] => ABCD[1].IN6
 ABCD[2] => ABCD[2].IN7
 ABCD[3] => ABCD[3].IN4
-ABCDEFG[0] <= or_gate_4_inputs:gate_23.S
-ABCDEFG[1] <= or_gate_4_inputs:gate_19.S
-ABCDEFG[2] <= or_gate_2_inputs:gate_15.S
-ABCDEFG[3] <= or_gate_5_inputs:gate_12.S
-ABCDEFG[4] <= or_gate_3_inputs:gate_7.S
-ABCDEFG[5] <= or_gate_3_inputs:gate_6.S
-ABCDEFG[6] <= or_gate_4_inputs:gate_3.S
+ABCDEFG[0] <= and_gate_2_inputs:gate_24.S
+ABCDEFG[1] <= or_gate_4_inputs:gate_23.S
+ABCDEFG[2] <= or_gate_4_inputs:gate_19.S
+ABCDEFG[3] <= or_gate_2_inputs:gate_15.S
+ABCDEFG[4] <= or_gate_5_inputs:gate_12.S
+ABCDEFG[5] <= or_gate_3_inputs:gate_7.S
+ABCDEFG[6] <= or_gate_3_inputs:gate_6.S
+ABCDEFG[7] <= or_gate_4_inputs:gate_3.S
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_1
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_1
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_2
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_2
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_3
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_3
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -1866,58 +1869,58 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_4
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_4
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_5
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_5
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_3_inputs:gate_6
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_3_inputs:gate_6
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_3_inputs:gate_7
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_3_inputs:gate_7
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_8
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_8
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_9
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_9
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_10
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_10
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_3_inputs:gate_11
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_3_inputs:gate_11
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_5_inputs:gate_12
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_5_inputs:gate_12
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -1926,43 +1929,43 @@ E => WideOr0.IN4
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_13
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_13
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_14
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_14
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_2_inputs:gate_15
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_2_inputs:gate_15
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_16
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_16
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_17
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_17
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_18
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_18
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_19
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_19
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -1970,29 +1973,35 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_20
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_20
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_21
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_21
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_22
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_22
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_23
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_23
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_24
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
