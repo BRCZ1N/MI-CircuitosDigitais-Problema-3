@@ -12,7 +12,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire [5:0] transporte_aux_somadores_subtratores_completo;
 	wire [1:0] sel_mux_e,sel_mux_display;
 	
-	not(nal,al);
+	not(Nal,al);
 	not(Nac_7segmentos[3],ac_7segmentos[3]);
 	not(Nac_7segmentos[2],ac_7segmentos[2]);
 	not(Nac_7segmentos[1],ac_7segmentos[1]);
