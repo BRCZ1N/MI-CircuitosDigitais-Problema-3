@@ -1,4 +1,4 @@
-module modulo_mux4_1(input_sel,out);
+module modulo_codificador_contador4bitsU(input_sel,out);
 
 	input [3:0] input_sel;
 	output [3:0]out;
