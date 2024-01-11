@@ -90,3 +90,5 @@ set_location_assignment PIN_75 -to ev
 set_location_assignment PIN_73 -to ve
 set_location_assignment PIN_71 -to mef_estado[1]
 set_location_assignment PIN_69 -to mef_estado[0]
+set_global_assignment -name VERILOG_FILE modulo_codificador_contador4bitsU.v
+set_global_assignment -name VERILOG_FILE modulo_codificador_contador4bitsD.v
