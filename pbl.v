@@ -26,7 +26,6 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	not(Nout_7seg[1],out_7seg[1]);
 	not(Nout_7seg[0],out_7seg[0]);
 	
-	
 	modulo_divisor_frequencia divisor_f(.clk(clock_50mhz),.clr(1'b0),.clk_div(clk_div));
 	
 	modulo_mef_enchimento_vedacao mef_1(.enable(start_stop),.pg(pg),.ch(ch),.ro(),.eb(sinal_duzias_reset),.clk(clk_div),.m(m),.ve(ve),.al(al),.ev(ev),.q0(mef_estado[0]),.q1(mef_estado[1]));

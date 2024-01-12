@@ -10,7 +10,6 @@ module modulo_mef_enchimento_vedacao(enable,pg,ch,ro,eb,clk,m,ve,al,ev,q0,q1);
 	not(Nro,ro);
 	not(Neb,eb);
 	
-	
 	//j1
 	
 	and_gate_2_inputs gate_1(.A(q0),.B(ch),.S(j1));

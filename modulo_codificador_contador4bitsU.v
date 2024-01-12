@@ -1,21 +1,18 @@
-module modulo_codificador_contador4bitsU(input_sel,out);
+module modulo_codificador_contador4bitsU(cdd,cdf);
 
-	input [3:0] input_sel;
-	output [3:0]out;
+	input [3:0] cdd;
+	output [3:0] cdf;
+	wire [2:0] Ncdd;
+
+	not(Ncdd[2], cdd[2]);
+	not(Ncdd[0], cdd[0]);
 	
+	and_gate_2_inputs gate_1(.A(cdd[0]),.B(Ncdd[2]),.S(cdf[3]));
 	
+	and_gate_2_inputs gate_2(.A(1'b1),.B(cdd[1]),.S(cdf[2]));
 	
+	and_gate_2_inputs gate_3(.A(Ncdd[0]),.B(cdd[2]),.S(cdf[1]));
 	
-	not(Ninput_sel[2], input_sel[2])
-	not(Ninput_sel[0], input_sel[0])
+	and_gate_2_inputs gate_4(.A(1'b1),.B(cdd[3]),.S(cdf[0]));
 	
-	
-	
-	and_gate_2_inputs gate_1(.A(input_sel[0]),.B(Ninput_sel[2]),.S(out[3]));
-	
-	and_gate_2_inputs gate_1(.A(1'b1),.B(input_sel[1]),.S(out[2]));
-	
-	and_gate_2_inputs gate_1(.A(Ninput_sel[0]),.B(input_sel[2]),.S(out[1]));
-	
-	and_gate_2_inputs gate_1(.A(1'b1),.B(input_sel[3]),.S(out[0]));
 endmodule
