@@ -45,8 +45,7 @@ and (aux_b[3], int[6], int[3], int[2], Nint[1]);
 and (aux_b[2], Nint[6], Nint[5], Nint[4], Nint[3], int[1]);
 and (aux_b[1], int[5], int[4], Nint[3], int[2], int[1]);
 and (aux_b[0], int[6], Nint[5], Nint[3], Nint[2], int[1]);
-or (s[2], aux_b[10], aux_b[9], aux_b[8], aux_b[7], aux_b[6], aux_b[5], 
-aux_b[4], aux_b[3], aux_b[2], aux_b[1], aux_b[0]);
+or (s[2], aux_b[10], aux_b[9], aux_b[8], aux_b[7], aux_b[6], aux_b[5], aux_b[4], aux_b[3], aux_b[2], aux_b[1], aux_b[0]);
 
 //s1 = a'b'c'de'f' + a'b'cd'e'f + a'b'cdef' + bc'd'ef + bcd'e'f' + bcde'f + ac'd'ef' + ac'def + acde'f' + abf
 and (aux_c[9], Nint[6], Nint[5], Nint[4], int[3], Nint[2], Nint[1]);
@@ -60,10 +59,9 @@ and (aux_c[2], int[6], Nint[4], int[3], int[2], int[1]);
 and (aux_c[1], int[6], int[4], int[3], Nint[2], Nint[1]);
 and (aux_c[0], int[6], int[5], int[1]);
 or (s[1], aux_c[9], aux_c[8], aux_c[7], aux_c[6], aux_c[5], aux_c[4], aux_c[3], aux_c[2], aux_c[1], aux_c[0]);
-
+  
 //s0 = g
 and (s[0], int[0]);
-
 
 endmodule 
 
