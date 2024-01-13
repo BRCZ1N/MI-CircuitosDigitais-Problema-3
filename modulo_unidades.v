@@ -16,7 +16,7 @@ not (Nint[2], int[2]);
 not (Nint[1], int[1]);
 not (Nint[0], int[0]);
 
-//s0 = a'b'de'f'g' + a'b'cde' + a'bc'd'e'f + bc'de + bcd'ef + ac'def' + acef + a'b'c'd'e + a'b'c'ef + a'b'cd'f' + a'cde'f' + ac'd'e'f' + ab'c'e'f + b'cd'ef'
+//s3 = a'b'de'f'g' + a'b'cde' + a'bc'd'e'f + bc'de + bcd'ef + ac'def' + acef + a'b'c'd'e + a'b'c'ef + a'b'cd'f' + a'cde'f' + ac'd'e'f' + ab'c'e'f + b'cd'ef'
 and (aux_a[13], Nint[6], Nint[5], int[3], Nint[2], Nint[1], Nint[0]);
 and (aux_a[12], Nint[6], Nint[5], int[4], int[3], Nint[2]);
 and (aux_a[11], Nint[6], int[5], Nint[4], Nint[3], Nint[2], int[1]);
@@ -61,7 +61,7 @@ and (aux_c[1], int[6], int[4], int[3], Nint[2], Nint[1]);
 and (aux_c[0], int[6], int[5], int[1]);
 or (s[1], aux_c[9], aux_c[8], aux_c[7], aux_c[6], aux_c[5], aux_c[4], aux_c[3], aux_c[2], aux_c[1], aux_c[0]);
 
-//s3 = g
+//s0 = g
 and (s[0], int[0]);
 
 
