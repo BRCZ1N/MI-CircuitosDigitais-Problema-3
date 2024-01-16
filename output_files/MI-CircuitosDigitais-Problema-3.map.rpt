@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Tue Jan 16 18:53:03 2024
+Tue Jan 16 19:45:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,87 +40,87 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jan 16 18:53:03 2024       ;
+; Analysis & Synthesis Status ; Successful - Tue Jan 16 19:45:12 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
-; Top-level Entity Name       ; modulo_codificador_dezena_rolhas            ;
+; Top-level Entity Name       ; modulo_verificador_ausencia_rolhas          ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 9                                           ;
-; Total pins                  ; 11                                          ;
+; Total logic elements        ; 2                                           ;
+; Total pins                  ; 8                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                                         ;
-+------------------------------------------------------------------+----------------------------------+---------------------------------+
-; Option                                                           ; Setting                          ; Default Value                   ;
-+------------------------------------------------------------------+----------------------------------+---------------------------------+
-; Device                                                           ; EPM240T100C5                     ;                                 ;
-; Top-level entity name                                            ; modulo_codificador_dezena_rolhas ; MI-CircuitosDigitais-Problema-3 ;
-; Family name                                                      ; MAX II                           ; Cyclone V                       ;
-; Use smart compilation                                            ; Off                              ; Off                             ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                               ; On                              ;
-; Enable compact report table                                      ; Off                              ; Off                             ;
-; Restructure Multiplexers                                         ; Auto                             ; Auto                            ;
-; Create Debugging Nodes for IP Cores                              ; Off                              ; Off                             ;
-; Preserve fewer node names                                        ; On                               ; On                              ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable                           ; Enable                          ;
-; Verilog Version                                                  ; Verilog_2001                     ; Verilog_2001                    ;
-; VHDL Version                                                     ; VHDL_1993                        ; VHDL_1993                       ;
-; State Machine Processing                                         ; Auto                             ; Auto                            ;
-; Safe State Machine                                               ; Off                              ; Off                             ;
-; Extract Verilog State Machines                                   ; On                               ; On                              ;
-; Extract VHDL State Machines                                      ; On                               ; On                              ;
-; Ignore Verilog initial constructs                                ; Off                              ; Off                             ;
-; Iteration limit for constant Verilog loops                       ; 5000                             ; 5000                            ;
-; Iteration limit for non-constant Verilog loops                   ; 250                              ; 250                             ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                               ; On                              ;
-; Infer RAMs from Raw Logic                                        ; On                               ; On                              ;
-; Parallel Synthesis                                               ; On                               ; On                              ;
-; NOT Gate Push-Back                                               ; On                               ; On                              ;
-; Power-Up Don't Care                                              ; On                               ; On                              ;
-; Remove Redundant Logic Cells                                     ; Off                              ; Off                             ;
-; Remove Duplicate Registers                                       ; On                               ; On                              ;
-; Ignore CARRY Buffers                                             ; Off                              ; Off                             ;
-; Ignore CASCADE Buffers                                           ; Off                              ; Off                             ;
-; Ignore GLOBAL Buffers                                            ; Off                              ; Off                             ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                              ; Off                             ;
-; Ignore LCELL Buffers                                             ; Off                              ; Off                             ;
-; Ignore SOFT Buffers                                              ; On                               ; On                              ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                              ; Off                             ;
-; Optimization Technique                                           ; Balanced                         ; Balanced                        ;
-; Carry Chain Length                                               ; 70                               ; 70                              ;
-; Auto Carry Chains                                                ; On                               ; On                              ;
-; Auto Open-Drain Pins                                             ; On                               ; On                              ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                              ; Off                             ;
-; Auto Shift Register Replacement                                  ; Auto                             ; Auto                            ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto                             ; Auto                            ;
-; Auto Clock Enable Replacement                                    ; On                               ; On                              ;
-; Allow Synchronous Control Signals                                ; On                               ; On                              ;
-; Force Use of Synchronous Clear Signals                           ; Off                              ; Off                             ;
-; Auto Resource Sharing                                            ; Off                              ; Off                             ;
-; Use LogicLock Constraints during Resource Balancing              ; On                               ; On                              ;
-; Ignore translate_off and synthesis_off directives                ; Off                              ; Off                             ;
-; Report Parameter Settings                                        ; On                               ; On                              ;
-; Report Source Assignments                                        ; On                               ; On                              ;
-; Report Connectivity Checks                                       ; On                               ; On                              ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                              ; Off                             ;
-; Synchronization Register Chain Length                            ; 2                                ; 2                               ;
-; Power Optimization During Synthesis                              ; Normal compilation               ; Normal compilation              ;
-; HDL message level                                                ; Level2                           ; Level2                          ;
-; Suppress Register Optimization Related Messages                  ; Off                              ; Off                             ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000                             ; 5000                            ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000                             ; 5000                            ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                              ; 100                             ;
-; Clock MUX Protection                                             ; On                               ; On                              ;
-; Block Design Naming                                              ; Auto                             ; Auto                            ;
-; Synthesis Effort                                                 ; Auto                             ; Auto                            ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                               ; On                              ;
-; Analysis & Synthesis Message Level                               ; Medium                           ; Medium                          ;
-; Disable Register Merging Across Hierarchies                      ; Auto                             ; Auto                            ;
-+------------------------------------------------------------------+----------------------------------+---------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                           ;
++------------------------------------------------------------------+------------------------------------+---------------------------------+
+; Option                                                           ; Setting                            ; Default Value                   ;
++------------------------------------------------------------------+------------------------------------+---------------------------------+
+; Device                                                           ; EPM240T100C5                       ;                                 ;
+; Top-level entity name                                            ; modulo_verificador_ausencia_rolhas ; MI-CircuitosDigitais-Problema-3 ;
+; Family name                                                      ; MAX II                             ; Cyclone V                       ;
+; Use smart compilation                                            ; Off                                ; Off                             ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                 ; On                              ;
+; Enable compact report table                                      ; Off                                ; Off                             ;
+; Restructure Multiplexers                                         ; Auto                               ; Auto                            ;
+; Create Debugging Nodes for IP Cores                              ; Off                                ; Off                             ;
+; Preserve fewer node names                                        ; On                                 ; On                              ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                             ; Enable                          ;
+; Verilog Version                                                  ; Verilog_2001                       ; Verilog_2001                    ;
+; VHDL Version                                                     ; VHDL_1993                          ; VHDL_1993                       ;
+; State Machine Processing                                         ; Auto                               ; Auto                            ;
+; Safe State Machine                                               ; Off                                ; Off                             ;
+; Extract Verilog State Machines                                   ; On                                 ; On                              ;
+; Extract VHDL State Machines                                      ; On                                 ; On                              ;
+; Ignore Verilog initial constructs                                ; Off                                ; Off                             ;
+; Iteration limit for constant Verilog loops                       ; 5000                               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                   ; 250                                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                                 ; On                              ;
+; Infer RAMs from Raw Logic                                        ; On                                 ; On                              ;
+; Parallel Synthesis                                               ; On                                 ; On                              ;
+; NOT Gate Push-Back                                               ; On                                 ; On                              ;
+; Power-Up Don't Care                                              ; On                                 ; On                              ;
+; Remove Redundant Logic Cells                                     ; Off                                ; Off                             ;
+; Remove Duplicate Registers                                       ; On                                 ; On                              ;
+; Ignore CARRY Buffers                                             ; Off                                ; Off                             ;
+; Ignore CASCADE Buffers                                           ; Off                                ; Off                             ;
+; Ignore GLOBAL Buffers                                            ; Off                                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                                ; Off                             ;
+; Ignore LCELL Buffers                                             ; Off                                ; Off                             ;
+; Ignore SOFT Buffers                                              ; On                                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                                ; Off                             ;
+; Optimization Technique                                           ; Balanced                           ; Balanced                        ;
+; Carry Chain Length                                               ; 70                                 ; 70                              ;
+; Auto Carry Chains                                                ; On                                 ; On                              ;
+; Auto Open-Drain Pins                                             ; On                                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                                ; Off                             ;
+; Auto Shift Register Replacement                                  ; Auto                               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                               ; Auto                            ;
+; Auto Clock Enable Replacement                                    ; On                                 ; On                              ;
+; Allow Synchronous Control Signals                                ; On                                 ; On                              ;
+; Force Use of Synchronous Clear Signals                           ; Off                                ; Off                             ;
+; Auto Resource Sharing                                            ; Off                                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing              ; On                                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                ; Off                                ; Off                             ;
+; Report Parameter Settings                                        ; On                                 ; On                              ;
+; Report Source Assignments                                        ; On                                 ; On                              ;
+; Report Connectivity Checks                                       ; On                                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                                ; Off                             ;
+; Synchronization Register Chain Length                            ; 2                                  ; 2                               ;
+; Power Optimization During Synthesis                              ; Normal compilation                 ; Normal compilation              ;
+; HDL message level                                                ; Level2                             ; Level2                          ;
+; Suppress Register Optimization Related Messages                  ; Off                                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                                ; 100                             ;
+; Clock MUX Protection                                             ; On                                 ; On                              ;
+; Block Design Naming                                              ; Auto                               ; Auto                            ;
+; Synthesis Effort                                                 ; Auto                               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                                 ; On                              ;
+; Analysis & Synthesis Message Level                               ; Medium                             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                      ; Auto                               ; Auto                            ;
++------------------------------------------------------------------+------------------------------------+---------------------------------+
 
 
 +------------------------------------------+
@@ -139,56 +139,58 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                 ; Library ;
-+------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; modulo_codificador_dezena_rolhas.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_rolhas.v ;         ;
-+------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                   ; Library ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; module_gates.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v                       ;         ;
+; modulo_verificador_ausencia_rolhas.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_verificador_ausencia_rolhas.v ;         ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Total logic elements                        ; 9       ;
-;     -- Combinational with no register       ; 9       ;
-;     -- Register only                        ; 0       ;
-;     -- Combinational with a register        ; 0       ;
-;                                             ;         ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 7       ;
-;     -- 3 input functions                    ; 2       ;
-;     -- 2 input functions                    ; 0       ;
-;     -- 1 input functions                    ; 0       ;
-;     -- 0 input functions                    ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 9       ;
-;     -- arithmetic mode                      ; 0       ;
-;     -- qfbk mode                            ; 0       ;
-;     -- register cascade mode                ; 0       ;
-;     -- synchronous clear/load mode          ; 0       ;
-;     -- asynchronous clear/load mode         ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-; I/O pins                                    ; 11      ;
-; Maximum fan-out node                        ; abcd[6] ;
-; Maximum fan-out                             ; 7       ;
-; Total fan-out                               ; 38      ;
-; Average fan-out                             ; 1.90    ;
-+---------------------------------------------+---------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 2        ;
+;     -- Combinational with no register       ; 2        ;
+;     -- Register only                        ; 0        ;
+;     -- Combinational with a register        ; 0        ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 2        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- 2 input functions                    ; 0        ;
+;     -- 1 input functions                    ; 0        ;
+;     -- 0 input functions                    ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 2        ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+; I/O pins                                    ; 8        ;
+; Maximum fan-out node                        ; reg_r[0] ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 9        ;
+; Average fan-out                             ; 0.90     ;
++---------------------------------------------+----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
-; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name               ; Entity Name                      ; Library Name ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
-; |modulo_codificador_dezena_rolhas ; 9 (9)       ; 0            ; 0          ; 11   ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |modulo_codificador_dezena_rolhas ; modulo_codificador_dezena_rolhas ; work         ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+----------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+------------------------------------+--------------+
+; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                          ; Entity Name                        ; Library Name ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+------------------------------------+--------------+
+; |modulo_verificador_ausencia_rolhas ; 2 (0)       ; 0            ; 0          ; 8    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |modulo_verificador_ausencia_rolhas                          ; modulo_verificador_ausencia_rolhas ; work         ;
+;    |and_gate_7_inputs:gate_1|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |modulo_verificador_ausencia_rolhas|and_gate_7_inputs:gate_1 ; and_gate_7_inputs                  ; work         ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -213,7 +215,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 16 18:52:57 2024
+    Info: Processing started: Tue Jan 16 19:45:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -279,6 +281,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
     Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_seletor_permissoes.v
     Info (12023): Found entity 1: modulo_seletor_permissoes File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_permissoes.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_verificador_ausencia_rolhas.v
+    Info (12023): Found entity 1: modulo_verificador_ausencia_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_verificador_ausencia_rolhas.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(63): created implicit net for "Qi0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 63
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(68): created implicit net for "Qi1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 68
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(65): created implicit net for "clk_div_r" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
@@ -286,16 +290,15 @@ Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(67): cr
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(69): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 69
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(66): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 66
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(65): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
-Info (12127): Elaborating entity "modulo_codificador_dezena_rolhas" for the top level hierarchy
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "abcd[0]" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_rolhas.v Line: 3
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Info (12127): Elaborating entity "modulo_verificador_ausencia_rolhas" for the top level hierarchy
+Info (12128): Elaborating entity "and_gate_7_inputs" for hierarchy "and_gate_7_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_verificador_ausencia_rolhas.v Line: 21
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Tue Jan 16 18:53:03 2024
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Tue Jan 16 19:45:12 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 
