@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_valor_minimo_rolhas
+set_global_assignment -name TOP_LEVEL_ENTITY modulo_codificador_dezena_rolhas
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -96,7 +96,6 @@ set_global_assignment -name VERILOG_FILE modulo_seletor_permissoes.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
@@ -112,3 +111,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf

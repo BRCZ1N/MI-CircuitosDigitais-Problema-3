@@ -1,33 +1,33 @@
 # do MI-CircuitosDigitais-Problema-3.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:24:59 on Jan 16,2024
+# Start time: 18:53:47 on Jan 16,2024
 # vlog -work work MI-CircuitosDigitais-Problema-3.vo 
-# -- Compiling module modulo_valor_minimo_rolhas
+# -- Compiling module modulo_codificador_dezena_rolhas
 # 
 # Top level modules:
-# 	modulo_valor_minimo_rolhas
-# End time: 15:24:59 on Jan 16,2024, Elapsed time: 0:00:00
+# 	modulo_codificador_dezena_rolhas
+# End time: 18:53:47 on Jan 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:24:59 on Jan 16,2024
-# vlog -work work Waveform18.vwf.vt 
-# -- Compiling module modulo_valor_minimo_rolhas_vlg_vec_tst
+# Start time: 18:53:47 on Jan 16,2024
+# vlog -work work Waveform19.vwf.vt 
+# -- Compiling module modulo_codificador_dezena_rolhas_vlg_vec_tst
 # 
 # Top level modules:
-# 	modulo_valor_minimo_rolhas_vlg_vec_tst
-# End time: 15:24:59 on Jan 16,2024, Elapsed time: 0:00:00
+# 	modulo_codificador_dezena_rolhas_vlg_vec_tst
+# End time: 18:53:47 on Jan 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_valor_minimo_rolhas_vlg_vec_tst 
-# Start time: 15:24:59 on Jan 16,2024
-# Loading work.modulo_valor_minimo_rolhas_vlg_vec_tst
-# Loading work.modulo_valor_minimo_rolhas
+# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_codificador_dezena_rolhas_vlg_vec_tst 
+# Start time: 18:53:47 on Jan 16,2024
+# Loading work.modulo_codificador_dezena_rolhas_vlg_vec_tst
+# Loading work.modulo_codificador_dezena_rolhas
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $finish    : Waveform18.vwf.vt(44)
-#    Time: 1280 ns  Iteration: 0  Instance: /modulo_valor_minimo_rolhas_vlg_vec_tst
-# End time: 15:24:59 on Jan 16,2024, Elapsed time: 0:00:00
+# ** Note: $finish    : Waveform19.vwf.vt(44)
+#    Time: 1280 ns  Iteration: 0  Instance: /modulo_codificador_dezena_rolhas_vlg_vec_tst
+# End time: 18:53:47 on Jan 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
