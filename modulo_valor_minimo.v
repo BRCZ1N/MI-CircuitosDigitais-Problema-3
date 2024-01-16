@@ -1,6 +1,6 @@
 module modulo_valor_minimo(REG, MIN);
 
-input[6:0]REG;
+input [6:0]REG;
 output MIN;
 wire [6:0] NREG;
 

@@ -1,4 +1,5 @@
-module modulo_dezenas(abcd, s);
+module modulo_codificador_dezena_rolhas(abcd, s);
+
 input [6:0] abcd;
 output [3:0] s;
 

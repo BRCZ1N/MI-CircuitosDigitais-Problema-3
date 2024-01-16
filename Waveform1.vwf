@@ -7,10 +7,10 @@
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform1.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_reset_contador_dd_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_codificador_dezena_garrafas_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal modulo_reset_contador_dd_vlg_vec_tst/*
-vcd add -internal modulo_reset_contador_dd_vlg_vec_tst/i1/*
+vcd add -internal modulo_codificador_dezena_garrafas_vlg_vec_tst/*
+vcd add -internal modulo_codificador_dezena_garrafas_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -25,10 +25,10 @@ quit -f
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform1.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_reset_contador_dd_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_codificador_dezena_garrafas_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal modulo_reset_contador_dd_vlg_vec_tst/*
-vcd add -internal modulo_reset_contador_dd_vlg_vec_tst/i1/*
+vcd add -internal modulo_codificador_dezena_garrafas_vlg_vec_tst/*
+vcd add -internal modulo_codificador_dezena_garrafas_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -125,14 +125,54 @@ SIGNAL("cdd[0]")
 	PARENT = "cdd";
 }
 
-SIGNAL("rst_cdd")
+SIGNAL("cdf")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("cdf[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "";
+	PARENT = "cdf";
+}
+
+SIGNAL("cdf[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "cdf";
+}
+
+SIGNAL("cdf[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "cdf";
+}
+
+SIGNAL("cdf[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "cdf";
 }
 
 TRANSITION_LIST("cdd[3]")
@@ -191,7 +231,34 @@ TRANSITION_LIST("cdd[0]")
 	}
 }
 
-TRANSITION_LIST("rst_cdd")
+TRANSITION_LIST("cdf[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("cdf[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("cdf[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("cdf[0]")
 {
 	NODE
 	{
@@ -252,11 +319,52 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "rst_cdd";
-	EXPAND_STATUS = COLLAPSED;
+	CHANNEL = "cdf";
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
+	CHILDREN = 6, 7, 8, 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cdf[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cdf[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cdf[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cdf[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 5;
 }
 
 TIME_BAR

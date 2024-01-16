@@ -18,30 +18,30 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/06/2024 05:31:18"
+// Generated on "01/15/2024 17:20:00"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_reset_contador_dd
+// Verilog Test Bench (with test vectors) for design :                          modulo_codificador_dezena_garrafas
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_reset_contador_dd_vlg_vec_tst();
+module modulo_codificador_dezena_garrafas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg [3:0] cdd;
 // wires                                               
-wire rst_cdd;
+wire [3:0] cdf;
 
 // assign statements (if any)                          
-modulo_reset_contador_dd i1 (
+modulo_codificador_dezena_garrafas i1 (
 // port map - connection between master ports and signals/registers   
 	.cdd(cdd),
-	.rst_cdd(rst_cdd)
+	.cdf(cdf)
 );
 initial 
 begin 
-#160000 $stop;
+#160000 $finish;
 end 
 // cdd[ 3 ]
 always

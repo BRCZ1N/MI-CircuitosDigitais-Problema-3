@@ -1,4 +1,4 @@
-module modulo_unidades(int, s);
+module modulo_codificador_unidade_rolhas(int, s);
 input [6:0] int;
 output  [3:0]s;
 
@@ -24,7 +24,7 @@ and (aux_a[10], int[5], Nint[4], int[3], int[2]);
 and (aux_a[9], int[5], int[4], Nint[3], int[2], int[1]);
 and (aux_a[8], int[6], Nint[4], int[3], int[2], Nint[1]);
 and (aux_a[7], int[6], int[4], int[2], int[1]);
-and (aux_a[6], Nint[6], Nint[5], int[4], int[3], int[2]);
+and (aux_a[6], Nint[6], Nint[5], Nint[4], Nint[3], int[2]);
 and (aux_a[5], Nint[6], Nint[5], Nint[4], int[2], int[1]);
 and (aux_a[4], Nint[6], Nint[5], int[4], Nint[3], Nint[1]);
 and (aux_a[3], Nint[6], int[4], int[3], Nint[2], Nint[1]);
@@ -43,7 +43,7 @@ and (aux_b[5], int[5], int[3], int[2], int[1]);
 and (aux_b[4], int[6], Nint[4], int[3], Nint[1]);
 and (aux_b[3], int[6], int[3], int[2], Nint[1]);
 and (aux_b[2], Nint[6], Nint[5], Nint[4], Nint[3], int[1]);
-and (aux_b[1], int[5], int[4], Nint[3], int[2], int[1]);
+and (aux_b[1], Nint[5], int[4], Nint[3], int[2], int[1]);
 and (aux_b[0], int[6], Nint[5], Nint[3], Nint[2], int[1]);
 or (s[2], aux_b[10], aux_b[9], aux_b[8], aux_b[7], aux_b[6], aux_b[5], aux_b[4], aux_b[3], aux_b[2], aux_b[1], aux_b[0]);
 

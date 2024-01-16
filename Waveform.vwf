@@ -7,10 +7,10 @@
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.cod_7segments_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_codificador_unidade_garrafas_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal cod_7segments_vlg_vec_tst/*
-vcd add -internal cod_7segments_vlg_vec_tst/i1/*
+vcd add -internal modulo_codificador_unidade_garrafas_vlg_vec_tst/*
+vcd add -internal modulo_codificador_unidade_garrafas_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -20,16 +20,15 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.cod_7segments_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_codificador_unidade_garrafas_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal cod_7segments_vlg_vec_tst/*
-vcd add -internal cod_7segments_vlg_vec_tst/i1/*
+vcd add -internal modulo_codificador_unidade_garrafas_vlg_vec_tst/*
+vcd add -internal modulo_codificador_unidade_garrafas_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -39,7 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -77,7 +75,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("ABCD")
+SIGNAL("cdd")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -87,127 +85,97 @@ SIGNAL("ABCD")
 	PARENT = "";
 }
 
-SIGNAL("ABCD[3]")
+SIGNAL("cdd[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "ABCD";
+	PARENT = "cdd";
 }
 
-SIGNAL("ABCD[2]")
+SIGNAL("cdd[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "ABCD";
+	PARENT = "cdd";
 }
 
-SIGNAL("ABCD[1]")
+SIGNAL("cdd[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "ABCD";
+	PARENT = "cdd";
 }
 
-SIGNAL("ABCD[0]")
+SIGNAL("cdd[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "ABCD";
+	PARENT = "cdd";
 }
 
-SIGNAL("ABCDEFG")
+SIGNAL("cdf")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 7;
+	WIDTH = 4;
 	LSB_INDEX = 0;
 	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("ABCDEFG[6]")
+SIGNAL("cdf[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
+	PARENT = "cdf";
 }
 
-SIGNAL("ABCDEFG[5]")
+SIGNAL("cdf[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
+	PARENT = "cdf";
 }
 
-SIGNAL("ABCDEFG[4]")
+SIGNAL("cdf[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
+	PARENT = "cdf";
 }
 
-SIGNAL("ABCDEFG[3]")
+SIGNAL("cdf[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
+	PARENT = "cdf";
 }
 
-SIGNAL("ABCDEFG[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
-}
-
-SIGNAL("ABCDEFG[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
-}
-
-SIGNAL("ABCDEFG[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "ABCDEFG";
-}
-
-TRANSITION_LIST("ABCD[3]")
+TRANSITION_LIST("cdd[3]")
 {
 	NODE
 	{
@@ -221,7 +189,7 @@ TRANSITION_LIST("ABCD[3]")
 	}
 }
 
-TRANSITION_LIST("ABCD[2]")
+TRANSITION_LIST("cdd[2]")
 {
 	NODE
 	{
@@ -235,7 +203,7 @@ TRANSITION_LIST("ABCD[2]")
 	}
 }
 
-TRANSITION_LIST("ABCD[1]")
+TRANSITION_LIST("cdd[1]")
 {
 	NODE
 	{
@@ -249,7 +217,7 @@ TRANSITION_LIST("ABCD[1]")
 	}
 }
 
-TRANSITION_LIST("ABCD[0]")
+TRANSITION_LIST("cdd[0]")
 {
 	NODE
 	{
@@ -263,7 +231,7 @@ TRANSITION_LIST("ABCD[0]")
 	}
 }
 
-TRANSITION_LIST("ABCDEFG[6]")
+TRANSITION_LIST("cdf[3]")
 {
 	NODE
 	{
@@ -272,7 +240,7 @@ TRANSITION_LIST("ABCDEFG[6]")
 	}
 }
 
-TRANSITION_LIST("ABCDEFG[5]")
+TRANSITION_LIST("cdf[2]")
 {
 	NODE
 	{
@@ -281,7 +249,7 @@ TRANSITION_LIST("ABCDEFG[5]")
 	}
 }
 
-TRANSITION_LIST("ABCDEFG[4]")
+TRANSITION_LIST("cdf[1]")
 {
 	NODE
 	{
@@ -290,34 +258,7 @@ TRANSITION_LIST("ABCDEFG[4]")
 	}
 }
 
-TRANSITION_LIST("ABCDEFG[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 160.0;
-	}
-}
-
-TRANSITION_LIST("ABCDEFG[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 160.0;
-	}
-}
-
-TRANSITION_LIST("ABCDEFG[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 160.0;
-	}
-}
-
-TRANSITION_LIST("ABCDEFG[0]")
+TRANSITION_LIST("cdf[0]")
 {
 	NODE
 	{
@@ -328,7 +269,7 @@ TRANSITION_LIST("ABCDEFG[0]")
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCD";
+	CHANNEL = "cdd";
 	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -338,7 +279,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCD[3]";
+	CHANNEL = "cdd[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -348,7 +289,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCD[2]";
+	CHANNEL = "cdd[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -358,7 +299,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCD[1]";
+	CHANNEL = "cdd[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -368,7 +309,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCD[0]";
+	CHANNEL = "cdd[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -378,17 +319,17 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCDEFG";
+	CHANNEL = "cdf";
 	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
-	CHILDREN = 6, 7, 8, 9, 10, 11, 12;
+	CHILDREN = 6, 7, 8, 9;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCDEFG[6]";
+	CHANNEL = "cdf[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -398,7 +339,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCDEFG[5]";
+	CHANNEL = "cdf[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -408,7 +349,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCDEFG[4]";
+	CHANNEL = "cdf[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -418,40 +359,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ABCDEFG[3]";
+	CHANNEL = "cdf[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
-	TREE_LEVEL = 1;
-	PARENT = 5;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ABCDEFG[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 5;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ABCDEFG[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 11;
-	TREE_LEVEL = 1;
-	PARENT = 5;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ABCDEFG[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
 	PARENT = 5;
 }
