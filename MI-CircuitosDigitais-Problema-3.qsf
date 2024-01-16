@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_codificador_dezena_rolhas
+set_global_assignment -name TOP_LEVEL_ENTITY modulo_valor_minimo_rolhas
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -67,9 +67,9 @@ set_location_assignment PIN_75 -to ev
 set_location_assignment PIN_73 -to ve
 set_location_assignment PIN_71 -to mef_estado[1]
 set_location_assignment PIN_69 -to mef_estado[0]
+set_global_assignment -name VERILOG_FILE modulo_valor_minimo_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_garrafas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_garrafas.v
-set_global_assignment -name VERILOG_FILE modulo_valor_minimo.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_decodificadorBCD_7Segmentos.v
@@ -111,3 +111,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf

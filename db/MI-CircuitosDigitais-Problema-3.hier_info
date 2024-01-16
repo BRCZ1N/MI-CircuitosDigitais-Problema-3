@@ -1,88 +1,35 @@
-|modulo_codificador_dezena_rolhas
-abcd[0] => WideAnd17.IN0
-abcd[1] => WideAnd6.IN0
-abcd[1] => WideAnd9.IN0
-abcd[1] => WideAnd13.IN0
-abcd[1] => WideAnd15.IN0
-abcd[1] => WideAnd18.IN0
-abcd[1] => WideAnd8.IN0
-abcd[2] => WideAnd1.IN0
-abcd[2] => WideAnd5.IN0
-abcd[2] => WideAnd7.IN0
-abcd[2] => WideAnd9.IN1
-abcd[2] => WideAnd11.IN0
-abcd[2] => WideAnd13.IN1
-abcd[2] => WideAnd16.IN0
-abcd[2] => WideAnd8.IN1
-abcd[2] => WideAnd12.IN0
-abcd[2] => WideAnd17.IN1
-abcd[2] => WideAnd18.IN1
-abcd[3] => aux_b[2].IN0
-abcd[3] => WideAnd2.IN0
-abcd[3] => WideAnd5.IN1
-abcd[3] => WideAnd6.IN1
-abcd[3] => WideAnd7.IN1
-abcd[3] => WideAnd9.IN2
-abcd[3] => WideAnd12.IN1
-abcd[3] => WideAnd14.IN0
-abcd[3] => WideAnd15.IN1
-abcd[3] => WideAnd16.IN1
-abcd[3] => WideAnd3.IN0
-abcd[3] => WideAnd8.IN2
-abcd[3] => WideAnd10.IN0
-abcd[3] => WideAnd11.IN1
-abcd[3] => WideAnd17.IN2
-abcd[4] => aux_a[1].IN0
-abcd[4] => aux_b[1].IN0
-abcd[4] => WideAnd1.IN1
-abcd[4] => WideAnd2.IN1
-abcd[4] => WideAnd5.IN2
-abcd[4] => WideAnd8.IN3
-abcd[4] => WideAnd12.IN2
-abcd[4] => WideAnd17.IN3
-abcd[4] => WideAnd18.IN2
-abcd[4] => WideAnd0.IN0
-abcd[4] => WideAnd3.IN1
-abcd[4] => WideAnd4.IN0
-abcd[4] => WideAnd6.IN2
-abcd[4] => WideAnd7.IN2
-abcd[4] => WideAnd10.IN1
-abcd[4] => WideAnd13.IN2
-abcd[4] => WideAnd14.IN1
-abcd[5] => aux_a[0].IN0
-abcd[5] => aux_b[2].IN1
-abcd[5] => aux_b[1].IN1
-abcd[5] => WideAnd3.IN2
-abcd[5] => WideAnd10.IN2
-abcd[5] => WideAnd11.IN2
-abcd[5] => WideAnd12.IN3
-abcd[5] => WideAnd18.IN3
-abcd[5] => WideAnd0.IN1
-abcd[5] => WideAnd1.IN2
-abcd[5] => WideAnd2.IN2
-abcd[5] => WideAnd4.IN1
-abcd[5] => WideAnd6.IN3
-abcd[5] => WideAnd7.IN3
-abcd[5] => WideAnd8.IN4
-abcd[5] => WideAnd9.IN3
-abcd[5] => WideAnd17.IN4
-abcd[6] => aux_a[1].IN1
-abcd[6] => aux_a[0].IN1
-abcd[6] => WideAnd0.IN2
-abcd[6] => WideAnd4.IN2
-abcd[6] => WideAnd13.IN3
-abcd[6] => WideAnd14.IN2
-abcd[6] => WideAnd15.IN2
-abcd[6] => WideAnd16.IN2
-abcd[6] => WideAnd1.IN3
-abcd[6] => WideAnd2.IN3
-abcd[6] => WideAnd3.IN3
-abcd[6] => WideAnd5.IN3
-abcd[6] => WideAnd8.IN5
-abcd[6] => WideAnd17.IN5
-s[0] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-s[1] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-s[2] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-s[3] << comb.DB_MAX_OUTPUT_PORT_TYPE
+|modulo_valor_minimo_rolhas
+reg_data[0] => ~NO_FANOUT~
+reg_data[1] => Nreg_data[1].IN1
+reg_data[2] => Nreg_data[2].IN1
+reg_data[3] => Nreg_data[3].IN2
+reg_data[4] => Nreg_data[4].IN2
+reg_data[5] => Nreg_data[5].IN2
+reg_data[6] => Nreg_data[6].IN2
+min_signal <= or_gate_2_inputs:gate_3.S
+
+
+|modulo_valor_minimo_rolhas|and_gate_5_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd0.IN3
+E => WideAnd0.IN4
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_valor_minimo_rolhas|and_gate_5_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd0.IN3
+E => WideAnd0.IN4
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|modulo_valor_minimo_rolhas|or_gate_2_inputs:gate_3
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
