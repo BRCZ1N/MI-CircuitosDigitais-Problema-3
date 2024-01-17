@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Wed Jan 17 01:57:02 2024
+Wed Jan 17 15:21:50 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,12 +40,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jan 17 01:57:02 2024       ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 17 15:21:50 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; modulo_codificador_unidade_rolhas           ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 14                                          ;
+; Total logic elements        ; 16                                          ;
 ; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -148,38 +148,38 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Total logic elements                        ; 14     ;
-;     -- Combinational with no register       ; 14     ;
-;     -- Register only                        ; 0      ;
-;     -- Combinational with a register        ; 0      ;
-;                                             ;        ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 13     ;
-;     -- 3 input functions                    ; 1      ;
-;     -- 2 input functions                    ; 0      ;
-;     -- 1 input functions                    ; 0      ;
-;     -- 0 input functions                    ; 0      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 14     ;
-;     -- arithmetic mode                      ; 0      ;
-;     -- qfbk mode                            ; 0      ;
-;     -- register cascade mode                ; 0      ;
-;     -- synchronous clear/load mode          ; 0      ;
-;     -- asynchronous clear/load mode         ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-; I/O pins                                    ; 11     ;
-; Maximum fan-out node                        ; int[6] ;
-; Maximum fan-out                             ; 10     ;
-; Total fan-out                               ; 59     ;
-; Average fan-out                             ; 2.36   ;
-+---------------------------------------------+--------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 16       ;
+;     -- Combinational with no register       ; 16       ;
+;     -- Register only                        ; 0        ;
+;     -- Combinational with a register        ; 0        ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 15       ;
+;     -- 3 input functions                    ; 1        ;
+;     -- 2 input functions                    ; 0        ;
+;     -- 1 input functions                    ; 0        ;
+;     -- 0 input functions                    ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 16       ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+; I/O pins                                    ; 11       ;
+; Maximum fan-out node                        ; REG_R[6] ;
+; Maximum fan-out                             ; 9        ;
+; Total fan-out                               ; 67       ;
+; Average fan-out                             ; 2.48     ;
++---------------------------------------------+----------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -187,7 +187,7 @@ refer to the applicable agreement for further details.
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                ; Entity Name                       ; Library Name ;
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-----------------------------------+--------------+
-; |modulo_codificador_unidade_rolhas ; 14 (14)     ; 0            ; 0          ; 11   ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |modulo_codificador_unidade_rolhas ; modulo_codificador_unidade_rolhas ; work         ;
+; |modulo_codificador_unidade_rolhas ; 16 (16)     ; 0            ; 0          ; 11   ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |modulo_codificador_unidade_rolhas ; modulo_codificador_unidade_rolhas ; work         ;
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,7 +213,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 17 01:56:56 2024
+    Info: Processing started: Wed Jan 17 15:21:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -243,7 +243,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_codificador_unidade_garrafas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_garrafas.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_codificador_dezena_rolhas.v
     Info (12023): Found entity 1: modulo_codificador_dezena_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_rolhas.v Line: 1
-Warning (10463): Verilog HDL Declaration warning at modulo_codificador_unidade_rolhas.v(2): "int" is SystemVerilog-2005 keyword File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_rolhas.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_codificador_unidade_rolhas.v
     Info (12023): Found entity 1: modulo_codificador_unidade_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_rolhas.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_decodificadorbcd_7segmentos.v
@@ -291,16 +290,14 @@ Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(68): cr
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(65): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 65
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(66): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 66
 Info (12127): Elaborating entity "modulo_codificador_unidade_rolhas" for the top level hierarchy
-Info (13014): Ignored 1 buffer(s)
-    Info (13019): Ignored 1 SOFT buffer(s)
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4709 megabytes
-    Info: Processing ended: Wed Jan 17 01:57:02 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21061): Implemented 16 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Wed Jan 17 15:21:50 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:05
 
 

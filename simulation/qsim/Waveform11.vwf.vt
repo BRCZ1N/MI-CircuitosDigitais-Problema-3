@@ -18,57 +18,78 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/17/2024 01:52:52"
+// Generated on "01/17/2024 15:22:06"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_decodificadorBCD_7Segmentos
+// Verilog Test Bench (with test vectors) for design :                          modulo_codificador_unidade_rolhas
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_decodificadorBCD_7Segmentos_vlg_vec_tst();
+module modulo_codificador_unidade_rolhas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] ABCD;
+reg [6:0] REG_R;
 // wires                                               
-wire [7:0] ABCDEFGDP;
+wire [3:0] REG_RU;
 
 // assign statements (if any)                          
-modulo_decodificadorBCD_7Segmentos i1 (
+modulo_codificador_unidade_rolhas i1 (
 // port map - connection between master ports and signals/registers   
-	.ABCD(ABCD),
-	.ABCDEFGDP(ABCDEFGDP)
+	.REG_R(REG_R),
+	.REG_RU(REG_RU)
 );
 initial 
 begin 
-#160000 $finish;
+#1280000 $finish;
 end 
-// ABCD[ 3 ]
+// REG_R[ 6 ]
 always
 begin
-	ABCD[3] = 1'b0;
-	ABCD[3] = #80000 1'b1;
+	REG_R[6] = 1'b0;
+	REG_R[6] = #640000 1'b1;
+	#640000;
+end 
+// REG_R[ 5 ]
+always
+begin
+	REG_R[5] = 1'b0;
+	REG_R[5] = #320000 1'b1;
+	#320000;
+end 
+// REG_R[ 4 ]
+always
+begin
+	REG_R[4] = 1'b0;
+	REG_R[4] = #160000 1'b1;
+	#160000;
+end 
+// REG_R[ 3 ]
+always
+begin
+	REG_R[3] = 1'b0;
+	REG_R[3] = #80000 1'b1;
 	#80000;
 end 
-// ABCD[ 2 ]
+// REG_R[ 2 ]
 always
 begin
-	ABCD[2] = 1'b0;
-	ABCD[2] = #40000 1'b1;
+	REG_R[2] = 1'b0;
+	REG_R[2] = #40000 1'b1;
 	#40000;
 end 
-// ABCD[ 1 ]
+// REG_R[ 1 ]
 always
 begin
-	ABCD[1] = 1'b0;
-	ABCD[1] = #20000 1'b1;
+	REG_R[1] = 1'b0;
+	REG_R[1] = #20000 1'b1;
 	#20000;
 end 
-// ABCD[ 0 ]
+// REG_R[ 0 ]
 always
 begin
-	ABCD[0] = 1'b0;
-	ABCD[0] = #10000 1'b1;
+	REG_R[0] = 1'b0;
+	REG_R[0] = #10000 1'b1;
 	#10000;
 end 
 endmodule
