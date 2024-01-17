@@ -48,7 +48,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_contador_sync_7_bits contador_entrada_rolhas(.clr(1'b0),.clk(op_c_deboucing),.q(rolhas_entrada));
 	
-	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.sel_perm(sel_mux_e));
+	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(min_rolhas),.op(op_deboucing),.sel_perm(sel_mux_e));
 	
 	modulo_mux4_1 mux_1(.A(1'b0),.B(rolhas_entrada[6]),.C(1'b0),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[6]));
 	modulo_mux4_1 mux_2(.A(1'b0),.B(rolhas_entrada[5]),.C(1'b0),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[5]));
