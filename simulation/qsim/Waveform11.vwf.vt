@@ -18,78 +18,57 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/17/2024 02:08:38"
+// Generated on "01/17/2024 01:52:52"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_codificador_unidade_rolhas
+// Verilog Test Bench (with test vectors) for design :                          modulo_decodificadorBCD_7Segmentos
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_codificador_unidade_rolhas_vlg_vec_tst();
+module modulo_decodificadorBCD_7Segmentos_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [6:0] int;
+reg [3:0] ABCD;
 // wires                                               
-wire [3:0] s;
+wire [7:0] ABCDEFGDP;
 
 // assign statements (if any)                          
-modulo_codificador_unidade_rolhas i1 (
+modulo_decodificadorBCD_7Segmentos i1 (
 // port map - connection between master ports and signals/registers   
-	.\int (int),
-	.s(s)
+	.ABCD(ABCD),
+	.ABCDEFGDP(ABCDEFGDP)
 );
 initial 
 begin 
-#1280000 $finish;
+#160000 $finish;
 end 
-// \int [ 6 ]
+// ABCD[ 3 ]
 always
 begin
-	int[6] = 1'b0;
-	int[6] = #640000 1'b1;
-	#640000;
-end 
-// \int [ 5 ]
-always
-begin
-	int[5] = 1'b0;
-	int[5] = #320000 1'b1;
-	#320000;
-end 
-// \int [ 4 ]
-always
-begin
-	int[4] = 1'b0;
-	int[4] = #160000 1'b1;
-	#160000;
-end 
-// \int [ 3 ]
-always
-begin
-	int[3] = 1'b0;
-	int[3] = #80000 1'b1;
+	ABCD[3] = 1'b0;
+	ABCD[3] = #80000 1'b1;
 	#80000;
 end 
-// \int [ 2 ]
+// ABCD[ 2 ]
 always
 begin
-	int[2] = 1'b0;
-	int[2] = #40000 1'b1;
+	ABCD[2] = 1'b0;
+	ABCD[2] = #40000 1'b1;
 	#40000;
 end 
-// \int [ 1 ]
+// ABCD[ 1 ]
 always
 begin
-	int[1] = 1'b0;
-	int[1] = #20000 1'b1;
+	ABCD[1] = 1'b0;
+	ABCD[1] = #20000 1'b1;
 	#20000;
 end 
-// \int [ 0 ]
+// ABCD[ 0 ]
 always
 begin
-	int[0] = 1'b0;
-	int[0] = #10000 1'b1;
+	ABCD[0] = 1'b0;
+	ABCD[0] = #10000 1'b1;
 	#10000;
 end 
 endmodule
