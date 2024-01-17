@@ -7,10 +7,10 @@
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform6.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_mux4_1_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_reset_contador_d_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal modulo_mux4_1_vlg_vec_tst/*
-vcd add -internal modulo_mux4_1_vlg_vec_tst/i1/*
+vcd add -internal modulo_reset_contador_d_vlg_vec_tst/*
+vcd add -internal modulo_reset_contador_d_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -20,15 +20,16 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work MI-CircuitosDigitais-Problema-3.vo
 vlog -work work Waveform6.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_mux4_1_vlg_vec_tst
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_reset_contador_d_vlg_vec_tst
 vcd file -direction MI-CircuitosDigitais-Problema-3.msim.vcd
-vcd add -internal modulo_mux4_1_vlg_vec_tst/*
-vcd add -internal modulo_mux4_1_vlg_vec_tst/i1/*
+vcd add -internal modulo_reset_contador_d_vlg_vec_tst/*
+vcd add -internal modulo_reset_contador_d_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -68,84 +70,64 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 640.0;
+	DATA_DURATION = 160.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("A")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("B")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("C")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("D")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("input_sel")
+SIGNAL("cd")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 2;
+	WIDTH = 4;
 	LSB_INDEX = 0;
 	DIRECTION = INPUT;
 	PARENT = "";
 }
 
-SIGNAL("input_sel[1]")
+SIGNAL("cd[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_sel";
+	PARENT = "cd";
 }
 
-SIGNAL("input_sel[0]")
+SIGNAL("cd[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_sel";
+	PARENT = "cd";
 }
 
-SIGNAL("out")
+SIGNAL("cd[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "cd";
+}
+
+SIGNAL("cd[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "cd";
+}
+
+SIGNAL("rst_cd")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -155,7 +137,18 @@ SIGNAL("out")
 	PARENT = "";
 }
 
-TRANSITION_LIST("A")
+TRANSITION_LIST("cd[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL X FOR 30.0;
+	}
+}
+
+TRANSITION_LIST("cd[2]")
 {
 	NODE
 	{
@@ -163,164 +156,112 @@ TRANSITION_LIST("A")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 320.0;
-			LEVEL 1 FOR 320.0;
-		}
-	}
-}
-
-TRANSITION_LIST("B")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
-		}
-	}
-}
-
-TRANSITION_LIST("C")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 4;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-		}
-	}
-}
-
-TRANSITION_LIST("D")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 8;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL X FOR 30.0;
 	}
 }
 
-TRANSITION_LIST("input_sel[1]")
+TRANSITION_LIST("cd[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 16;
+			REPEAT = 3;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
+		LEVEL 0 FOR 10.0;
+		LEVEL X FOR 30.0;
 	}
 }
 
-TRANSITION_LIST("input_sel[0]")
+TRANSITION_LIST("cd[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 32;
+			REPEAT = 6;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
+		LEVEL 0 FOR 10.0;
+		LEVEL X FOR 30.0;
 	}
 }
 
-TRANSITION_LIST("out")
+TRANSITION_LIST("rst_cd")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 159.0;
-		LEVEL 0 FOR 481.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "A";
-	EXPAND_STATUS = COLLAPSED;
+	CHANNEL = "cd";
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
+	CHILDREN = 1, 2, 3, 4;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "B";
+	CHANNEL = "cd[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "C";
+	CHANNEL = "cd[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "D";
+	CHANNEL = "cd[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_sel";
-	EXPAND_STATUS = EXPANDED;
+	CHANNEL = "cd[0]";
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
-	TREE_LEVEL = 0;
-	CHILDREN = 5, 6;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_sel[1]";
+	CHANNEL = "rst_cd";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "input_sel[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 1;
-	PARENT = 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "out";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 7;
 	TREE_LEVEL = 0;
 }
 

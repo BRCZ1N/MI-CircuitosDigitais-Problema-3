@@ -18,57 +18,78 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/15/2024 17:15:58"
+// Generated on "01/16/2024 22:44:28"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_codificador_unidade_garrafas
+// Verilog Test Bench (with test vectors) for design :                          modulo_valor_minimo_rolhas
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_codificador_unidade_garrafas_vlg_vec_tst();
+module modulo_valor_minimo_rolhas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] cdd;
+reg [6:0] reg_data;
 // wires                                               
-wire [3:0] cdf;
+wire min_signal;
 
 // assign statements (if any)                          
-modulo_codificador_unidade_garrafas i1 (
+modulo_valor_minimo_rolhas i1 (
 // port map - connection between master ports and signals/registers   
-	.cdd(cdd),
-	.cdf(cdf)
+	.min_signal(min_signal),
+	.reg_data(reg_data)
 );
 initial 
 begin 
-#160000 $finish;
+#1280000 $finish;
 end 
-// cdd[ 3 ]
+// reg_data[ 6 ]
 always
 begin
-	cdd[3] = 1'b0;
-	cdd[3] = #80000 1'b1;
+	reg_data[6] = 1'b0;
+	reg_data[6] = #640000 1'b1;
+	#640000;
+end 
+// reg_data[ 5 ]
+always
+begin
+	reg_data[5] = 1'b0;
+	reg_data[5] = #320000 1'b1;
+	#320000;
+end 
+// reg_data[ 4 ]
+always
+begin
+	reg_data[4] = 1'b0;
+	reg_data[4] = #160000 1'b1;
+	#160000;
+end 
+// reg_data[ 3 ]
+always
+begin
+	reg_data[3] = 1'b0;
+	reg_data[3] = #80000 1'b1;
 	#80000;
 end 
-// cdd[ 2 ]
+// reg_data[ 2 ]
 always
 begin
-	cdd[2] = 1'b0;
-	cdd[2] = #40000 1'b1;
+	reg_data[2] = 1'b0;
+	reg_data[2] = #40000 1'b1;
 	#40000;
 end 
-// cdd[ 1 ]
+// reg_data[ 1 ]
 always
 begin
-	cdd[1] = 1'b0;
-	cdd[1] = #20000 1'b1;
+	reg_data[1] = 1'b0;
+	reg_data[1] = #20000 1'b1;
 	#20000;
 end 
-// cdd[ 0 ]
+// reg_data[ 0 ]
 always
 begin
-	cdd[0] = 1'b0;
-	cdd[0] = #10000 1'b1;
+	reg_data[0] = 1'b0;
+	reg_data[0] = #10000 1'b1;
 	#10000;
 end 
 endmodule

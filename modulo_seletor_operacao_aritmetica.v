@@ -9,7 +9,7 @@ module modulo_seletor_operacao_aritmetica(smx,operacao_a);
 	
 	//OPERACAO_A(SMX1, SMX2) = SMX1'SMX2'
 	
-	and_gate_2_inputs gate_1(.A(Nsmx[1]),.B(Nsmx[1]),.S(operacao_a));
+	and_gate_2_inputs gate_1(.A(Nsmx[1]),.B(Nsmx[0]),.S(operacao_a));
 	
 	
 endmodule 
