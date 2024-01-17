@@ -1,4 +1,3 @@
-//Finalizado
 module modulo_ff_d(
   input d, clk, clr, enable,
   output reg q, nq
@@ -15,5 +14,4 @@ module modulo_ff_d(
     end
   end
 
-  
 endmodule

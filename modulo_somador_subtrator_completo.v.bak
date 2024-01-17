@@ -1,6 +1,4 @@
-//Finalizado
 module modulo_somador_subtrator_completo(m,a,b,Te,S,Ts);
-	
 	
 	input m,a,b,Te;
 	output S,Ts;
@@ -27,6 +25,5 @@ module modulo_somador_subtrator_completo(m,a,b,Te,S,Ts);
 	and_gate_3_inputs gate_10(.A(m),.B(na),.C(b),.S(Ts_aux[0]));
 	
 	or_gate_5_inputs gate_11(.A(Ts_aux[4]),.B(Ts_aux[3]),.C(Ts_aux[2]),.D(Ts_aux[1]),.E(Ts_aux[0]),.S(Ts));
-	
 	
 endmodule 

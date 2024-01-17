@@ -1,4 +1,3 @@
-//Finalizado
 module and_gate_3_inputs(A,B,C,S);
 
 	input A,B,C;
@@ -85,3 +84,4 @@ module and_gate_5_inputs(A,B,C,D,E,S);
 	and(S,A,B,C,E,D);
 
 endmodule 
+

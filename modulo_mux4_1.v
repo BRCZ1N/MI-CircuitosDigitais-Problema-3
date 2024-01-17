@@ -1,4 +1,6 @@
+////Finalizado
 module modulo_mux4_1(A,B,C,D,input_sel,out);
+
 
 	input A,B,C,D;
 	input [1:0] input_sel;

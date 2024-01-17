@@ -1,4 +1,6 @@
+//Finalizado
 module modulo_seletor_operacao_aritmetica(smx,operacao_a);
+	
 	
 	input [1:0] smx;
 	output operacao_a;

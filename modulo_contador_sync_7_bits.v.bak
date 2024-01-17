@@ -1,6 +1,4 @@
-//Finalizado
 module modulo_contador_sync_7_bits(clr, clk, q);
-
 
 	input clk,clr;
 	wire [4:0]ff_inputs;

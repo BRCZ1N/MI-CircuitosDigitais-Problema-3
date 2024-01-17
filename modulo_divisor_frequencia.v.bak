@@ -1,6 +1,4 @@
-//Finalizado
 module modulo_divisor_frequencia(clr, clk_div, clk);
-
 
 	input clk,clr;
 	wire [19:0] q;

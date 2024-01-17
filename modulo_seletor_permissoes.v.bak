@@ -1,6 +1,4 @@
-//Finalizado
 module modulo_seletor_permissoes(ve,min_r,op,sel_perm);
-	
 	
 	input ve,min_r,op;
 	output [1:0] sel_perm;
