@@ -4,7 +4,6 @@ module modulo_count_superior99(reg_data, cont_superior_99);
 
 	input [6:0]reg_data;
 	output cont_superior_99;
-	wire [6:0] Nreg_data;
 	wire [2:0] ands;
 
 	and_gate_3_inputs gate_1(.A(reg_data[6]),.B(reg_data[5]),.C(reg_data[2]),.S(ands[0]));
