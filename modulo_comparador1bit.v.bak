@@ -1,4 +1,4 @@
-module modulo_comparador1bit(A,B,AeqBin,AltB,AeqB,AgtB);
+module modulo_comparador1bit(A,B , AeqBin , AltB, AeqB, AgtB);
 input A, B, AeqBin;
 output AltB, AeqB, AgtB; 
 wire nA, nB, nAeqBin, lig_1, lig_2;
@@ -23,7 +23,5 @@ or_gate_2_inputs gate_4(.A(lig_1),.B(lig_2),.S(AeqB));
 
 //AltB
 and_gate_3_inputs gate_5(.A(AeqBin),.B(nA),.C(B),.S(AltB));
-
-endmodule 
 
 
