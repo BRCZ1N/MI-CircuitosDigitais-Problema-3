@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_comparador1bit
+set_global_assignment -name TOP_LEVEL_ENTITY pbl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -67,6 +67,7 @@ set_location_assignment PIN_75 -to ev
 set_location_assignment PIN_73 -to ve
 set_location_assignment PIN_71 -to mef_estado[1]
 set_location_assignment PIN_69 -to mef_estado[0]
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_descendente.v
 set_global_assignment -name VERILOG_FILE modulo_comparador7bits.v
 set_global_assignment -name VERILOG_FILE modulo_comparador1bit.v
 set_global_assignment -name VERILOG_FILE pbl.v

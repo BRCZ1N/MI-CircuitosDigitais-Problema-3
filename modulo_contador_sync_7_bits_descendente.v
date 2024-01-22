@@ -1,11 +1,11 @@
 //Finalizado
-module modulo_contador_sync_7_bits_descendente(clear, clock, q, load);
+module modulo_contador_sync_7_bits_descendente(clear, clock, load, q_bar,e);
 
 	input clock,clear,load;
 	input [6:0] e;
 	wire [4:0]ff_inputs;
 	output [6:0] q_bar;
-	wire [6:0] preset_input;
+	wire [6:0] preset_input, clear_input;
 	
 	nand_gate_2_inputs gate_6(.A(load),.B(e[6]),.S(preset_input[6]));
 	nand_gate_2_inputs gate_7(.A(load),.B(e[5]),.S(preset_input[5]));
@@ -26,7 +26,7 @@ module modulo_contador_sync_7_bits_descendente(clear, clock, q, load);
 	
 	modulo_ff_t ff_1(.t(1'b1),.clock(clock),.preset(preset_input[6]),.clear(clear_input[6]),.q(),.q_bar(q_bar[0]));
 	
-	modulo_ff_t ff_2(.t(q[0]),.clock(clock),.preset(preset_input[5]),.clear(clear_input[5]),.q(),.q_bar(q_bar[1]));
+	modulo_ff_t ff_2(.t(q_bar[0]),.clock(clock),.preset(preset_input[5]),.clear(clear_input[5]),.q(),.q_bar(q_bar[1]));
 	
 	and_gate_2_inputs gate_1(.A(q_bar[0]),.B(q_bar[1]),.S(ff_inputs[0]));
 	
