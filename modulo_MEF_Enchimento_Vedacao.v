@@ -12,13 +12,13 @@ module modulo_mef_enchimento_vedacao(enable,pg,ch,ro,eb,clk,m,ve,al,ev,q0,q1);
 	not(Nro,ro);
 	not(Neb,eb);
 	
-	//j1
+	//j1	
 	
 	and_gate_2_inputs gate_1(.A(q0),.B(ch),.S(j1));
 	
 	//k1
 	
-	modulo_ff_jk jk_1(.clk(clk),.rst(),.enable(),.j(j1),.k(q0),.q(q1),.q_bar(Nq1));
+	modulo_ff_jk jk_1(.clk(clk),.rst(),.enable(enable),.j(j1),.k(q0),.q(q1),.q_bar(Nq1));
 	
 	//j0
 	
@@ -31,13 +31,13 @@ module modulo_mef_enchimento_vedacao(enable,pg,ch,ro,eb,clk,m,ve,al,ev,q0,q1);
 	
 	or_gate_2_inputs gate_5(.A(ch),.B(q1),.S(k0));
 	
-	modulo_ff_jk jk_2(.clk(clk),.rst(),.enable(),.j(j0),.k(k0),.q(q0), .q_bar(Nq0));
+	modulo_ff_jk jk_2(.clk(clk),.rst(),.enable(enable),.j(j0),.k(k0),.q(q0), .q_bar(Nq0));
 	
 	and_gate_4_inputs gate_6(.A(Nq1),.B(Nq0),.C(pg),.D(Neb),.S(ev_aux[1]));
 	
 	and_gate_3_inputs gate_7(.A(Nq1),.B(q0),.C(Nch),.S(ev_aux[0]));
 	
-	or_gate_3_inputs gate_8(.A(ev_aux[1]),.B(ev_aux[0]),.S(ev));
+	or_gate_2_inputs gate_8(.A(ev_aux[1]),.B(ev_aux[0]),.S(ev));
 		
 	and_gate_3_inputs gate_9(.A(q1),.B(Nq0),.C(Nro),.S(al));
 	

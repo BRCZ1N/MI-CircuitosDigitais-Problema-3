@@ -67,12 +67,9 @@ set_location_assignment PIN_75 -to ev
 set_location_assignment PIN_73 -to ve
 set_location_assignment PIN_71 -to mef_estado[1]
 set_location_assignment PIN_69 -to mef_estado[0]
-<<<<<<< HEAD
-=======
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_descendente.v
+set_global_assignment -name VERILOG_FILE modulo_mux2_1.v
 set_global_assignment -name VERILOG_FILE modulo_comparador7bits.v
 set_global_assignment -name VERILOG_FILE modulo_comparador1bit.v
->>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 set_global_assignment -name VERILOG_FILE pbl.v
 set_global_assignment -name VERILOG_FILE modulo_mef_enchimento_vedacao.v
 set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
@@ -81,6 +78,10 @@ set_global_assignment -name VERILOG_FILE modulo_verificador_ausencia_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_seletor_permissoes.v
 set_global_assignment -name VERILOG_FILE modulo_count_superior99.v
 set_global_assignment -name VERILOG_FILE modulo_seletor_operacao_aritmetica.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits_ascendente.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits_ascendente.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_descendente.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_dd.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_d.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_garrafas.v
@@ -89,9 +90,6 @@ set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_decodificadorBCD_7Segmentos.v
 set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo.v
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits.v
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits.v
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
 set_global_assignment -name VERILOG_FILE modulo_divisor_frequencia.v
@@ -113,3 +111,7 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf

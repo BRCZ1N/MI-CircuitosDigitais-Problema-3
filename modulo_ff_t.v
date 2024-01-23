@@ -1,40 +1,23 @@
-//Finalizado
-module modulo_ff_t(t,clk,clr,q);
+module modulo_ff_t (
+  input t, clk, clr, prst,
+  output reg q, q_bar
+);
 
-
-	input t,clk,clr;
-	output reg q;
-	
-	always @(negedge clk) 
-	
-	begin 
-	
-		if(clr == 1'b1) 
-		
-		begin 
-	
-			q <= 1'b0;
-	
-		end 
-		
-		else if( t )
-		
-		begin
-		
-			q <= !q;
-		
-		end
-		
-		else
-		
-		begin
-		
-			q <= q;
-		
-		end
-		
-	
+	initial begin
+		q = 1'b0;
+		q_bar = 1'b1;
 	end
 
+  always @(posedge clk or posedge clr or posedge prst)
+    if (clr) begin
+      q <= 1'b0;
+    end
+    else if (prst) begin
+      q <= 1'b1;
+    end
+    else if (t) begin
+      q <= ~q;
+		q_bar <= q;
+    end
 
-endmodule 
+endmodule
