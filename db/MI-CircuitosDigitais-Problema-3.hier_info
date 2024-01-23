@@ -4,6 +4,7 @@ pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
 clock_50mhz => clock_50mhz.IN1
+<<<<<<< HEAD
 m <= modulo_mef_enchimento_vedacao:mef_1.m
 ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
 al <= modulo_mef_enchimento_vedacao:mef_1.al
@@ -23,11 +24,33 @@ Nac_7segmentos[0] <= modulo_demux1_4:demux_1.out
 Nac_7segmentos[1] <= modulo_demux1_4:demux_1.out
 Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
 Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
+=======
+m << modulo_mef_enchimento_vedacao:mef_1.m
+ve << ve.DB_MAX_OUTPUT_PORT_TYPE
+al << modulo_mef_enchimento_vedacao:mef_1.al
+Nal << modulo_mef_enchimento_vedacao:mef_1.al
+ev << modulo_mef_enchimento_vedacao:mef_1.ev
+mef_estado[0] << modulo_mef_enchimento_vedacao:mef_1.q0
+mef_estado[1] << modulo_mef_enchimento_vedacao:mef_1.q1
+Nout_7seg[0] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[1] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[2] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[3] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[4] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[5] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[6] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[7] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nac_7segmentos[0] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[1] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[2] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[3] << modulo_demux1_4:demux_1.out
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 op_c_deboucing => op_c_deboucing.IN1
 op_deboucing => op_deboucing.IN1
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
+<<<<<<< HEAD
 clr => clr.IN19
 clk_div <= modulo_ff_t:ff_19.q
 clk => clk.IN1
@@ -164,6 +187,259 @@ t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+preset => preset.IN19
+clear => clear.IN19
+clock => clock.IN1
+clock_div <= modulo_ff_t:ff_19.q
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 
 
 |pbl|modulo_mef_enchimento_vedacao:mef_1
@@ -282,16 +558,25 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_4_bits:contador_duzias
 input_primeiro_ff => input_primeiro_ff.IN1
 clr => clr.IN4
 clk => clk.IN4
+=======
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias
+input_primeiro_ff => input_primeiro_ff.IN1
+preset => preset.IN4
+clear => clear.IN4
+clock => clock.IN4
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= modulo_ff_t:ff_2.q
 q[2] <= modulo_ff_t:ff_3.q
 q[3] <= modulo_ff_t:ff_4.q
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_4_bits:contador_duzias|modulo_ff_t:ff_1
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -318,6 +603,58 @@ t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 
 
 |pbl|modulo_reset_contador_d:reset_1
@@ -334,16 +671,25 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_4_bits:contador_dezenas_duzias
 input_primeiro_ff => input_primeiro_ff.IN1
 clr => clr.IN4
 clk => clk.IN4
+=======
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias
+input_primeiro_ff => input_primeiro_ff.IN1
+preset => preset.IN4
+clear => clear.IN4
+clock => clock.IN4
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= modulo_ff_t:ff_2.q
 q[2] <= modulo_ff_t:ff_3.q
 q[3] <= modulo_ff_t:ff_4.q
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_4_bits:contador_dezenas_duzias|modulo_ff_t:ff_1
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -370,6 +716,58 @@ t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_1
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_2
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_3
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_4
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 
 
 |pbl|modulo_reset_contador_dd:reset_2
@@ -392,9 +790,16 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas
 clr => clr.IN7
 clk => clk.IN7
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas
+preset => preset.IN7
+clear => clear.IN7
+clock => clock.IN7
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -404,6 +809,7 @@ q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= modulo_ff_t:ff_7.q
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_1
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -419,11 +825,41 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|and_gate_2_inputs:gate_1
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_1
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_3
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -432,11 +868,28 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|and_gate_2_inputs:gate_2
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_2
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_4
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -445,11 +898,28 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|and_gate_2_inputs:gate_3
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_3
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_5
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -458,11 +928,28 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|and_gate_2_inputs:gate_4
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_4
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_6
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -471,16 +958,46 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|and_gate_2_inputs:gate_5
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_5
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_7_bits:contador_entrada_rolhas|modulo_ff_t:ff_7
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 
 
 |pbl|modulo_seletor_permissoes:seletor_1
@@ -1644,13 +2161,21 @@ G => WideAnd0.IN6
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_2_bits:contador_display
 clr => clr.IN2
 clk => clk.IN2
+=======
+|pbl|modulo_contador_sync_2_bits_ascendente:contador_display
+preset => preset.IN2
+clear => clear.IN2
+clock => clock.IN2
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= modulo_ff_t:ff_2.q
 
 
+<<<<<<< HEAD
 |pbl|modulo_contador_sync_2_bits:contador_display|modulo_ff_t:ff_1
 t => q.OUTPUTSELECT
 clk => q~reg0.CLK
@@ -1663,6 +2188,32 @@ t => q.OUTPUTSELECT
 clk => q~reg0.CLK
 clr => q.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2
+t => q_bar~reg0.ENA
+t => q~reg0.ENA
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+preset => q.IN0
+clear => q_bar~reg0.PRESET
+clear => q~reg0.ACLR
+clear => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> parent of a391db4 (Revert "Alterações no buffer principal/secundário")
 
 
 |pbl|modulo_codificador_dezena_garrafas:codificador_garrafas_1
