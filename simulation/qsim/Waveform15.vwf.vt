@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/23/2024 06:06:04"
+// Generated on "01/23/2024 15:35:43"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          modulo_mef_enchimento_vedacao
 // 
@@ -67,15 +67,13 @@ end
 // ch
 initial
 begin
-	ch = 1'b0;
+	ch = 1'b1;
 end 
 
 // clk
-always
+initial
 begin
 	clk = 1'b0;
-	clk = #10000 1'b1;
-	#10000;
 end 
 
 // eb
