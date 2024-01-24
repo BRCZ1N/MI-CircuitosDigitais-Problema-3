@@ -27,28 +27,28 @@ module modulo_contador_sync_7_bits_descendente(clk, load, e, q_bar,prst_input_te
 	and_gate_2_inputs gate_19(.A(load),.B(clr_input[0]),.S(prst_input[0]));
 	
 	
-	modulo_ff_t ff_1(.t(1'b1),.clk(clk),.prst(prst_input[0]),.clr(clr_input[0]),.q(q[0]),.q_bar(q_bar[0]));
+	modulo_ff_t_inicializado ff_1(.t(1'b1),.clk(clk),.prst(prst_input[0]),.clr(clr_input[0]),.q(q[0]),.q_bar(q_bar[0]));
 	
-	modulo_ff_t ff_2(.t(q[0]),.clk(clk),.prst(prst_input[1]),.clr(clr_input[1]),.q(q[1]),.q_bar(q_bar[1]));
+	modulo_ff_t_inicializado ff_2(.t(q[0]),.clk(clk),.prst(prst_input[1]),.clr(clr_input[1]),.q(q[1]),.q_bar(q_bar[1]));
 	and_gate_2_inputs gate_1(.A(q[0]),.B(q[1]),.S(ff_inputs[0]));
 	
 	
-	modulo_ff_t ff_3(.t(ff_inputs[0]),.clk(clk),.prst(prst_input[2]),.clr(clr_input[2]),.q(q[2]),.q_bar(q_bar[2]));
+	modulo_ff_t_inicializado ff_3(.t(ff_inputs[0]),.clk(clk),.prst(prst_input[2]),.clr(clr_input[2]),.q(q[2]),.q_bar(q_bar[2]));
 	and_gate_2_inputs gate_2(.A(ff_inputs[0]),.B(q[2]),.S(ff_inputs[1])); 
 	
 	
-	modulo_ff_t ff_4(.t(ff_inputs[1]),.clk(clk),.prst(prst_input[3]),.clr(clr_input[3]),.q(q[3]),.q_bar(q_bar[3]));
+	modulo_ff_t_inicializado ff_4(.t(ff_inputs[1]),.clk(clk),.prst(prst_input[3]),.clr(clr_input[3]),.q(q[3]),.q_bar(q_bar[3]));
 	and_gate_2_inputs gate_3(.A(ff_inputs[1]),.B(q[3]),.S(ff_inputs[2])); 
 	
 	
-	modulo_ff_t ff_5(.t(ff_inputs[2]),.clk(clk),.prst(prst_input[4]),.clr(clr_input[4]),.q(q[4]),.q_bar(q_bar[4]));
+	modulo_ff_t_inicializado ff_5(.t(ff_inputs[2]),.clk(clk),.prst(prst_input[4]),.clr(clr_input[4]),.q(q[4]),.q_bar(q_bar[4]));
 	and_gate_2_inputs gate_4(.A(ff_inputs[2]),.B(q[4]),.S(ff_inputs[3])); 
 	
 	
-	modulo_ff_t ff_6(.t(ff_inputs[3]),.clk(clk),.prst(prst_input[5]),.clr(clr_input[5]),.q(q[5]),.q_bar(q_bar[5]));
+	modulo_ff_t_inicializado ff_6(.t(ff_inputs[3]),.clk(clk),.prst(prst_input[5]),.clr(clr_input[5]),.q(q[5]),.q_bar(q_bar[5]));
 	and_gate_2_inputs gate_5(.A(ff_inputs[3]),.B(q[5]),.S(ff_inputs[4])); 
 	
-	modulo_ff_t ff_7(.t(ff_inputs[4]),.clk(clk),.prst(prst_input[6]),.clr(clr_input[6]),.q(q[6]),.q_bar(q_bar[6]));
+	modulo_ff_t_inicializado ff_7(.t(ff_inputs[4]),.clk(clk),.prst(prst_input[6]),.clr(clr_input[6]),.q(q[6]),.q_bar(q_bar[6]));
 
 	
 endmodule 

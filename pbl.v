@@ -1,9 +1,9 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida,test_load_input, test_signal_min_rolhas);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida,test_load_input, test_signal_min_rolhas, load_input, test_rolhas_entrada);
 	
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
-	output m,ve,al,ev,Nal;
+	output m,ve,al,ev,Nal,load_input;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
@@ -14,7 +14,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire [5:0] transporte_aux_somadores_subtratores_completo;
 	wire [1:0] sel_mux_display;
 	output [6:0] test_buffer_entrada;
-	output [6:0] test_buffer_saida;
+	output [6:0] test_buffer_saida, test_rolhas_entrada;
 	output test_load_input;
 	output test_signal_min_rolhas;
 	
@@ -25,6 +25,8 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	assign test_load_input = load_input;
 	
 	assign test_signal_min_rolhas = signal_min_rolhas;
+	
+	assign test_rolhas_entrada = rolhas_entrada;
 	
 	not(Nal,al);
 	not(Nac_7segmentos[3],ac_7segmentos[3]);
@@ -70,13 +72,13 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_mux2_1 mux_6(.A(rolhas_entrada[1]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[1]));
 	modulo_mux2_1 mux_7(.A(rolhas_entrada[0]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[0]));
 	
-	modulo_somador_subtrator_completo somador_subtrator_1(.m(1'b0),.a(buffer_saida[6]),.b(buffer_entrada_aux[6]),.Te(1'b0),.S(buffer_entrada[6]),.Ts(transporte_aux_somadores_subtratores_completo[5]));
-	modulo_somador_subtrator_completo somador_subtrator_2(.m(1'b0),.a(buffer_saida[5]),.b(buffer_entrada_aux[5]),.Te(transporte_aux_somadores_subtratores_completo[5]),.S(buffer_entrada[5]),.Ts(transporte_aux_somadores_subtratores_completo[4]));
-	modulo_somador_subtrator_completo somador_subtrator_3(.m(1'b0),.a(buffer_saida[4]),.b(buffer_entrada_aux[4]),.Te(transporte_aux_somadores_subtratores_completo[4]),.S(buffer_entrada[4]),.Ts(transporte_aux_somadores_subtratores_completo[3]));
-	modulo_somador_subtrator_completo somador_subtrator_4(.m(1'b0),.a(buffer_saida[3]),.b(buffer_entrada_aux[3]),.Te(transporte_aux_somadores_subtratores_completo[3]),.S(buffer_entrada[3]),.Ts(transporte_aux_somadores_subtratores_completo[2]));
-	modulo_somador_subtrator_completo somador_subtrator_5(.m(1'b0),.a(buffer_saida[2]),.b(buffer_entrada_aux[2]),.Te(transporte_aux_somadores_subtratores_completo[2]),.S(buffer_entrada[2]),.Ts(transporte_aux_somadores_subtratores_completo[1]));
-	modulo_somador_subtrator_completo somador_subtrator_6(.m(1'b0),.a(buffer_saida[1]),.b(buffer_entrada_aux[1]),.Te(transporte_aux_somadores_subtratores_completo[1]),.S(buffer_entrada[1]),.Ts(transporte_aux_somadores_subtratores_completo[0]));
-	modulo_somador_subtrator_completo somador_subtrator_7(.m(1'b0),.a(buffer_saida[0]),.b(buffer_entrada_aux[0]),.Te(transporte_aux_somadores_subtratores_completo[0]),.S(buffer_entrada[0]),.Ts());
+	modulo_somador_subtrator_completo somador_subtrator_1(.m(1'b0),.a(buffer_saida[0]),.b(buffer_entrada_aux[0]),.Te(1'b0),.S(buffer_entrada[0]),.Ts(transporte_aux_somadores_subtratores_completo[0]));
+	modulo_somador_subtrator_completo somador_subtrator_2(.m(1'b0),.a(buffer_saida[1]),.b(buffer_entrada_aux[1]),.Te(transporte_aux_somadores_subtratores_completo[0]),.S(buffer_entrada[1]),.Ts(transporte_aux_somadores_subtratores_completo[1]));
+	modulo_somador_subtrator_completo somador_subtrator_3(.m(1'b0),.a(buffer_saida[2]),.b(buffer_entrada_aux[2]),.Te(transporte_aux_somadores_subtratores_completo[1]),.S(buffer_entrada[2]),.Ts(transporte_aux_somadores_subtratores_completo[2]));
+	modulo_somador_subtrator_completo somador_subtrator_4(.m(1'b0),.a(buffer_saida[3]),.b(buffer_entrada_aux[3]),.Te(transporte_aux_somadores_subtratores_completo[2]),.S(buffer_entrada[3]),.Ts(transporte_aux_somadores_subtratores_completo[3]));
+	modulo_somador_subtrator_completo somador_subtrator_5(.m(1'b0),.a(buffer_saida[4]),.b(buffer_entrada_aux[4]),.Te(transporte_aux_somadores_subtratores_completo[3]),.S(buffer_entrada[4]),.Ts(transporte_aux_somadores_subtratores_completo[4]));
+	modulo_somador_subtrator_completo somador_subtrator_6(.m(1'b0),.a(buffer_saida[5]),.b(buffer_entrada_aux[5]),.Te(transporte_aux_somadores_subtratores_completo[4]),.S(buffer_entrada[5]),.Ts(transporte_aux_somadores_subtratores_completo[5]));
+	modulo_somador_subtrator_completo somador_subtrator_7(.m(1'b0),.a(buffer_saida[6]),.b(buffer_entrada_aux[6]),.Te(transporte_aux_somadores_subtratores_completo[5]),.S(buffer_entrada[6]),.Ts());
 	
 	/*
 	modulo_mux4_1 mux_1(.A(1'b0),.B(rolhas_entrada[6]),.C(1'b0),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[6]));
@@ -99,7 +101,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_registrador_rolhas buffer_rolhas(.m_in(buffer_entrada),.clk(clk_div),.clr(1'b0),.enable(start_stop),.m_out(buffer_saida));
 	*/
-	
+
 	modulo_contador_sync_7_bits_descendente buffer_bandeja(.clk(ve),.load(load_input),.e(buffer_entrada),.q_bar(buffer_saida));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_saida),.cont_superior_99(out_range_buffer));

@@ -41,6 +41,14 @@ test_buffer_saida[5] <= buffer_saida[5].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_saida[6] <= buffer_saida[6].DB_MAX_OUTPUT_PORT_TYPE
 test_load_input <= load_input.DB_MAX_OUTPUT_PORT_TYPE
 test_signal_min_rolhas <= signal_min_rolhas.DB_MAX_OUTPUT_PORT_TYPE
+load_input <= load_input.DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[0] <= rolhas_entrada[0].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[1] <= rolhas_entrada[1].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[2] <= rolhas_entrada[2].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[3] <= rolhas_entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[4] <= rolhas_entrada[4].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[5] <= rolhas_entrada[5].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada[6] <= rolhas_entrada[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -1440,13 +1448,13 @@ e[3] => e[3].IN1
 e[4] => e[4].IN1
 e[5] => e[5].IN1
 e[6] => e[6].IN1
-q_bar[0] <= modulo_ff_t:ff_1.q_bar
-q_bar[1] <= modulo_ff_t:ff_2.q_bar
-q_bar[2] <= modulo_ff_t:ff_3.q_bar
-q_bar[3] <= modulo_ff_t:ff_4.q_bar
-q_bar[4] <= modulo_ff_t:ff_5.q_bar
-q_bar[5] <= modulo_ff_t:ff_6.q_bar
-q_bar[6] <= modulo_ff_t:ff_7.q_bar
+q_bar[0] <= modulo_ff_t_inicializado:ff_1.q_bar
+q_bar[1] <= modulo_ff_t_inicializado:ff_2.q_bar
+q_bar[2] <= modulo_ff_t_inicializado:ff_3.q_bar
+q_bar[3] <= modulo_ff_t_inicializado:ff_4.q_bar
+q_bar[4] <= modulo_ff_t_inicializado:ff_5.q_bar
+q_bar[5] <= modulo_ff_t_inicializado:ff_6.q_bar
+q_bar[6] <= modulo_ff_t_inicializado:ff_7.q_bar
 prst_input_test[0] <= prst_input[0].DB_MAX_OUTPUT_PORT_TYPE
 prst_input_test[1] <= prst_input[1].DB_MAX_OUTPUT_PORT_TYPE
 prst_input_test[2] <= prst_input[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1547,7 +1555,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_1
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_1
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1560,7 +1568,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_2
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_2
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1579,7 +1587,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_3
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_3
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1598,7 +1606,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_4
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_4
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1617,7 +1625,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_5
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_5
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1636,7 +1644,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_6
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_6
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
@@ -1655,7 +1663,7 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_7
+|pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t_inicializado:ff_7
 t => q~reg0.ENA
 t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
