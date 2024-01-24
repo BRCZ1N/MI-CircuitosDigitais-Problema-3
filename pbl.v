@@ -1,13 +1,13 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida,test_load_input, test_signal_min_rolhas, load_input, test_rolhas_entrada);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida,test_load_input, test_signal_min_rolhas, test_rolhas_entrada);
 	
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
-	output m,ve,al,ev,Nal,load_input;
+	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
-	wire clk_div, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
+	wire clk_div, load_input, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in,ac_7segmentos, codificacao_4bits_d_garrafas, codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
 	wire [6:0] rolhas_entrada, buffer_entrada, buffer_saida, buffer_entrada_aux;
 	wire [7:0] out_7seg;
