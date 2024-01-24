@@ -18,79 +18,112 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/16/2024 15:24:58"
+// Generated on "01/24/2024 13:15:54"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_valor_minimo_rolhas
+// Verilog Test Bench (with test vectors) for design :                          pbl
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_valor_minimo_rolhas_vlg_vec_tst();
+module pbl_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [6:0] reg_data;
+reg ch;
+reg clock_50mhz;
+reg cq;
+reg op_c_deboucing;
+reg op_deboucing;
+reg pg;
+reg start_stop;
 // wires                                               
-wire min_signal;
+wire [3:0] Nac_7segmentos;
+wire Nal;
+wire [7:0] Nout_7seg;
+wire al;
+wire ev;
+wire m;
+wire [1:0] mef_estado;
+wire [6:0] test_buffer_entrada;
+wire [6:0] test_buffer_saida;
+wire test_load_input;
+wire test_signal_min_rolhas;
+wire ve;
 
 // assign statements (if any)                          
-modulo_valor_minimo_rolhas i1 (
+pbl i1 (
 // port map - connection between master ports and signals/registers   
-	.min_signal(min_signal),
-	.reg_data(reg_data)
+	.Nac_7segmentos(Nac_7segmentos),
+	.Nal(Nal),
+	.Nout_7seg(Nout_7seg),
+	.al(al),
+	.ch(ch),
+	.clock_50mhz(clock_50mhz),
+	.cq(cq),
+	.ev(ev),
+	.m(m),
+	.mef_estado(mef_estado),
+	.op_c_deboucing(op_c_deboucing),
+	.op_deboucing(op_deboucing),
+	.pg(pg),
+	.start_stop(start_stop),
+	.test_buffer_entrada(test_buffer_entrada),
+	.test_buffer_saida(test_buffer_saida),
+	.test_load_input(test_load_input),
+	.test_signal_min_rolhas(test_signal_min_rolhas),
+	.ve(ve)
 );
 initial 
 begin 
-#1280000 $finish;
+#1000000 $finish;
 end 
-// reg_data[ 6 ]
+
+// ch
+initial
+begin
+	ch = 1'b0;
+	ch = #50000 1'b1;
+	ch = #40000 1'b0;
+end 
+
+// pg
+initial
+begin
+	pg = 1'b0;
+	pg = #10000 1'b1;
+	pg = #40000 1'b0;
+end 
+
+// clock_50mhz
 always
 begin
-	reg_data[6] = 1'b0;
-	reg_data[6] = #640000 1'b1;
-	#640000;
-end 
-// reg_data[ 5 ]
-always
-begin
-	reg_data[5] = 1'b0;
-	reg_data[5] = #320000 1'b1;
-	#320000;
-end 
-// reg_data[ 4 ]
-always
-begin
-	reg_data[4] = 1'b0;
-	reg_data[4] = #160000 1'b1;
-	#160000;
-end 
-// reg_data[ 3 ]
-always
-begin
-	reg_data[3] = 1'b0;
-	reg_data[3] = #80000 1'b1;
-	#80000;
-end 
-// reg_data[ 2 ]
-always
-begin
-	reg_data[2] = 1'b0;
-	reg_data[2] = #40000 1'b1;
-	#40000;
-end 
-// reg_data[ 1 ]
-always
-begin
-	reg_data[1] = 1'b0;
-	reg_data[1] = #20000 1'b1;
-	#20000;
-end 
-// reg_data[ 0 ]
-always
-begin
-	reg_data[0] = 1'b0;
-	reg_data[0] = #10000 1'b1;
+	clock_50mhz = 1'b0;
+	clock_50mhz = #10000 1'b1;
 	#10000;
+end 
+
+// cq
+initial
+begin
+	cq = 1'b0;
+end 
+
+// op_c_deboucing
+initial
+begin
+	op_c_deboucing = 1'b0;
+end 
+
+// op_deboucing
+initial
+begin
+	op_deboucing = 1'b0;
+end 
+
+// start_stop
+initial
+begin
+	start_stop = 1'b1;
 end 
 endmodule
 

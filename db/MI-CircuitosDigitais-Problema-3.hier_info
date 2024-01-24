@@ -4,41 +4,43 @@ pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
 clock_50mhz => clock_50mhz.IN1
-m << modulo_mef_enchimento_vedacao:mef_1.m
-ve << ve.DB_MAX_OUTPUT_PORT_TYPE
-al << modulo_mef_enchimento_vedacao:mef_1.al
-Nal << modulo_mef_enchimento_vedacao:mef_1.al
-ev << modulo_mef_enchimento_vedacao:mef_1.ev
-mef_estado[0] << modulo_mef_enchimento_vedacao:mef_1.q0
-mef_estado[1] << modulo_mef_enchimento_vedacao:mef_1.q1
-Nout_7seg[0] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[1] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[2] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[3] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[4] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[5] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[6] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[7] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nac_7segmentos[0] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[1] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[2] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[3] << modulo_demux1_4:demux_1.out
+m <= modulo_mef_enchimento_vedacao:mef_1.m
+ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
+al <= modulo_mef_enchimento_vedacao:mef_1.al
+Nal <= modulo_mef_enchimento_vedacao:mef_1.al
+ev <= modulo_mef_enchimento_vedacao:mef_1.ev
+mef_estado[0] <= modulo_mef_enchimento_vedacao:mef_1.q0
+mef_estado[1] <= modulo_mef_enchimento_vedacao:mef_1.q1
+Nout_7seg[0] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[1] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[2] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[3] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[4] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[5] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[6] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[7] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nac_7segmentos[0] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[1] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c_deboucing => op_c_deboucing.IN1
 op_deboucing => op_deboucing.IN1
-test_buffer_entrada[0] << buffer_entrada[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[1] << buffer_entrada[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[2] << buffer_entrada[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[3] << buffer_entrada[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[4] << buffer_entrada[4].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[5] << buffer_entrada[5].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[6] << buffer_entrada[6].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[0] << buffer_saida[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[1] << buffer_saida[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[2] << buffer_saida[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[3] << buffer_saida[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[4] << buffer_saida[4].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[5] << buffer_saida[5].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[6] << buffer_saida[6].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[0] <= buffer_entrada[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[1] <= buffer_entrada[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[2] <= buffer_entrada[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[3] <= buffer_entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[4] <= buffer_entrada[4].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[5] <= buffer_entrada[5].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[6] <= buffer_entrada[6].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[0] <= buffer_saida[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[1] <= buffer_saida[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[2] <= buffer_saida[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[3] <= buffer_saida[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[4] <= buffer_saida[4].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[5] <= buffer_saida[5].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[6] <= buffer_saida[6].DB_MAX_OUTPUT_PORT_TYPE
+test_load_input <= load_input.DB_MAX_OUTPUT_PORT_TYPE
+test_signal_min_rolhas <= signal_min_rolhas.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -49,266 +51,247 @@ clk => clk.IN1
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -441,28 +424,26 @@ prst => prst.IN4
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -475,14 +456,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -495,14 +475,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -534,28 +513,26 @@ prst => prst.IN4
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -568,14 +545,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_3
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -588,14 +564,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_4
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -635,28 +610,26 @@ prst => prst.IN7
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -669,14 +642,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -689,14 +661,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -709,14 +680,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -729,14 +699,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -749,14 +718,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1479,6 +1447,20 @@ q_bar[3] <= modulo_ff_t:ff_4.q_bar
 q_bar[4] <= modulo_ff_t:ff_5.q_bar
 q_bar[5] <= modulo_ff_t:ff_6.q_bar
 q_bar[6] <= modulo_ff_t:ff_7.q_bar
+prst_input_test[0] <= prst_input[0].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[1] <= prst_input[1].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[2] <= prst_input[2].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[3] <= prst_input[3].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[4] <= prst_input[4].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[5] <= prst_input[5].DB_MAX_OUTPUT_PORT_TYPE
+prst_input_test[6] <= prst_input[6].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[0] <= clr_input[0].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[1] <= clr_input[1].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[2] <= clr_input[2].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[3] <= clr_input[3].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[4] <= clr_input[4].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[5] <= clr_input[5].DB_MAX_OUTPUT_PORT_TYPE
+clr_input_test[6] <= clr_input[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_6
@@ -1566,28 +1548,26 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1600,14 +1580,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_3
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1620,14 +1599,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_4
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1640,14 +1618,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_5
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1660,14 +1637,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_6
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1680,14 +1656,13 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_7
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1798,28 +1773,26 @@ prst => prst.IN2
 
 
 |pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2
-t => q_bar.OUTPUTSELECT
 t => q~reg0.ENA
+t => q_bar~reg0.ENA
 clk => q_bar~reg0.CLK
 clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
 clr => q~reg0.ACLR
 clr => q.IN0
-clr => q_bar~reg0.ENA
-prst => q_bar.OUTPUTSELECT
 prst => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE

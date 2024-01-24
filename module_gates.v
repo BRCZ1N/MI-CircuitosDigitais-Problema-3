@@ -8,6 +8,15 @@ module and_gate_3_inputs(A,B,C,S);
 
 endmodule 
 
+module nand_gate_2_inputs(A,B,S);
+
+	input A,B;
+	output S;
+
+	nand(S,A,B);
+
+endmodule 
+
 module and_gate_4_inputs(A,B,C,D,S);
 
 	input A,B,C,D;

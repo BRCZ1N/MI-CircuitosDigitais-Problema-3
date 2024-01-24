@@ -18,78 +18,90 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/16/2024 18:53:46"
+// Generated on "01/24/2024 14:39:32"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_codificador_dezena_rolhas
+// Verilog Test Bench (with test vectors) for design :                          modulo_valor_minimo_rolhas
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_codificador_dezena_rolhas_vlg_vec_tst();
+module modulo_valor_minimo_rolhas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [6:0] abcd;
+reg [6:0] reg_r;
 // wires                                               
-wire [3:0] s;
+wire min_signal;
 
 // assign statements (if any)                          
-modulo_codificador_dezena_rolhas i1 (
+modulo_valor_minimo_rolhas i1 (
 // port map - connection between master ports and signals/registers   
-	.abcd(abcd),
-	.s(s)
+	.min_signal(min_signal),
+	.reg_r(reg_r)
 );
 initial 
 begin 
-#1280000 $finish;
+#1000000 $finish;
 end 
-// abcd[ 6 ]
+// reg_r[ 6 ]
+initial
+begin
+	reg_r[6] = 1'b0;
+	reg_r[6] = #640000 1'b1;
+end 
+// reg_r[ 5 ]
+initial
+begin
+	reg_r[5] = 1'b0;
+	reg_r[5] = #320000 1'b1;
+	reg_r[5] = #320000 1'b0;
+	reg_r[5] = #320000 1'b1;
+end 
+// reg_r[ 4 ]
+initial
+begin
+	repeat(3)
+	begin
+		reg_r[4] = 1'b0;
+		reg_r[4] = #160000 1'b1;
+		# 160000;
+	end
+	reg_r[4] = 1'b0;
+end 
+// reg_r[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		reg_r[3] = 1'b0;
+		reg_r[3] = #80000 1'b1;
+		# 80000;
+	end
+	reg_r[3] = 1'b0;
+end 
+// reg_r[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		reg_r[2] = 1'b0;
+		reg_r[2] = #40000 1'b1;
+		# 40000;
+	end
+	reg_r[2] = 1'b0;
+end 
+// reg_r[ 1 ]
 always
 begin
-	abcd[6] = 1'b0;
-	abcd[6] = #640000 1'b1;
-	#640000;
-end 
-// abcd[ 5 ]
-always
-begin
-	abcd[5] = 1'b0;
-	abcd[5] = #320000 1'b1;
-	#320000;
-end 
-// abcd[ 4 ]
-always
-begin
-	abcd[4] = 1'b0;
-	abcd[4] = #160000 1'b1;
-	#160000;
-end 
-// abcd[ 3 ]
-always
-begin
-	abcd[3] = 1'b0;
-	abcd[3] = #80000 1'b1;
-	#80000;
-end 
-// abcd[ 2 ]
-always
-begin
-	abcd[2] = 1'b0;
-	abcd[2] = #40000 1'b1;
-	#40000;
-end 
-// abcd[ 1 ]
-always
-begin
-	abcd[1] = 1'b0;
-	abcd[1] = #20000 1'b1;
+	reg_r[1] = 1'b0;
+	reg_r[1] = #20000 1'b1;
 	#20000;
 end 
-// abcd[ 0 ]
+// reg_r[ 0 ]
 always
 begin
-	abcd[0] = 1'b0;
-	abcd[0] = #10000 1'b1;
+	reg_r[0] = 1'b0;
+	reg_r[0] = #10000 1'b1;
 	#10000;
 end 
 endmodule

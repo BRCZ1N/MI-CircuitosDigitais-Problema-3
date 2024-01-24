@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Tue Jan 23 17:04:38 2024
+Wed Jan 24 15:54:14 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -104,13 +104,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jan 23 17:04:38 2024       ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 24 15:54:14 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 129                                         ;
-; Total pins                  ; 40                                          ;
+; Total logic elements        ; 131                                         ;
+; Total pins                  ; 42                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -192,8 +192,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -236,39 +236,39 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                          ;
-+---------------------------------------------+--------------------------------------------------------+
-; Resource                                    ; Usage                                                  ;
-+---------------------------------------------+--------------------------------------------------------+
-; Total logic elements                        ; 129                                                    ;
-;     -- Combinational with no register       ; 95                                                     ;
-;     -- Register only                        ; 0                                                      ;
-;     -- Combinational with a register        ; 34                                                     ;
-;                                             ;                                                        ;
-; Logic element usage by number of LUT inputs ;                                                        ;
-;     -- 4 input functions                    ; 68                                                     ;
-;     -- 3 input functions                    ; 27                                                     ;
-;     -- 2 input functions                    ; 29                                                     ;
-;     -- 1 input functions                    ; 5                                                      ;
-;     -- 0 input functions                    ; 0                                                      ;
-;                                             ;                                                        ;
-; Logic elements by mode                      ;                                                        ;
-;     -- normal mode                          ; 123                                                    ;
-;     -- arithmetic mode                      ; 6                                                      ;
-;     -- qfbk mode                            ; 0                                                      ;
-;     -- register cascade mode                ; 0                                                      ;
-;     -- synchronous clear/load mode          ; 0                                                      ;
-;     -- asynchronous clear/load mode         ; 15                                                     ;
-;                                             ;                                                        ;
-; Total registers                             ; 34                                                     ;
-; Total logic cells in carry chains           ; 7                                                      ;
-; I/O pins                                    ; 40                                                     ;
-; Maximum fan-out node                        ; modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q ;
-; Maximum fan-out                             ; 27                                                     ;
-; Total fan-out                               ; 497                                                    ;
-; Average fan-out                             ; 2.94                                                   ;
-+---------------------------------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                 ;
++---------------------------------------------+-------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                         ;
++---------------------------------------------+-------------------------------------------------------------------------------+
+; Total logic elements                        ; 131                                                                           ;
+;     -- Combinational with no register       ; 97                                                                            ;
+;     -- Register only                        ; 0                                                                             ;
+;     -- Combinational with a register        ; 34                                                                            ;
+;                                             ;                                                                               ;
+; Logic element usage by number of LUT inputs ;                                                                               ;
+;     -- 4 input functions                    ; 59                                                                            ;
+;     -- 3 input functions                    ; 25                                                                            ;
+;     -- 2 input functions                    ; 27                                                                            ;
+;     -- 1 input functions                    ; 20                                                                            ;
+;     -- 0 input functions                    ; 0                                                                             ;
+;                                             ;                                                                               ;
+; Logic elements by mode                      ;                                                                               ;
+;     -- normal mode                          ; 125                                                                           ;
+;     -- arithmetic mode                      ; 6                                                                             ;
+;     -- qfbk mode                            ; 0                                                                             ;
+;     -- register cascade mode                ; 0                                                                             ;
+;     -- synchronous clear/load mode          ; 0                                                                             ;
+;     -- asynchronous clear/load mode         ; 22                                                                            ;
+;                                             ;                                                                               ;
+; Total registers                             ; 34                                                                            ;
+; Total logic cells in carry chains           ; 7                                                                             ;
+; I/O pins                                    ; 42                                                                            ;
+; Maximum fan-out node                        ; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_4|q_bar ;
+; Maximum fan-out                             ; 23                                                                            ;
+; Total fan-out                               ; 487                                                                           ;
+; Average fan-out                             ; 2.82                                                                          ;
++---------------------------------------------+-------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -276,22 +276,22 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                          ; Entity Name                             ; Library Name ;
 +---------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
-; |pbl                                                                ; 129 (0)     ; 34           ; 0          ; 40   ; 0            ; 95 (0)       ; 0 (0)             ; 34 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                         ; pbl                                     ; work         ;
+; |pbl                                                                ; 131 (0)     ; 34           ; 0          ; 42   ; 0            ; 97 (0)       ; 0 (0)             ; 34 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                         ; pbl                                     ; work         ;
 ;    |modulo_codificador_unidade_garrafas:codificador_garrafas_2|     ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_codificador_unidade_garrafas:codificador_garrafas_2                              ; modulo_codificador_unidade_garrafas     ; work         ;
 ;       |and_gate_2_inputs:gate_1|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_1     ; and_gate_2_inputs                       ; work         ;
 ;    |modulo_contador_sync_2_bits_ascendente:contador_display|        ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits_ascendente:contador_display                                 ; modulo_contador_sync_2_bits_ascendente  ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1                ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_2|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2                ; modulo_ff_t                             ; work         ;
-;    |modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias| ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias                          ; modulo_contador_sync_4_bits_ascendente  ; work         ;
+;    |modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias| ; 5 (0)       ; 4            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias                          ; modulo_contador_sync_4_bits_ascendente  ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_1         ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_2|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_2         ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_3|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_3         ; modulo_ff_t                             ; work         ;
-;       |modulo_ff_t:ff_4|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_4         ; modulo_ff_t                             ; work         ;
-;    |modulo_contador_sync_4_bits_ascendente:contador_duzias|         ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias                                  ; modulo_contador_sync_4_bits_ascendente  ; work         ;
+;       |modulo_ff_t:ff_4|                                            ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_4         ; modulo_ff_t                             ; work         ;
+;    |modulo_contador_sync_4_bits_ascendente:contador_duzias|         ; 5 (0)       ; 4            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias                                  ; modulo_contador_sync_4_bits_ascendente  ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1                 ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_2|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2                 ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_3|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3                 ; modulo_ff_t                             ; work         ;
-;       |modulo_ff_t:ff_4|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4                 ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_4|                                            ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4                 ; modulo_ff_t                             ; work         ;
 ;    |modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas| ; 8 (0)       ; 7            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 7 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas                          ; modulo_contador_sync_7_bits_ascendente  ; work         ;
 ;       |and_gate_2_inputs:gate_3|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_3 ; and_gate_2_inputs                       ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1         ; modulo_ff_t                             ; work         ;
@@ -302,18 +302,18 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_t:ff_6|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6         ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_7|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7         ; modulo_ff_t                             ; work         ;
 ;    |modulo_contador_sync_7_bits_descendente:buffer_bandeja|         ; 26 (0)      ; 14           ; 0          ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 14 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja                                  ; modulo_contador_sync_7_bits_descendente ; work         ;
-;       |and_gate_2_inputs:gate_13|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_13        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_14|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_14        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_15|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_15        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_16|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_16        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_17|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_17        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_18|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_18        ; and_gate_2_inputs                       ; work         ;
-;       |and_gate_2_inputs:gate_19|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_19        ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_10|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_10        ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_11|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_11        ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_12|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_12        ; and_gate_2_inputs                       ; work         ;
 ;       |and_gate_2_inputs:gate_1|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_1         ; and_gate_2_inputs                       ; work         ;
 ;       |and_gate_2_inputs:gate_2|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_2         ; and_gate_2_inputs                       ; work         ;
 ;       |and_gate_2_inputs:gate_3|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_3         ; and_gate_2_inputs                       ; work         ;
 ;       |and_gate_2_inputs:gate_4|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_4         ; and_gate_2_inputs                       ; work         ;
 ;       |and_gate_2_inputs:gate_5|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_5         ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_6|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_6         ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_7|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_7         ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_8|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_8         ; and_gate_2_inputs                       ; work         ;
+;       |and_gate_2_inputs:gate_9|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|and_gate_2_inputs:gate_9         ; and_gate_2_inputs                       ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_1                 ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_2|                                            ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_2                 ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_3|                                            ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_3                 ; modulo_ff_t                             ; work         ;
@@ -386,27 +386,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 34    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 15    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 22    ;
+; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                            ;
-+-------------------------------------------------------------------------------+---------+
-; Inverted Register                                                             ; Fan out ;
-+-------------------------------------------------------------------------------+---------+
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_5|q_bar ; 17      ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_6|q_bar ; 22      ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_4|q_bar ; 24      ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_7|q_bar ; 24      ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_1|q_bar ; 5       ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_2|q_bar ; 22      ;
-; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_3|q_bar ; 21      ;
-; Total number of inverted registers = 7                                        ;         ;
-+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                ;
++-----------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                 ; Fan out ;
++-----------------------------------------------------------------------------------+---------+
+; modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q         ; 4       ;
+; modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4|q         ; 3       ;
+; modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1|q        ; 13      ;
+; modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2|q        ; 10      ;
+; modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_2|q ; 7       ;
+; modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_4|q ; 5       ;
+; modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_3|q ; 3       ;
+; modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias|modulo_ff_t:ff_1|q ; 5       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7|q ; 4       ;
+; modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q                            ; 13      ;
+; modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1|q         ; 4       ;
+; modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2|q         ; 3       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_1|q         ; 7       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_2|q         ; 5       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_3|q         ; 4       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_5|q         ; 4       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_4|q         ; 3       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_6|q         ; 3       ;
+; modulo_contador_sync_7_bits_descendente:buffer_bandeja|modulo_ff_t:ff_7|q         ; 2       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1|q ; 6       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2|q ; 5       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3|q ; 4       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4|q ; 3       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5|q ; 4       ;
+; modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6|q ; 3       ;
+; Total number of inverted registers = 25                                           ;         ;
++-----------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -523,13 +541,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+---------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_contador_sync_7_bits_descendente:buffer_bandeja"                      ;
-+-------------------+---------+------------------+--------------------------------------------------------+
-; Port              ; Type    ; Severity         ; Details                                                ;
-+-------------------+---------+------------------+--------------------------------------------------------+
-; input_primeiro_ff ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
-+-------------------+---------+------------------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_7_bits_descendente:buffer_bandeja"                                                             ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                  ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; prst_input_test ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; clr_input_test  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -1013,10 +1032,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 23 17:04:15 2024
+    Info: Processing started: Wed Jan 24 15:54:07 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mux2_1.v
     Info (12023): Found entity 1: modulo_mux2_1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux2_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_comparador7bits.v
@@ -1080,18 +1099,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_ff_jk File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_jk.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_ff_d.v
     Info (12023): Found entity 1: modulo_ff_d File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_d.v Line: 2
-Info (12021): Found 10 design units, including 10 entities, in source file module_gates.v
+Info (12021): Found 11 design units, including 11 entities, in source file module_gates.v
     Info (12023): Found entity 1: and_gate_3_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 2
-    Info (12023): Found entity 2: and_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 11
-    Info (12023): Found entity 3: and_gate_7_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 20
-    Info (12023): Found entity 4: or_gate_7_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 30
-    Info (12023): Found entity 5: or_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 39
-    Info (12023): Found entity 6: or_gate_3_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 49
-    Info (12023): Found entity 7: or_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 59
-    Info (12023): Found entity 8: or_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 70
-    Info (12023): Found entity 9: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 80
-    Info (12023): Found entity 10: and_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at pbl.v(57): created implicit net for "load_input" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 57
+    Info (12023): Found entity 2: nand_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 11
+    Info (12023): Found entity 3: and_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 20
+    Info (12023): Found entity 4: and_gate_7_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 29
+    Info (12023): Found entity 5: or_gate_7_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 39
+    Info (12023): Found entity 6: or_gate_4_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 48
+    Info (12023): Found entity 7: or_gate_3_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 58
+    Info (12023): Found entity 8: or_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 68
+    Info (12023): Found entity 9: or_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 79
+    Info (12023): Found entity 10: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 89
+    Info (12023): Found entity 11: and_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 99
+Warning (10236): Verilog HDL Implicit Net warning at pbl.v(63): created implicit net for "load_input" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 63
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(66): created implicit net for "clk_div_r" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 66
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(68): created implicit net for "Qi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 68
 Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMealy.v(70): created implicit net for "NQi" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 70
@@ -1100,49 +1120,49 @@ Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(69): cr
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMealy.v(66): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 66
 Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(67): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 67
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 37
+Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 43
 Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 12
-Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 39
+Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 45
 Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 17
 Info (12128): Elaborating entity "modulo_ff_jk" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 21
 Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 25
 Info (12128): Elaborating entity "or_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|or_gate_2_inputs:gate_4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 28
 Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_4_inputs:gate_6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 36
-Info (12128): Elaborating entity "modulo_contador_sync_4_bits_ascendente" for hierarchy "modulo_contador_sync_4_bits_ascendente:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 45
-Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 46
-Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 49
-Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente" for hierarchy "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 55
-Info (12128): Elaborating entity "modulo_seletor_permissoes" for hierarchy "modulo_seletor_permissoes:seletor_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 57
-Info (12128): Elaborating entity "modulo_mux2_1" for hierarchy "modulo_mux2_1:mux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 59
-Info (12128): Elaborating entity "modulo_somador_subtrator_completo" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 67
+Info (12128): Elaborating entity "modulo_contador_sync_4_bits_ascendente" for hierarchy "modulo_contador_sync_4_bits_ascendente:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 51
+Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 52
+Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 55
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente" for hierarchy "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 61
+Info (12128): Elaborating entity "modulo_seletor_permissoes" for hierarchy "modulo_seletor_permissoes:seletor_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 63
+Info (12128): Elaborating entity "modulo_mux2_1" for hierarchy "modulo_mux2_1:mux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 65
+Info (12128): Elaborating entity "modulo_somador_subtrator_completo" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 73
 Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_4_inputs:gate_5" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 21
 Info (12128): Elaborating entity "or_gate_5_inputs" for hierarchy "modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_5_inputs:gate_11" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 29
-Info (12128): Elaborating entity "modulo_contador_sync_7_bits_descendente" for hierarchy "modulo_contador_sync_7_bits_descendente:buffer_bandeja" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 98
-Info (12128): Elaborating entity "modulo_count_superior99" for hierarchy "modulo_count_superior99:m_out_range" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 100
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits_descendente" for hierarchy "modulo_contador_sync_7_bits_descendente:buffer_bandeja" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 103
+Info (12128): Elaborating entity "modulo_count_superior99" for hierarchy "modulo_count_superior99:m_out_range" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 105
 Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "modulo_count_superior99:m_out_range|or_gate_3_inputs:gate_4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_count_superior99.v Line: 15
-Info (12128): Elaborating entity "modulo_valor_minimo_rolhas" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 102
+Info (12128): Elaborating entity "modulo_valor_minimo_rolhas" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 107
 Info (12128): Elaborating entity "and_gate_5_inputs" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas|and_gate_5_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_minimo_rolhas.v Line: 22
-Info (12128): Elaborating entity "modulo_verificador_ausencia_rolhas" for hierarchy "modulo_verificador_ausencia_rolhas:m_aus_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 104
+Info (12128): Elaborating entity "modulo_verificador_ausencia_rolhas" for hierarchy "modulo_verificador_ausencia_rolhas:m_aus_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 109
 Info (12128): Elaborating entity "or_gate_7_inputs" for hierarchy "modulo_verificador_ausencia_rolhas:m_aus_rolhas|or_gate_7_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_verificador_ausencia_rolhas.v Line: 8
-Info (12128): Elaborating entity "modulo_contador_sync_2_bits_ascendente" for hierarchy "modulo_contador_sync_2_bits_ascendente:contador_display" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 106
-Info (12128): Elaborating entity "modulo_codificador_dezena_garrafas" for hierarchy "modulo_codificador_dezena_garrafas:codificador_garrafas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 108
-Info (12128): Elaborating entity "modulo_codificador_unidade_garrafas" for hierarchy "modulo_codificador_unidade_garrafas:codificador_garrafas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 109
-Info (12128): Elaborating entity "modulo_codificador_dezena_rolhas" for hierarchy "modulo_codificador_dezena_rolhas:codificador_rolhas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 110
-Info (12128): Elaborating entity "modulo_codificador_unidade_rolhas" for hierarchy "modulo_codificador_unidade_rolhas:codificador_rolhas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 111
-Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_8" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 113
-Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:demux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 118
-Info (12128): Elaborating entity "modulo_decodificadorBCD_7Segmentos" for hierarchy "modulo_decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 120
+Info (12128): Elaborating entity "modulo_contador_sync_2_bits_ascendente" for hierarchy "modulo_contador_sync_2_bits_ascendente:contador_display" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 111
+Info (12128): Elaborating entity "modulo_codificador_dezena_garrafas" for hierarchy "modulo_codificador_dezena_garrafas:codificador_garrafas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 113
+Info (12128): Elaborating entity "modulo_codificador_unidade_garrafas" for hierarchy "modulo_codificador_unidade_garrafas:codificador_garrafas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 114
+Info (12128): Elaborating entity "modulo_codificador_dezena_rolhas" for hierarchy "modulo_codificador_dezena_rolhas:codificador_rolhas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 115
+Info (12128): Elaborating entity "modulo_codificador_unidade_rolhas" for hierarchy "modulo_codificador_unidade_rolhas:codificador_rolhas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 116
+Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_8" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 118
+Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:demux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 123
+Info (12128): Elaborating entity "modulo_decodificadorBCD_7Segmentos" for hierarchy "modulo_decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 125
 Warning (12241): 15 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Nout_7seg[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 8
-Info (21057): Implemented 169 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 129 logic cells
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 131 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Tue Jan 23 17:04:38 2024
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Wed Jan 24 15:54:14 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 

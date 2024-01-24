@@ -27,6 +27,11 @@ quit -f
 
 
 
+
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -45,6 +50,11 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
 
 
 
@@ -539,6 +549,26 @@ SIGNAL("ve")
 	PARENT = "";
 }
 
+SIGNAL("test_load_input")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_signal_min_rolhas")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("Nac_7segmentos[3]")
 {
 	NODE
@@ -670,9 +700,7 @@ TRANSITION_LIST("ch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 910.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -758,9 +786,7 @@ TRANSITION_LIST("pg")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 960.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -900,6 +926,24 @@ TRANSITION_LIST("test_buffer_saida[0]")
 }
 
 TRANSITION_LIST("ve")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("test_load_input")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("test_signal_min_rolhas")
 {
 	NODE
 	{
@@ -1344,6 +1388,24 @@ DISPLAY_LINE
 	TREE_INDEX = 44;
 	TREE_LEVEL = 1;
 	PARENT = 37;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_load_input";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_signal_min_rolhas";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR
