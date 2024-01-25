@@ -1,32 +1,23 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida,test_load_input, test_signal_min_rolhas, test_rolhas_entrada);
-	
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_entrada,test_buffer_saida);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
-	wire clk_div, load_input, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
+	wire load_input, load_input_aux, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in,ac_7segmentos, codificacao_4bits_d_garrafas, codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
 	wire [6:0] rolhas_entrada, buffer_entrada, buffer_saida, buffer_entrada_aux;
 	wire [7:0] out_7seg;
 	wire [5:0] transporte_aux_somadores_subtratores_completo;
-	wire [1:0] sel_mux_display;
+	wire [1:0] sel_mux_display, clk_div, sincronizador;
 	output [6:0] test_buffer_entrada;
-	output [6:0] test_buffer_saida, test_rolhas_entrada;
-	output test_load_input;
-	output test_signal_min_rolhas;
+	output [6:0] test_buffer_saida;
 	
 	assign test_buffer_entrada = buffer_entrada;
 	
 	assign test_buffer_saida = buffer_saida;
-	
-	assign test_load_input = load_input;
-	
-	assign test_signal_min_rolhas = signal_min_rolhas;
-	
-	assign test_rolhas_entrada = rolhas_entrada;
 	
 	not(Nal,al);
 	not(Nac_7segmentos[3],ac_7segmentos[3]);
@@ -44,16 +35,16 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_divisor_frequencia divisor_f(.prst(1'b0),.clr(1'b0),.clk(clock_50mhz),.clk_div(clk_div));
 	
-	modulo_mef_enchimento_vedacao mef_1(.enable(start_stop),.pg(pg),.ch(ch),.ro(ro),.eb(sinal_duzias_reset),.clk(clk_div),.m(m),.ve(ve),.al(al),.ev(ev),.q0(mef_estado[0]),.q1(mef_estado[1]));
+	modulo_mef_enchimento_vedacao mef_1(.enable(start_stop),.pg(pg),.ch(ch),.ro(ro),.eb(sinal_duzias_reset),.clk(clk_div[1]),.m(m),.ve(ve),.al(al),.ev(ev),.q0(mef_estado[0]),.q1(mef_estado[1]));
 	
 	//Circuito auxiliar de contagem de dúzias
 	
 	and_gate_2_inputs gate_1(.A(ve),.B(cq),.S(conta_duzias));
 	
-	modulo_contador_sync_4_bits_ascendente contador_duzias(.input_primeiro_ff(conta_duzias),.prst(1'b0),.clr(sinal_duzias_reset),.clk(clk_div),.q(out_4_bits_duzias));
+	modulo_contador_sync_4_bits_ascendente contador_duzias(.input_primeiro_ff(conta_duzias),.prst(1'b0),.clr(sinal_duzias_reset),.clk(clk_div[1]),.q(out_4_bits_duzias));
 	modulo_reset_contador_d reset_1(.cd(out_4_bits_duzias), .rst_cd(sinal_duzias_reset));
 	
-	modulo_contador_sync_4_bits_ascendente contador_dezenas_duzias(.input_primeiro_ff(sinal_duzias_reset),.prst(1'b0),.clr(sinal_dezenas_duzias_reset),.clk(clk_div),.q(out_4_bits_dezena_duzias));
+	modulo_contador_sync_4_bits_ascendente contador_dezenas_duzias(.input_primeiro_ff(sinal_duzias_reset),.prst(1'b0),.clr(sinal_dezenas_duzias_reset),.clk(clk_div[1]),.q(out_4_bits_dezena_duzias));
 	modulo_reset_contador_dd reset_2(.cdd(out_4_bits_dezena_duzias), .rst_cdd(sinal_dezenas_duzias_reset_aux));
 	
 	or_gate_2_inputs gate_2(.A(start_stop),.B(sinal_dezenas_duzias_reset_aux),.S(sinal_dezenas_duzias_reset));
@@ -62,7 +53,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b0),.clr(1'b0),.clk(op_c_deboucing),.q(rolhas_entrada));
 	
-	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.load(load_input));
+	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.load(load_input_aux));
 	
 	modulo_mux2_1 mux_1(.A(rolhas_entrada[6]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[6]));
 	modulo_mux2_1 mux_2(.A(rolhas_entrada[5]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[5]));
@@ -102,6 +93,10 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_registrador_rolhas buffer_rolhas(.m_in(buffer_entrada),.clk(clk_div),.clr(1'b0),.enable(start_stop),.m_out(buffer_saida));
 	*/
 
+	modulo_contador_sync_2_bits_ascendente contador_sicronizador(.clr(1'b0),.clk(clk_div[0]),.q(sincronizador));
+	
+	and(load_input,load_input_aux,sincronizador[1]);
+	
 	modulo_contador_sync_7_bits_descendente buffer_bandeja(.clk(ve),.load(load_input),.e(buffer_entrada),.q_bar(buffer_saida));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_saida),.cont_superior_99(out_range_buffer));
@@ -110,7 +105,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_verificador_ausencia_rolhas m_aus_rolhas(.reg_r(buffer_saida),.ro(ro));
 	
-	modulo_contador_sync_2_bits_ascendente contador_display(.clr(1'b0),.clk(clk_div),.q(sel_mux_display));
+	modulo_contador_sync_2_bits_ascendente contador_display(.clr(1'b0),.clk(clk_div[1]),.q(sel_mux_display));
 	
 	modulo_codificador_dezena_garrafas codificador_garrafas_1(.cdd(out_4_bits_dezena_duzias),.cdfd(codificacao_4bits_d_garrafas));
 	modulo_codificador_unidade_garrafas codificador_garrafas_2(.cdd(out_4_bits_dezena_duzias),.cdfu(codificacao_4bits_u_garrafas));
