@@ -76,12 +76,12 @@ set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_valor_minimo_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_verificador_ausencia_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_seletor_permissoes.v
+set_global_assignment -name VERILOG_FILE modulo_seletor_load.v
 set_global_assignment -name VERILOG_FILE modulo_count_superior99.v
 set_global_assignment -name VERILOG_FILE modulo_seletor_operacao_aritmetica.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente.v
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_descendente.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_dd.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_d.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_garrafas.v
@@ -89,6 +89,7 @@ set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_garrafas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_decodificadorBCD_7Segmentos.v
+set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo_7bits.v
 set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
@@ -120,8 +121,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
-set_global_assignment -name VERILOG_FILE modulo_ff_t_inicializado.v
-set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo_7bits.v
-set_global_assignment -name VERILOG_FILE modulo_seletor_load.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform21.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform22.vwf
