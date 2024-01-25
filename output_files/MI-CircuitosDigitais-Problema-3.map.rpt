@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Thu Jan 25 06:43:13 2024
+Thu Jan 25 07:01:09 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -104,12 +104,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jan 25 06:43:13 2024       ;
+; Analysis & Synthesis Status ; Successful - Thu Jan 25 07:01:09 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 98                                          ;
+; Total logic elements        ; 116                                         ;
 ; Total pins                  ; 45                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -245,32 +245,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                  ;
 +---------------------------------------------+------------------------------------------------------------------------+
-; Total logic elements                        ; 98                                                                     ;
+; Total logic elements                        ; 116                                                                    ;
 ;     -- Combinational with no register       ; 72                                                                     ;
 ;     -- Register only                        ; 7                                                                      ;
-;     -- Combinational with a register        ; 19                                                                     ;
+;     -- Combinational with a register        ; 37                                                                     ;
 ;                                             ;                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                        ;
 ;     -- 4 input functions                    ; 52                                                                     ;
 ;     -- 3 input functions                    ; 26                                                                     ;
 ;     -- 2 input functions                    ; 10                                                                     ;
-;     -- 1 input functions                    ; 3                                                                      ;
+;     -- 1 input functions                    ; 21                                                                     ;
 ;     -- 0 input functions                    ; 0                                                                      ;
 ;                                             ;                                                                        ;
 ; Logic elements by mode                      ;                                                                        ;
-;     -- normal mode                          ; 98                                                                     ;
+;     -- normal mode                          ; 116                                                                    ;
 ;     -- arithmetic mode                      ; 0                                                                      ;
 ;     -- qfbk mode                            ; 0                                                                      ;
 ;     -- register cascade mode                ; 0                                                                      ;
 ;     -- synchronous clear/load mode          ; 0                                                                      ;
 ;     -- asynchronous clear/load mode         ; 8                                                                      ;
 ;                                             ;                                                                        ;
-; Total registers                             ; 26                                                                     ;
+; Total registers                             ; 44                                                                     ;
 ; I/O pins                                    ; 45                                                                     ;
 ; Maximum fan-out node                        ; modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_10|WideAnd0 ;
 ; Maximum fan-out                             ; 20                                                                     ;
-; Total fan-out                               ; 392                                                                    ;
-; Average fan-out                             ; 2.74                                                                   ;
+; Total fan-out                               ; 428                                                                    ;
+; Average fan-out                             ; 2.66                                                                   ;
 +---------------------------------------------+------------------------------------------------------------------------+
 
 
@@ -279,7 +279,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                             ; Entity Name                             ; Library Name ;
 +---------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
-; |pbl                                                                ; 98 (0)      ; 26           ; 0          ; 45   ; 0            ; 72 (0)       ; 7 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |pbl                                                                                                                                            ; pbl                                     ; work         ;
+; |pbl                                                                ; 116 (0)     ; 44           ; 0          ; 45   ; 0            ; 72 (0)       ; 7 (0)             ; 37 (0)           ; 0 (0)           ; 0 (0)      ; |pbl                                                                                                                                            ; pbl                                     ; work         ;
 ;    |modulo_contador_sync_2_bits_ascendente:contador_display|        ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits_ascendente:contador_display                                                                                    ; modulo_contador_sync_2_bits_ascendente  ; work         ;
 ;       |modulo_ff_t:ff_2|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2                                                                   ; modulo_ff_t                             ; work         ;
 ;    |modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias| ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias                                                                             ; modulo_contador_sync_4_bits_ascendente  ; work         ;
@@ -311,8 +311,26 @@ refer to the applicable agreement for further details.
 ;       |or_gate_4_inputs:gate_23|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_23                                                                          ; or_gate_4_inputs                        ; work         ;
 ;       |or_gate_4_inputs:gate_3|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_4_inputs:gate_3                                                                           ; or_gate_4_inputs                        ; work         ;
 ;       |or_gate_5_inputs:gate_12|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_5_inputs:gate_12                                                                          ; or_gate_5_inputs                        ; work         ;
-;    |modulo_divisor_frequencia:divisor_f|                            ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f                                                                                                        ; modulo_divisor_frequencia               ; work         ;
+;    |modulo_divisor_frequencia:divisor_f|                            ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f                                                                                                        ; modulo_divisor_frequencia               ; work         ;
+;       |modulo_ff_t:ff_10|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_11|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_12|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_13|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_14|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_15|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_16|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_17|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_18|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18                                                                                      ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_19|                                           ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19                                                                                      ; modulo_ff_t                             ; work         ;
 ;       |modulo_ff_t:ff_1|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_2|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_3|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_4|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_5|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_6|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_7|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_8|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8                                                                                       ; modulo_ff_t                             ; work         ;
+;       |modulo_ff_t:ff_9|                                            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9                                                                                       ; modulo_ff_t                             ; work         ;
 ;    |modulo_mef_enchimento_vedacao:mef_1|                            ; 7 (0)       ; 2            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1                                                                                                        ; modulo_mef_enchimento_vedacao           ; work         ;
 ;       |and_gate_3_inputs:gate_10|                                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_10                                                                              ; and_gate_3_inputs                       ; work         ;
 ;       |and_gate_3_inputs:gate_9|                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_9                                                                               ; and_gate_3_inputs                       ; work         ;
@@ -400,7 +418,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 44    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
@@ -819,15 +837,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+---------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19"                               ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; t     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; q_bar ; Output ; Info     ; Explicitly unconnected                                                              ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; t     ; Input  ; Info     ; Stuck at VCC                                          ;
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -1010,15 +1027,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+--------+----------+------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f"                                                      ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; prst       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; clr        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; clk_div[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; prst ; Input ; Info     ; Stuck at GND                          ;
+; clr  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
 
 
 +-------------------------------+
@@ -1027,7 +1043,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 25 06:43:00 2024
+    Info: Processing started: Thu Jan 25 07:00:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1123,7 +1139,7 @@ Info (12127): Elaborating entity "pbl" for the top level hierarchy
 Warning (10858): Verilog HDL warning at pbl.v(9): object op_aritmetica used but never assigned File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 9
 Warning (10030): Net "op_aritmetica" at pbl.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 9
 Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 46
-Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 13
+Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 12
 Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 48
 Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 17
 Info (12128): Elaborating entity "modulo_ff_jk" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 21
@@ -1164,14 +1180,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Nac_7segmentos[1]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 8
     Warning (13410): Pin "Nac_7segmentos[3]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 8
     Warning (13410): Pin "test_op_aritmetica" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 18
-Info (21057): Implemented 143 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 98 logic cells
+    Info (21061): Implemented 116 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Thu Jan 25 06:43:13 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Thu Jan 25 07:01:09 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 

@@ -49,8 +49,7 @@ test_op_aritmetica <= <GND>
 |pbl|modulo_divisor_frequencia:divisor_f
 prst => prst.IN19
 clr => clr.IN19
-clk_div[0] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-clk_div[1] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+clk_div <= modulo_ff_t:ff_19.q
 clk => clk.IN1
 
 
