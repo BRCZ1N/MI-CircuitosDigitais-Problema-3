@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/24/2024 22:39:03"
+// Generated on "01/25/2024 03:05:41"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -85,13 +85,15 @@ end
 // pg
 initial
 begin
-	pg = 1'b1;
+	pg = 1'b0;
+	pg = #480000 1'b1;
 end 
 
 // ch
 initial
 begin
-	ch = 1'b1;
+	ch = 1'b0;
+	ch = #480000 1'b1;
 end 
 
 // cq
@@ -115,7 +117,8 @@ end
 // start_stop
 initial
 begin
-	start_stop = 1'b1;
+	start_stop = 1'b0;
+	start_stop = #480000 1'b1;
 end 
 endmodule
 

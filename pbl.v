@@ -6,12 +6,12 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
-	wire load_input, load_input_aux, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
+	wire load_input, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in,ac_7segmentos, codificacao_4bits_d_garrafas, codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
-	wire [6:0] rolhas_entrada, buffer_entrada, buffer_saida, buffer_entrada_aux;
+	wire [6:0] rolhas_entrada, buffer_entrada, buffer_saida, buffer_entrada_aux, buffer_entrada_sum;
 	wire [7:0] out_7seg;
 	wire [5:0] transporte_aux_somadores_subtratores_completo;
-	wire [1:0] sel_mux_display, clk_div, sincronizador;
+	wire [1:0] sel_mux_display, clk_div, sel_mux_e;
 	output [6:0] test_buffer_entrada;
 	output [6:0] test_buffer_saida;
 	
@@ -53,25 +53,9 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b0),.clr(1'b0),.clk(op_c_deboucing),.q(rolhas_entrada));
 	
-	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.load(load_input_aux));
+	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.load(load_input));
 	
-	modulo_mux2_1 mux_1(.A(rolhas_entrada[6]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[6]));
-	modulo_mux2_1 mux_2(.A(rolhas_entrada[5]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[5]));
-	modulo_mux2_1 mux_3(.A(rolhas_entrada[4]),.B(1'b1),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[4]));
-	modulo_mux2_1 mux_4(.A(rolhas_entrada[3]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[3]));
-	modulo_mux2_1 mux_5(.A(rolhas_entrada[2]),.B(1'b1),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[2]));
-	modulo_mux2_1 mux_6(.A(rolhas_entrada[1]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[1]));
-	modulo_mux2_1 mux_7(.A(rolhas_entrada[0]),.B(1'b0),.SEL(signal_min_rolhas),.OUT(buffer_entrada_aux[0]));
 	
-	modulo_somador_subtrator_completo somador_subtrator_1(.m(1'b0),.a(buffer_saida[0]),.b(buffer_entrada_aux[0]),.Te(1'b0),.S(buffer_entrada[0]),.Ts(transporte_aux_somadores_subtratores_completo[0]));
-	modulo_somador_subtrator_completo somador_subtrator_2(.m(1'b0),.a(buffer_saida[1]),.b(buffer_entrada_aux[1]),.Te(transporte_aux_somadores_subtratores_completo[0]),.S(buffer_entrada[1]),.Ts(transporte_aux_somadores_subtratores_completo[1]));
-	modulo_somador_subtrator_completo somador_subtrator_3(.m(1'b0),.a(buffer_saida[2]),.b(buffer_entrada_aux[2]),.Te(transporte_aux_somadores_subtratores_completo[1]),.S(buffer_entrada[2]),.Ts(transporte_aux_somadores_subtratores_completo[2]));
-	modulo_somador_subtrator_completo somador_subtrator_4(.m(1'b0),.a(buffer_saida[3]),.b(buffer_entrada_aux[3]),.Te(transporte_aux_somadores_subtratores_completo[2]),.S(buffer_entrada[3]),.Ts(transporte_aux_somadores_subtratores_completo[3]));
-	modulo_somador_subtrator_completo somador_subtrator_5(.m(1'b0),.a(buffer_saida[4]),.b(buffer_entrada_aux[4]),.Te(transporte_aux_somadores_subtratores_completo[3]),.S(buffer_entrada[4]),.Ts(transporte_aux_somadores_subtratores_completo[4]));
-	modulo_somador_subtrator_completo somador_subtrator_6(.m(1'b0),.a(buffer_saida[5]),.b(buffer_entrada_aux[5]),.Te(transporte_aux_somadores_subtratores_completo[4]),.S(buffer_entrada[5]),.Ts(transporte_aux_somadores_subtratores_completo[5]));
-	modulo_somador_subtrator_completo somador_subtrator_7(.m(1'b0),.a(buffer_saida[6]),.b(buffer_entrada_aux[6]),.Te(transporte_aux_somadores_subtratores_completo[5]),.S(buffer_entrada[6]),.Ts());
-	
-	/*
 	modulo_mux4_1 mux_1(.A(1'b0),.B(rolhas_entrada[6]),.C(1'b0),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[6]));
 	modulo_mux4_1 mux_2(.A(1'b0),.B(rolhas_entrada[5]),.C(1'b0),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[5]));
 	modulo_mux4_1 mux_3(.A(1'b0),.B(rolhas_entrada[4]),.C(1'b1),.D(1'b0),.input_sel(sel_mux_e),.out(buffer_entrada_aux[4]));
@@ -82,22 +66,23 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_seletor_operacao_aritmetica seletor_op(.smx(sel_mux_e),.operacao_a(op_arimetica));
 	
-	modulo_somador_subtrator_completo somador_subtrator_1(.m(op_arimetica),.a(buffer_saida[6]),.b(buffer_entrada_aux[6]),.Te(1'b0),.S(buffer_entrada[6]),.Ts(transporte_aux_somadores_subtratores_completo[5]));
-	modulo_somador_subtrator_completo somador_subtrator_2(.m(op_arimetica),.a(buffer_saida[5]),.b(buffer_entrada_aux[5]),.Te(transporte_aux_somadores_subtratores_completo[5]),.S(buffer_entrada[5]),.Ts(transporte_aux_somadores_subtratores_completo[4]));
-	modulo_somador_subtrator_completo somador_subtrator_3(.m(op_arimetica),.a(buffer_saida[4]),.b(buffer_entrada_aux[4]),.Te(transporte_aux_somadores_subtratores_completo[4]),.S(buffer_entrada[4]),.Ts(transporte_aux_somadores_subtratores_completo[3]));
-	modulo_somador_subtrator_completo somador_subtrator_4(.m(op_arimetica),.a(buffer_saida[3]),.b(buffer_entrada_aux[3]),.Te(transporte_aux_somadores_subtratores_completo[3]),.S(buffer_entrada[3]),.Ts(transporte_aux_somadores_subtratores_completo[2]));
-	modulo_somador_subtrator_completo somador_subtrator_5(.m(op_arimetica),.a(buffer_saida[2]),.b(buffer_entrada_aux[2]),.Te(transporte_aux_somadores_subtratores_completo[2]),.S(buffer_entrada[2]),.Ts(transporte_aux_somadores_subtratores_completo[1]));
-	modulo_somador_subtrator_completo somador_subtrator_6(.m(op_arimetica),.a(buffer_saida[1]),.b(buffer_entrada_aux[1]),.Te(transporte_aux_somadores_subtratores_completo[1]),.S(buffer_entrada[1]),.Ts(transporte_aux_somadores_subtratores_completo[0]));
-	modulo_somador_subtrator_completo somador_subtrator_7(.m(op_arimetica),.a(buffer_saida[0]),.b(buffer_entrada_aux[0]),.Te(transporte_aux_somadores_subtratores_completo[0]),.S(buffer_entrada[0]),.Ts());
+	modulo_somador_subtrator_completo somador_subtrator_1(.m(op_arimetica),.a(buffer_saida[0]),.b(buffer_entrada_aux[0]),.Te(1'b0),.S(buffer_entrada_sum[0]),.Ts(transporte_aux_somadores_subtratores_completo[0]));
+	modulo_somador_subtrator_completo somador_subtrator_2(.m(op_arimetica),.a(buffer_saida[1]),.b(buffer_entrada_aux[1]),.Te(transporte_aux_somadores_subtratores_completo[0]),.S(buffer_entrada_sum[1]),.Ts(transporte_aux_somadores_subtratores_completo[1]));
+	modulo_somador_subtrator_completo somador_subtrator_3(.m(op_arimetica),.a(buffer_saida[2]),.b(buffer_entrada_aux[2]),.Te(transporte_aux_somadores_subtratores_completo[1]),.S(buffer_entrada_sum[2]),.Ts(transporte_aux_somadores_subtratores_completo[2]));
+	modulo_somador_subtrator_completo somador_subtrator_4(.m(op_arimetica),.a(buffer_saida[3]),.b(buffer_entrada_aux[3]),.Te(transporte_aux_somadores_subtratores_completo[2]),.S(buffer_entrada_sum[3]),.Ts(transporte_aux_somadores_subtratores_completo[3]));
+	modulo_somador_subtrator_completo somador_subtrator_5(.m(op_arimetica),.a(buffer_saida[4]),.b(buffer_entrada_aux[4]),.Te(transporte_aux_somadores_subtratores_completo[3]),.S(buffer_entrada_sum[4]),.Ts(transporte_aux_somadores_subtratores_completo[4]));
+	modulo_somador_subtrator_completo somador_subtrator_6(.m(op_arimetica),.a(buffer_saida[5]),.b(buffer_entrada_aux[5]),.Te(transporte_aux_somadores_subtratores_completo[4]),.S(buffer_entrada_sum[5]),.Ts(transporte_aux_somadores_subtratores_completo[5]));
+	modulo_somador_subtrator_completo somador_subtrator_7(.m(op_arimetica),.a(buffer_saida[6]),.b(buffer_entrada_aux[6]),.Te(transporte_aux_somadores_subtratores_completo[5]),.S(buffer_entrada_sum[6]),.Ts());
 	
-	modulo_registrador_rolhas buffer_rolhas(.m_in(buffer_entrada),.clk(clk_div),.clr(1'b0),.enable(start_stop),.m_out(buffer_saida));
-	*/
-
-	modulo_contador_sync_2_bits_ascendente contador_sicronizador(.clr(1'b0),.clk(clk_div[0]),.q(sincronizador));
+	modulo_mux2_1 mux_8(.A(buffer_saida[6]),.B(buffer_entrada_sum[6]),.SEL(load_input),.OUT(buffer_entrada[6]));
+	modulo_mux2_1 mux_9(.A(buffer_saida[5]),.B(buffer_entrada_sum[5]),.SEL(load_input),.OUT(buffer_entrada[5]));
+	modulo_mux2_1 mux_10(.A(buffer_saida[4]),.B(buffer_entrada_sum[4]),.SEL(load_input),.OUT(buffer_entrada[4]));
+	modulo_mux2_1 mux_11(.A(buffer_saida[3]),.B(buffer_entrada_sum[3]),.SEL(load_input),.OUT(buffer_entrada[3]));
+	modulo_mux2_1 mux_12(.A(buffer_saida[2]),.B(buffer_entrada_sum[2]),.SEL(load_input),.OUT(buffer_entrada[2]));
+	modulo_mux2_1 mux_13(.A(buffer_saida[1]),.B(buffer_entrada_sum[1]),.SEL(load_input),.OUT(buffer_entrada[1]));
+	modulo_mux2_1 mux_14(.A(buffer_saida[0]),.B(buffer_entrada_sum[0]),.SEL(load_input),.OUT(buffer_entrada[0]));
 	
-	and(load_input,load_input_aux,sincronizador[1]);
-	
-	modulo_contador_sync_7_bits_descendente buffer_bandeja(.clk(ve),.load(load_input),.e(buffer_entrada),.q_bar(buffer_saida));
+	modulo_registrador_rolhas buffer_rolhas(.m_in(buffer_entrada),.clk(clk_div[1]),.clr(1'b0),.enable(start_stop),.m_out(buffer_saida));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_saida),.cont_superior_99(out_range_buffer));
 	
@@ -112,10 +97,10 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_codificador_dezena_rolhas codificador_rolhas_1(.reg_r(buffer_saida),.reg_rd(codificacao_4bits_d_rolhas));
 	modulo_codificador_unidade_rolhas codificador_rolhas_2(.reg_r(buffer_saida),.reg_ru(codificacao_4bits_u_rolhas));
 	
-	modulo_mux4_1 mux_8(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(codificacao_4bits_d_rolhas[3]),.D(codificacao_4bits_u_rolhas[3]),.input_sel(sel_mux_display),.out(display_in[3]));
-	modulo_mux4_1 mux_9(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(codificacao_4bits_d_rolhas[2]),.D(codificacao_4bits_u_rolhas[2]),.input_sel(sel_mux_display),.out(display_in[2]));
-	modulo_mux4_1 mux_10(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(codificacao_4bits_d_rolhas[1]),.D(codificacao_4bits_u_rolhas[1]),.input_sel(sel_mux_display),.out(display_in[1]));
-	modulo_mux4_1 mux_11(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(codificacao_4bits_d_rolhas[0]),.D(codificacao_4bits_u_rolhas[0]),.input_sel(sel_mux_display),.out(display_in[0]));
+	modulo_mux4_1 mux_15(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(codificacao_4bits_d_rolhas[3]),.D(codificacao_4bits_u_rolhas[3]),.input_sel(sel_mux_display),.out(display_in[3]));
+	modulo_mux4_1 mux_16(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(codificacao_4bits_d_rolhas[2]),.D(codificacao_4bits_u_rolhas[2]),.input_sel(sel_mux_display),.out(display_in[2]));
+	modulo_mux4_1 mux_17(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(codificacao_4bits_d_rolhas[1]),.D(codificacao_4bits_u_rolhas[1]),.input_sel(sel_mux_display),.out(display_in[1]));
+	modulo_mux4_1 mux_18(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(codificacao_4bits_d_rolhas[0]),.D(codificacao_4bits_u_rolhas[0]),.input_sel(sel_mux_display),.out(display_in[0]));
 	
 	modulo_demux1_4 demux_1(.A(1'b1),.input_sel(sel_mux_display),.out(ac_7segmentos));
 

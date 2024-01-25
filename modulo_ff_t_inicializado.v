@@ -23,8 +23,10 @@ module modulo_ff_t_inicializado (
 			end
 		end
 		else if (t) begin
+			if(!enable)begin
 				q <= ~q;
 				q_bar <= q;
+			end
 		end
 
 	 
