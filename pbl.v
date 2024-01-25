@@ -8,7 +8,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	output [3:0] Nac_7segmentos;
 	wire load_input, clk_div, op_aritmetica, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in,ac_7segmentos, codificacao_4bits_d_garrafas, codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
-	wire [6:0] rolhas_entrada, buffer_entrada_principal, buffer_saida_principal, buffer_entrada_aux_principal, buffer_entrada_sum_principal, buffer_entrada_secundario, buffer_saida_secundario, buffer_entrada_aux_secundario, buffer_entrada_sum_secundario;
+	wire [6:0] rolhas_entrada_secundario, buffer_entrada_principal, buffer_saida_principal, buffer_entrada_aux_principal, buffer_entrada_sum_principal, buffer_entrada_secundario, buffer_saida_secundario, buffer_entrada_aux_secundario, buffer_entrada_sum_secundario;
 	wire [7:0] out_7seg;
 	wire [5:0] transporte_aux_somadores_subtratores_completo;
 	wire [1:0] sel_mux_display, sel_mux_e, perm_input;
@@ -61,6 +61,16 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	//Circuito de contagem de rolhas
 	
+	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b0),.clr(1'b0),.clk(op_c_deboucing),.q(rolhas_entrada_secundario));
+	
+	modulo_mux2_1 mux_1(.A(rolhas_entrada_secundario[6]),.B(1'b0),.SEL(min_r),.OUT(buffer_entrada_secundario[6]));
+	modulo_mux2_1 mux_2(.A(rolhas_entrada_secundario[5]),.B(1'b0),.SEL(min_r),.OUT(buffer_entrada_secundario[5]));
+	modulo_mux2_1 mux_3(.A(rolhas_entrada_secundario[4]),.B(1'b1),.SEL(min_r),.OUT(buffer_entrada_secundario[4]));
+	modulo_mux2_1 mux_4(.A(rolhas_entrada_secundario[3]),.B(1'b0),.SEL(min_r),.OUT(buffer_entrada_secundario[3]));
+	modulo_mux2_1 mux_5(.A(rolhas_entrada_secundario[2]),.B(1'b1),.SEL(min_r),.OUT(buffer_entrada_secundario[2]));
+	modulo_mux2_1 mux_6(.A(rolhas_entrada_secundario[1]),.B(1'b0),.SEL(min_r),.OUT(buffer_entrada_secundario[1]));
+	modulo_mux2_1 mux_7(.A(rolhas_entrada_secundario[0]),.B(1'b0),.SEL(min_r),.OUT(buffer_entrada_secundario[0]));
+	
 	modulo_somador_subtrator_completo_7bits somador_subtrator_1(.op_aritmetica(1'b0),.a(buffer_saida_secundario),.b(buffer_entrada_aux_secundario),.sum(buffer_entrada_sum_secundario));
 	
 	modulo_mux2_1 mux_1(.A(buffer_saida_secundario[6]),.B(buffer_entrada_sum_secundario[6]),.SEL(load_input),.OUT(buffer_entrada_secundario[6]));
@@ -72,10 +82,6 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_mux2_1 mux_7(.A(buffer_saida_secundario[0]),.B(buffer_entrada_sum_secundario[0]),.SEL(load_input),.OUT(buffer_entrada_secundario[0]));
 	
 	modulo_registrador_rolhas buffer_rolhas_secundario(.m_in(buffer_entrada_secundario),.clk(clk_div),.clr(1'b0),.enable(start_stop),.m_out(buffer_saida_secundario));
-	
-	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b0),.clr(1'b0),.clk(op_c_deboucing),.q(rolhas_entrada));
-	
-	
 	
 	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.perm(perm_input));
 	
