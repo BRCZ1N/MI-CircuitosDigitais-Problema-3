@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/25/2024 06:43:27"
+// Generated on "01/25/2024 19:02:31"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -45,11 +45,11 @@ wire ev;
 wire m;
 wire [1:0] mef_estado;
 wire [6:0] test_buffer_entrada;
+wire [6:0] test_buffer_entrada_aux_secundario;
 wire [6:0] test_buffer_saida;
-wire test_op_aritmetica;
-wire test_out_range_buffer;
+wire test_load_input;
+wire test_op_aritmetico;
 wire [1:0] test_perm_input;
-wire test_signal_min_rolhas;
 wire ve;
 
 // assign statements (if any)                          
@@ -70,11 +70,11 @@ pbl i1 (
 	.pg(pg),
 	.start_stop(start_stop),
 	.test_buffer_entrada(test_buffer_entrada),
+	.test_buffer_entrada_aux_secundario(test_buffer_entrada_aux_secundario),
 	.test_buffer_saida(test_buffer_saida),
-	.test_op_aritmetica(test_op_aritmetica),
-	.test_out_range_buffer(test_out_range_buffer),
+	.test_load_input(test_load_input),
+	.test_op_aritmetico(test_op_aritmetico),
 	.test_perm_input(test_perm_input),
-	.test_signal_min_rolhas(test_signal_min_rolhas),
 	.ve(ve)
 );
 initial 

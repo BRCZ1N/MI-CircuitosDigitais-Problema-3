@@ -17,7 +17,7 @@ module modulo_mux4_1(A,B,C,D,input_sel,out);
 	and_gate_3_inputs gate_4(.A(D),.B(input_sel[1]),.C(input_sel[0]),.S(gate_wire_and[0]));
 	
 
-	or_gate_4_inputs gate_5(.A(gate_wire_and[3]),.B(gate_wire_and[2]),.C(gate_wire_and[1]),.D(gate_wire_and[0]),.S(out),);
+	or_gate_4_inputs gate_5(.A(gate_wire_and[3]),.B(gate_wire_and[2]),.C(gate_wire_and[1]),.D(gate_wire_and[0]),.S(out));
 	
 
 endmodule
