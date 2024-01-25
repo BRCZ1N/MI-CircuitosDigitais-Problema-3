@@ -121,3 +121,7 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
 set_global_assignment -name VERILOG_FILE modulo_ff_t_inicializado.v
+set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo_7bits.v
+set_global_assignment -name VERILOG_FILE modulo_seletor_load.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform21.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform22.vwf

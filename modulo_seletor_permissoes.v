@@ -1,21 +1,19 @@
 //Finalizado
-module modulo_seletor_permissoes(ve,min_r,op,out_range_b,load);
+module modulo_seletor_permissoes(ve,min_r,op,out_range_b,perm);
 	
 	
 	input ve,min_r,op,out_range_b;
-	output load;
+	output [1:0] perm;
 	wire nve,nmin_r,nop,nout_range_b;
-	wire [1:0] load_aux;
 	
 	not (nve, ve);
 	not (nmin_r, min_r);
 	not (nop, op);
 	not (nout_range_b,out_range_b);
 	
-	and_gate_3_inputs gate_1(.A(nve),.B(op),.C(nout_range_b),.S(load_aux[1]));
-	and_gate_3_inputs gate_2(.A(nve),.B(min_r),.C(nout_range_b),.S(load_aux[0]));
+	and_gate_2_inputs gate_1(.A(nve),.B(nop),.S(perm[1]));
+	and_gate_2_inputs gate_2(.A(nve),.B(op),.S(perm[0]));
 	
-	or_gate_2_inputs gate_3(.A(load_aux[1]),.B(load_aux[0]),.S(load));
 	
 	
 endmodule 

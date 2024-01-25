@@ -18,79 +18,60 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/16/2024 22:20:04"
+// Generated on "01/25/2024 05:39:07"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          modulo_count_superior99
+// Verilog Test Bench (with test vectors) for design :                          modulo_seletor_permissoes
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module modulo_count_superior99_vlg_vec_tst();
+module modulo_seletor_permissoes_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [6:0] reg_data;
+reg min_r;
+reg op;
+reg out_range_b;
+reg ve;
 // wires                                               
-wire cont_superior_99;
+wire [1:0] perm;
 
 // assign statements (if any)                          
-modulo_count_superior99 i1 (
+modulo_seletor_permissoes i1 (
 // port map - connection between master ports and signals/registers   
-	.cont_superior_99(cont_superior_99),
-	.reg_data(reg_data)
+	.min_r(min_r),
+	.op(op),
+	.out_range_b(out_range_b),
+	.perm(perm),
+	.ve(ve)
 );
 initial 
 begin 
-#1280000 $finish;
+#1000000 $finish;
 end 
-// reg_data[ 6 ]
-always
+
+// ve
+initial
 begin
-	reg_data[6] = 1'b0;
-	reg_data[6] = #640000 1'b1;
-	#640000;
+	ve = 1'b0;
 end 
-// reg_data[ 5 ]
-always
+
+// min_r
+initial
 begin
-	reg_data[5] = 1'b0;
-	reg_data[5] = #320000 1'b1;
-	#320000;
+	min_r = 1'b1;
 end 
-// reg_data[ 4 ]
-always
+
+// op
+initial
 begin
-	reg_data[4] = 1'b0;
-	reg_data[4] = #160000 1'b1;
-	#160000;
+	op = 1'b0;
 end 
-// reg_data[ 3 ]
-always
+
+// out_range_b
+initial
 begin
-	reg_data[3] = 1'b0;
-	reg_data[3] = #80000 1'b1;
-	#80000;
-end 
-// reg_data[ 2 ]
-always
-begin
-	reg_data[2] = 1'b0;
-	reg_data[2] = #40000 1'b1;
-	#40000;
-end 
-// reg_data[ 1 ]
-always
-begin
-	reg_data[1] = 1'b0;
-	reg_data[1] = #20000 1'b1;
-	#20000;
-end 
-// reg_data[ 0 ]
-always
-begin
-	reg_data[0] = 1'b0;
-	reg_data[0] = #10000 1'b1;
-	#10000;
+	out_range_b = 1'b0;
 end 
 endmodule
 

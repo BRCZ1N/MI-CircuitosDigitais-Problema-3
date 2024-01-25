@@ -3,30 +3,42 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -7.961
-TNS   : -82.947
+Slack : -13.869
+TNS   : -125.654
+
+Type  : Setup 'op_c_deboucing'
+Slack : -3.187
+TNS   : -16.513
 
 Type  : Setup 'clock_50mhz'
-Slack : 1.944
+Slack : 1.924
 TNS   : 0.000
 
 Type  : Hold 'clock_50mhz'
-Slack : -1.998
-TNS   : -1.998
+Slack : -1.978
+TNS   : -1.978
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
 Slack : 1.078
 TNS   : 0.000
 
+Type  : Hold 'op_c_deboucing'
+Slack : 1.951
+TNS   : 0.000
+
 Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -6.531
-TNS   : -48.711
+Slack : -6.555
+TNS   : -48.855
 
 Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 5.775
+Slack : 5.780
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'op_c_deboucing'
 Slack : -2.289
 TNS   : -2.289
 
