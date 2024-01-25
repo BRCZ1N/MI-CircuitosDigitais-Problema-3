@@ -1,5 +1,5 @@
 |pbl
-start_stop => start_stop.IN3
+start_stop => start_stop.IN4
 pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
@@ -25,25 +25,25 @@ Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
 Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c_deboucing => op_c_deboucing.IN1
 op_deboucing => op_deboucing.IN2
-test_buffer_entrada[0] <= buffer_entrada[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[1] <= buffer_entrada[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[2] <= buffer_entrada[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[3] <= buffer_entrada[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[4] <= buffer_entrada[4].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[5] <= buffer_entrada[5].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_entrada[6] <= buffer_entrada[6].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[0] <= buffer_saida[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[1] <= buffer_saida[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[2] <= buffer_saida[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[3] <= buffer_saida[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[4] <= buffer_saida[4].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[5] <= buffer_saida[5].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_saida[6] <= buffer_saida[6].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[0] <= buffer_entrada_principal[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[1] <= buffer_entrada_principal[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[2] <= buffer_entrada_principal[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[3] <= buffer_entrada_principal[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[4] <= buffer_entrada_principal[4].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[5] <= buffer_entrada_principal[5].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_entrada[6] <= buffer_entrada_principal[6].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[0] <= buffer_saida_principal[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[1] <= buffer_saida_principal[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[2] <= buffer_saida_principal[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[3] <= buffer_saida_principal[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[4] <= buffer_saida_principal[4].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[5] <= buffer_saida_principal[5].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_saida[6] <= buffer_saida_principal[6].DB_MAX_OUTPUT_PORT_TYPE
 test_perm_input[0] <= perm_input[0].DB_MAX_OUTPUT_PORT_TYPE
 test_perm_input[1] <= perm_input[1].DB_MAX_OUTPUT_PORT_TYPE
 test_signal_min_rolhas <= signal_min_rolhas.DB_MAX_OUTPUT_PORT_TYPE
 test_out_range_buffer <= out_range_buffer.DB_MAX_OUTPUT_PORT_TYPE
-test_op_aritmetica <= <GND>
+test_op_aritmetica <= modulo_somador_subtrator_completo_7bits:somador_subtrator_2.op_aritmetica
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -594,524 +594,6 @@ S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|or_gate_2_inputs:gate_2
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas
-clr => clr.IN7
-clk => clk.IN7
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= modulo_ff_t:ff_7.q
-prst => prst.IN7
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_1
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_2
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_3
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_4
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_5
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7
-t => q~reg0.ENA
-t => q_bar~reg0.ENA
-clk => q_bar~reg0.CLK
-clk => q~reg0.CLK
-clr => q_bar~reg0.PRESET
-clr => q~reg0.ACLR
-clr => q.IN0
-prst => q.IN1
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_permissoes:seletor_1
-ve => nve.IN2
-min_r => ~NO_FANOUT~
-op => op.IN1
-out_range_b => ~NO_FANOUT~
-perm[0] <= and_gate_2_inputs:gate_2.S
-perm[1] <= and_gate_2_inputs:gate_1.S
-
-
-|pbl|modulo_seletor_permissoes:seletor_1|and_gate_2_inputs:gate_1
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_permissoes:seletor_1|and_gate_2_inputs:gate_2
-A => comb.IN0
-B => comb.IN1
-S <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_load:seletor_2
-ve => ve.IN1
-min_r => min_r.IN1
-op => op.IN1
-out_range_b => nout_range_b.IN2
-load <= or_gate_3_inputs:gate_3.S
-
-
-|pbl|modulo_seletor_load:seletor_2|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_load:seletor_2|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_load:seletor_2|or_gate_3_inputs:gate_3
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_1
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_1|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_1|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_1|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_1|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_1|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_2
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_2|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_2|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_2|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_2|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_2|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_3
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_3|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_3|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_3|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_3|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_3|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_4
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_4|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_4|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_4|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_4|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_4|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_5
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_5|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_5|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_5|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_5|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_5|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_6
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_6|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_6|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_6|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_6|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_6|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_7
-A => A.IN1
-B => B.IN1
-C => C.IN1
-D => D.IN1
-input_sel[0] => input_sel[0].IN2
-input_sel[1] => input_sel[1].IN2
-out <= or_gate_4_inputs:gate_5.S
-
-
-|pbl|modulo_mux4_1:mux_7|and_gate_3_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_7|and_gate_3_inputs:gate_2
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_7|and_gate_3_inputs:gate_3
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_7|and_gate_3_inputs:gate_4
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_mux4_1:mux_7|or_gate_4_inputs:gate_5
-A => WideOr0.IN0
-B => WideOr0.IN1
-C => WideOr0.IN2
-D => WideOr0.IN3
-S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|modulo_seletor_operacao_aritmetica:seletor_op
-smx[0] => Nsmx[0].IN1
-smx[1] => Nsmx[1].IN1
-operacao_a <= and_gate_2_inputs:gate_1.S
-
-
-|pbl|modulo_seletor_operacao_aritmetica:seletor_op|and_gate_2_inputs:gate_1
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
@@ -1758,7 +1240,7 @@ E => WideOr0.IN4
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_8
+|pbl|modulo_mux2_1:mux_1
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1766,7 +1248,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_9
+|pbl|modulo_mux2_1:mux_2
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1774,7 +1256,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_10
+|pbl|modulo_mux2_1:mux_3
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1782,7 +1264,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_11
+|pbl|modulo_mux2_1:mux_4
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1790,7 +1272,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_12
+|pbl|modulo_mux2_1:mux_5
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1798,7 +1280,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_13
+|pbl|modulo_mux2_1:mux_6
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1806,7 +1288,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux2_1:mux_14
+|pbl|modulo_mux2_1:mux_7
 A => NSEL_and_A.IN0
 B => SEL_and_B.IN0
 SEL => SEL_and_B.IN1
@@ -1814,7 +1296,7 @@ SEL => NSEL_and_A.IN1
 OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario
 m_in[0] => modulo_ff_d:ff[0].d
 m_in[1] => modulo_ff_d:ff[1].d
 m_in[2] => modulo_ff_d:ff[2].d
@@ -1852,7 +1334,7 @@ m_out[5] <= modulo_ff_d:ff[5].q
 m_out[6] <= modulo_ff_d:ff[6].q
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[0]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[0]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1864,7 +1346,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[1]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[1]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1876,7 +1358,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[2]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[2]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1888,7 +1370,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[3]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[3]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1900,7 +1382,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[4]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[4]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1912,7 +1394,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[5]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[5]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -1924,7 +1406,1344 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_registrador_rolhas:buffer_rolhas_bandeja|modulo_ff_d:ff[6]
+|pbl|modulo_registrador_rolhas:buffer_rolhas_secundario|modulo_ff_d:ff[6]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas
+clr => clr.IN7
+clk => clk.IN7
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= modulo_ff_t:ff_7.q
+prst => prst.IN7
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_2
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_3
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_4
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_5
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7
+t => q~reg0.ENA
+t => q_bar~reg0.ENA
+clk => q_bar~reg0.CLK
+clk => q~reg0.CLK
+clr => q_bar~reg0.PRESET
+clr => q~reg0.ACLR
+clr => q.IN0
+prst => q.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_permissoes:seletor_1
+ve => nve.IN2
+min_r => ~NO_FANOUT~
+op => op.IN1
+out_range_b => ~NO_FANOUT~
+perm[0] <= and_gate_2_inputs:gate_2.S
+perm[1] <= and_gate_2_inputs:gate_1.S
+
+
+|pbl|modulo_seletor_permissoes:seletor_1|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_permissoes:seletor_1|and_gate_2_inputs:gate_2
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_load:seletor_2
+ve => ve.IN1
+min_r => min_r.IN1
+op => op.IN1
+out_range_b => nout_range_b.IN2
+load <= or_gate_3_inputs:gate_3.S
+
+
+|pbl|modulo_seletor_load:seletor_2|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_load:seletor_2|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_load:seletor_2|or_gate_3_inputs:gate_3
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_8
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_8|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_8|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_8|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_8|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_8|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_9
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_9|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_9|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_9|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_9|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_9|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_10
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_10|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_10|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_10|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_10|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_10|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_11
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_11|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_11|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_11|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_11|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_11|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_12
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_12|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_12|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_12|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_12|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_12|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_13
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_13|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_13|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_13|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_13|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_13|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_14
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+input_sel[0] => input_sel[0].IN2
+input_sel[1] => input_sel[1].IN2
+out <= or_gate_4_inputs:gate_5.S
+
+
+|pbl|modulo_mux4_1:mux_14|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_14|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_14|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_14|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux4_1:mux_14|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_seletor_operacao_aritmetica:seletor_op
+smx[0] => Nsmx[0].IN1
+smx[1] => Nsmx[1].IN1
+operacao_a <= and_gate_2_inputs:gate_1.S
+
+
+|pbl|modulo_seletor_operacao_aritmetica:seletor_op|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2
+op_aritmetica => op_aritmetica.IN7
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+sum[0] <= modulo_somador_subtrator_completo:somador_subtrator_1.S
+sum[1] <= modulo_somador_subtrator_completo:somador_subtrator_2.S
+sum[2] <= modulo_somador_subtrator_completo:somador_subtrator_3.S
+sum[3] <= modulo_somador_subtrator_completo:somador_subtrator_4.S
+sum[4] <= modulo_somador_subtrator_completo:somador_subtrator_5.S
+sum[5] <= modulo_somador_subtrator_completo:somador_subtrator_6.S
+sum[6] <= modulo_somador_subtrator_completo:somador_subtrator_7.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_2|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_3|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_4|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_5|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_6|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7
+m => m.IN2
+a => a.IN4
+b => b.IN5
+Te => Te.IN5
+S <= or_gate_4_inputs:gate_5.S
+Ts <= or_gate_5_inputs:gate_11.S
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_1
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_2
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_3
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_4
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|or_gate_4_inputs:gate_5
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_2_inputs:gate_6
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_7
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_8
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_9
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|and_gate_3_inputs:gate_10
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_somador_subtrator_completo_7bits:somador_subtrator_2|modulo_somador_subtrator_completo:somador_subtrator_7|or_gate_5_inputs:gate_11
+A => WideOr0.IN0
+B => WideOr0.IN1
+C => WideOr0.IN2
+D => WideOr0.IN3
+E => WideOr0.IN4
+S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_15
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_16
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_17
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_18
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_19
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_20
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mux2_1:mux_21
+A => NSEL_and_A.IN0
+B => SEL_and_B.IN0
+SEL => SEL_and_B.IN1
+SEL => NSEL_and_A.IN1
+OUT <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal
+m_in[0] => modulo_ff_d:ff[0].d
+m_in[1] => modulo_ff_d:ff[1].d
+m_in[2] => modulo_ff_d:ff[2].d
+m_in[3] => modulo_ff_d:ff[3].d
+m_in[4] => modulo_ff_d:ff[4].d
+m_in[5] => modulo_ff_d:ff[5].d
+m_in[6] => modulo_ff_d:ff[6].d
+clk => modulo_ff_d:ff[0].clk
+clk => modulo_ff_d:ff[1].clk
+clk => modulo_ff_d:ff[2].clk
+clk => modulo_ff_d:ff[3].clk
+clk => modulo_ff_d:ff[4].clk
+clk => modulo_ff_d:ff[5].clk
+clk => modulo_ff_d:ff[6].clk
+clr => modulo_ff_d:ff[0].clr
+clr => modulo_ff_d:ff[1].clr
+clr => modulo_ff_d:ff[2].clr
+clr => modulo_ff_d:ff[3].clr
+clr => modulo_ff_d:ff[4].clr
+clr => modulo_ff_d:ff[5].clr
+clr => modulo_ff_d:ff[6].clr
+enable => modulo_ff_d:ff[0].enable
+enable => modulo_ff_d:ff[1].enable
+enable => modulo_ff_d:ff[2].enable
+enable => modulo_ff_d:ff[3].enable
+enable => modulo_ff_d:ff[4].enable
+enable => modulo_ff_d:ff[5].enable
+enable => modulo_ff_d:ff[6].enable
+m_out[0] <= modulo_ff_d:ff[0].q
+m_out[1] <= modulo_ff_d:ff[1].q
+m_out[2] <= modulo_ff_d:ff[2].q
+m_out[3] <= modulo_ff_d:ff[3].q
+m_out[4] <= modulo_ff_d:ff[4].q
+m_out[5] <= modulo_ff_d:ff[5].q
+m_out[6] <= modulo_ff_d:ff[6].q
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[0]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[1]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[2]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[3]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[4]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[5]
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => nq~reg0.PRESET
+clr => q~reg0.ACLR
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_registrador_rolhas:buffer_rolhas_principal|modulo_ff_d:ff[6]
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -2403,7 +3222,7 @@ reg_ru[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 reg_ru[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_15
+|pbl|modulo_mux4_1:mux_22
 A => A.IN1
 B => B.IN1
 C => C.IN1
@@ -2413,35 +3232,35 @@ input_sel[1] => input_sel[1].IN2
 out <= or_gate_4_inputs:gate_5.S
 
 
-|pbl|modulo_mux4_1:mux_15|and_gate_3_inputs:gate_1
+|pbl|modulo_mux4_1:mux_22|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_15|and_gate_3_inputs:gate_2
+|pbl|modulo_mux4_1:mux_22|and_gate_3_inputs:gate_2
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_15|and_gate_3_inputs:gate_3
+|pbl|modulo_mux4_1:mux_22|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_15|and_gate_3_inputs:gate_4
+|pbl|modulo_mux4_1:mux_22|and_gate_3_inputs:gate_4
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_15|or_gate_4_inputs:gate_5
+|pbl|modulo_mux4_1:mux_22|or_gate_4_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -2449,7 +3268,7 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_16
+|pbl|modulo_mux4_1:mux_23
 A => A.IN1
 B => B.IN1
 C => C.IN1
@@ -2459,35 +3278,35 @@ input_sel[1] => input_sel[1].IN2
 out <= or_gate_4_inputs:gate_5.S
 
 
-|pbl|modulo_mux4_1:mux_16|and_gate_3_inputs:gate_1
+|pbl|modulo_mux4_1:mux_23|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_16|and_gate_3_inputs:gate_2
+|pbl|modulo_mux4_1:mux_23|and_gate_3_inputs:gate_2
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_16|and_gate_3_inputs:gate_3
+|pbl|modulo_mux4_1:mux_23|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_16|and_gate_3_inputs:gate_4
+|pbl|modulo_mux4_1:mux_23|and_gate_3_inputs:gate_4
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_16|or_gate_4_inputs:gate_5
+|pbl|modulo_mux4_1:mux_23|or_gate_4_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -2495,7 +3314,7 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_17
+|pbl|modulo_mux4_1:mux_24
 A => A.IN1
 B => B.IN1
 C => C.IN1
@@ -2505,35 +3324,35 @@ input_sel[1] => input_sel[1].IN2
 out <= or_gate_4_inputs:gate_5.S
 
 
-|pbl|modulo_mux4_1:mux_17|and_gate_3_inputs:gate_1
+|pbl|modulo_mux4_1:mux_24|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_17|and_gate_3_inputs:gate_2
+|pbl|modulo_mux4_1:mux_24|and_gate_3_inputs:gate_2
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_17|and_gate_3_inputs:gate_3
+|pbl|modulo_mux4_1:mux_24|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_17|and_gate_3_inputs:gate_4
+|pbl|modulo_mux4_1:mux_24|and_gate_3_inputs:gate_4
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_17|or_gate_4_inputs:gate_5
+|pbl|modulo_mux4_1:mux_24|or_gate_4_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
@@ -2541,7 +3360,7 @@ D => WideOr0.IN3
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_18
+|pbl|modulo_mux4_1:mux_25
 A => A.IN1
 B => B.IN1
 C => C.IN1
@@ -2551,35 +3370,35 @@ input_sel[1] => input_sel[1].IN2
 out <= or_gate_4_inputs:gate_5.S
 
 
-|pbl|modulo_mux4_1:mux_18|and_gate_3_inputs:gate_1
+|pbl|modulo_mux4_1:mux_25|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_18|and_gate_3_inputs:gate_2
+|pbl|modulo_mux4_1:mux_25|and_gate_3_inputs:gate_2
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_18|and_gate_3_inputs:gate_3
+|pbl|modulo_mux4_1:mux_25|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_18|and_gate_3_inputs:gate_4
+|pbl|modulo_mux4_1:mux_25|and_gate_3_inputs:gate_4
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mux4_1:mux_18|or_gate_4_inputs:gate_5
+|pbl|modulo_mux4_1:mux_25|or_gate_4_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
