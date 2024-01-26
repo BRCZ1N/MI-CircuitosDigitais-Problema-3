@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/26/2024 03:18:47"
+// Generated on "01/26/2024 18:16:32"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -49,6 +49,7 @@ wire [6:0] test_buffer_entrada_principal;
 wire [6:0] test_buffer_entrada_secundario;
 wire [6:0] test_buffer_saida_principal;
 wire [6:0] test_buffer_saida_secundario;
+wire test_sel_op_a_mx;
 wire ve;
 
 // assign statements (if any)                          
@@ -73,6 +74,7 @@ pbl i1 (
 	.test_buffer_entrada_secundario(test_buffer_entrada_secundario),
 	.test_buffer_saida_principal(test_buffer_saida_principal),
 	.test_buffer_saida_secundario(test_buffer_saida_secundario),
+	.test_sel_op_a_mx(test_sel_op_a_mx),
 	.ve(ve)
 );
 initial 
@@ -110,16 +112,12 @@ end
 initial
 begin
 	op_c_deboucing = 1'b0;
-	op_c_deboucing = #80000 1'b1;
-	op_c_deboucing = #80000 1'b0;
 end 
 
 // op_deboucing
 initial
 begin
-	op_deboucing = 1'b0;
-	op_deboucing = #320000 1'b1;
-	op_deboucing = #80000 1'b0;
+	op_deboucing = 1'b1;
 end 
 
 // start_stop

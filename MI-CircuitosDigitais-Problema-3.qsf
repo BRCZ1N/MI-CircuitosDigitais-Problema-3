@@ -76,9 +76,8 @@ set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_valor_minimo_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_verificador_ausencia_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_seletor_permissoes.v
-set_global_assignment -name VERILOG_FILE modulo_seletor_load.v
+set_global_assignment -name VERILOG_FILE modulo_seletor_load_principal.v
 set_global_assignment -name VERILOG_FILE modulo_count_superior99.v
-set_global_assignment -name VERILOG_FILE modulo_seletor_operacao_aritmetica.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente.v
