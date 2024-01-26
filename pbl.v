@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_saida_secundario, test_perm_load_registrador);
+module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_entrada_principal, test_buffer_saida_principal, test_buffer_entrada_secundario, test_buffer_saida_secundario);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing, hh_load;
 	output m,ve,al,ev,Nal;
@@ -12,10 +12,11 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	wire [2:0] out_comparador;
 	wire [7:0] out_7seg;
 	wire [1:0] sel_mux_display, perm_input;
+	output [6:0] test_buffer_entrada_principal = buffer_entrada_principal;
+	output [6:0] test_buffer_saida_principal = buffer_saida_principal;
+	output [6:0] test_buffer_entrada_secundario = buffer_entrada_secundario;
 	output [6:0] test_buffer_saida_secundario = buffer_saida_secundario;
-	output test_perm_load_registrador;
 	
-	assign test_perm_load_registrador = perm_load_registrador;
 
 	and(e_load_rolhas[6],1'b1,1'b0);
 	and(e_load_rolhas[5],1'b1,1'b0);
@@ -23,7 +24,7 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	and(e_load_rolhas[3],1'b1,1'b0);
 	and(e_load_rolhas[2],1'b1,1'b1);
 	and(e_load_rolhas[1],1'b1,1'b0);
-	and(e_load_rolhas[0],1'b1,1'b0);
+	and(e_load_rolhas[0],1'b1,1'b1);
 	
 	not(Nstart_stop,start_stop);
 	not(Nal,al);
@@ -127,17 +128,13 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	modulo_mux2_1 mux_35(.A(buffer_saida_principal[0]),.B(buffer_entrada_sum_principal[0]),.SEL(load_input),.OUT(buffer_entrada_principal[0]));
 	
 	modulo_seletor_permissoes seletor_1(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.perm(perm_input));
-	
 	modulo_seletor_load seletor_2(.ve(ve),.min_r(signal_min_rolhas),.op(op_deboucing),.out_range_b(out_range_buffer),.load(load_input));
 	
-	modulo_registrador_rolhas buffer_rolhas_principal(.m_in(buffer_entrada_principal),.e_load(1'b0),.load(),.clk(clk_div),.enable(start_stop),.m_out(buffer_saida_principal));
+	modulo_registrador_rolhas buffer_rolhas_principal(.m_in(buffer_entrada_principal),.e_load(),.load(),.clk(clk_div),.enable(start_stop),.m_out(buffer_saida_principal));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_entrada_sum_principal),.cont_superior_99(out_range_buffer));
-	
 	modulo_valor_minimo_rolhas m_min_rolhas(.reg_r(buffer_saida_principal),.min_signal(signal_min_rolhas));
-	
 	modulo_verificador_ausencia_rolhas m_aus_rolhas(.reg_r(buffer_saida_principal),.ro(ro));
-	
 	modulo_contador_sync_2_bits_ascendente contador_display(.clr(1'b0),.clk(clk_div),.q(sel_mux_display));
 	
 	modulo_codificador_dezena_garrafas codificador_garrafas_1(.cdd(out_4_bits_dezena_duzias),.cdfd(codificacao_4bits_d_garrafas));

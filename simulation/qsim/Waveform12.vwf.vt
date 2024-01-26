@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/26/2024 00:25:56"
+// Generated on "01/26/2024 03:18:47"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -45,8 +45,10 @@ wire al;
 wire ev;
 wire m;
 wire [1:0] mef_estado;
+wire [6:0] test_buffer_entrada_principal;
+wire [6:0] test_buffer_entrada_secundario;
+wire [6:0] test_buffer_saida_principal;
 wire [6:0] test_buffer_saida_secundario;
-wire test_perm_load_registrador;
 wire ve;
 
 // assign statements (if any)                          
@@ -67,8 +69,10 @@ pbl i1 (
 	.op_deboucing(op_deboucing),
 	.pg(pg),
 	.start_stop(start_stop),
+	.test_buffer_entrada_principal(test_buffer_entrada_principal),
+	.test_buffer_entrada_secundario(test_buffer_entrada_secundario),
+	.test_buffer_saida_principal(test_buffer_saida_principal),
 	.test_buffer_saida_secundario(test_buffer_saida_secundario),
-	.test_perm_load_registrador(test_perm_load_registrador),
 	.ve(ve)
 );
 initial 
@@ -106,24 +110,31 @@ end
 initial
 begin
 	op_c_deboucing = 1'b0;
+	op_c_deboucing = #80000 1'b1;
+	op_c_deboucing = #80000 1'b0;
 end 
 
 // op_deboucing
 initial
 begin
 	op_deboucing = 1'b0;
+	op_deboucing = #320000 1'b1;
+	op_deboucing = #80000 1'b0;
 end 
 
 // start_stop
 initial
 begin
 	start_stop = 1'b0;
+	start_stop = #160000 1'b1;
 end 
 
 // hh_load
 initial
 begin
-	hh_load = 1'b1;
+	hh_load = 1'b0;
+	hh_load = #80000 1'b1;
+	hh_load = #80000 1'b0;
 end 
 endmodule
 
