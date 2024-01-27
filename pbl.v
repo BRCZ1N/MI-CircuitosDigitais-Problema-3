@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_entrada_principal, test_buffer_saida_principal, test_buffer_entrada_secundario, test_buffer_saida_secundario,test_sel_op_a_mx);
+module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_entrada_principal, test_buffer_saida_principal, test_buffer_entrada_secundario, test_buffer_saida_secundario,test_sel_op_a_mx, test_rolhas_entrada_secundario, test_load_and_comp_and_op, test_load_input_secundario);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing, hh_load;
 	output m,ve,al,ev,Nal;
@@ -17,12 +17,15 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	output [6:0] test_buffer_entrada_secundario = buffer_entrada_secundario;
 	output [6:0] test_buffer_saida_secundario = buffer_saida_secundario;
 	output test_sel_op_a_mx = sel_op_a_mx;
+	output [6:0] test_rolhas_entrada_secundario = rolhas_entrada_secundario;
+	output test_load_and_comp_and_op = load_and_comp_and_op;
+	output test_load_input_secundario = load_input_secundario;
 	
 	and(e_load_rolhas[6],1'b1,1'b0);
 	and(e_load_rolhas[5],1'b1,1'b0);
-	and(e_load_rolhas[4],1'b1,1'b1);
+	and(e_load_rolhas[4],1'b1,1'b0);
 	and(e_load_rolhas[3],1'b1,1'b0);
-	and(e_load_rolhas[2],1'b1,1'b1);
+	and(e_load_rolhas[2],1'b1,1'b0);
 	and(e_load_rolhas[1],1'b1,1'b0);
 	and(e_load_rolhas[0],1'b1,1'b0);
 	
@@ -58,7 +61,7 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	or_gate_2_inputs gate_2(.A(start_stop),.B(sinal_dezenas_duzias_reset_aux),.S(sinal_dezenas_duzias_reset));
 	
-	//Circuito de contagem de rolhas
+	//Circuito auxiliar de contagem de rolhas
 	
 	or(comparator_aux, out_comparador[1], out_comparador[0]);
 	

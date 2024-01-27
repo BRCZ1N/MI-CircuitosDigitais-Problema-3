@@ -55,6 +55,15 @@ test_buffer_saida_secundario[4] <= buffer_saida_secundario[4].DB_MAX_OUTPUT_PORT
 test_buffer_saida_secundario[5] <= buffer_saida_secundario[5].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_saida_secundario[6] <= buffer_saida_secundario[6].DB_MAX_OUTPUT_PORT_TYPE
 test_sel_op_a_mx <= sel_op_a_mx.DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[0] <= rolhas_entrada_secundario[0].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[1] <= rolhas_entrada_secundario[1].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[2] <= rolhas_entrada_secundario[2].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[3] <= rolhas_entrada_secundario[3].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[4] <= rolhas_entrada_secundario[4].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[5] <= rolhas_entrada_secundario[5].DB_MAX_OUTPUT_PORT_TYPE
+test_rolhas_entrada_secundario[6] <= rolhas_entrada_secundario[6].DB_MAX_OUTPUT_PORT_TYPE
+test_load_and_comp_and_op <= load_and_comp_and_op.DB_MAX_OUTPUT_PORT_TYPE
+test_load_input_secundario <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
