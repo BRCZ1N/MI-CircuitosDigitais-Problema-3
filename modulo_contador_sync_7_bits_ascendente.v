@@ -1,4 +1,4 @@
-module modulo_contador_sync_7_bits_ascendente(clr, clk, q, prst);
+module modulo_contador_sync_7_bits_ascendente(clk, q, prst, clr);
 
   input clk, clr, prst;
   wire [4:0] ff_inputs;

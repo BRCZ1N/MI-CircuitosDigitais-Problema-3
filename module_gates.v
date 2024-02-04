@@ -26,6 +26,15 @@ module and_gate_4_inputs(A,B,C,D,S);
 
 endmodule 
 
+module and_gate_6_inputs(A,B,C,D,E,F,S);
+
+	input A,B,C,D,E,F;
+	output S;
+
+	and(S,A,B,C,D,E,F);
+
+endmodule 
+
 module and_gate_7_inputs(A,B,C,D,E,F,G,S);
 
 	input A,B,C,D,E,F,G;
