@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/04/2024 00:49:41"
+// Generated on "02/04/2024 01:24:58"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          modulo_registrador_rolhas
 // 
@@ -30,6 +30,7 @@ module modulo_registrador_rolhas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
+reg clr;
 reg [6:0] m_in;
 // wires                                               
 wire [6:0] m_out;
@@ -38,6 +39,7 @@ wire [6:0] m_out;
 modulo_registrador_rolhas i1 (
 // port map - connection between master ports and signals/registers   
 	.clk(clk),
+	.clr(clr),
 	.m_in(m_in),
 	.m_out(m_out)
 );
@@ -57,49 +59,61 @@ end
 initial
 begin
 	m_in[6] = 1'b0;
+	m_in[6] = #20000 1'b1;
+	m_in[6] = #10000 1'b0;
 	m_in[6] = #10000 1'b1;
 	m_in[6] = #10000 1'b0;
+	m_in[6] = #40000 1'b1;
+	m_in[6] = #290000 1'b0;
 end 
 // m_in[ 5 ]
 initial
 begin
 	m_in[5] = 1'b0;
+	m_in[5] = #20000 1'b1;
+	m_in[5] = #10000 1'b0;
 	m_in[5] = #10000 1'b1;
 	m_in[5] = #10000 1'b0;
+	m_in[5] = #40000 1'b1;
+	m_in[5] = #290000 1'b0;
 end 
 // m_in[ 4 ]
 initial
 begin
 	m_in[4] = 1'b0;
+	m_in[4] = #20000 1'b1;
+	m_in[4] = #10000 1'b0;
 	m_in[4] = #10000 1'b1;
 	m_in[4] = #10000 1'b0;
+	m_in[4] = #40000 1'b1;
+	m_in[4] = #290000 1'b0;
 end 
 // m_in[ 3 ]
 initial
 begin
 	m_in[3] = 1'b0;
-	m_in[3] = #10000 1'b1;
+	m_in[3] = #20000 1'b1;
 	m_in[3] = #10000 1'b0;
 end 
 // m_in[ 2 ]
 initial
 begin
 	m_in[2] = 1'b0;
-	m_in[2] = #10000 1'b1;
+	m_in[2] = #20000 1'b1;
 	m_in[2] = #10000 1'b0;
 end 
 // m_in[ 1 ]
 initial
 begin
 	m_in[1] = 1'b0;
-	m_in[1] = #10000 1'b1;
+	m_in[1] = #20000 1'b1;
 	m_in[1] = #10000 1'b0;
 end 
 // m_in[ 0 ]
 initial
 begin
 	m_in[0] = 1'b0;
-	m_in[0] = #10000 1'b1;
+	m_in[0] = #20000 1'b1;
 	m_in[0] = #10000 1'b0;
 end 
 endmodule

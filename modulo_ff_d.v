@@ -1,10 +1,10 @@
 //Finalizado
 module modulo_ff_d(
-  input d, clk, clr, prst,
+  input d, clk, clr, prst, enable,
   output reg q, nq
 );
 
-  always @(posedge clk) begin
+  always @(negedge clk) begin
   
     if (prst) begin
 	 
@@ -20,7 +20,7 @@ module modulo_ff_d(
 		
     end
 	 
-    else begin
+    else if(enable) begin
 	 
       q <= d;
       nq <= ~q;

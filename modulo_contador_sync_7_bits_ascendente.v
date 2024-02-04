@@ -1,10 +1,10 @@
-module modulo_contador_sync_7_bits_ascendente(clk, q, prst, clr);
+module modulo_contador_sync_7_bits_ascendente(input_primeiro_ff, clk, q, prst, clr);
 
-  input clk, clr, prst;
+  input clk, clr, prst, input_primeiro_ff;
   wire [4:0] ff_inputs;
   output [6:0] q;
 
-  modulo_ff_t ff_1(.t(1'b1), .clk(clk), .clr(clr), .prst(prst), .q(q[0]));
+  modulo_ff_t ff_1(.t(input_primeiro_ff), .clk(clk), .clr(clr), .prst(prst), .q(q[0]));
 
   modulo_ff_t ff_2(.t(q[0]), .clk(clk), .clr(clr), .prst(prst), .q(q[1]));
 

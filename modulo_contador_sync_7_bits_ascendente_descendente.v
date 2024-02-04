@@ -1,6 +1,6 @@
-module modulo_contador_sync_7_bits_ascendente_descendente(clk, q, prst, clr, up_down);
+module modulo_contador_sync_7_bits_ascendente_descendente(input_primeiro_ff, clk, q, prst, clr, up_down);
 
-  input clk, clr, prst, up_down;
+  input clk, clr, prst, up_down,input_primeiro_ff;
   wire Nup_down;
   wire [6:0] q_bar;
   wire [5:0] ff_inputs,ff_inputs_aux, N_ff_inputs_aux;
@@ -8,7 +8,7 @@ module modulo_contador_sync_7_bits_ascendente_descendente(clk, q, prst, clr, up_
   
   not (Nup_down,up_down);
 
-  modulo_ff_t ff_1(.t(1'b1),.clk(clk),.clr(clr),.prst(prst),.q(q[0]),.q_bar(q_bar[0]));
+  modulo_ff_t ff_1(.t(input_primeiro_ff),.clk(clk),.clr(clr),.prst(prst),.q(q[0]),.q_bar(q_bar[0]));
 
   and_gate_2_inputs gate_1(.A(up_down), .B(q[0]), .S(ff_inputs_aux[0]));
   and_gate_2_inputs gate_2(.A(Nup_down), .B(q_bar[0]), .S(N_ff_inputs_aux[0]));

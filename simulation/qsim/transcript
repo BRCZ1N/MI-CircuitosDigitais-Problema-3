@@ -1,33 +1,33 @@
 # do MI-CircuitosDigitais-Problema-3.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:51:58 on Feb 04,2024
+# Start time: 05:08:15 on Feb 04,2024
 # vlog -work work MI-CircuitosDigitais-Problema-3.vo 
-# -- Compiling module modulo_ff_d
+# -- Compiling module pbl
 # 
 # Top level modules:
-# 	modulo_ff_d
-# End time: 00:51:58 on Feb 04,2024, Elapsed time: 0:00:00
+# 	pbl
+# End time: 05:08:15 on Feb 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:51:58 on Feb 04,2024
-# vlog -work work Waveform30.vwf.vt 
-# -- Compiling module modulo_ff_d_vlg_vec_tst
+# Start time: 05:08:15 on Feb 04,2024
+# vlog -work work Waveform12.vwf.vt 
+# -- Compiling module pbl_vlg_vec_tst
 # 
 # Top level modules:
-# 	modulo_ff_d_vlg_vec_tst
-# End time: 00:51:58 on Feb 04,2024, Elapsed time: 0:00:00
+# 	pbl_vlg_vec_tst
+# End time: 05:08:15 on Feb 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.modulo_ff_d_vlg_vec_tst 
-# Start time: 00:51:58 on Feb 04,2024
-# Loading work.modulo_ff_d_vlg_vec_tst
-# Loading work.modulo_ff_d
+# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.pbl_vlg_vec_tst 
+# Start time: 05:08:15 on Feb 04,2024
+# Loading work.pbl_vlg_vec_tst
+# Loading work.pbl
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $finish    : Waveform30.vwf.vt(52)
-#    Time: 1 us  Iteration: 0  Instance: /modulo_ff_d_vlg_vec_tst
-# End time: 00:51:59 on Feb 04,2024, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform12.vwf.vt(88)
+#    Time: 10 us  Iteration: 0  Instance: /pbl_vlg_vec_tst
+# End time: 05:08:15 on Feb 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
