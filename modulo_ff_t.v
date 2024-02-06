@@ -1,5 +1,5 @@
 module modulo_ff_t (
-  input t, clk, clr, prst,
+  input t, clk, clr, prst, enable,
   output reg q, q_bar
 );
 
@@ -7,22 +7,34 @@ module modulo_ff_t (
     
 	 if (clr) begin
 	 
-		q <= 1'b0;
-		q_bar <= 1'b1;
+		if(enable) begin
+	 
+			q <= 1'b0;
+			q_bar <= 1'b1;
+		
+		end 
 		
     end
 	 
     else if (prst) begin
 	 
-		q <= 1'b1;
-		q_bar <= 1'b0;
+		if(enable) begin 
+		
+			q <= 1'b1;
+			q_bar <= 1'b0;
+		
+		end
 		
     end
 	 
     else if (t) begin
-	 
-		q <= ~q;
-		q_bar <= q;
+		
+		if(enable) begin
+		
+			q <= ~q;
+			q_bar <= q;
+		
+		end
 		
 	 end
 	 

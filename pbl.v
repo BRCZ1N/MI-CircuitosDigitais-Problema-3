@@ -1,12 +1,12 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_secundario,test_load_input,test_buffer_entrada_aux_secundario_in_aux,test_buffer_secundario_aux,test_buffer_entrada_aux_secundario_in,test_buffer_entrada_aux_secundario_out,test_load_input_pulse,test_out_comparador_controle,test_controle_reset);
+module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing,test_buffer_secundario,test_load_input,test_buffer_entrada_aux_secundario_in_aux,test_buffer_secundario_aux,test_buffer_entrada_aux_secundario_in,test_buffer_entrada_aux_secundario_out,test_load_input_pulse,test_out_comparador_controle,test_controle_reset,test_load_reg, test_comparator_aux);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing, hh_load;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
-	wire Nload_input, controle_reset, load_reg, load_input_pulse, Nop_c_deboucing, out_comparador_controle, Nout_range_buffer, perm_load_registrador, sel_op_a_mx, perm_input, Nop_deboucing, Nstart_stop, load_input, comparator_aux, clk_div, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
+	wire Nload_input_pulse, Nload_input, controle_reset, load_reg, load_input_pulse, Nop_c_deboucing, out_comparador_controle, Nout_range_buffer, perm_load_registrador, sel_op_a_mx, perm_input, Nop_deboucing, Nstart_stop, load_input, comparator_aux, clk_div, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux,sinal_dezenas_duzias_reset, op_arimetica, signal_min_rolhas, ro;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in,ac_7segmentos, codificacao_4bits_d_garrafas, codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
 	wire [6:0] buffer_principal, buffer_secundario, buffer_secundario_atual_sum_op, buffer_secundario_controle, buffer_secundario_aux, buffer_entrada_aux_secundario_in, buffer_entrada_aux_secundario_out, rolhas_entrada_secundario, buffer_entrada_aux_secundario_in_aux;
 	wire [2:0] out_comparador;
@@ -21,7 +21,10 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	output test_load_input_pulse = load_input_pulse;
 	output test_out_comparador_controle = out_comparador_controle;
 	output test_controle_reset = controle_reset;
+	output test_load_reg = load_reg;
+	output test_comparator_aux = comparator_aux;
 	
+	not(Nload_input_pulse, load_input_pulse);
 	not(Nload_input,load_input);
 	not(Nop_c_deboucing,op_c_deboucing);
 	not(Nout_range_buffer,out_range_buffer);
@@ -69,31 +72,31 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	LevelToPulseMealy pulsador_1(.Clock(clk_div),.Reset(),.Level(load_input),.Pulse(load_input_pulse));
 	
-	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.input_primeiro_ff(1'b1),.prst(1'b0),.clr(1'b0),.clk(Nop_c_deboucing),.q(rolhas_entrada_secundario));
+	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b0),.clr(1'b0),.clk(Nop_c_deboucing),.q(rolhas_entrada_secundario));
 	
-	modulo_mux2_1 mux_1(.A(rolhas_entrada_secundario[6]),.B(1'b0),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[6]));
-	modulo_mux2_1 mux_2(.A(rolhas_entrada_secundario[5]),.B(1'b0),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[5]));
-	modulo_mux2_1 mux_3(.A(rolhas_entrada_secundario[4]),.B(1'b1),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[4]));
-	modulo_mux2_1 mux_4(.A(rolhas_entrada_secundario[3]),.B(1'b0),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[3]));
-	modulo_mux2_1 mux_5(.A(rolhas_entrada_secundario[2]),.B(1'b1),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[2]));
-	modulo_mux2_1 mux_6(.A(rolhas_entrada_secundario[1]),.B(1'b0),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[1]));
-	modulo_mux2_1 mux_7(.A(rolhas_entrada_secundario[0]),.B(1'b0),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[0]));
+	modulo_mux2_1 mux_1(.A(rolhas_entrada_secundario[6]),.B(1'b0),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[6]));
+	modulo_mux2_1 mux_2(.A(rolhas_entrada_secundario[5]),.B(1'b0),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[5]));
+	modulo_mux2_1 mux_3(.A(rolhas_entrada_secundario[4]),.B(1'b1),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[4]));
+	modulo_mux2_1 mux_4(.A(rolhas_entrada_secundario[3]),.B(1'b0),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[3]));
+	modulo_mux2_1 mux_5(.A(rolhas_entrada_secundario[2]),.B(1'b1),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[2]));
+	modulo_mux2_1 mux_6(.A(rolhas_entrada_secundario[1]),.B(1'b0),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[1]));
+	modulo_mux2_1 mux_7(.A(rolhas_entrada_secundario[0]),.B(1'b0),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in_aux[0]));
 	
-	modulo_registrador_rolhas registrador_1(.m_in(buffer_secundario),.clk(load_input_pulse),.clr(),.m_out(buffer_secundario_aux),.enable(1'b1));
+	modulo_registrador_rolhas registrador_1(.m_in(buffer_secundario),.clk(load_input_pulse),.m_out(buffer_secundario_aux),.enable(1'b1));
 	
-	modulo_somador_subtrator_completo_7bits(.op_aritmetica(load_aux[1]),.a(buffer_secundario_aux),.b(buffer_entrada_aux_secundario_in),.sum(buffer_secundario_atual_sum_op));
+	modulo_somador_subtrator_completo_7bits(.op_aritmetica(load_aux[1]),.a(buffer_secundario_aux),.b(buffer_entrada_aux_secundario_in_aux),.sum(buffer_secundario_atual_sum_op));
 	
-	modulo_mux2_1 mux_8(.A(buffer_secundario_atual_sum_op[6]),.B(buffer_entrada_aux_secundario_in_aux[6]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[6]));
-	modulo_mux2_1 mux_9(.A(buffer_secundario_atual_sum_op[5]),.B(buffer_entrada_aux_secundario_in_aux[5]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[5]));
-	modulo_mux2_1 mux_10(.A(buffer_secundario_atual_sum_op[4]),.B(buffer_entrada_aux_secundario_in_aux[4]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[4]));
-	modulo_mux2_1 mux_11(.A(buffer_secundario_atual_sum_op[3]),.B(buffer_entrada_aux_secundario_in_aux[3]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[3]));
-	modulo_mux2_1 mux_12(.A(buffer_secundario_atual_sum_op[2]),.B(buffer_entrada_aux_secundario_in_aux[2]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[2]));
-	modulo_mux2_1 mux_13(.A(buffer_secundario_atual_sum_op[1]),.B(buffer_entrada_aux_secundario_in_aux[1]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[1]));
-	modulo_mux2_1 mux_14(.A(buffer_secundario_atual_sum_op[0]),.B(buffer_entrada_aux_secundario_in_aux[0]),.SEL(Nop_deboucing),.OUT(buffer_entrada_aux_secundario_in[0]));
+	modulo_mux2_1 mux_8(.A(buffer_secundario_atual_sum_op[6]),.B(buffer_entrada_aux_secundario_in_aux[6]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[6]));
+	modulo_mux2_1 mux_9(.A(buffer_secundario_atual_sum_op[5]),.B(buffer_entrada_aux_secundario_in_aux[5]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[5]));
+	modulo_mux2_1 mux_10(.A(buffer_secundario_atual_sum_op[4]),.B(buffer_entrada_aux_secundario_in_aux[4]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[4]));
+	modulo_mux2_1 mux_11(.A(buffer_secundario_atual_sum_op[3]),.B(buffer_entrada_aux_secundario_in_aux[3]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[3]));
+	modulo_mux2_1 mux_12(.A(buffer_secundario_atual_sum_op[2]),.B(buffer_entrada_aux_secundario_in_aux[2]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[2]));
+	modulo_mux2_1 mux_13(.A(buffer_secundario_atual_sum_op[1]),.B(buffer_entrada_aux_secundario_in_aux[1]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[1]));
+	modulo_mux2_1 mux_14(.A(buffer_secundario_atual_sum_op[0]),.B(buffer_entrada_aux_secundario_in_aux[0]),.SEL(op_deboucing),.OUT(buffer_entrada_aux_secundario_in[0]));
 	
 	modulo_registrador_rolhas registrador_2(.m_in(buffer_entrada_aux_secundario_in),.clk(load_input_pulse),.m_out(buffer_entrada_aux_secundario_out),.enable(1'b1));
 	
-	modulo_comparador7bits comparador_1(.A(buffer_secundario),.B(buffer_entrada_aux_secundario_out),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
+	modulo_comparador7bits comparador_1(.A(buffer_secundario_aux),.B(buffer_entrada_aux_secundario_out),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_entrada_aux_secundario_out),.cont_superior_99(out_range_buffer));
 	
@@ -101,10 +104,24 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	modulo_ff_d ff_1(.d(load_input),.clk(load_input_pulse),.clr(controle_reset),.enable(1'b1),.q(load_reg),.nq());
 	
-	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_secundario),.prst(),.clr(),.up_down(load_aux[1]));
-	modulo_contador_sync_7_bits_ascendente contador_2_buffer_secundario_controle(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_secundario_controle),.prst(),.clr(1'b1));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg),.q(buffer_secundario),.prst(),.clr(),.up_down(load_aux[1]));
+	modulo_contador_sync_7_bits_ascendente contador_2_buffer_secundario_controle(.clk(clk_div),.enable(load_reg),.q(buffer_secundario_controle),.prst(),.clr(controle_reset));
 	
 	modulo_comparador7bits comparador_2(.A(buffer_secundario_controle),.B(buffer_entrada_aux_secundario_out),.AltB_out(),.AeqB_out(out_comparador_controle),.AgtB_out());
+	
+
+	// Parte 2 circuito de rolhas 
+	/*
+	and(controle_reset, Nload_input, out_comparador_controle);
+	
+	modulo_ff_d ff_2(.d(load_input),.clk(load_input_pulse),.clr(controle_reset),.enable(1'b1),.q(load_reg),.nq());
+	
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_primeiro(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_primario),.prst(),.clr(),.up_down(load_aux[1]));
+	modulo_contador_sync_7_bits_ascendente contador_1_buffer_primario_controle(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_primario_controle),.prst(),.clr(1'b1));
+	
+	modulo_comparador7bits comparador_3(.A(buffer_secundario_controle),.B(buffer_entrada_aux_secundario_out),.AltB_out(),.AeqB_out(out_comparador_controle),.AgtB_out());
+	*/
+	// Parte 2 circuito de rolhas
 	
 	modulo_valor_minimo_rolhas m_min_rolhas(.reg_r(buffer_principal),.min_signal(signal_min_rolhas));
 	modulo_verificador_ausencia_rolhas m_aus_rolhas(.reg_r(buffer_principal),.ro(ro));

@@ -4,7 +4,7 @@ module modulo_ff_d(
   output reg q, nq
 );
 
-  always @(negedge clk) begin
+  always @(posedge clk) begin
   
     if (prst) begin
 	 
