@@ -25,11 +25,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Feb 09 02:02:47 2024
+    Info: Processing started: Fri Feb 09 05:14:46 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3 --vector_source=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/Waveform12.vwf --testbench_file=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/Waveform12.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-rce file when writing test bench files
+g output pin "test_buffer_secundario[0]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -55,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Feb 09 02:02:48 2024
+    Info: Processing started: Fri Feb 09 05:14:48 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/ MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MI-CircuitosDigitais-Problema-3.vo in folder "C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4615 megabytes
-    Info: Processing ended: Fri Feb 09 02:02:49 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4611 megabytes
+    Info: Processing ended: Fri Feb 09 05:14:48 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -79,6 +79,7 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do MI-CircuitosDigitais
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
+
 # 10.5b
 
 
@@ -87,37 +88,35 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:02:51 on Feb 09,2024
+# Start time: 05:14:52 on Feb 09,2024
 # vlog -work work MI-CircuitosDigitais-Problema-3.vo 
+
 # -- Compiling module pbl
 # 
 # Top level modules:
 # 	pbl
-# End time: 02:02:51 on Feb 09,2024, Elapsed time: 0:00:00
+# End time: 05:14:52 on Feb 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:02:51 on Feb 09,2024
-# vlog -work work Waveform12.vwf.vt 
 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:14:52 on Feb 09,2024
+# vlog -work work Waveform12.vwf.vt 
 # -- Compiling module pbl_vlg_vec_tst
 # 
 # Top level modules:
 # 	pbl_vlg_vec_tst
-# End time: 02:02:51 on Feb 09,2024, Elapsed time: 0:00:00
+# End time: 05:14:52 on Feb 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.pbl_vlg_vec_tst 
-# Start time: 02:02:52 on Feb 09,2024
+# Start time: 05:14:53 on Feb 09,2024
 # Loading work.pbl_vlg_vec_tst
 # Loading work.pbl
 # Loading maxii_ver.maxii_io
-# Loading maxii_ver.maxii_lcell
-# Loading maxii_ver.maxii_asynch_lcell
-# Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $finish    : Waveform12.vwf.vt(88)
+# ** Note: $finish    : Waveform12.vwf.vt(70)
 #    Time: 10 us  Iteration: 0  Instance: /pbl_vlg_vec_tst
-# End time: 02:02:52 on Feb 09,2024, Elapsed time: 0:00:00
+# End time: 05:14:54 on Feb 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -130,13 +129,91 @@ Reading C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-
 
 Processing channel transitions... 
 
+Warning: hh_load - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[6] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[5] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[4] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[3] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[2] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[1] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in[0] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[6] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[5] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[4] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[3] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[2] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[1] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_in_aux[0] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[6] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[5] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[4] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[3] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[2] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[1] - signal not found in VCD.
+
+Warning: test_buffer_entrada_aux_secundario_out[0] - signal not found in VCD.
+
+Warning: test_buffer_secundario[6] - signal not found in VCD.
+
+Warning: test_buffer_secundario[5] - signal not found in VCD.
+
+Warning: test_buffer_secundario[4] - signal not found in VCD.
+
+Warning: test_buffer_secundario[3] - signal not found in VCD.
+
+Warning: test_buffer_secundario[2] - signal not found in VCD.
+
+Warning: test_buffer_secundario[1] - signal not found in VCD.
+
+Warning: test_buffer_secundario[0] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[6] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[5] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[4] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[3] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[2] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[1] - signal not found in VCD.
+
+Warning: test_buffer_secundario_aux[0] - signal not found in VCD.
+
 Warning: test_controle_reset - signal not found in VCD.
+
+Warning: test_load_input - signal not found in VCD.
 
 Warning: test_load_input_pulse - signal not found in VCD.
 
+Warning: test_load_reg - signal not found in VCD.
+
 Warning: test_out_comparador_controle - signal not found in VCD.
 
-Writing the resulting VWF to C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/MI-CircuitosDigitais-Problema-3_20240209020252.sim.vwf
+Warning: test_comparator_aux - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/MI-CircuitosDigitais-Problema-3_20240209051454.sim.vwf
 
 Finished VCD to VWF conversion.
 
