@@ -102,11 +102,13 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	and(controle_reset, Nload_input, out_comparador_controle);
 	
-	modulo_ff_d ff_1(.d(load_input),.clk(load_input_pulse),.clr(controle_reset),.enable(1'b1),.q(load_reg),.nq());
+	modulo_ff_d ff_1(.d(load_aux[0]),.clk(load_input_pulse[0]),.clr(controle_reset[0]),.enable(1'b1),.q(load_reg_min_rolhas),.nq());
+	
+	modulo_ff_d ff_2(.d(load_aux[1]),.clk(load_input_pulse[1]),.clr(controle_reset[1]),.enable(1'b1),.q(load_reg_operador),.nq());
 	
 	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg),.q(buffer_secundario),.prst(),.clr(),.up_down(load_aux[1]));
-	modulo_contador_sync_7_bits_ascendente contador_2_buffer_secundario_controle(.clk(clk_div),.enable(load_reg),.q(buffer_secundario_controle),.prst(),.clr(controle_reset));
-	
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg),.q(buffer_secundario_controle_min_rolhas),.prst(),.clr(),.up_down(1'b0));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg),.q(buffer_secundario_controle_operador),.prst(),.clr(),.up_down(1'b0));
 	modulo_comparador7bits comparador_2(.A(buffer_secundario_controle),.B(buffer_entrada_aux_secundario_out),.AltB_out(),.AeqB_out(out_comparador_controle),.AgtB_out());
 	
 
@@ -114,7 +116,7 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	/*
 	and(controle_reset, Nload_input, out_comparador_controle);
 	
-	modulo_ff_d ff_2(.d(load_input),.clk(load_input_pulse),.clr(controle_reset),.enable(1'b1),.q(load_reg),.nq());
+	modulo_ff_d ff_2(.d(load_input),.cl	k(load_input_pulse),.clr(controle_reset),.enable(1'b1),.q(load_reg),.nq());
 	
 	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_primeiro(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_primario),.prst(),.clr(),.up_down(load_aux[1]));
 	modulo_contador_sync_7_bits_ascendente contador_1_buffer_primario_controle(.input_primeiro_ff(load_reg),.clk(clk_div),.q(buffer_primario_controle),.prst(),.clr(1'b1));
