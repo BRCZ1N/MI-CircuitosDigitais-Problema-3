@@ -18,136 +18,30 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/06/2024 13:58:08"
+// Generated on "02/10/2024 02:30:27"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          pbl
+// Verilog Test Bench (with test vectors) for design :                          modulo_valor_transfer_rolhas
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module pbl_vlg_vec_tst();
+module modulo_valor_transfer_rolhas_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg ch;
-reg clock_50mhz;
-reg cq;
-reg hh_load;
-reg op_c_deboucing;
-reg op_deboucing;
-reg pg;
-reg start_stop;
+reg [6:0] reg_r;
 // wires                                               
-wire [3:0] Nac_7segmentos;
-wire Nal;
-wire [7:0] Nout_7seg;
-wire al;
-wire ev;
-wire m;
-wire [1:0] mef_estado;
-wire [6:0] test_buffer_entrada_aux_secundario_in;
-wire [6:0] test_buffer_entrada_aux_secundario_in_aux;
-wire [6:0] test_buffer_entrada_aux_secundario_out;
-wire [6:0] test_buffer_secundario;
-wire [6:0] test_buffer_secundario_aux;
-wire test_comparator_aux;
-wire test_controle_reset;
-wire test_load_input;
-wire test_load_input_pulse;
-wire test_load_reg;
-wire test_out_comparador_controle;
-wire ve;
+wire transfer_rolhas;
 
 // assign statements (if any)                          
-pbl i1 (
+modulo_valor_transfer_rolhas i1 (
 // port map - connection between master ports and signals/registers   
-	.Nac_7segmentos(Nac_7segmentos),
-	.Nal(Nal),
-	.Nout_7seg(Nout_7seg),
-	.al(al),
-	.ch(ch),
-	.clock_50mhz(clock_50mhz),
-	.cq(cq),
-	.ev(ev),
-	.hh_load(hh_load),
-	.m(m),
-	.mef_estado(mef_estado),
-	.op_c_deboucing(op_c_deboucing),
-	.op_deboucing(op_deboucing),
-	.pg(pg),
-	.start_stop(start_stop),
-	.test_buffer_entrada_aux_secundario_in(test_buffer_entrada_aux_secundario_in),
-	.test_buffer_entrada_aux_secundario_in_aux(test_buffer_entrada_aux_secundario_in_aux),
-	.test_buffer_entrada_aux_secundario_out(test_buffer_entrada_aux_secundario_out),
-	.test_buffer_secundario(test_buffer_secundario),
-	.test_buffer_secundario_aux(test_buffer_secundario_aux),
-	.test_comparator_aux(test_comparator_aux),
-	.test_controle_reset(test_controle_reset),
-	.test_load_input(test_load_input),
-	.test_load_input_pulse(test_load_input_pulse),
-	.test_load_reg(test_load_reg),
-	.test_out_comparador_controle(test_out_comparador_controle),
-	.ve(ve)
+	.reg_r(reg_r),
+	.transfer_rolhas(transfer_rolhas)
 );
 initial 
 begin 
 #10000000 $finish;
-end 
-
-// clock_50mhz
-initial
-begin
-	clock_50mhz = 1'b1;
-	# 10000;
-	repeat(499)
-	begin
-		clock_50mhz = 1'b0;
-		clock_50mhz = #10000 1'b1;
-		# 10000;
-	end
-	clock_50mhz = 1'b0;
-end 
-
-// pg
-initial
-begin
-	pg = 1'b1;
-end 
-
-// ch
-initial
-begin
-	ch = 1'b1;
-end 
-
-// cq
-initial
-begin
-	cq = 1'b0;
-end 
-
-// op_c_deboucing
-initial
-begin
-	op_c_deboucing = 1'b0;
-end 
-
-// op_deboucing
-initial
-begin
-	op_deboucing = 1'b1;
-end 
-
-// start_stop
-initial
-begin
-	start_stop = 1'b0;
-end 
-
-// hh_load
-initial
-begin
-	hh_load = 1'b0;
 end 
 endmodule
 

@@ -135,3 +135,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform31.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform32.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform33.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
+set_global_assignment -name VERILOG_FILE modulo_valor_transfer_rolhas.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf

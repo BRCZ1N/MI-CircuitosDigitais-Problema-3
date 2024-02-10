@@ -3,6 +3,14 @@ module modulo_ff_t (
   output reg q, q_bar
 );
 
+	initial begin
+		
+		q <= 1'b0;
+		q_bar <= 1'b1;
+	
+	
+	end
+
   always @(negedge clk or posedge clr or posedge prst) begin
     
 	 if (clr) begin
