@@ -3,7 +3,7 @@ module modulo_ff_t (
   output reg q, q_bar
 );
 
-  always @(negedge clk) begin
+  always @(negedge clk or posedge clr or posedge prst) begin
     
 	 if (clr) begin
 	 
