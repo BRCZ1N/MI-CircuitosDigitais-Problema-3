@@ -121,9 +121,9 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	or(load_reg_aux,load_reg[0],load_reg[1]);
 	
-	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg_aux),.q(buffer_secundario),.prst(),.clr(),.up_down(load_aux[1]));
-	modulo_contador_sync_7_bits_ascendente_descendente contador_2_buffer_secundario(.clk(clk_div),.enable(load_reg[0]),.q(buffer_secundario_controle_min_rolhas),.prst(),.clr(controle_reset[0]),.up_down(1'b0));
-	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario(.clk(clk_div),.enable(load_reg[1]),.q(buffer_secundario_controle_operador),.prst(),.clr(controle_reset[1]),.up_down(1'b0));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(load_reg_aux),.q(buffer_secundario),.up_down(load_aux[1]));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_2_buffer_secundario(.clk(clk_div),.enable(load_reg[0]),.q(buffer_secundario_controle_min_rolhas),.prst(),.clr(),.up_down(1'b0));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario(.clk(clk_div),.enable(load_reg[1]),.q(buffer_secundario_controle_operador),.prst(),.clr(),.up_down(1'b0));
 	modulo_comparador7bits comparador_2(.A(buffer_secundario_controle),.B(buffer_entrada_aux_secundario_out),.AltB_out(),.AeqB_out(out_comparador_controle),.AgtB_out());
 	
 	modulo_valor_transfer_rolhas m_trans_rolha(.reg_r(buffer_secundario),.transfer_rolhas(min_trans_rolhas));
