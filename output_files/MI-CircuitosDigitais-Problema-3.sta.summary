@@ -2,44 +2,60 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -14.575
-TNS   : -252.558
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : -12.096
+TNS   : -246.153
 
 Type  : Setup 'op_deboucing'
-Slack : -13.324
-TNS   : -86.689
+Slack : -9.746
+TNS   : -39.669
 
 Type  : Setup 'op_c_deboucing'
-Slack : -2.956
-TNS   : -15.114
+Slack : -3.003
+TNS   : -15.050
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Slack : 1.400
+TNS   : 0.000
 
 Type  : Setup 'clock_50mhz'
-Slack : 1.690
+Slack : 1.635
 TNS   : 0.000
 
 Type  : Hold 'op_deboucing'
-Slack : -3.570
-TNS   : -27.558
+Slack : -4.290
+TNS   : -48.011
 
 Type  : Hold 'clock_50mhz'
-Slack : -1.744
-TNS   : -1.744
+Slack : -1.689
+TNS   : -1.689
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 0.823
+Slack : -1.454
+TNS   : -1.454
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : -0.523
+TNS   : -0.523
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : 0.317
 TNS   : 0.000
 
 Type  : Hold 'op_c_deboucing'
-Slack : 1.695
+Slack : 1.746
 TNS   : 0.000
 
-Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -10.958
-TNS   : -105.247
+Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : -12.434
+TNS   : -115.608
 
-Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 2.838
+Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : 3.382
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
@@ -55,6 +71,14 @@ Slack : -2.289
 TNS   : -2.289
 
 Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
 Slack : 0.234
 TNS   : 0.000
 
