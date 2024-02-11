@@ -2,68 +2,68 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -9.799
-TNS   : -202.218
-
 Type  : Setup 'op_deboucing'
-Slack : -9.517
-TNS   : -40.835
+Slack : -10.018
+TNS   : -41.544
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : -9.790
+TNS   : -303.806
 
 Type  : Setup 'op_c_deboucing'
-Slack : -2.973
-TNS   : -15.422
+Slack : -3.197
+TNS   : -15.664
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
 Slack : 0.466
 TNS   : 0.000
 
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : 1.303
+Type  : Setup 'clock_50mhz'
+Slack : 1.672
 TNS   : 0.000
 
-Type  : Setup 'clock_50mhz'
-Slack : 1.618
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : 1.796
 TNS   : 0.000
 
 Type  : Hold 'op_deboucing'
-Slack : -3.750
-TNS   : -36.013
-
-Type  : Hold 'clock_50mhz'
-Slack : -1.672
-TNS   : -1.672
+Slack : -4.112
+TNS   : -41.062
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : -1.357
-TNS   : -1.357
+Slack : -1.850
+TNS   : -1.850
+
+Type  : Hold 'clock_50mhz'
+Slack : -1.726
+TNS   : -1.726
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
 Slack : -0.520
 TNS   : -0.520
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 0.596
+Slack : 1.049
 TNS   : 0.000
 
 Type  : Hold 'op_c_deboucing'
-Slack : 1.710
+Slack : 1.649
 TNS   : 0.000
 
 Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -12.011
-TNS   : -112.779
+Slack : -11.882
+TNS   : -111.859
 
 Type  : Recovery 'op_deboucing'
-Slack : -3.911
-TNS   : -4.995
+Slack : -2.622
+TNS   : -3.400
 
 Type  : Removal 'op_deboucing'
-Slack : 0.516
-TNS   : 0.000
+Slack : -0.590
+TNS   : -0.590
 
 Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 3.309
+Slack : 3.314
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
