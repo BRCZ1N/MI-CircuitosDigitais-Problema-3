@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/10/2024 04:21:37"
+// Generated on "02/10/2024 22:30:23"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -42,15 +42,20 @@ wire [3:0] Nac_7segmentos;
 wire Nal;
 wire [7:0] Nout_7seg;
 wire al;
+wire [1:0] contador_state;
 wire ev;
 wire m;
 wire [1:0] mef_estado;
 wire [6:0] test_buffer_secundario;
 wire [6:0] test_buffer_secundario_controle_min_rolhas;
 wire [6:0] test_buffer_secundario_controle_operador;
+wire test_clk_div;
 wire test_controle_reset;
+wire test_enable_count_min_rolhas;
+wire test_load_count_min_rolhas;
 wire [1:0] test_load_input_pulse;
-wire [1:0] test_load_reg;
+wire test_load_reg;
+wire test_min_trans_rolhas;
 wire ve;
 
 // assign statements (if any)                          
@@ -62,6 +67,7 @@ pbl i1 (
 	.al(al),
 	.ch(ch),
 	.clock_50mhz(clock_50mhz),
+	.contador_state(contador_state),
 	.cq(cq),
 	.ev(ev),
 	.hh_load(hh_load),
@@ -74,9 +80,13 @@ pbl i1 (
 	.test_buffer_secundario(test_buffer_secundario),
 	.test_buffer_secundario_controle_min_rolhas(test_buffer_secundario_controle_min_rolhas),
 	.test_buffer_secundario_controle_operador(test_buffer_secundario_controle_operador),
+	.test_clk_div(test_clk_div),
 	.test_controle_reset(test_controle_reset),
+	.test_enable_count_min_rolhas(test_enable_count_min_rolhas),
+	.test_load_count_min_rolhas(test_load_count_min_rolhas),
 	.test_load_input_pulse(test_load_input_pulse),
 	.test_load_reg(test_load_reg),
+	.test_min_trans_rolhas(test_min_trans_rolhas),
 	.ve(ve)
 );
 initial 

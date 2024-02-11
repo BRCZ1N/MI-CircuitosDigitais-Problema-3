@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY modulo_contador_sync_7_bits_ascendente_descendente
+set_global_assignment -name TOP_LEVEL_ENTITY pbl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:43:15  DECEMBER 10, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -138,3 +138,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
 set_global_assignment -name VERILOG_FILE modulo_valor_transfer_rolhas.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform36.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform37.vwf
+set_global_assignment -name VERILOG_FILE modulo_mef_controle_contador.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform38.vwf
