@@ -2,68 +2,68 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'op_deboucing'
-Slack : -10.018
-TNS   : -41.544
-
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -9.790
-TNS   : -303.806
+Slack : -10.550
+TNS   : -337.236
+
+Type  : Setup 'op_deboucing'
+Slack : -10.297
+TNS   : -39.885
 
 Type  : Setup 'op_c_deboucing'
-Slack : -3.197
-TNS   : -15.664
+Slack : -2.931
+TNS   : -15.894
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : 0.810
+TNS   : 0.000
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 0.466
+Slack : 0.847
 TNS   : 0.000
 
 Type  : Setup 'clock_50mhz'
-Slack : 1.672
-TNS   : 0.000
-
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : 1.796
+Slack : 1.948
 TNS   : 0.000
 
 Type  : Hold 'op_deboucing'
-Slack : -4.112
-TNS   : -41.062
-
-Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : -1.850
-TNS   : -1.850
+Slack : -4.517
+TNS   : -45.608
 
 Type  : Hold 'clock_50mhz'
-Slack : -1.726
-TNS   : -1.726
+Slack : -2.002
+TNS   : -2.002
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -0.520
-TNS   : -0.520
+Slack : -0.901
+TNS   : -0.901
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : -0.864
+TNS   : -0.864
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 1.049
+Slack : 0.557
 TNS   : 0.000
 
 Type  : Hold 'op_c_deboucing'
-Slack : 1.649
+Slack : 1.755
 TNS   : 0.000
 
 Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -11.882
-TNS   : -111.859
+Slack : -12.583
+TNS   : -144.790
 
 Type  : Recovery 'op_deboucing'
-Slack : -2.622
-TNS   : -3.400
+Slack : -3.591
+TNS   : -4.051
 
 Type  : Removal 'op_deboucing'
-Slack : -0.590
-TNS   : -0.590
+Slack : -1.326
+TNS   : -1.326
 
 Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 3.314
+Slack : 3.321
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
