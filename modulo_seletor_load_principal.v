@@ -1,4 +1,4 @@
-//Finalizado
+//Remover
 module modulo_seletor_load_principal(ve,min_r,load,sel_op_a_mx);
 	
 	

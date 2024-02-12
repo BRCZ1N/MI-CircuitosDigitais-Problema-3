@@ -48,11 +48,10 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente_descendente.v
+set_global_assignment -name VERILOG_FILE pbl.v
 set_global_assignment -name VERILOG_FILE modulo_mux2_1.v
 set_global_assignment -name VERILOG_FILE modulo_comparador7bits.v
 set_global_assignment -name VERILOG_FILE modulo_comparador1bit.v
-set_global_assignment -name VERILOG_FILE pbl.v
 set_global_assignment -name VERILOG_FILE modulo_mef_enchimento_vedacao.v
 set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_valor_minimo_rolhas.v
@@ -63,15 +62,18 @@ set_global_assignment -name VERILOG_FILE modulo_count_superior99.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_7_bits_ascendente_descendente.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_dd.v
 set_global_assignment -name VERILOG_FILE modulo_reset_contador_d.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_garrafas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_garrafas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_dezena_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_codificador_unidade_rolhas.v
+set_global_assignment -name VERILOG_FILE modulo_valor_transfer_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_decodificadorBCD_7Segmentos.v
 set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo_7bits.v
 set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo.v
+set_global_assignment -name VERILOG_FILE modulo_mef_controle_contador.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
 set_global_assignment -name VERILOG_FILE modulo_divisor_frequencia.v
@@ -116,11 +118,9 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform31.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform32.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform33.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
-set_global_assignment -name VERILOG_FILE modulo_valor_transfer_rolhas.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform36.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform37.vwf
-set_global_assignment -name VERILOG_FILE modulo_mef_controle_contador.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform38.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform39.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform40.vwf
