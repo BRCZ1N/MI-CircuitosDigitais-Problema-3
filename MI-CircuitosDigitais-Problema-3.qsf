@@ -56,8 +56,6 @@ set_global_assignment -name VERILOG_FILE modulo_mef_enchimento_vedacao.v
 set_global_assignment -name VERILOG_FILE modulo_registrador_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_valor_minimo_rolhas.v
 set_global_assignment -name VERILOG_FILE modulo_verificador_ausencia_rolhas.v
-set_global_assignment -name VERILOG_FILE modulo_seletor_permissoes.v
-set_global_assignment -name VERILOG_FILE modulo_seletor_load_principal.v
 set_global_assignment -name VERILOG_FILE modulo_count_superior99.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_2_bits_ascendente.v
 set_global_assignment -name VERILOG_FILE modulo_contador_sync_4_bits_ascendente.v
@@ -75,7 +73,6 @@ set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo_7bits
 set_global_assignment -name VERILOG_FILE modulo_somador_subtrator_completo.v
 set_global_assignment -name VERILOG_FILE modulo_mef_controle_contador.v
 set_global_assignment -name VERILOG_FILE LevelToPulseMealy.v
-set_global_assignment -name VERILOG_FILE LevelToPulseMoore.v
 set_global_assignment -name VERILOG_FILE modulo_divisor_frequencia.v
 set_global_assignment -name VERILOG_FILE modulo_mux4_1.v
 set_global_assignment -name VERILOG_FILE modulo_demux1_4.v
