@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Sun Feb 11 21:21:18 2024
+Sun Feb 11 21:34:26 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -120,7 +120,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Feb 11 21:21:18 2024       ;
+; Analysis & Synthesis Status ; Successful - Sun Feb 11 21:34:26 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
@@ -224,11 +224,10 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                   ; Library ;
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
-; modulo_contador_sync_7_bits_ascendente_descendente.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente_descendente.v ;         ;
+; pbl.v                                                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                                                ;         ;
 ; modulo_mux2_1.v                                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux2_1.v                                      ;         ;
 ; modulo_comparador7bits.v                             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v                             ;         ;
 ; modulo_comparador1bit.v                              ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador1bit.v                              ;         ;
-; pbl.v                                                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                                                ;         ;
 ; modulo_mef_enchimento_vedacao.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v                      ;         ;
 ; modulo_registrador_rolhas.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_registrador_rolhas.v                          ;         ;
 ; modulo_valor_minimo_rolhas.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_minimo_rolhas.v                         ;         ;
@@ -237,15 +236,18 @@ refer to the applicable agreement for further details.
 ; modulo_contador_sync_2_bits_ascendente.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_2_bits_ascendente.v             ;         ;
 ; modulo_contador_sync_4_bits_ascendente.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_4_bits_ascendente.v             ;         ;
 ; modulo_contador_sync_7_bits_ascendente.v             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente.v             ;         ;
+; modulo_contador_sync_7_bits_ascendente_descendente.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente_descendente.v ;         ;
 ; modulo_reset_contador_dd.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_dd.v                           ;         ;
 ; modulo_reset_contador_d.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_d.v                            ;         ;
 ; modulo_codificador_dezena_garrafas.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_garrafas.v                 ;         ;
 ; modulo_codificador_unidade_garrafas.v                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_garrafas.v                ;         ;
 ; modulo_codificador_dezena_rolhas.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_rolhas.v                   ;         ;
 ; modulo_codificador_unidade_rolhas.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_rolhas.v                  ;         ;
+; modulo_valor_transfer_rolhas.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_transfer_rolhas.v                       ;         ;
 ; modulo_decodificadorBCD_7Segmentos.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_decodificadorBCD_7Segmentos.v                 ;         ;
 ; modulo_somador_subtrator_completo_7bits.v            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo_7bits.v            ;         ;
 ; modulo_somador_subtrator_completo.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v                  ;         ;
+; modulo_mef_controle_contador.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v                       ;         ;
 ; LevelToPulseMealy.v                                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v                                  ;         ;
 ; modulo_divisor_frequencia.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v                          ;         ;
 ; modulo_mux4_1.v                                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux4_1.v                                      ;         ;
@@ -254,8 +256,6 @@ refer to the applicable agreement for further details.
 ; modulo_ff_jk.v                                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_jk.v                                       ;         ;
 ; modulo_ff_d.v                                        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_d.v                                        ;         ;
 ; module_gates.v                                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v                                       ;         ;
-; modulo_valor_transfer_rolhas.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_transfer_rolhas.v                       ;         ;
-; modulo_mef_controle_contador.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v                       ;         ;
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1296,20 +1296,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Feb 11 21:21:11 2024
+    Info: Processing started: Sun Feb 11 21:34:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_contador_sync_7_bits_ascendente_descendente.v
-    Info (12023): Found entity 1: modulo_contador_sync_7_bits_ascendente_descendente File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente_descendente.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
+    Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mux2_1.v
     Info (12023): Found entity 1: modulo_mux2_1 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux2_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_comparador7bits.v
     Info (12023): Found entity 1: modulo_comparador7bits File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_comparador1bit.v
     Info (12023): Found entity 1: modulo_comparador1bit File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador1bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
-    Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mef_enchimento_vedacao.v
     Info (12023): Found entity 1: modulo_mef_enchimento_vedacao File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_registrador_rolhas.v
@@ -1318,10 +1316,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_valor_minimo_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_minimo_rolhas.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_verificador_ausencia_rolhas.v
     Info (12023): Found entity 1: modulo_verificador_ausencia_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_verificador_ausencia_rolhas.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_seletor_permissoes.v
-    Info (12023): Found entity 1: modulo_seletor_permissoes File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_permissoes.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_seletor_load_principal.v
-    Info (12023): Found entity 1: modulo_seletor_load_principal File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_seletor_load_principal.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_count_superior99.v
     Info (12023): Found entity 1: modulo_count_superior99 File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_count_superior99.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_contador_sync_2_bits_ascendente.v
@@ -1330,6 +1324,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_contador_sync_4_bits_ascendente File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_4_bits_ascendente.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_contador_sync_7_bits_ascendente.v
     Info (12023): Found entity 1: modulo_contador_sync_7_bits_ascendente File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_contador_sync_7_bits_ascendente_descendente.v
+    Info (12023): Found entity 1: modulo_contador_sync_7_bits_ascendente_descendente File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente_descendente.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_reset_contador_dd.v
     Info (12023): Found entity 1: modulo_reset_contador_dd File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_reset_contador_dd.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_reset_contador_d.v
@@ -1342,16 +1338,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_codificador_dezena_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_dezena_rolhas.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_codificador_unidade_rolhas.v
     Info (12023): Found entity 1: modulo_codificador_unidade_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_codificador_unidade_rolhas.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_valor_transfer_rolhas.v
+    Info (12023): Found entity 1: modulo_valor_transfer_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_transfer_rolhas.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_decodificadorbcd_7segmentos.v
     Info (12023): Found entity 1: modulo_decodificadorBCD_7Segmentos File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_decodificadorBCD_7Segmentos.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_somador_subtrator_completo_7bits.v
     Info (12023): Found entity 1: modulo_somador_subtrator_completo_7bits File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo_7bits.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_somador_subtrator_completo.v
     Info (12023): Found entity 1: modulo_somador_subtrator_completo File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_mef_controle_contador.v
+    Info (12023): Found entity 1: modulo_mef_controle_contador File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file leveltopulsemealy.v
     Info (12023): Found entity 1: LevelToPulseMealy File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file leveltopulsemoore.v
-    Info (12023): Found entity 1: LevelToPulseMoore File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_divisor_frequencia.v
     Info (12023): Found entity 1: modulo_divisor_frequencia File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mux4_1.v
@@ -1377,16 +1375,9 @@ Info (12021): Found 12 design units, including 12 entities, in source file modul
     Info (12023): Found entity 10: or_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 88
     Info (12023): Found entity 11: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 98
     Info (12023): Found entity 12: and_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 108
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_valor_transfer_rolhas.v
-    Info (12023): Found entity 1: modulo_valor_transfer_rolhas File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_transfer_rolhas.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file modulo_mef_controle_contador.v
-    Info (12023): Found entity 1: modulo_mef_controle_contador File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(64): created implicit net for "Qi0" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 64
-Warning (10236): Verilog HDL Implicit Net warning at LevelToPulseMoore.v(69): created implicit net for "Qi1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 69
 Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(97): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 97
 Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(130): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 130
 Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(131): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 131
-Critical Warning (10846): Verilog HDL Instantiation warning at LevelToPulseMoore.v(67): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 67
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
 Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 69
 Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 12
@@ -1438,9 +1429,9 @@ Info (21057): Implemented 272 device resources after synthesis - the final resou
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 47 output pins
     Info (21061): Implemented 217 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4713 megabytes
-    Info: Processing ended: Sun Feb 11 21:21:18 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4712 megabytes
+    Info: Processing ended: Sun Feb 11 21:34:26 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
