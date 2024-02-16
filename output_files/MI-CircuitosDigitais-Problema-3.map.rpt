@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Sun Feb 11 21:34:26 2024
+Fri Feb 16 13:43:30 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,87 +14,92 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Port Connectivity Checks: "modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_24"
- 12. Port Connectivity Checks: "modulo_demux1_4:demux_1"
- 13. Port Connectivity Checks: "modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_4"
- 14. Port Connectivity Checks: "modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_2"
- 15. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_3"
- 16. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_2"
- 17. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_1"
- 18. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2"
- 19. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1"
- 20. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display"
- 21. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal"
- 22. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador"
- 23. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas"
- 24. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_7"
- 25. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1"
- 26. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario"
- 27. Port Connectivity Checks: "modulo_mef_controle_contador:comb_95"
- 28. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|and_gate_2_inputs:gate_6"
- 29. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|and_gate_2_inputs:gate_5"
- 30. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_2"
- 31. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_1"
- 32. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|or_gate_3_inputs:gate_2"
- 33. Port Connectivity Checks: "modulo_mef_controle_contador:comb_94"
- 34. Port Connectivity Checks: "modulo_ff_d:ff_2"
- 35. Port Connectivity Checks: "modulo_ff_d:ff_1"
- 36. Port Connectivity Checks: "modulo_comparador7bits:comparador_1|modulo_comparador1bit:comparador_1"
- 37. Port Connectivity Checks: "modulo_comparador7bits:comparador_1"
- 38. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_2"
- 39. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_7"
- 40. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1"
- 41. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54"
- 42. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_7"
- 43. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_6"
- 44. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_5"
- 45. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_4"
- 46. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_3"
- 47. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_2"
- 48. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_1"
- 49. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1"
- 50. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7"
- 51. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6"
- 52. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5"
- 53. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4"
- 54. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3"
- 55. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2"
- 56. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1"
- 57. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas"
- 58. Port Connectivity Checks: "LevelToPulseMealy:pulsador_2"
- 59. Port Connectivity Checks: "LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1"
- 60. Port Connectivity Checks: "LevelToPulseMealy:pulsador_1"
- 61. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias"
- 62. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4"
- 63. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3"
- 64. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2"
- 65. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1"
- 66. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias"
- 67. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2"
- 68. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1"
- 69. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19"
- 70. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18"
- 71. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17"
- 72. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16"
- 73. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15"
- 74. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14"
- 75. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13"
- 76. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12"
- 77. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11"
- 78. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10"
- 79. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9"
- 80. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8"
- 81. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7"
- 82. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6"
- 83. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5"
- 84. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4"
- 85. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3"
- 86. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2"
- 87. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1"
- 88. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f"
- 89. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Port Connectivity Checks: "modulo_decodificadorBCD_7Segmentos:bcd_1|and_gate_2_inputs:gate_24"
+ 13. Port Connectivity Checks: "modulo_demux1_4:demux_1"
+ 14. Port Connectivity Checks: "modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_4"
+ 15. Port Connectivity Checks: "modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_2"
+ 16. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_3"
+ 17. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_2"
+ 18. Port Connectivity Checks: "modulo_codificador_dezena_garrafas:codificador_garrafas_1|and_gate_2_inputs:gate_1"
+ 19. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_2"
+ 20. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display|modulo_ff_t:ff_1"
+ 21. Port Connectivity Checks: "modulo_contador_sync_2_bits_ascendente:contador_display"
+ 22. Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal"
+ 23. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador"
+ 24. Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5"
+ 25. Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1"
+ 26. Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas"
+ 27. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_7"
+ 28. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1"
+ 29. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario"
+ 30. Port Connectivity Checks: "modulo_mef_controle_contador:comb_86"
+ 31. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_6"
+ 32. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_5"
+ 33. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_2"
+ 34. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_1"
+ 35. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|or_gate_3_inputs:gate_2"
+ 36. Port Connectivity Checks: "modulo_mef_controle_contador:comb_85"
+ 37. Port Connectivity Checks: "modulo_ff_d:ff_2"
+ 38. Port Connectivity Checks: "modulo_ff_d:ff_1"
+ 39. Port Connectivity Checks: "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_2"
+ 40. Port Connectivity Checks: "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_1"
+ 41. Port Connectivity Checks: "modulo_comparador7bits:comparador_1|modulo_comparador1bit:comparador_1"
+ 42. Port Connectivity Checks: "modulo_comparador7bits:comparador_1"
+ 43. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_2"
+ 44. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_7"
+ 45. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1"
+ 46. Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50"
+ 47. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_7"
+ 48. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_6"
+ 49. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_5"
+ 50. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_4"
+ 51. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_3"
+ 52. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_2"
+ 53. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_1"
+ 54. Port Connectivity Checks: "modulo_registrador_rolhas:registrador_1"
+ 55. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7"
+ 56. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6"
+ 57. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5"
+ 58. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_4"
+ 59. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_3"
+ 60. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2"
+ 61. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1"
+ 62. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas"
+ 63. Port Connectivity Checks: "LevelToPulseMealy:pulsador_2"
+ 64. Port Connectivity Checks: "LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1"
+ 65. Port Connectivity Checks: "LevelToPulseMealy:pulsador_1"
+ 66. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias"
+ 67. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4"
+ 68. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3"
+ 69. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2"
+ 70. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_1"
+ 71. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias"
+ 72. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2"
+ 73. Port Connectivity Checks: "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1"
+ 74. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19"
+ 75. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18"
+ 76. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17"
+ 77. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16"
+ 78. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15"
+ 79. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14"
+ 80. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13"
+ 81. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12"
+ 82. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11"
+ 83. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10"
+ 84. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9"
+ 85. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8"
+ 86. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7"
+ 87. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6"
+ 88. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5"
+ 89. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4"
+ 90. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3"
+ 91. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2"
+ 92. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1"
+ 93. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f"
+ 94. Analysis & Synthesis Messages
 
 
 
@@ -120,12 +125,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Feb 11 21:34:26 2024       ;
+; Analysis & Synthesis Status ; Successful - Fri Feb 16 13:43:30 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 217                                         ;
+; Total logic elements        ; 164                                         ;
 ; Total pins                  ; 55                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -208,8 +213,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -225,7 +230,6 @@ refer to the applicable agreement for further details.
 ; File Name with User-Entered Path                     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                   ; Library ;
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
 ; pbl.v                                                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                                                ;         ;
-; modulo_mux2_1.v                                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux2_1.v                                      ;         ;
 ; modulo_comparador7bits.v                             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v                             ;         ;
 ; modulo_comparador1bit.v                              ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador1bit.v                              ;         ;
 ; modulo_mef_enchimento_vedacao.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v                      ;         ;
@@ -256,6 +260,7 @@ refer to the applicable agreement for further details.
 ; modulo_ff_jk.v                                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_jk.v                                       ;         ;
 ; modulo_ff_d.v                                        ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_d.v                                        ;         ;
 ; module_gates.v                                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v                                       ;         ;
+; modulo_contador_sync_5_bits_ascendente_descendente.v ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_5_bits_ascendente_descendente.v ;         ;
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -264,33 +269,33 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------+
 ; Resource                                    ; Usage                                                  ;
 +---------------------------------------------+--------------------------------------------------------+
-; Total logic elements                        ; 217                                                    ;
-;     -- Combinational with no register       ; 132                                                    ;
-;     -- Register only                        ; 10                                                     ;
-;     -- Combinational with a register        ; 75                                                     ;
+; Total logic elements                        ; 164                                                    ;
+;     -- Combinational with no register       ; 98                                                     ;
+;     -- Register only                        ; 9                                                      ;
+;     -- Combinational with a register        ; 57                                                     ;
 ;                                             ;                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                        ;
-;     -- 4 input functions                    ; 94                                                     ;
-;     -- 3 input functions                    ; 36                                                     ;
-;     -- 2 input functions                    ; 43                                                     ;
-;     -- 1 input functions                    ; 34                                                     ;
+;     -- 4 input functions                    ; 71                                                     ;
+;     -- 3 input functions                    ; 33                                                     ;
+;     -- 2 input functions                    ; 41                                                     ;
+;     -- 1 input functions                    ; 10                                                     ;
 ;     -- 0 input functions                    ; 0                                                      ;
 ;                                             ;                                                        ;
 ; Logic elements by mode                      ;                                                        ;
-;     -- normal mode                          ; 211                                                    ;
+;     -- normal mode                          ; 158                                                    ;
 ;     -- arithmetic mode                      ; 6                                                      ;
 ;     -- qfbk mode                            ; 0                                                      ;
 ;     -- register cascade mode                ; 0                                                      ;
 ;     -- synchronous clear/load mode          ; 0                                                      ;
-;     -- asynchronous clear/load mode         ; 24                                                     ;
+;     -- asynchronous clear/load mode         ; 20                                                     ;
 ;                                             ;                                                        ;
-; Total registers                             ; 85                                                     ;
+; Total registers                             ; 66                                                     ;
 ; Total logic cells in carry chains           ; 7                                                      ;
 ; I/O pins                                    ; 55                                                     ;
 ; Maximum fan-out node                        ; modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q ;
-; Maximum fan-out                             ; 60                                                     ;
-; Total fan-out                               ; 798                                                    ;
-; Average fan-out                             ; 2.93                                                   ;
+; Maximum fan-out                             ; 43                                                     ;
+; Total fan-out                               ; 619                                                    ;
+; Average fan-out                             ; 2.83                                                   ;
 +---------------------------------------------+--------------------------------------------------------+
 
 
@@ -299,9 +304,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                 ; Entity Name                                        ; Library Name ;
 +--------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+--------------+
-; |pbl                                                                                                   ; 217 (16)    ; 85           ; 0          ; 55   ; 0            ; 132 (16)     ; 10 (0)            ; 75 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                                                                ; pbl                                                ; work         ;
-;    |LevelToPulseMealy:pulsador_1|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_1                                                                                                   ; LevelToPulseMealy                                  ; work         ;
-;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1                                                                                  ; modulo_ff_d                                        ; work         ;
+; |pbl                                                                                                   ; 164 (9)     ; 66           ; 0          ; 55   ; 0            ; 98 (9)       ; 9 (0)             ; 57 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                                                                ; pbl                                                ; work         ;
 ;    |LevelToPulseMealy:pulsador_2|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_2                                                                                                   ; LevelToPulseMealy                                  ; work         ;
 ;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_2|modulo_ff_d:ff_1                                                                                  ; modulo_ff_d                                        ; work         ;
 ;    |modulo_codificador_unidade_garrafas:codificador_garrafas_2|                                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_codificador_unidade_garrafas:codificador_garrafas_2                                                                     ; modulo_codificador_unidade_garrafas                ; work         ;
@@ -319,6 +322,18 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_2                                                        ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_3|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3                                                        ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_4|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4                                                        ; modulo_ff_t                                        ; work         ;
+;    |modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|   ; 7 (0)       ; 5            ; 0          ; 0    ; 0            ; 2 (0)        ; 1 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas                                ; modulo_contador_sync_5_bits_ascendente_descendente ; work         ;
+;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_3|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_4|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_5|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5               ; modulo_ff_t                                        ; work         ;
+;    |modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|                    ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal                                                 ; modulo_contador_sync_5_bits_ascendente_descendente ; work         ;
+;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1                                ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2                                ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_3|                                                                               ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3                                ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_4|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4                                ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_5|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_5                                ; modulo_ff_t                                        ; work         ;
 ;    |modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|                                    ; 8 (0)       ; 7            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 7 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas                                                                 ; modulo_contador_sync_7_bits_ascendente             ; work         ;
 ;       |and_gate_2_inputs:gate_3|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|and_gate_2_inputs:gate_3                                        ; and_gate_2_inputs                                  ; work         ;
 ;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1                                                ; modulo_ff_t                                        ; work         ;
@@ -328,22 +343,14 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_t:ff_5|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_5                                                ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_6|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_6                                                ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_7|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_7                                                ; modulo_ff_t                                        ; work         ;
-;    |modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|                   ; 26 (0)      ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario                                                ; modulo_contador_sync_7_bits_ascendente_descendente ; work         ;
-;       |modulo_ff_t:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_2|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_3|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_4|                                                                               ; 5 (5)       ; 2            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_5|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_6|                                                                               ; 5 (5)       ; 2            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6                               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_7|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_7                               ; modulo_ff_t                                        ; work         ;
-;    |modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|   ; 9 (0)       ; 7            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 7 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas                                ; modulo_contador_sync_7_bits_ascendente_descendente ; work         ;
-;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_2|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_3|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_4|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_5|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_6|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_6               ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_7|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_7               ; modulo_ff_t                                        ; work         ;
+;    |modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|                   ; 9 (0)       ; 7            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 7 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario                                                ; modulo_contador_sync_7_bits_ascendente_descendente ; work         ;
+;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_3|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_4|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_5|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_6|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6                               ; modulo_ff_t                                        ; work         ;
+;       |modulo_ff_t:ff_7|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_7                               ; modulo_ff_t                                        ; work         ;
 ;    |modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador| ; 25 (0)      ; 7            ; 0          ; 0    ; 0            ; 18 (0)       ; 1 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador                              ; modulo_contador_sync_7_bits_ascendente_descendente ; work         ;
 ;       |modulo_ff_t:ff_1|                                                                               ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_1             ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_2|                                                                               ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_2             ; modulo_ff_t                                        ; work         ;
@@ -359,14 +366,6 @@ refer to the applicable agreement for further details.
 ;       |nand_gate_2_inputs:gate_31|                                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|nand_gate_2_inputs:gate_31   ; nand_gate_2_inputs                                 ; work         ;
 ;       |nand_gate_2_inputs:gate_32|                                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|nand_gate_2_inputs:gate_32   ; nand_gate_2_inputs                                 ; work         ;
 ;       |nand_gate_2_inputs:gate_33|                                                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|nand_gate_2_inputs:gate_33   ; nand_gate_2_inputs                                 ; work         ;
-;    |modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|                    ; 24 (0)      ; 12           ; 0          ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal                                                 ; modulo_contador_sync_7_bits_ascendente_descendente ; work         ;
-;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_2|                                                                               ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_3|                                                                               ; 5 (5)       ; 2            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_4|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_5|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_5                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_6|                                                                               ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_6                                ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_7|                                                                               ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_7                                ; modulo_ff_t                                        ; work         ;
 ;    |modulo_decodificadorBCD_7Segmentos:bcd_1|                                                          ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1                                                                                       ; modulo_decodificadorBCD_7Segmentos                 ; work         ;
 ;       |or_gate_2_inputs:gate_15|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_2_inputs:gate_15                                                              ; or_gate_2_inputs                                   ; work         ;
 ;       |or_gate_3_inputs:gate_6|                                                                        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_decodificadorBCD_7Segmentos:bcd_1|or_gate_3_inputs:gate_6                                                               ; or_gate_3_inputs                                   ; work         ;
@@ -382,14 +381,12 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1                                                                           ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2                                                                           ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_3|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3                                                                           ; modulo_ff_t                                        ; work         ;
-;    |modulo_ff_d:ff_1|                                                                                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_ff_d:ff_1                                                                                                               ; modulo_ff_d                                        ; work         ;
-;    |modulo_ff_d:ff_2|                                                                                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_ff_d:ff_2                                                                                                               ; modulo_ff_d                                        ; work         ;
-;    |modulo_mef_controle_contador:comb_94|                                                              ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_94                                                                                           ; modulo_mef_controle_contador                       ; work         ;
-;       |modulo_ff_jk:jk_1|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_1                                                                         ; modulo_ff_jk                                       ; work         ;
-;       |modulo_ff_jk:jk_2|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_2                                                                         ; modulo_ff_jk                                       ; work         ;
-;    |modulo_mef_controle_contador:comb_95|                                                              ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_95                                                                                           ; modulo_mef_controle_contador                       ; work         ;
-;       |modulo_ff_jk:jk_1|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_95|modulo_ff_jk:jk_1                                                                         ; modulo_ff_jk                                       ; work         ;
-;       |modulo_ff_jk:jk_2|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_95|modulo_ff_jk:jk_2                                                                         ; modulo_ff_jk                                       ; work         ;
+;    |modulo_mef_controle_contador:comb_85|                                                              ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_85                                                                                           ; modulo_mef_controle_contador                       ; work         ;
+;       |modulo_ff_jk:jk_1|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_1                                                                         ; modulo_ff_jk                                       ; work         ;
+;       |modulo_ff_jk:jk_2|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_2                                                                         ; modulo_ff_jk                                       ; work         ;
+;    |modulo_mef_controle_contador:comb_86|                                                              ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_86                                                                                           ; modulo_mef_controle_contador                       ; work         ;
+;       |modulo_ff_jk:jk_1|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_86|modulo_ff_jk:jk_1                                                                         ; modulo_ff_jk                                       ; work         ;
+;       |modulo_ff_jk:jk_2|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_controle_contador:comb_86|modulo_ff_jk:jk_2                                                                         ; modulo_ff_jk                                       ; work         ;
 ;    |modulo_mef_enchimento_vedacao:mef_1|                                                               ; 9 (0)       ; 2            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1                                                                                            ; modulo_mef_enchimento_vedacao                      ; work         ;
 ;       |and_gate_3_inputs:gate_10|                                                                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_10                                                                  ; and_gate_3_inputs                                  ; work         ;
 ;       |and_gate_3_inputs:gate_9|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_9                                                                   ; and_gate_3_inputs                                  ; work         ;
@@ -397,20 +394,17 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_jk:jk_1|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1                                                                          ; modulo_ff_jk                                       ; work         ;
 ;       |modulo_ff_jk:jk_2|                                                                              ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_2                                                                          ; modulo_ff_jk                                       ; work         ;
 ;       |or_gate_2_inputs:gate_8|                                                                        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mef_enchimento_vedacao:mef_1|or_gate_2_inputs:gate_8                                                                    ; or_gate_2_inputs                                   ; work         ;
-;    |modulo_mux2_1:mux_1|                                                                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux2_1:mux_1                                                                                                            ; modulo_mux2_1                                      ; work         ;
-;    |modulo_mux2_1:mux_2|                                                                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux2_1:mux_2                                                                                                            ; modulo_mux2_1                                      ; work         ;
-;    |modulo_mux4_1:mux_36|                                                                              ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_36                                                                                                           ; modulo_mux4_1                                      ; work         ;
-;       |and_gate_3_inputs:gate_4|                                                                       ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_36|and_gate_3_inputs:gate_4                                                                                  ; and_gate_3_inputs                                  ; work         ;
-;       |or_gate_4_inputs:gate_5|                                                                        ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_36|or_gate_4_inputs:gate_5                                                                                   ; or_gate_4_inputs                                   ; work         ;
-;    |modulo_mux4_1:mux_37|                                                                              ; 10 (0)      ; 0            ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_37                                                                                                           ; modulo_mux4_1                                      ; work         ;
-;       |and_gate_3_inputs:gate_4|                                                                       ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_37|and_gate_3_inputs:gate_4                                                                                  ; and_gate_3_inputs                                  ; work         ;
+;    |modulo_mux4_1:mux_36|                                                                              ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_36                                                                                                           ; modulo_mux4_1                                      ; work         ;
+;       |or_gate_4_inputs:gate_5|                                                                        ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_36|or_gate_4_inputs:gate_5                                                                                   ; or_gate_4_inputs                                   ; work         ;
+;    |modulo_mux4_1:mux_37|                                                                              ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_37                                                                                                           ; modulo_mux4_1                                      ; work         ;
+;       |and_gate_3_inputs:gate_4|                                                                       ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_37|and_gate_3_inputs:gate_4                                                                                  ; and_gate_3_inputs                                  ; work         ;
 ;       |or_gate_4_inputs:gate_5|                                                                        ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_37|or_gate_4_inputs:gate_5                                                                                   ; or_gate_4_inputs                                   ; work         ;
-;    |modulo_mux4_1:mux_38|                                                                              ; 12 (0)      ; 0            ; 0          ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38                                                                                                           ; modulo_mux4_1                                      ; work         ;
+;    |modulo_mux4_1:mux_38|                                                                              ; 11 (0)      ; 0            ; 0          ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38                                                                                                           ; modulo_mux4_1                                      ; work         ;
 ;       |and_gate_3_inputs:gate_3|                                                                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38|and_gate_3_inputs:gate_3                                                                                  ; and_gate_3_inputs                                  ; work         ;
-;       |and_gate_3_inputs:gate_4|                                                                       ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38|and_gate_3_inputs:gate_4                                                                                  ; and_gate_3_inputs                                  ; work         ;
+;       |and_gate_3_inputs:gate_4|                                                                       ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38|and_gate_3_inputs:gate_4                                                                                  ; and_gate_3_inputs                                  ; work         ;
 ;       |or_gate_4_inputs:gate_5|                                                                        ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_38|or_gate_4_inputs:gate_5                                                                                   ; or_gate_4_inputs                                   ; work         ;
-;    |modulo_mux4_1:mux_39|                                                                              ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_39                                                                                                           ; modulo_mux4_1                                      ; work         ;
-;       |and_gate_3_inputs:gate_3|                                                                       ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_39|and_gate_3_inputs:gate_3                                                                                  ; and_gate_3_inputs                                  ; work         ;
+;    |modulo_mux4_1:mux_39|                                                                              ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_39                                                                                                           ; modulo_mux4_1                                      ; work         ;
+;       |and_gate_3_inputs:gate_3|                                                                       ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_39|and_gate_3_inputs:gate_3                                                                                  ; and_gate_3_inputs                                  ; work         ;
 ;       |or_gate_4_inputs:gate_5|                                                                        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_mux4_1:mux_39|or_gate_4_inputs:gate_5                                                                                   ; or_gate_4_inputs                                   ; work         ;
 ;    |modulo_registrador_rolhas:registrador_1|                                                           ; 7 (0)       ; 7            ; 0          ; 0    ; 0            ; 0 (0)        ; 7 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_registrador_rolhas:registrador_1                                                                                        ; modulo_registrador_rolhas                          ; work         ;
 ;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_1                                                                       ; modulo_ff_d                                        ; work         ;
@@ -430,11 +424,11 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_d:ff_7|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_7                                                                       ; modulo_ff_d                                        ; work         ;
 ;    |modulo_reset_contador_d:reset_1|                                                                   ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_reset_contador_d:reset_1                                                                                                ; modulo_reset_contador_d                            ; work         ;
 ;       |and_gate_2_inputs:gate_1|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_reset_contador_d:reset_1|and_gate_2_inputs:gate_1                                                                       ; and_gate_2_inputs                                  ; work         ;
-;    |modulo_somador_subtrator_completo_7bits:comb_54|                                                   ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_54                                                                                ; modulo_somador_subtrator_completo_7bits            ; work         ;
-;       |modulo_somador_subtrator_completo:somador_subtrator_1|                                          ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1                          ; modulo_somador_subtrator_completo                  ; work         ;
-;          |and_gate_3_inputs:gate_8|                                                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_8 ; and_gate_3_inputs                                  ; work         ;
-;    |modulo_verificador_ausencia_rolhas:m_aus_rolhas|                                                   ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_verificador_ausencia_rolhas:m_aus_rolhas                                                                                ; modulo_verificador_ausencia_rolhas                 ; work         ;
-;       |or_gate_7_inputs:gate_1|                                                                        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_verificador_ausencia_rolhas:m_aus_rolhas|or_gate_7_inputs:gate_1                                                        ; or_gate_7_inputs                                   ; work         ;
+;    |modulo_somador_subtrator_completo_7bits:comb_50|                                                   ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_50                                                                                ; modulo_somador_subtrator_completo_7bits            ; work         ;
+;       |modulo_somador_subtrator_completo:somador_subtrator_1|                                          ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1                          ; modulo_somador_subtrator_completo                  ; work         ;
+;          |and_gate_3_inputs:gate_8|                                                                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1|and_gate_3_inputs:gate_8 ; and_gate_3_inputs                                  ; work         ;
+;    |modulo_verificador_ausencia_rolhas:m_aus_rolhas|                                                   ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_verificador_ausencia_rolhas:m_aus_rolhas                                                                                ; modulo_verificador_ausencia_rolhas                 ; work         ;
+;       |or_gate_5_inputs:gate_1|                                                                        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_verificador_ausencia_rolhas:m_aus_rolhas|or_gate_5_inputs:gate_1                                                        ; or_gate_5_inputs                                   ; work         ;
 ;    |or_gate_2_inputs:gate_2|                                                                           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|or_gate_2_inputs:gate_2                                                                                                        ; or_gate_2_inputs                                   ; work         ;
 +--------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -445,21 +439,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                        ; Reason for Removal                                                                                                                   ;
 +----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q                    ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q_bar                    ;
+; modulo_ff_d:ff_2|q                                                                                                   ; Stuck at VCC due to stuck port data_in                                                                                               ;
+; modulo_ff_d:ff_1|q                                                                                                   ; Stuck at VCC due to stuck port data_in                                                                                               ;
+; LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1|nq                                                                     ; Lost fanout                                                                                                                          ;
+; LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1|q                                                                      ; Lost fanout                                                                                                                          ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q                    ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q_bar                    ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_1|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_1|q_bar ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q_bar   ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q   ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q_bar   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1|q_bar                   ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4|q                    ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4|q_bar                    ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3|q                    ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3|q_bar                    ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2|q                    ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2|q_bar                    ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_6|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_6|q_bar ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_5|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_5|q_bar ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_4|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_4|q_bar ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_3|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_3|q_bar ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_2|q ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_2|q_bar ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_6|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_6|q_bar   ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5|q_bar   ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q_bar   ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q_bar   ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q_bar   ;
-; Total Number of Removed Registers = 13                                                                               ;                                                                                                                                      ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q   ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q_bar   ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q   ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q_bar   ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q   ; Merged with modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q_bar   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6|q_bar                   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5|q_bar                   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4|q_bar                   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3|q_bar                   ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2|q                   ; Merged with modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2|q_bar                   ;
+; Total Number of Removed Registers = 24                                                                               ;                                                                                                                                      ;
 +----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                        ;
++--------------------+---------------------------+---------------------------------------------------+
+; Register name      ; Reason for Removal        ; Registers Removed due to This Register            ;
++--------------------+---------------------------+---------------------------------------------------+
+; modulo_ff_d:ff_1|q ; Stuck at VCC              ; LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1|nq, ;
+;                    ; due to stuck port data_in ; LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1|q   ;
++--------------------+---------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -467,12 +482,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 85    ;
+; Total registers                              ; 66    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 22    ;
-; Number of registers using Asynchronous Load  ; 9     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 10    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -482,31 +497,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                        ; Fan out ;
 +--------------------------------------------------------------------------------------------------------------------------+---------+
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q_bar                    ; 8       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q_bar   ; 5       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q_bar   ; 6       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q_bar   ; 5       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q_bar   ; 4       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5|q_bar   ; 5       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_6|q_bar   ; 4       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_1|q_bar ; 8       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3|q_bar                    ; 5       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4|q_bar                    ; 4       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_1|q_bar                    ; 6       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2|q_bar                    ; 5       ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6|q_bar                   ; 22      ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5|q_bar                   ; 18      ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4|q_bar                   ; 21      ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3|q_bar                   ; 15      ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2|q_bar                   ; 14      ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1|q_bar                   ; 7       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1|q_bar   ; 6       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_2|q_bar   ; 5       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_3|q_bar   ; 5       ;
+; modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_4|q_bar   ; 4       ;
+; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_1|q_bar ; 6       ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_2|q_bar ; 6       ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_3|q_bar ; 5       ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_4|q_bar ; 4       ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_5|q_bar ; 5       ;
 ; modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador|modulo_ff_t:ff_6|q_bar ; 4       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_2|q_bar                    ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_3|q_bar                    ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_4|q_bar                    ; 3       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_5|q_bar                    ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal|modulo_ff_t:ff_6|q_bar                    ; 1       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_1|q_bar                   ; 3       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_2|q_bar                   ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_3|q_bar                   ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_4|q_bar                   ; 2       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_5|q_bar                   ; 1       ;
-; modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|modulo_ff_t:ff_6|q_bar                   ; 1       ;
-; Total number of inverted registers = 24                                                                                  ;         ;
+; Total number of inverted registers = 20                                                                                  ;         ;
 +--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -609,7 +620,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_4_buffer_principal"                                                               ;
+; Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_4_buffer_principal"                                                               ;
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -627,8 +638,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+-------+----------+--------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_5" ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                          ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; q_bar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                              ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas|modulo_ff_t:ff_1" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                            ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                                                                                       ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas" ;
+; Port Connectivity Checks: "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas" ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                        ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------+
@@ -664,17 +693,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_95" ;
-+--------+-------+----------+--------------------------------------+
-; Port   ; Type  ; Severity ; Details                              ;
-+--------+-------+----------+--------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                         ;
-+--------+-------+----------+--------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_86"                                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|and_gate_2_inputs:gate_6" ;
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_6" ;
 +------+-------+----------+-----------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                         ;
 +------+-------+----------+-----------------------------------------------------------------+
@@ -683,7 +714,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|and_gate_2_inputs:gate_5" ;
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_5" ;
 +------+-------+----------+-----------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                         ;
 +------+-------+----------+-----------------------------------------------------------------+
@@ -692,7 +723,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_2"                              ;
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_2"                              ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -702,7 +733,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|modulo_ff_jk:jk_1" ;
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_1" ;
 +------+-------+----------+----------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                  ;
 +------+-------+----------+----------------------------------------------------------+
@@ -711,7 +742,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94|or_gate_3_inputs:gate_2"                                                                               ;
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85|or_gate_3_inputs:gate_2"                                                                               ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -719,13 +750,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_mef_controle_contador:comb_94" ;
-+--------+-------+----------+--------------------------------------+
-; Port   ; Type  ; Severity ; Details                              ;
-+--------+-------+----------+--------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                         ;
-+--------+-------+----------+--------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_mef_controle_contador:comb_85"                                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -733,6 +766,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; d      ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; clr    ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
 ; enable ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; nq     ; Output ; Info     ; Explicitly unconnected                                                                                                                       ;
 ; prst   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
@@ -744,10 +779,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; d      ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; clr    ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
 ; enable ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; nq     ; Output ; Info     ; Explicitly unconnected                                                                                                                       ;
 ; prst   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_2"                                                                                ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; F    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; G    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_1"                                                                                ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; F    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; G    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -759,18 +816,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+-------+----------+------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_comparador7bits:comparador_1"                                                    ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; B[6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; B[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; B[4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; B[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; B[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; AltB_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_comparador7bits:comparador_1"                                                                                                                                                 ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                          ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A        ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (5 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
+; B[3..2]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; B[4]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
+; AltB_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -784,7 +840,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_7" ;
+; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_7" ;
 +------+--------+----------+--------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                ;
 +------+--------+----------+--------------------------------------------------------------------------------------------------------+
@@ -793,7 +849,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1" ;
+; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1" ;
 +------+-------+----------+---------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                 ;
 +------+-------+----------+---------------------------------------------------------------------------------------------------------+
@@ -802,7 +858,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_54" ;
+; Port Connectivity Checks: "modulo_somador_subtrator_completo_7bits:comb_50" ;
 +---------------+-------+----------+------------------------------------------+
 ; Port          ; Type  ; Severity ; Details                                  ;
 +---------------+-------+----------+------------------------------------------+
@@ -1296,10 +1352,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Feb 11 21:34:19 2024
+    Info: Processing started: Fri Feb 16 13:43:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
     Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mux2_1.v
@@ -1375,64 +1431,75 @@ Info (12021): Found 12 design units, including 12 entities, in source file modul
     Info (12023): Found entity 10: or_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 88
     Info (12023): Found entity 11: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 98
     Info (12023): Found entity 12: and_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 108
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(97): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 97
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(130): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 130
-Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(131): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 131
+Info (12021): Found 1 design units, including 1 entities, in source file modulo_contador_sync_5_bits_ascendente_descendente.v
+    Info (12023): Found entity 1: modulo_contador_sync_5_bits_ascendente_descendente File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_5_bits_ascendente_descendente.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(93): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 93
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(121): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 121
+Critical Warning (10846): Verilog HDL Instantiation warning at pbl.v(122): instance has no name File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 122
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 69
+Warning (10858): Verilog HDL warning at pbl.v(16): object controle_reset used but never assigned File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 16
+Warning (10136): Verilog HDL Module Declaration warning at pbl.v(2): port "test_reset_ff_operador" already exists in the list of ports File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 2
+Warning (10030): Net "controle_reset[1]" at pbl.v(16) has no driver or initial value, using a default initial value '0' File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 16
+Warning (10030): Net "controle_reset_aux_min_rolhas[1]" at pbl.v(16) has no driver or initial value, using a default initial value '0' File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 16
+Warning (10030): Net "controle_reset_aux_operador[1]" at pbl.v(16) has no driver or initial value, using a default initial value '0' File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 16
+Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 65
 Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 12
-Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 71
+Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 67
 Info (12128): Elaborating entity "and_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_2_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 17
 Info (12128): Elaborating entity "modulo_ff_jk" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|modulo_ff_jk:jk_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 21
 Info (12128): Elaborating entity "and_gate_3_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_3_inputs:gate_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 25
 Info (12128): Elaborating entity "or_gate_2_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|or_gate_2_inputs:gate_4" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 28
 Info (12128): Elaborating entity "and_gate_4_inputs" for hierarchy "modulo_mef_enchimento_vedacao:mef_1|and_gate_4_inputs:gate_6" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_enchimento_vedacao.v Line: 36
-Info (12128): Elaborating entity "modulo_contador_sync_4_bits_ascendente" for hierarchy "modulo_contador_sync_4_bits_ascendente:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 77
-Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 78
-Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 81
-Info (12128): Elaborating entity "LevelToPulseMealy" for hierarchy "LevelToPulseMealy:pulsador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 91
+Info (12128): Elaborating entity "modulo_contador_sync_4_bits_ascendente" for hierarchy "modulo_contador_sync_4_bits_ascendente:contador_duzias" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 73
+Info (12128): Elaborating entity "modulo_reset_contador_d" for hierarchy "modulo_reset_contador_d:reset_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 74
+Info (12128): Elaborating entity "modulo_reset_contador_dd" for hierarchy "modulo_reset_contador_dd:reset_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 77
+Info (12128): Elaborating entity "LevelToPulseMealy" for hierarchy "LevelToPulseMealy:pulsador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 87
 Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 14
-Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente" for hierarchy "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 94
-Info (12128): Elaborating entity "modulo_registrador_rolhas" for hierarchy "modulo_registrador_rolhas:registrador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 96
-Info (12128): Elaborating entity "modulo_somador_subtrator_completo_7bits" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_54" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 97
-Info (12128): Elaborating entity "modulo_somador_subtrator_completo" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo_7bits.v Line: 8
-Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_4_inputs:gate_5" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 21
-Info (12128): Elaborating entity "or_gate_5_inputs" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_54|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_5_inputs:gate_11" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 29
-Info (12128): Elaborating entity "modulo_comparador7bits" for hierarchy "modulo_comparador7bits:comparador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 100
-Info (12128): Elaborating entity "modulo_comparador1bit" for hierarchy "modulo_comparador7bits:comparador_1|modulo_comparador1bit:comparador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v Line: 7
-Info (12128): Elaborating entity "or_gate_7_inputs" for hierarchy "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v Line: 15
-Info (12128): Elaborating entity "modulo_mux2_1" for hierarchy "modulo_mux2_1:mux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 113
-Info (12128): Elaborating entity "modulo_mef_controle_contador" for hierarchy "modulo_mef_controle_contador:comb_94" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 130
-Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "modulo_mef_controle_contador:comb_94|or_gate_3_inputs:gate_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v Line: 18
-Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente_descendente" for hierarchy "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 133
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente" for hierarchy "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 90
+Info (12128): Elaborating entity "modulo_registrador_rolhas" for hierarchy "modulo_registrador_rolhas:registrador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 92
+Info (12128): Elaborating entity "modulo_somador_subtrator_completo_7bits" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_50" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 93
+Info (12128): Elaborating entity "modulo_somador_subtrator_completo" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo_7bits.v Line: 8
+Info (12128): Elaborating entity "or_gate_4_inputs" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_4_inputs:gate_5" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 21
+Info (12128): Elaborating entity "or_gate_5_inputs" for hierarchy "modulo_somador_subtrator_completo_7bits:comb_50|modulo_somador_subtrator_completo:somador_subtrator_1|or_gate_5_inputs:gate_11" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 29
+Info (12128): Elaborating entity "modulo_comparador7bits" for hierarchy "modulo_comparador7bits:comparador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 96
+Info (12128): Elaborating entity "modulo_comparador1bit" for hierarchy "modulo_comparador7bits:comparador_1|modulo_comparador1bit:comparador_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v Line: 8
+Info (12128): Elaborating entity "or_gate_7_inputs" for hierarchy "modulo_comparador7bits:comparador_1|or_gate_7_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v Line: 14
+Info (12128): Elaborating entity "modulo_mef_controle_contador" for hierarchy "modulo_mef_controle_contador:comb_85" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 121
+Info (12128): Elaborating entity "or_gate_3_inputs" for hierarchy "modulo_mef_controle_contador:comb_85|or_gate_3_inputs:gate_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v Line: 18
+Info (12128): Elaborating entity "modulo_contador_sync_7_bits_ascendente_descendente" for hierarchy "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 124
 Info (12128): Elaborating entity "nand_gate_2_inputs" for hierarchy "modulo_contador_sync_7_bits_ascendente_descendente:contador_1_buffer_secundario|nand_gate_2_inputs:gate_20" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_contador_sync_7_bits_ascendente_descendente.v Line: 14
-Info (12128): Elaborating entity "modulo_count_superior99" for hierarchy "modulo_count_superior99:m_out_range" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 141
-Info (12128): Elaborating entity "modulo_valor_transfer_rolhas" for hierarchy "modulo_valor_transfer_rolhas:m_trans_rolha" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 142
-Info (12128): Elaborating entity "modulo_valor_minimo_rolhas" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 143
-Info (12128): Elaborating entity "and_gate_5_inputs" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas|and_gate_5_inputs:gate_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_valor_minimo_rolhas.v Line: 22
-Info (12128): Elaborating entity "modulo_verificador_ausencia_rolhas" for hierarchy "modulo_verificador_ausencia_rolhas:m_aus_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 144
-Info (12128): Elaborating entity "modulo_contador_sync_2_bits_ascendente" for hierarchy "modulo_contador_sync_2_bits_ascendente:contador_display" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 145
-Info (12128): Elaborating entity "modulo_codificador_dezena_garrafas" for hierarchy "modulo_codificador_dezena_garrafas:codificador_garrafas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 147
-Info (12128): Elaborating entity "modulo_codificador_unidade_garrafas" for hierarchy "modulo_codificador_unidade_garrafas:codificador_garrafas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 148
-Info (12128): Elaborating entity "modulo_codificador_dezena_rolhas" for hierarchy "modulo_codificador_dezena_rolhas:codificador_rolhas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 149
-Info (12128): Elaborating entity "modulo_codificador_unidade_rolhas" for hierarchy "modulo_codificador_unidade_rolhas:codificador_rolhas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 150
-Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_36" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 152
-Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:demux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 157
-Info (12128): Elaborating entity "modulo_decodificadorBCD_7Segmentos" for hierarchy "modulo_decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 159
-Warning (12241): 28 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "modulo_contador_sync_5_bits_ascendente_descendente" for hierarchy "modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 125
+Info (12128): Elaborating entity "modulo_count_superior99" for hierarchy "modulo_count_superior99:m_out_range" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 132
+Info (12128): Elaborating entity "modulo_valor_transfer_rolhas" for hierarchy "modulo_valor_transfer_rolhas:m_trans_rolha" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 133
+Info (12128): Elaborating entity "modulo_valor_minimo_rolhas" for hierarchy "modulo_valor_minimo_rolhas:m_min_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 134
+Info (12128): Elaborating entity "modulo_verificador_ausencia_rolhas" for hierarchy "modulo_verificador_ausencia_rolhas:m_aus_rolhas" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 135
+Info (12128): Elaborating entity "modulo_contador_sync_2_bits_ascendente" for hierarchy "modulo_contador_sync_2_bits_ascendente:contador_display" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 136
+Info (12128): Elaborating entity "modulo_codificador_dezena_garrafas" for hierarchy "modulo_codificador_dezena_garrafas:codificador_garrafas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 138
+Info (12128): Elaborating entity "modulo_codificador_unidade_garrafas" for hierarchy "modulo_codificador_unidade_garrafas:codificador_garrafas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 139
+Info (12128): Elaborating entity "modulo_codificador_dezena_rolhas" for hierarchy "modulo_codificador_dezena_rolhas:codificador_rolhas_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 140
+Info (12128): Elaborating entity "modulo_codificador_unidade_rolhas" for hierarchy "modulo_codificador_unidade_rolhas:codificador_rolhas_2" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 141
+Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_36" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 143
+Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:demux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 148
+Info (12128): Elaborating entity "modulo_decodificadorBCD_7Segmentos" for hierarchy "modulo_decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 150
+Warning (12241): 31 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Nout_7seg[0]" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 7
+    Warning (13410): Pin "test_reset_ff_operador" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 105
+    Warning (13410): Pin "test_reset_ff_operador__duplicate" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 105
+    Warning (13410): Pin "test_load_reg" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 106
+    Warning (13410): Pin "test_controle_reset" is stuck at GND File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 107
 Info (18000): Registers with preset signals will power-up high File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_t.v Line: 4
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "hh_load" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 4
-Info (21057): Implemented 272 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 47 output pins
-    Info (21061): Implemented 217 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4712 megabytes
-    Info: Processing ended: Sun Feb 11 21:34:26 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21061): Implemented 164 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4713 megabytes
+    Info: Processing ended: Fri Feb 16 13:43:30 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
