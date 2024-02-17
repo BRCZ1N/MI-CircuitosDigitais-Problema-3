@@ -3,8 +3,8 @@ module modulo_mef_controle_contador(enable,Load_Reg,EmptyBuffer,clk,Enable_C,Loa
 
 
 	input enable,Load_Reg,EmptyBuffer,clk;
-	output Enable_C,Load_C, Clea-r_Reg,q1,q0;
-	wire Nq1,Nq0,j1,j0,k0, NLoad_Reg, NEmptyBuffer, j0_aux;
+	output Enable_C,Load_C, Clear_Reg,q1,q0;
+	wire Nq1,Nq0,j1,j0,k0, NLoad_Reg, NEmptyBuffer;
 	
 	not(NLoad_Reg,Load_Reg);
 	not(NEmptyBuffer,EmptyBuffer);
@@ -19,8 +19,7 @@ module modulo_mef_controle_contador(enable,Load_Reg,EmptyBuffer,clk,Enable_C,Loa
 	
 	//j0
 	
-	and_gate_2_inputs gate_2(j0_aux, Load_Reg, EmptyBuffer);
-	or_gate_2_inputs gate_3(.A(q1),.B(j0_aux),.S(j0));
+	and_gate_2_inputs gate_2(.A(Load_Reg),.B(EmptyBuffer),.S(j0));
 	
 	//k0
 	
@@ -32,7 +31,7 @@ module modulo_mef_controle_contador(enable,Load_Reg,EmptyBuffer,clk,Enable_C,Loa
 		
 	and_gate_2_inputs gate_6(.A(Nq1),.B(q0),.S(Load_C));
 	
-	and_gate_2_inputs gate_6(.A(q1),.B(q0),.S(Clear_Reg));
+	and_gate_2_inputs gate_7(.A(q1),.B(q0),.S(Clear_Reg));
 	
 	
 endmodule 
