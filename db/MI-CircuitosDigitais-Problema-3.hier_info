@@ -52,9 +52,11 @@ test_buffer_principal[1] <= buffer_principal[1].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[2] <= buffer_principal[2].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[3] <= buffer_principal[3].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[4] <= buffer_principal[4].DB_MAX_OUTPUT_PORT_TYPE
-test_reset_ff_operador__duplicate <= reset_ff_operador.DB_MAX_OUTPUT_PORT_TYPE
+test_load_reg_1 <= load_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+test_contador_mef_controle_state_operador <= modulo_mef_controle_contador:comb_88.q0
+test_Ncontador_mef_controle_state_operador <= modulo_mef_controle_contador:comb_88.q0
+test_controle_reset_aux_operador <= controle_reset_aux_operador.DB_MAX_OUTPUT_PORT_TYPE
 test_load_reg <= load_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-test_controle_reset <= <GND>
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -672,15 +674,15 @@ Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -693,15 +695,15 @@ Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|LevelToPulseMealy:pulsador_2|modulo_ff_d:ff_1
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -876,99 +878,99 @@ enable => enable.IN7
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_1
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_2
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_3
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_4
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_5
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_6
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_1|modulo_ff_d:ff_7
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -1635,99 +1637,99 @@ enable => enable.IN7
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_1
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_2
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_3
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_4
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_5
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_6
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_registrador_rolhas:registrador_2|modulo_ff_d:ff_7
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -1986,34 +1988,62 @@ S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_ff_d:ff_1
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_ff_d:ff_2
-d => q~reg0.DATAIN
+d => q.DATAB
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
-clr => q.IN0
-prst => nq~reg0.ACLR
-prst => q~reg0.PRESET
-prst => q.IN1
-enable => q~reg0.ENA
-enable => nq~reg0.ENA
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85
+|pbl|modulo_ff_d:ff_3
+d => q.DATAB
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_ff_d:ff_4
+d => q.DATAB
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.OUTPUTSELECT
+clr => nq.OUTPUTSELECT
+prst => q.OUTPUTSELECT
+prst => nq.OUTPUTSELECT
+enable => q.OUTPUTSELECT
+enable => nq.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|modulo_mef_controle_contador:comb_87
 enable => enable.IN2
 Load_Reg => Load_Reg.IN2
 EmptyBuffer => EmptyBuffer.IN2
@@ -2024,21 +2054,21 @@ q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
 q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_3_inputs:gate_1
+|pbl|modulo_mef_controle_contador:comb_87|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|or_gate_3_inputs:gate_2
+|pbl|modulo_mef_controle_contador:comb_87|or_gate_3_inputs:gate_2
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_1
+|pbl|modulo_mef_controle_contador:comb_87|modulo_ff_jk:jk_1
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2048,20 +2078,20 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_3_inputs:gate_3
+|pbl|modulo_mef_controle_contador:comb_87|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|or_gate_2_inputs:gate_4
+|pbl|modulo_mef_controle_contador:comb_87|or_gate_2_inputs:gate_4
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_2
+|pbl|modulo_mef_controle_contador:comb_87|modulo_ff_jk:jk_2
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2071,19 +2101,19 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_5
+|pbl|modulo_mef_controle_contador:comb_87|and_gate_2_inputs:gate_5
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_6
+|pbl|modulo_mef_controle_contador:comb_87|and_gate_2_inputs:gate_6
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86
+|pbl|modulo_mef_controle_contador:comb_88
 enable => enable.IN2
 Load_Reg => Load_Reg.IN2
 EmptyBuffer => EmptyBuffer.IN2
@@ -2094,21 +2124,21 @@ q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
 q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|and_gate_3_inputs:gate_1
+|pbl|modulo_mef_controle_contador:comb_88|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|or_gate_3_inputs:gate_2
+|pbl|modulo_mef_controle_contador:comb_88|or_gate_3_inputs:gate_2
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|modulo_ff_jk:jk_1
+|pbl|modulo_mef_controle_contador:comb_88|modulo_ff_jk:jk_1
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2118,20 +2148,20 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|and_gate_3_inputs:gate_3
+|pbl|modulo_mef_controle_contador:comb_88|and_gate_3_inputs:gate_3
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|or_gate_2_inputs:gate_4
+|pbl|modulo_mef_controle_contador:comb_88|or_gate_2_inputs:gate_4
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|modulo_ff_jk:jk_2
+|pbl|modulo_mef_controle_contador:comb_88|modulo_ff_jk:jk_2
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2141,13 +2171,13 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|and_gate_2_inputs:gate_5
+|pbl|modulo_mef_controle_contador:comb_88|and_gate_2_inputs:gate_5
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_86|and_gate_2_inputs:gate_6
+|pbl|modulo_mef_controle_contador:comb_88|and_gate_2_inputs:gate_6
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE

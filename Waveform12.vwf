@@ -146,6 +146,19 @@ quit -f
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -164,6 +177,19 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -627,6 +653,16 @@ SIGNAL("hh_load")
 	PARENT = "";
 }
 
+SIGNAL("test_Ncontador_mef_controle_state_operador")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 SIGNAL("test_buffer_principal")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -907,7 +943,7 @@ SIGNAL("test_buffer_secundario_controle_operador[0]")
 	PARENT = "test_buffer_secundario_controle_operador";
 }
 
-SIGNAL("test_contador_mef_controle_state_rolha")
+SIGNAL("test_clr_count")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -917,57 +953,57 @@ SIGNAL("test_contador_mef_controle_state_rolha")
 	PARENT = "";
 }
 
-SIGNAL("test_contador_mef_controle_state_rolha[1]")
+SIGNAL("test_clr_count[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "test_contador_mef_controle_state_rolha";
+	PARENT = "test_clr_count";
 }
 
-SIGNAL("test_contador_mef_controle_state_rolha[0]")
+SIGNAL("test_clr_count[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "test_contador_mef_controle_state_rolha";
+	PARENT = "test_clr_count";
+}
+
+SIGNAL("test_contador_mef_controle_state_operador")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_controle_reset_aux_operador")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_load_reg_1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
 }
 
 SIGNAL("test_reset_ff_operador")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("test_reset_ff_operador__duplicate")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("test_load_reg")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("test_controle_reset")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1252,6 +1288,15 @@ TRANSITION_LIST("hh_load")
 	}
 }
 
+TRANSITION_LIST("test_Ncontador_mef_controle_state_operador")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
 TRANSITION_LIST("test_buffer_principal[4]")
 {
 	NODE
@@ -1468,7 +1513,7 @@ TRANSITION_LIST("test_buffer_secundario_controle_operador[0]")
 	}
 }
 
-TRANSITION_LIST("test_contador_mef_controle_state_rolha[1]")
+TRANSITION_LIST("test_clr_count[1]")
 {
 	NODE
 	{
@@ -1477,7 +1522,34 @@ TRANSITION_LIST("test_contador_mef_controle_state_rolha[1]")
 	}
 }
 
-TRANSITION_LIST("test_contador_mef_controle_state_rolha[0]")
+TRANSITION_LIST("test_clr_count[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_contador_mef_controle_state_operador")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_controle_reset_aux_operador")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_load_reg_1")
 {
 	NODE
 	{
@@ -1487,33 +1559,6 @@ TRANSITION_LIST("test_contador_mef_controle_state_rolha[0]")
 }
 
 TRANSITION_LIST("test_reset_ff_operador")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 100000.0;
-	}
-}
-
-TRANSITION_LIST("test_reset_ff_operador__duplicate")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 100000.0;
-	}
-}
-
-TRANSITION_LIST("test_load_reg")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 100000.0;
-	}
-}
-
-TRANSITION_LIST("test_controle_reset")
 {
 	NODE
 	{
@@ -2091,7 +2136,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_contador_mef_controle_state_rolha";
+	CHANNEL = "test_clr_count";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 58;
@@ -2101,7 +2146,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_contador_mef_controle_state_rolha[1]";
+	CHANNEL = "test_clr_count[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 59;
@@ -2111,7 +2156,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_contador_mef_controle_state_rolha[0]";
+	CHANNEL = "test_clr_count[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 60;
@@ -2121,7 +2166,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_reset_ff_operador";
+	CHANNEL = "test_contador_mef_controle_state_operador";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 61;
@@ -2130,7 +2175,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_reset_ff_operador__duplicate";
+	CHANNEL = "test_Ncontador_mef_controle_state_operador";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 62;
@@ -2139,7 +2184,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_load_reg";
+	CHANNEL = "test_controle_reset_aux_operador";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 63;
@@ -2148,10 +2193,19 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_controle_reset";
+	CHANNEL = "test_load_reg_1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 64;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_reset_ff_operador";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 65;
 	TREE_LEVEL = 0;
 }
 
