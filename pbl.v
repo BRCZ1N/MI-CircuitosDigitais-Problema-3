@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_conta_duzias, test_out_4_bits_duzias, test_out_4_bits_dezena_duzias);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
 	output m,ve,al,ev,Nal;
@@ -72,10 +72,6 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	//Circuito auxiliar de contagem de dúzias
 	
 	and_gate_2_inputs gate_1(.A(ve),.B(cq),.S(conta_duzias));
-	
-	output test_conta_duzias = conta_duzias;
-	output [3:0] test_out_4_bits_duzias = out_4_bits_duzias;
-	output [3:0] test_out_4_bits_dezena_duzias = out_4_bits_dezena_duzias;
 	
 	modulo_contador_sync_4_bits_ascendente contador_duzias(.prst(1'b1),.clr(Nsinal_duzias_reset),.clk(conta_duzias),.q(out_4_bits_duzias));
 	modulo_reset_contador_d reset_1(.cd(out_4_bits_duzias), .rst_cd(sinal_duzias_reset));
