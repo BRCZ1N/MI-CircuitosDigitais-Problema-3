@@ -1,7 +1,7 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
 	
-	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing, hh_load;
+	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
@@ -122,7 +122,7 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	
 	or(enable_buffer_principal,estado_vedacao,enable_count_min_rolhas);
 	
-	modulo_contador_sync_5_bits_ascendente_descendente contador_4_buffer_principal(.clk(clk_div),.enable(1'b0),.q(buffer_principal),.up_down(Nestado_vedacao));
+	modulo_contador_sync_5_bits_ascendente_descendente contador_4_buffer_principal(.clk(clk_div),.enable(enable_buffer_principal),.q(buffer_principal),.up_down(Nestado_vedacao));
 	
 	modulo_count_superior99 m_out_range(.reg_data(buffer_entrada_aux_secundario_out),.cont_superior_99(out_range_buffer));
 	modulo_valor_transfer_rolhas m_trans_rolha(.reg_r(buffer_secundario),.transfer_rolhas(min_trans_rolhas));

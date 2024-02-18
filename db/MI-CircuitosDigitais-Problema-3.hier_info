@@ -3,7 +3,6 @@ start_stop => start_stop.IN2
 pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
-hh_load => ~NO_FANOUT~
 clock_50mhz => clock_50mhz.IN1
 m <= modulo_mef_enchimento_vedacao:mef_1.m
 ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
