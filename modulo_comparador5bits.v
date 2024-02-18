@@ -1,4 +1,4 @@
-module modulo_comparador7bits(A,B,AltB_out,AeqB_out,AgtB_out);
+module modulo_comparador5bits(A,B,AltB_out,AeqB_out,AgtB_out);
 	
 	input [4:0]A,B;
 	output AltB_out, AeqB_out, AgtB_out; 

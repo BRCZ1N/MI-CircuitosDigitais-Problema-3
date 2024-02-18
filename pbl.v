@@ -94,7 +94,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_somador_subtrator_completo_7bits(.op_aritmetica(1'b0),.a(buffer_secundario_aux),.b(rolhas_entrada_secundario),.sum(buffer_secundario_atual_sum_op));
 	modulo_registrador_rolhas registrador_2(.m_in(buffer_secundario_atual_sum_op),.clk(load_input_pulse[1]),.m_out(buffer_entrada_aux_secundario_out),.enable(1'b1));
 	
-	modulo_comparador7bits comparador_1(.A(buffer_secundario),.B(init_rolhas),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
+	modulo_comparador5bits comparador_1(.A(buffer_secundario),.B(init_rolhas),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
 	
 	modulo_ff_d ff_1(.d(1'b1),.clk(load_input_pulse[0]),.clr(reset_ff_rolhas),.enable(1'b1),.q(load_reg[0]),.nq());
 	modulo_ff_d ff_2(.d(1'b1),.clk(load_input_pulse[1]),.clr(reset_ff_operador),.enable(1'b1),.q(load_reg[1]),.nq());
