@@ -3,67 +3,67 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -11.787
-TNS   : -262.808
+Slack : -11.623
+TNS   : -252.054
 
 Type  : Setup 'op_deboucing'
-Slack : -4.021
-TNS   : -24.693
+Slack : -3.913
+TNS   : -24.145
 
 Type  : Setup 'op_c_deboucing'
-Slack : -2.840
-TNS   : -14.827
-
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 0.468
-TNS   : 0.000
+Slack : -2.904
+TNS   : -15.677
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : 1.582
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Slack : 1.297
 TNS   : 0.000
 
 Type  : Setup 'clock_50mhz'
-Slack : 1.619
+Slack : 1.957
 TNS   : 0.000
 
 Type  : Hold 'op_deboucing'
-Slack : -3.250
-TNS   : -31.525
+Slack : -3.971
+TNS   : -42.484
 
 Type  : Hold 'clock_50mhz'
-Slack : -1.673
-TNS   : -1.673
-
-Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : -1.636
-TNS   : -1.636
+Slack : -2.011
+TNS   : -2.011
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -0.522
-TNS   : -0.522
+Slack : -1.351
+TNS   : -1.351
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
+Slack : -0.523
+TNS   : -0.523
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 0.296
+Slack : 0.370
 TNS   : 0.000
 
 Type  : Hold 'op_c_deboucing'
-Slack : 1.734
+Slack : 1.716
 TNS   : 0.000
 
 Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -11.320
-TNS   : -106.967
+Slack : -12.421
+TNS   : -115.708
 
 Type  : Recovery 'op_deboucing'
-Slack : 0.755
+Slack : 0.902
 TNS   : 0.000
 
 Type  : Removal 'op_deboucing'
-Slack : -0.722
-TNS   : -1.371
+Slack : -1.931
+TNS   : -2.655
 
 Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 3.697
+Slack : 3.493
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
