@@ -62,103 +62,103 @@ CHIP  "MI-CircuitosDigitais-Problema-3"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-ve                           : 1         : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 2         :        :                   :         : 1         :                
-GND*                         : 3         :        :                   :         : 1         :                
-GND*                         : 4         :        :                   :         : 1         :                
+GND*                         : 1         :        :                   :         : 2         :                
+clock_50mhz                  : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_principal[2]     : 3         : output : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_secundario_controle_operador[4] : 4         : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 5         :        :                   :         : 1         :                
-Nout_7seg[0]                 : 6         : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 6         :        :                   :         : 1         :                
 GND*                         : 7         :        :                   :         : 1         :                
-test_buffer_secundario_controle_operador[1] : 8         : output : 3.3-V LVTTL       :         : 1         : N              
+Nout_7seg[0]                 : 8         : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-test_buffer_secundario_controle_operador[0] : 12        : output : 3.3-V LVTTL       :         : 1         : N              
+hh_load                      : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 op_c_deboucing               : 14        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 15        :        :                   :         : 1         :                
+test_buffer_secundario[0]    : 15        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 16        :        :                   :         : 1         :                
-cq                           : 17        : input  : 3.3-V LVTTL       :         : 1         : N              
-clock_50mhz                  : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
-test_buffer_principal[3]     : 19        : output : 3.3-V LVTTL       :         : 1         : N              
-test_buffer_principal[2]     : 20        : output : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_secundario_controle_operador[3] : 17        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 18        :        :                   :         : 1         :                
+test_buffer_secundario_controle_operador[5] : 19        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 20        :        :                   :         : 1         :                
 GND*                         : 21        :        :                   :         : 1         :                
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-test_buffer_principal[1]     : 26        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 26        :        :                   :         : 1         :                
 GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
-hh_load                      : 29        : input  : 3.3-V LVTTL       :         : 1         : N              
-test_buffer_secundario_controle_operador[5] : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 29        :        :                   :         : 1         :                
+cq                           : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
 test_buffer_secundario_controle_operador[6] : 33        : output : 3.3-V LVTTL       :         : 1         : N              
-test_buffer_secundario_controle_operador[4] : 34        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 35        :        :                   :         : 1         :                
-test_contador_mef_controle_state_operador : 36        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 37        :        :                   :         : 1         :                
-test_Ncontador_mef_controle_state_operador : 38        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 39        :        :                   :         : 1         :                
-test_buffer_secundario_controle_operador[2] : 40        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 41        :        :                   :         : 1         :                
-Nout_7seg[7]                 : 42        : output : 3.3-V LVTTL       :         : 1         : N              
-Nout_7seg[1]                 : 43        : output : 3.3-V LVTTL       :         : 1         : N              
-Nout_7seg[2]                 : 44        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 34        :        :                   :         : 1         :                
+test_buffer_principal[4]     : 35        : output : 3.3-V LVTTL       :         : 1         : N              
+op_deboucing                 : 36        : input  : 3.3-V LVTTL       :         : 1         : N              
+start_stop                   : 37        : input  : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_principal[1]     : 38        : output : 3.3-V LVTTL       :         : 1         : N              
+ch                           : 39        : input  : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_secundario_controle_min_rolhas[4] : 40        : output : 3.3-V LVTTL       :         : 1         : N              
+ev                           : 41        : output : 3.3-V LVTTL       :         : 1         : N              
+mef_estado[1]                : 42        : output : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_secundario_controle_min_rolhas[2] : 43        : output : 3.3-V LVTTL       :         : 1         : N              
+mef_estado[0]                : 44        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-Nout_7seg[6]                 : 47        : output : 3.3-V LVTTL       :         : 1         : N              
-Nout_7seg[4]                 : 48        : output : 3.3-V LVTTL       :         : 1         : N              
-Nout_7seg[5]                 : 49        : output : 3.3-V LVTTL       :         : 1         : N              
-Nac_7segmentos[2]            : 50        : output : 3.3-V LVTTL       :         : 1         : N              
-Nac_7segmentos[3]            : 51        : output : 3.3-V LVTTL       :         : 1         : N              
-Nout_7seg[3]                 : 52        : output : 3.3-V LVTTL       :         : 2         : N              
-Nac_7segmentos[1]            : 53        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 54        :        :                   :         : 2         :                
-test_buffer_secundario[1]    : 55        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario[5]    : 56        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 57        :        :                   :         : 2         :                
-test_buffer_secundario[6]    : 58        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario_controle_min_rolhas[0] : 47        : output : 3.3-V LVTTL       :         : 1         : N              
+test_buffer_secundario_controle_min_rolhas[1] : 48        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 49        :        :                   :         : 1         :                
+GND*                         : 50        :        :                   :         : 1         :                
+ve                           : 51        : output : 3.3-V LVTTL       :         : 1         : N              
+pg                           : 52        : input  : 3.3-V LVTTL       :         : 2         : N              
+Nal                          : 53        : output : 3.3-V LVTTL       :         : 2         : N              
+al                           : 54        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario_controle_min_rolhas[3] : 55        : output : 3.3-V LVTTL       :         : 2         : N              
+m                            : 56        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario[5]    : 57        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario[1]    : 58        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
-GND*                         : 61        :        :                   :         : 2         :                
-Nac_7segmentos[0]            : 62        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario[4]    : 61        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario[3]    : 62        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
-test_buffer_principal[0]     : 64        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario[6]    : 64        : output : 3.3-V LVTTL       :         : 2         : N              
 GNDINT                       : 65        : gnd    :                   :         :           :                
-test_buffer_secundario[2]    : 66        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario[4]    : 67        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario_controle_operador[3] : 68        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario[3]    : 69        : output : 3.3-V LVTTL       :         : 2         : N              
-mef_estado[1]                : 70        : output : 3.3-V LVTTL       :         : 2         : N              
-ev                           : 71        : output : 3.3-V LVTTL       :         : 2         : N              
-mef_estado[0]                : 72        : output : 3.3-V LVTTL       :         : 2         : N              
-ch                           : 73        : input  : 3.3-V LVTTL       :         : 2         : N              
-pg                           : 74        : input  : 3.3-V LVTTL       :         : 2         : N              
-start_stop                   : 75        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 66        :        :                   :         : 2         :                
+GND*                         : 67        :        :                   :         : 2         :                
+test_buffer_secundario[2]    : 68        : output : 3.3-V LVTTL       :         : 2         : N              
+Nac_7segmentos[0]            : 69        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_principal[0]     : 70        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 71        :        :                   :         : 2         :                
+GND*                         : 72        :        :                   :         : 2         :                
+GND*                         : 73        :        :                   :         : 2         :                
+GND*                         : 74        :        :                   :         : 2         :                
+GND*                         : 75        :        :                   :         : 2         :                
 GND*                         : 76        :        :                   :         : 2         :                
-m                            : 77        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 78        :        :                   :         : 2         :                
+GND*                         : 77        :        :                   :         : 2         :                
+Nout_7seg[6]                 : 78        : output : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
-GND*                         : 81        :        :                   :         : 2         :                
-Nal                          : 82        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_principal[4]     : 83        : output : 3.3-V LVTTL       :         : 2         : N              
-al                           : 84        : output : 3.3-V LVTTL       :         : 2         : N              
-test_load_reg_1              : 85        : output : 3.3-V LVTTL       :         : 2         : N              
-op_deboucing                 : 86        : input  : 3.3-V LVTTL       :         : 2         : N              
-test_load_reg                : 87        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 88        :        :                   :         : 2         :                
-test_buffer_secundario[0]    : 89        : output : 3.3-V LVTTL       :         : 2         : N              
-test_controle_reset_aux_operador : 90        : output : 3.3-V LVTTL       :         : 2         : N              
-test_reset_ff_operador       : 91        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario_controle_min_rolhas[3] : 92        : output : 3.3-V LVTTL       :         : 2         : N              
+Nac_7segmentos[1]            : 81        : output : 3.3-V LVTTL       :         : 2         : N              
+Nout_7seg[3]                 : 82        : output : 3.3-V LVTTL       :         : 2         : N              
+Nac_7segmentos[3]            : 83        : output : 3.3-V LVTTL       :         : 2         : N              
+Nac_7segmentos[2]            : 84        : output : 3.3-V LVTTL       :         : 2         : N              
+Nout_7seg[5]                 : 85        : output : 3.3-V LVTTL       :         : 2         : N              
+Nout_7seg[2]                 : 86        : output : 3.3-V LVTTL       :         : 2         : N              
+Nout_7seg[7]                 : 87        : output : 3.3-V LVTTL       :         : 2         : N              
+Nout_7seg[1]                 : 88        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 89        :        :                   :         : 2         :                
+GND*                         : 90        :        :                   :         : 2         :                
+Nout_7seg[4]                 : 91        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 92        :        :                   :         : 2         :                
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
-test_buffer_secundario_controle_min_rolhas[4] : 95        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario_controle_min_rolhas[1] : 96        : output : 3.3-V LVTTL       :         : 2         : N              
-test_buffer_secundario_controle_min_rolhas[2] : 97        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario_controle_operador[1] : 95        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario_controle_operador[2] : 96        : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_secundario_controle_operador[0] : 97        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 98        :        :                   :         : 2         :                
-GND*                         : 99        :        :                   :         : 2         :                
-test_buffer_secundario_controle_min_rolhas[0] : 100       : output : 3.3-V LVTTL       :         : 2         : N              
+test_buffer_principal[3]     : 99        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 100       :        :                   :         : 2         :                

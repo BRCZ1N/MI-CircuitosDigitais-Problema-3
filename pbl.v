@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_reset_ff_operador, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_load_reg_1, test_contador_mef_controle_state_operador, test_Ncontador_mef_controle_state_operador, test_controle_reset_aux_operador, test_load_reg);
+module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing, hh_load;
 	output m,ve,al,ev,Nal;
@@ -99,19 +99,13 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	modulo_ff_d ff_1(.d(1'b1),.clk(load_input_pulse[0]),.clr(reset_ff_rolhas),.enable(1'b1),.q(load_reg[0]),.nq());
 	modulo_ff_d ff_2(.d(1'b1),.clk(load_input_pulse[1]),.clr(reset_ff_operador),.enable(1'b1),.q(load_reg[1]),.nq());
 	
-	output test_load_reg_1 = load_reg[1];
-	
 	output [6:0] test_buffer_secundario = buffer_secundario;
 	output [4:0] test_buffer_secundario_controle_min_rolhas = buffer_secundario_controle_min_rolhas;
 	output [6:0] test_buffer_secundario_controle_operador = buffer_secundario_controle_operador;
 	output [4:0] test_buffer_principal = buffer_principal;
 	
-	output test_contador_mef_controle_state_operador = contador_mef_controle_state_operador;
-	output test_Ncontador_mef_controle_state_operador = contador_mef_controle_state_operador;
-	output test_controle_reset_aux_operador = controle_reset_aux_operador;
-	
-	and(controle_reset_aux_min_rolhas, Nbuffer_secundario_controle_min_rolhas[4], Nbuffer_secundario_controle_min_rolhas[3], Nbuffer_secundario_controle_min_rolhas[2], Nbuffer_secundario_controle_min_rolhas[1], Nbuffer_secundario_controle_min_rolhas[0]);
-	and(controle_reset_aux_operador, Nbuffer_secundario_controle_operador[6], Nbuffer_secundario_controle_operador[5], Nbuffer_secundario_controle_operador[4], Nbuffer_secundario_controle_operador[3], Nbuffer_secundario_controle_operador[2], Nbuffer_secundario_controle_operador[1], Nbuffer_secundario_controle_operador[0]);
+	and(controle_reset_aux_min_rolhas, Nbuffer_secundario_controle_min_rolhas[4], Nbuffer_secundario_controle_min_rolhas[3], Nbuffer_secundario_controle_min_rolhas[2], Nbuffer_secundario_controle_min_rolhas[1], buffer_secundario_controle_min_rolhas[0]);
+	and(controle_reset_aux_operador, Nbuffer_secundario_controle_operador[6], Nbuffer_secundario_controle_operador[5], Nbuffer_secundario_controle_operador[4], Nbuffer_secundario_controle_operador[3], Nbuffer_secundario_controle_operador[2], Nbuffer_secundario_controle_operador[1], buffer_secundario_controle_operador[0]);
 	
 	xor(enable_buffer_secundario,enable_count_min_rolhas,enable_count_operador);
 	
@@ -122,13 +116,9 @@ module pbl(start_stop,pg,ch,cq,hh_load,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nou
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[0]),.EmptyBuffer(controle_reset_aux_min_rolhas),.clk(clk_div),.Enable_C(enable_count_min_rolhas_aux),.Load_C(load_count_min_rolhas),.Clear_Reg(reset_ff_rolhas),.q0(contador_mef_controle_state_rolha[0]),.q1(contador_mef_controle_state_rolha[1]));
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[1]),.EmptyBuffer(controle_reset_aux_operador),.clk(clk_div),.Enable_C(enable_count_operador),.Load_C(load_count_operador),.Clear_Reg(reset_ff_operador),.q0(contador_mef_controle_state_operador[0]),.q1(contador_mef_controle_state_operador[1]));
 	
-	output test_reset_ff_operador = reset_ff_operador;
-	
 	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(enable_buffer_secundario),.q(buffer_secundario),.up_down(load_reg[1]));
 	modulo_contador_sync_5_bits_ascendente_descendente contador_2_buffer_secundario_controle_rolhas(.clk(clk_div),.enable(enable_count_min_rolhas),.q(buffer_secundario_controle_min_rolhas),.load(load_count_min_rolhas),.e_load(init_rolhas),.up_down(1'b0));
 	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario_controle_operador(.clk(clk_div),.enable(enable_count_operador),.q(buffer_secundario_controle_operador),.load(load_count_operador),.e_load(buffer_entrada_aux_secundario_out),.up_down(1'b0));
-	
-	output test_load_reg = load_reg[1];
 	
 	or(enable_buffer_principal,estado_vedacao,enable_count_min_rolhas);
 	

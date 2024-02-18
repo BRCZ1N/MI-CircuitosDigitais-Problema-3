@@ -27,7 +27,6 @@ Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c_deboucing => Nop_c_deboucing.IN1
 op_deboucing => WideAnd0.IN3
 op_deboucing => comb.IN1
-test_reset_ff_operador <= reset_ff_operador.DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_secundario[0] <= buffer_secundario[0].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_secundario[1] <= buffer_secundario[1].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_secundario[2] <= buffer_secundario[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -52,11 +51,6 @@ test_buffer_principal[1] <= buffer_principal[1].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[2] <= buffer_principal[2].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[3] <= buffer_principal[3].DB_MAX_OUTPUT_PORT_TYPE
 test_buffer_principal[4] <= buffer_principal[4].DB_MAX_OUTPUT_PORT_TYPE
-test_load_reg_1 <= load_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-test_contador_mef_controle_state_operador <= modulo_mef_controle_contador:comb_85.q0
-test_Ncontador_mef_controle_state_operador <= modulo_mef_controle_contador:comb_85.q0
-test_controle_reset_aux_operador <= controle_reset_aux_operador.DB_MAX_OUTPUT_PORT_TYPE
-test_load_reg <= load_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -2015,7 +2009,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84
+|pbl|modulo_mef_controle_contador:comb_80
 enable => enable.IN2
 Load_Reg => Load_Reg.IN3
 EmptyBuffer => EmptyBuffer.IN1
@@ -2027,14 +2021,14 @@ q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
 q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_3_inputs:gate_1
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|modulo_ff_jk:jk_1
+|pbl|modulo_mef_controle_contador:comb_80|modulo_ff_jk:jk_1
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2044,32 +2038,32 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_2_inputs:gate_2
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_2_inputs:gate_2
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_2_inputs:gate_3
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_2_inputs:gate_3
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|or_gate_2_inputs:gate_4
+|pbl|modulo_mef_controle_contador:comb_80|or_gate_2_inputs:gate_4
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|or_gate_3_inputs:gate_5
+|pbl|modulo_mef_controle_contador:comb_80|or_gate_3_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|modulo_ff_jk:jk_2
+|pbl|modulo_mef_controle_contador:comb_80|modulo_ff_jk:jk_2
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2079,25 +2073,25 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_2_inputs:gate_6
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_2_inputs:gate_6
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_2_inputs:gate_7
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_2_inputs:gate_7
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_84|and_gate_2_inputs:gate_8
+|pbl|modulo_mef_controle_contador:comb_80|and_gate_2_inputs:gate_8
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85
+|pbl|modulo_mef_controle_contador:comb_81
 enable => enable.IN2
 Load_Reg => Load_Reg.IN3
 EmptyBuffer => EmptyBuffer.IN1
@@ -2109,14 +2103,14 @@ q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
 q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_3_inputs:gate_1
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_3_inputs:gate_1
 A => WideAnd0.IN0
 B => WideAnd0.IN1
 C => WideAnd0.IN2
 S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_1
+|pbl|modulo_mef_controle_contador:comb_81|modulo_ff_jk:jk_1
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2126,32 +2120,32 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_2
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_2_inputs:gate_2
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_3
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_2_inputs:gate_3
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|or_gate_2_inputs:gate_4
+|pbl|modulo_mef_controle_contador:comb_81|or_gate_2_inputs:gate_4
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|or_gate_3_inputs:gate_5
+|pbl|modulo_mef_controle_contador:comb_81|or_gate_3_inputs:gate_5
 A => WideOr0.IN0
 B => WideOr0.IN1
 C => WideOr0.IN2
 S <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|modulo_ff_jk:jk_2
+|pbl|modulo_mef_controle_contador:comb_81|modulo_ff_jk:jk_2
 clk => q~reg0.CLK
 rst => q.OUTPUTSELECT
 enable => q.OUTPUTSELECT
@@ -2161,19 +2155,19 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_6
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_2_inputs:gate_6
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_7
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_2_inputs:gate_7
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|modulo_mef_controle_contador:comb_85|and_gate_2_inputs:gate_8
+|pbl|modulo_mef_controle_contador:comb_81|and_gate_2_inputs:gate_8
 A => comb.IN0
 B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
