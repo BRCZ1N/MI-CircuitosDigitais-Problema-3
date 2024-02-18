@@ -138,10 +138,10 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_codificador_dezena_rolhas codificador_rolhas_1(.reg_r(buffer_secundario),.reg_rd(codificacao_4bits_d_rolhas));
 	modulo_codificador_unidade_rolhas codificador_rolhas_2(.reg_r(buffer_secundario),.reg_ru(codificacao_4bits_u_rolhas));
 	
-	modulo_mux4_1 mux_36(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[3]));
-	modulo_mux4_1 mux_37(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[2]));
-	modulo_mux4_1 mux_38(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[1]));
-	modulo_mux4_1 mux_39(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[0]));
+	modulo_mux4_1 mux_1(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(codificacao_4bits_d_rolhas[3]),.D(codificacao_4bits_u_rolhas[3]),.input_sel(sel_mux_display),.out(display_in[3]));
+	modulo_mux4_1 mux_2(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(codificacao_4bits_d_rolhas[2]),.D(codificacao_4bits_u_rolhas[2]),.input_sel(sel_mux_display),.out(display_in[2]));
+	modulo_mux4_1 mux_3(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(codificacao_4bits_d_rolhas[1]),.D(codificacao_4bits_u_rolhas[1]),.input_sel(sel_mux_display),.out(display_in[1]));
+	modulo_mux4_1 mux_4(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(codificacao_4bits_d_rolhas[0]),.D(codificacao_4bits_u_rolhas[0]),.input_sel(sel_mux_display),.out(display_in[0]));
 	
 	modulo_demux1_4 demux_1(.A(1'b1),.input_sel(sel_mux_display),.out(ac_7segmentos));
 
