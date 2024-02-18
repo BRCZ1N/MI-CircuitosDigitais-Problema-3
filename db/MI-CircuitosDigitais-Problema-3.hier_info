@@ -4,61 +4,61 @@ pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
 clock_50mhz => clock_50mhz.IN1
-m <= modulo_mef_enchimento_vedacao:mef_1.m
-ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
-al <= modulo_mef_enchimento_vedacao:mef_1.al
-Nal <= modulo_mef_enchimento_vedacao:mef_1.al
-ev <= modulo_mef_enchimento_vedacao:mef_1.ev
-mef_estado[0] <= modulo_mef_enchimento_vedacao:mef_1.q0
-mef_estado[1] <= modulo_mef_enchimento_vedacao:mef_1.q1
-Nout_7seg[0] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[1] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[2] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[3] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[4] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[5] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[6] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[7] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nac_7segmentos[0] <= modulo_demux1_4:demux_1.out
-Nac_7segmentos[1] <= modulo_demux1_4:demux_1.out
-Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
-Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
+m << modulo_mef_enchimento_vedacao:mef_1.m
+ve << ve.DB_MAX_OUTPUT_PORT_TYPE
+al << modulo_mef_enchimento_vedacao:mef_1.al
+Nal << modulo_mef_enchimento_vedacao:mef_1.al
+ev << modulo_mef_enchimento_vedacao:mef_1.ev
+mef_estado[0] << modulo_mef_enchimento_vedacao:mef_1.q0
+mef_estado[1] << modulo_mef_enchimento_vedacao:mef_1.q1
+Nout_7seg[0] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[1] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[2] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[3] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[4] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[5] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[6] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[7] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nac_7segmentos[0] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[1] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[2] << modulo_demux1_4:demux_1.out
+Nac_7segmentos[3] << modulo_demux1_4:demux_1.out
 op_c_deboucing => Nop_c_deboucing.IN1
 op_deboucing => WideAnd0.IN3
 op_deboucing => comb.IN1
-test_buffer_secundario[0] <= buffer_secundario[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[1] <= buffer_secundario[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[2] <= buffer_secundario[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[3] <= buffer_secundario[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[4] <= buffer_secundario[4].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[5] <= buffer_secundario[5].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario[6] <= buffer_secundario[6].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_secundario_controle_min_rolhas[0] <= modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
-test_buffer_secundario_controle_min_rolhas[1] <= modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
-test_buffer_secundario_controle_min_rolhas[2] <= modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
-test_buffer_secundario_controle_min_rolhas[3] <= modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
-test_buffer_secundario_controle_min_rolhas[4] <= modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
-test_buffer_secundario_controle_operador[0] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[1] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[2] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[3] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[4] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[5] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_secundario_controle_operador[6] <= modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
-test_buffer_principal[0] <= buffer_principal[0].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_principal[1] <= buffer_principal[1].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_principal[2] <= buffer_principal[2].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_principal[3] <= buffer_principal[3].DB_MAX_OUTPUT_PORT_TYPE
-test_buffer_principal[4] <= buffer_principal[4].DB_MAX_OUTPUT_PORT_TYPE
-test_conta_duzias <= conta_duzias.DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_duzias[0] <= out_4_bits_duzias[0].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_duzias[1] <= out_4_bits_duzias[1].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_duzias[2] <= out_4_bits_duzias[2].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_duzias[3] <= out_4_bits_duzias[3].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_dezena_duzias[0] <= out_4_bits_dezena_duzias[0].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_dezena_duzias[1] <= out_4_bits_dezena_duzias[1].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_dezena_duzias[2] <= out_4_bits_dezena_duzias[2].DB_MAX_OUTPUT_PORT_TYPE
-test_out_4_bits_dezena_duzias[3] <= out_4_bits_dezena_duzias[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[0] << buffer_secundario[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[1] << buffer_secundario[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[2] << buffer_secundario[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[3] << buffer_secundario[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[4] << buffer_secundario[4].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[5] << buffer_secundario[5].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario[6] << buffer_secundario[6].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_secundario_controle_min_rolhas[0] << modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
+test_buffer_secundario_controle_min_rolhas[1] << modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
+test_buffer_secundario_controle_min_rolhas[2] << modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
+test_buffer_secundario_controle_min_rolhas[3] << modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
+test_buffer_secundario_controle_min_rolhas[4] << modulo_contador_sync_5_bits_ascendente_descendente:contador_2_buffer_secundario_controle_rolhas.q
+test_buffer_secundario_controle_operador[0] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[1] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[2] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[3] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[4] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[5] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_secundario_controle_operador[6] << modulo_contador_sync_7_bits_ascendente_descendente:contador_3_buffer_secundario_controle_operador.q
+test_buffer_principal[0] << buffer_principal[0].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_principal[1] << buffer_principal[1].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_principal[2] << buffer_principal[2].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_principal[3] << buffer_principal[3].DB_MAX_OUTPUT_PORT_TYPE
+test_buffer_principal[4] << buffer_principal[4].DB_MAX_OUTPUT_PORT_TYPE
+test_conta_duzias << conta_duzias.DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_duzias[0] << out_4_bits_duzias[0].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_duzias[1] << out_4_bits_duzias[1].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_duzias[2] << out_4_bits_duzias[2].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_duzias[3] << out_4_bits_duzias[3].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_dezena_duzias[0] << out_4_bits_dezena_duzias[0].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_dezena_duzias[1] << out_4_bits_dezena_duzias[1].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_dezena_duzias[2] << out_4_bits_dezena_duzias[2].DB_MAX_OUTPUT_PORT_TYPE
+test_out_4_bits_dezena_duzias[3] << out_4_bits_dezena_duzias[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_divisor_frequencia:divisor_f
@@ -551,19 +551,17 @@ q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_reset_contador_d:reset_1
-cd[0] => cd[0].IN1
-cd[1] => Ncd[1].IN1
+cd[0] => ~NO_FANOUT~
+cd[1] => ~NO_FANOUT~
 cd[2] => cd[2].IN1
 cd[3] => cd[3].IN1
-rst_cd <= and_gate_4_inputs:gate_1.S
+rst_cd <= and_gate_2_inputs:gate_1.S
 
 
-|pbl|modulo_reset_contador_d:reset_1|and_gate_4_inputs:gate_1
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd0.IN3
-S <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+|pbl|modulo_reset_contador_d:reset_1|and_gate_2_inputs:gate_1
+A => comb.IN0
+B => comb.IN1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias
