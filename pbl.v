@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_conta_duzias, test_out_4_bits_duzias, test_out_4_bits_dezena_duzias);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
 	output m,ve,al,ev,Nal;
@@ -51,6 +51,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	not(Nout_range_buffer,out_range_buffer);
 	not(Nop_deboucing, op_deboucing);
 	not(Nal,al);
+	not(Nstart_stop,start_stop);
 	not(Nac_7segmentos[3],ac_7segmentos[3]);
 	not(Nac_7segmentos[2],ac_7segmentos[2]);
 	not(Nac_7segmentos[1],ac_7segmentos[1]);
@@ -72,19 +73,23 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	and_gate_2_inputs gate_1(.A(ve),.B(cq),.S(conta_duzias));
 	
-	modulo_contador_sync_4_bits_ascendente contador_duzias(.input_primeiro_ff(conta_duzias),.prst(1'b1),.clr(Nsinal_duzias_reset),.clk(clk_div),.q(out_4_bits_duzias));
+	output test_conta_duzias = conta_duzias;
+	output [3:0] test_out_4_bits_duzias = out_4_bits_duzias;
+	output [3:0] test_out_4_bits_dezena_duzias = out_4_bits_dezena_duzias;
+	
+	modulo_contador_sync_4_bits_ascendente contador_duzias(.prst(1'b1),.clr(Nsinal_duzias_reset),.clk(conta_duzias),.q(out_4_bits_duzias));
 	modulo_reset_contador_d reset_1(.cd(out_4_bits_duzias), .rst_cd(sinal_duzias_reset));
 	
-	modulo_contador_sync_4_bits_ascendente contador_dezenas_duzias(.input_primeiro_ff(sinal_duzias_reset),.prst(1'b1),.clr(Nsinal_dezenas_duzias_reset),.clk(clk_div),.q(out_4_bits_dezena_duzias));
+	modulo_contador_sync_4_bits_ascendente contador_dezenas_duzias(.prst(1'b1),.clr(Nsinal_dezenas_duzias_reset),.clk(sinal_duzias_reset),.q(out_4_bits_dezena_duzias));
 	modulo_reset_contador_dd reset_2(.cdd(out_4_bits_dezena_duzias),.rst_cdd(sinal_dezenas_duzias_reset_aux));
 	
-	or_gate_2_inputs gate_2(.A(start_stop),.B(sinal_dezenas_duzias_reset_aux),.S(sinal_dezenas_duzias_reset));
+	or_gate_2_inputs gate_2(.A(Nstart_stop),.B(sinal_dezenas_duzias_reset_aux),.S(sinal_dezenas_duzias_reset));
 	
 	//Circuito auxiliar de contagem de rolhas
 	
 	or(comparator_aux, out_comparador[1], out_comparador[0]);
-	and(load_aux[1], start_stop, Nop_deboucing,Nout_range_buffer);
-	and(load_aux[0], start_stop, op_deboucing,comparator_aux,signal_min_rolhas,min_trans_rolhas);
+	and(load_aux[1], Nop_deboucing,Nout_range_buffer);
+	and(load_aux[0], op_deboucing,comparator_aux,signal_min_rolhas,min_trans_rolhas);
 	
 	LevelToPulseMealy pulsador_1(.Clock(clk_div),.Reset(),.Level(load_aux[0]),.Pulse(load_input_pulse[0]));
 	LevelToPulseMealy pulsador_2(.Clock(clk_div),.Reset(),.Level(load_aux[1]),.Pulse(load_input_pulse[1]));
@@ -112,8 +117,8 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	and(estado_vedacao, mef_estado[1], mef_estado[0]);
 	
-	and(enable_count_min_rolhas,start_stop,Nestado_vedacao,Nenable_count_operador,enable_count_min_rolhas_aux);
-	and(enable_count_operador,start_stop,enable_count_operador_aux);
+	and(enable_count_min_rolhas,Nestado_vedacao,Nenable_count_operador,enable_count_min_rolhas_aux);
+	and(enable_count_operador,enable_count_operador_aux);
 	
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[0]),.EmptyBuffer(controle_reset_aux_min_rolhas),.clk(clk_div),.Enable_C(enable_count_min_rolhas_aux),.Load_C(load_count_min_rolhas),.Clear_Reg(reset_ff_rolhas),.q0(contador_mef_controle_state_rolha[0]),.q1(contador_mef_controle_state_rolha[1]));
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[1]),.EmptyBuffer(controle_reset_aux_operador),.clk(clk_div),.Enable_C(enable_count_operador_aux),.Load_C(load_count_operador),.Clear_Reg(reset_ff_operador),.q0(contador_mef_controle_state_operador[0]),.q1(contador_mef_controle_state_operador[1]));
@@ -137,10 +142,10 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_codificador_dezena_rolhas codificador_rolhas_1(.reg_r(buffer_secundario),.reg_rd(codificacao_4bits_d_rolhas));
 	modulo_codificador_unidade_rolhas codificador_rolhas_2(.reg_r(buffer_secundario),.reg_ru(codificacao_4bits_u_rolhas));
 	
-	modulo_mux4_1 mux_36(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(codificacao_4bits_d_rolhas[3]),.D(codificacao_4bits_u_rolhas[3]),.input_sel(sel_mux_display),.out(display_in[3]));
-	modulo_mux4_1 mux_37(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(codificacao_4bits_d_rolhas[2]),.D(codificacao_4bits_u_rolhas[2]),.input_sel(sel_mux_display),.out(display_in[2]));
-	modulo_mux4_1 mux_38(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(codificacao_4bits_d_rolhas[1]),.D(codificacao_4bits_u_rolhas[1]),.input_sel(sel_mux_display),.out(display_in[1]));
-	modulo_mux4_1 mux_39(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(codificacao_4bits_d_rolhas[0]),.D(codificacao_4bits_u_rolhas[0]),.input_sel(sel_mux_display),.out(display_in[0]));
+	modulo_mux4_1 mux_36(.A(codificacao_4bits_d_garrafas[3]),.B(codificacao_4bits_u_garrafas[3]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[3]));
+	modulo_mux4_1 mux_37(.A(codificacao_4bits_d_garrafas[2]),.B(codificacao_4bits_u_garrafas[2]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[2]));
+	modulo_mux4_1 mux_38(.A(codificacao_4bits_d_garrafas[1]),.B(codificacao_4bits_u_garrafas[1]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[1]));
+	modulo_mux4_1 mux_39(.A(codificacao_4bits_d_garrafas[0]),.B(codificacao_4bits_u_garrafas[0]),.C(),.D(),.input_sel(sel_mux_display),.out(display_in[0]));
 	
 	modulo_demux1_4 demux_1(.A(1'b1),.input_sel(sel_mux_display),.out(ac_7segmentos));
 
