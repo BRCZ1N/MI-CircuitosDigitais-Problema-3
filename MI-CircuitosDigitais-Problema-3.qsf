@@ -78,7 +78,9 @@ set_global_assignment -name VERILOG_FILE modulo_mux4_1.v
 set_global_assignment -name VERILOG_FILE modulo_demux1_4.v
 set_global_assignment -name VERILOG_FILE modulo_ff_t.v
 set_global_assignment -name VERILOG_FILE modulo_ff_jk.v
+set_global_assignment -name VERILOG_FILE modulo_contador_sync_5_bits_ascendente_descendente.v
 set_global_assignment -name VERILOG_FILE modulo_ff_d.v
+set_global_assignment -name VERILOG_FILE modulo_comparador5bits.v
 set_global_assignment -name VERILOG_FILE module_gates.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
@@ -121,6 +123,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform37.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform38.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform39.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform40.vwf
-set_global_assignment -name VERILOG_FILE modulo_contador_sync_5_bits_ascendente_descendente.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform41.vwf
-set_global_assignment -name VERILOG_FILE modulo_comparador5bits.v

@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sat Feb 17 22:19:28 2024
+    Info: Processing started: Sat Feb 17 22:59:53 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3 --vector_source=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/Waveform12.vwf --testbench_file=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/Waveform12.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -53,15 +53,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sat Feb 17 22:19:29 2024
+    Info: Processing started: Sat Feb 17 22:59:54 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/ MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MI-CircuitosDigitais-Problema-3.vo in folder "C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Sat Feb 17 22:19:29 2024
+    Info: Processing ended: Sat Feb 17 22:59:54 2024
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -79,31 +79,31 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-# do MI-CircuitosDigitais-Problema-3.do
 
+# do MI-CircuitosDigitais-Problema-3.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:19:30 on Feb 17,2024
+# Start time: 22:59:55 on Feb 17,2024
 # vlog -work work MI-CircuitosDigitais-Problema-3.vo 
 # -- Compiling module pbl
 # 
 # Top level modules:
 # 	pbl
-# End time: 22:19:30 on Feb 17,2024, Elapsed time: 0:00:00
+# End time: 22:59:55 on Feb 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:19:30 on Feb 17,2024
-# vlog -work work Waveform12.vwf.vt 
 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:59:55 on Feb 17,2024
+# vlog -work work Waveform12.vwf.vt 
 # -- Compiling module pbl_vlg_vec_tst
 # 
 # Top level modules:
 # 	pbl_vlg_vec_tst
-# End time: 22:19:30 on Feb 17,2024, Elapsed time: 0:00:00
+# End time: 22:59:55 on Feb 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.pbl_vlg_vec_tst 
-# Start time: 22:19:30 on Feb 17,2024
+# Start time: 22:59:55 on Feb 17,2024
 # Loading work.pbl_vlg_vec_tst
 # Loading work.pbl
 # Loading maxii_ver.maxii_io
@@ -112,9 +112,9 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading maxii_ver.maxii_lcell_register
 # after#25
 
-# ** Note: $finish    : Waveform12.vwf.vt(78)
+# ** Note: $finish    : Waveform12.vwf.vt(80)
 #    Time: 100 us  Iteration: 0  Instance: /pbl_vlg_vec_tst
-# End time: 22:19:30 on Feb 17,2024, Elapsed time: 0:00:00
+# End time: 22:59:55 on Feb 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -127,7 +127,7 @@ Reading C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/MI-CircuitosDigitais-Problema-3_20240217221930.sim.vwf
+Writing the resulting VWF to C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/MI-CircuitosDigitais-Problema-3_20240217225955.sim.vwf
 
 Finished VCD to VWF conversion.
 

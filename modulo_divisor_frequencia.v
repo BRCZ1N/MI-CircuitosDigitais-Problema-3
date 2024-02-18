@@ -6,7 +6,7 @@ module modulo_divisor_frequencia(prst, clr, clk_div, clk);
 	wire [19:0] q;
 	output clk_div;
 	
-	and(clk_div,1'b1,q[18]);
+	and(clk_div,1'b1,q[2]);
 
 	
 	modulo_ff_t ff_1(.t(1'b1),.clk(clk),.prst(prst),.clr(clr),.enable(1'b1),.q(q[0]),.q_bar());
