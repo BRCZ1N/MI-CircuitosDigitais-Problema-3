@@ -167,6 +167,9 @@ quit -f
 
 
 
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -185,6 +188,9 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
 
 
 
@@ -939,6 +945,36 @@ SIGNAL("test_buffer_secundario_controle_operador[0]")
 	PARENT = "test_buffer_secundario_controle_operador";
 }
 
+SIGNAL("test_sel_mux_display")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 2;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_sel_mux_display[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_sel_mux_display";
+}
+
+SIGNAL("test_sel_mux_display[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_sel_mux_display";
+}
+
 TRANSITION_LIST("Nac_7segmentos[3]")
 {
 	NODE
@@ -1107,7 +1143,7 @@ TRANSITION_LIST("cq")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -1174,7 +1210,9 @@ TRANSITION_LIST("op_deboucing")
 		REPEAT = 1;
 		LEVEL 1 FOR 640.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 99280.0;
+		LEVEL 1 FOR 14640.0;
+		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 84000.0;
 	}
 }
 
@@ -1413,6 +1451,24 @@ TRANSITION_LIST("test_buffer_secundario_controle_operador[1]")
 }
 
 TRANSITION_LIST("test_buffer_secundario_controle_operador[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_sel_mux_display[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_sel_mux_display[0]")
 {
 	NODE
 	{
@@ -1977,6 +2033,36 @@ DISPLAY_LINE
 	TREE_INDEX = 56;
 	TREE_LEVEL = 1;
 	PARENT = 49;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_sel_mux_display";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 57;
+	TREE_LEVEL = 0;
+	CHILDREN = 58, 59;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_sel_mux_display[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 1;
+	PARENT = 57;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_sel_mux_display[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 1;
+	PARENT = 57;
 }
 
 TIME_BAR

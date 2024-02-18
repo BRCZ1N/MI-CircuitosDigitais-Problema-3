@@ -73,7 +73,7 @@ module modulo_decodificadorBCD_7Segmentos(ABCD, ABCDEFGDP);
 
 	// Saida DP = 1
 
-	and_gate_2_inputs gate_24(.A(1'b0),.B(1'b0),.S(ABCDEFGDP[0]));
+	and_gate_2_inputs gate_24(.A(1'b1),.B(1'b1),.S(ABCDEFGDP[0]));
 
 	
 endmodule 
