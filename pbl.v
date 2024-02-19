@@ -13,7 +13,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire sinal_dezenas_duzias_reset, signal_min_rolhas, ro, min_trans_rolhas;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in, ac_7segmentos, codificacao_4bits_d_garrafas;
 	wire [3:0] codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
-	wire [6:0] init_rolhas, Nbuffer_secundario_controle_operador, buffer_secundario_controle_operador, buffer_secundario;
+	wire [6:0] min_rolhas, Nbuffer_secundario_controle_operador, buffer_secundario_controle_operador, buffer_secundario;
 	wire [6:0] buffer_secundario_atual_sum_op, buffer_secundario_aux, buffer_entrada_aux_secundario_out, rolhas_entrada_secundario;
 	wire [2:0] out_comparador;
 	wire [7:0] out_7seg;
@@ -21,13 +21,13 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire [1:0] load_reg, Nload_reg, sel_mux_display, load_aux;
 	wire [4:0] buffer_principal, Nbuffer_secundario_controle_min_rolhas, buffer_secundario_controle_min_rolhas;
 	
-	and(init_rolhas[6],1'b1,1'b0);
-	and(init_rolhas[5],1'b1,1'b0);
-	and(init_rolhas[4],1'b1,1'b1);
-	and(init_rolhas[3],1'b1,1'b0);
-	and(init_rolhas[2],1'b1,1'b1);
-	and(init_rolhas[1],1'b1,1'b0);
-	and(init_rolhas[0],1'b1,1'b0);
+	and(min_rolhas[6],1'b1,1'b0);
+	and(min_rolhas[5],1'b1,1'b0);
+	and(min_rolhas[4],1'b1,1'b1);
+	and(min_rolhas[3],1'b1,1'b0);
+	and(min_rolhas[2],1'b1,1'b1);
+	and(min_rolhas[1],1'b1,1'b0);
+	and(min_rolhas[0],1'b1,1'b0);
 	
 	not(Nsinal_duzias_reset,sinal_duzias_reset);
 	not(Nsinal_dezenas_duzias_reset,sinal_dezenas_duzias_reset);
@@ -98,7 +98,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_somador_subtrator_completo_7bits(.op_aritmetica(1'b0),.a(buffer_secundario_aux),.b(rolhas_entrada_secundario),.sum(buffer_secundario_atual_sum_op));
 	modulo_registrador_rolhas registrador_2(.m_in(buffer_secundario_atual_sum_op),.clk(load_input_pulse[1]),.m_out(buffer_entrada_aux_secundario_out),.enable(1'b1));
 	
-	modulo_comparador7bits comparador_1(.A(buffer_secundario),.B(init_rolhas),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
+	modulo_comparador7bits comparador_1(.A(buffer_secundario),.B(min_rolhas),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
 	
 	modulo_ff_d ff_1(.d(1'b1),.clk(load_input_pulse[0]),.clr(reset_ff_rolhas),.enable(1'b1),.q(load_reg[0]),.nq());
 	modulo_ff_d ff_2(.d(1'b1),.clk(load_input_pulse[1]),.clr(reset_ff_operador),.enable(1'b1),.q(load_reg[1]),.nq());
@@ -121,7 +121,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[1]),.EmptyBuffer(controle_reset_aux_operador),.clk(clk_div),.Enable_C(enable_count_operador),.Load_C(load_count_operador),.Clear_Reg(reset_ff_operador),.q0(contador_mef_controle_state_operador[0]),.q1(contador_mef_controle_state_operador[1]));
 	
 	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(enable_buffer_secundario),.q(buffer_secundario),.up_down(load_reg[1]));
-	modulo_contador_sync_5_bits_ascendente_descendente contador_2_buffer_secundario_controle_rolhas(.clk(clk_div),.enable(enable_count_min_rolhas),.q(buffer_secundario_controle_min_rolhas),.load(load_count_min_rolhas),.e_load(init_rolhas[4:0]),.up_down(1'b0));
+	modulo_contador_sync_5_bits_ascendente_descendente contador_2_buffer_secundario_controle_rolhas(.clk(clk_div),.enable(enable_count_min_rolhas),.q(buffer_secundario_controle_min_rolhas),.load(load_count_min_rolhas),.e_load(min_rolhas[4:0]),.up_down(1'b0));
 	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario_controle_operador(.clk(clk_div),.enable(enable_count_operador),.q(buffer_secundario_controle_operador),.load(load_count_operador),.e_load(buffer_entrada_aux_secundario_out),.up_down(1'b0));
 	
 	or(enable_buffer_principal,estado_vedacao,enable_count_min_rolhas);
