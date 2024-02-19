@@ -1,5 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c_deboucing,op_deboucing, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_load_reg_1, test_up_down_buffer_2);
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c_deboucing,op_deboucing;
 	output m,ve,al,ev,Nal;
@@ -10,7 +10,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire load_count_operador, enable_count_operador, enable_count_min_rolhas, load_count_min_rolhas, enable_buffer_secundario, Nop_c_deboucing, controle_reset_aux_operador; 
 	wire Nestado_vedacao, Nout_range_buffer, Nop_deboucing, Nstart_stop, comparator_aux, clk_div, enable_count_operador_aux;
 	wire Nsinal_dezenas_duzias_reset, Nsinal_duzias_reset, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux;
-	wire sinal_dezenas_duzias_reset, signal_min_rolhas, ro, min_trans_rolhas;
+	wire up_down_buffer_2, sinal_dezenas_duzias_reset, signal_min_rolhas, ro, min_trans_rolhas;
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in, ac_7segmentos, codificacao_4bits_d_garrafas;
 	wire [3:0] codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
 	wire [6:0] init_rolhas, Nbuffer_secundario_controle_operador, buffer_secundario_controle_operador, buffer_secundario;
@@ -29,6 +29,8 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	and(init_rolhas[1],1'b1,1'b0);
 	and(init_rolhas[0],1'b1,1'b0);
 	
+	not(Ncontador_mef_controle_state_operador[1],contador_mef_controle_state_operador[1]);
+	not(Ncontador_mef_controle_state_operador[0],contador_mef_controle_state_operador[0]);
 	not(Nsinal_duzias_reset,sinal_duzias_reset);
 	not(Nsinal_dezenas_duzias_reset,sinal_dezenas_duzias_reset);
 	not(Nestado_vedacao,estado_vedacao);
@@ -118,7 +120,13 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[0]),.EmptyBuffer(controle_reset_aux_min_rolhas),.clk(clk_div),.Enable_C(enable_count_min_rolhas_aux),.Load_C(load_count_min_rolhas),.Clear_Reg(reset_ff_rolhas),.q0(contador_mef_controle_state_rolha[0]),.q1(contador_mef_controle_state_rolha[1]));
 	modulo_mef_controle_contador(.enable(1'b1),.Load_Reg(load_reg[1]),.EmptyBuffer(controle_reset_aux_operador),.clk(clk_div),.Enable_C(enable_count_operador),.Load_C(load_count_operador),.Clear_Reg(reset_ff_operador),.q0(contador_mef_controle_state_operador[0]),.q1(contador_mef_controle_state_operador[1]));
 	
-	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(enable_buffer_secundario),.q(buffer_secundario),.up_down(load_reg[1]));
+	and(up_down_buffer_2,contador_mef_controle_state_operador[1],Ncontador_mef_controle_state_operador[0]);
+	
+	output test_load_reg_1 = load_reg[1];
+	
+	output test_up_down_buffer_2 = up_down_buffer_2;
+	
+	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(enable_buffer_secundario),.q(buffer_secundario),.up_down(up_down_buffer_2));
 	modulo_contador_sync_5_bits_ascendente_descendente contador_2_buffer_secundario_controle_rolhas(.clk(clk_div),.enable(enable_count_min_rolhas),.q(buffer_secundario_controle_min_rolhas),.load(load_count_min_rolhas),.e_load(init_rolhas[4:0]),.up_down(1'b0));
 	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario_controle_operador(.clk(clk_div),.enable(enable_count_operador),.q(buffer_secundario_controle_operador),.load(load_count_operador),.e_load(buffer_entrada_aux_secundario_out),.up_down(1'b0));
 	

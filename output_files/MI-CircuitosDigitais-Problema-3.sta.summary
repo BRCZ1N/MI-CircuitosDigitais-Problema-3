@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -13.893
-TNS   : -322.200
+Slack : -14.335
+TNS   : -293.876
 
 Type  : Setup 'op_deboucing'
-Slack : -5.268
-TNS   : -29.154
+Slack : -5.673
+TNS   : -30.039
 
 Type  : Setup 'op_c_deboucing'
-Slack : -2.913
-TNS   : -15.692
+Slack : -3.221
+TNS   : -17.892
+
+Type  : Setup 'cq'
+Slack : -1.825
+TNS   : -6.366
 
 Type  : Setup 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
 Slack : -1.793
-TNS   : -6.517
-
-Type  : Setup 'cq'
-Slack : -1.708
-TNS   : -6.316
+TNS   : -6.634
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : 0.590
+Slack : 0.595
 TNS   : 0.000
 
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : 0.831
+Slack : 0.867
 TNS   : 0.000
 
 Type  : Setup 'clock_50mhz'
-Slack : 1.946
+Slack : 1.698
 TNS   : 0.000
 
 Type  : Hold 'cq'
-Slack : -5.383
-TNS   : -10.761
+Slack : -5.896
+TNS   : -11.782
 
 Type  : Hold 'op_deboucing'
-Slack : -2.794
-TNS   : -15.682
+Slack : -4.208
+TNS   : -26.968
 
 Type  : Hold 'clock_50mhz'
-Slack : -2.000
-TNS   : -2.000
+Slack : -1.752
+TNS   : -1.752
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -0.950
-TNS   : -0.950
+Slack : -0.978
+TNS   : -0.978
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : -0.885
-TNS   : -0.885
+Slack : -0.921
+TNS   : -0.921
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
-Slack : -0.644
-TNS   : -0.644
+Slack : -0.649
+TNS   : -0.649
 
 Type  : Hold 'op_c_deboucing'
-Slack : 1.692
+Slack : 1.661
 TNS   : 0.000
 
 Type  : Hold 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : 1.696
+Slack : 1.757
 TNS   : 0.000
 
 Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -11.161
-TNS   : -92.901
+Slack : -12.824
+TNS   : -99.976
 
 Type  : Recovery 'cq'
-Slack : -3.505
-TNS   : -14.020
+Slack : -3.502
+TNS   : -14.008
 
 Type  : Recovery 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : -3.280
-TNS   : -13.120
+Slack : -3.256
+TNS   : -13.024
 
 Type  : Recovery 'op_deboucing'
-Slack : 0.855
+Slack : 2.068
 TNS   : 0.000
 
 Type  : Removal 'cq'
-Slack : -3.332
-TNS   : -13.328
+Slack : -3.745
+TNS   : -14.980
 
 Type  : Removal 'op_deboucing'
-Slack : -1.159
-TNS   : -1.682
+Slack : -2.153
+TNS   : -4.155
 
 Type  : Removal 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : 3.400
+Slack : 3.417
 TNS   : 0.000
 
 Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 3.731
+Slack : 3.737
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
