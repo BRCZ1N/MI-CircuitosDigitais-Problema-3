@@ -12,7 +12,7 @@ module modulo_mef_controle_contador(enable,Load_Reg,EmptyBuffer,clk,Enable_C,Loa
 	
 	//j1	
 	
-	and_gate_3_inputs gate_1(.A(q0),.B(Load_Reg),.C(NEmptyBuffer),.S(j1));
+	and_gate_2_inputs gate_1(.A(q0),.B(Load_Reg),.S(j1));
 	
 	//k1
 	
@@ -26,7 +26,7 @@ module modulo_mef_controle_contador(enable,Load_Reg,EmptyBuffer,clk,Enable_C,Loa
 	
 	//k0
 	
-	or_gate_3_inputs gate_5(.A(NLoad_Reg),.B(NEmptyBuffer),.C(q1),.S(k0));
+	and_gate_2_inputs gate_5(.A(1'b1),.B(1'b1),.S(k0));
 	
 	modulo_ff_jk jk_2(.clk(clk),.rst(),.enable(enable),.j(j0),.k(k0),.q(q0), .q_bar(Nq0));
 	

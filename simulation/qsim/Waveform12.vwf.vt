@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/19/2024 00:19:04"
+// Generated on "02/19/2024 03:21:17"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -132,6 +132,8 @@ begin
 	op_deboucing = 1'b1;
 	op_deboucing = #640000 1'b0;
 	op_deboucing = #80000 1'b1;
+	op_deboucing = #3760000 1'b0;
+	op_deboucing = #640000 1'b1;
 end 
 
 // start_stop
