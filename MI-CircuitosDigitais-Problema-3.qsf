@@ -144,3 +144,4 @@ set_location_assignment PIN_30 -to ch
 set_location_assignment PIN_34 -to cq
 set_location_assignment PIN_44 -to op_c_deboucing
 set_location_assignment PIN_48 -to op_deboucing
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform42.vwf
