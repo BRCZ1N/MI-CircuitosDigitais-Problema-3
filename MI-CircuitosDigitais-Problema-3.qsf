@@ -141,7 +141,13 @@ set_location_assignment PIN_35 -to start_stop
 set_location_assignment PIN_33 -to pg
 set_location_assignment PIN_30 -to ch
 set_location_assignment PIN_34 -to cq
-set_location_assignment PIN_44 -to op_c_deboucing
-set_location_assignment PIN_48 -to op_deboucing
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform42.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform43.vwf
+set_location_assignment PIN_44 -to op
+set_location_assignment PIN_48 -to op_c
+set_location_assignment PIN_50 -to op_clr
+set_location_assignment PIN_76 -to m
+set_location_assignment PIN_75 -to ev
+set_location_assignment PIN_73 -to ve
+set_location_assignment PIN_71 -to mef_estado[1]
+set_location_assignment PIN_69 -to mef_estado[0]

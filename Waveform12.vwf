@@ -199,6 +199,8 @@ quit -f
 
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -217,6 +219,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 
@@ -1003,6 +1007,16 @@ SIGNAL("test_buffer_secundario_controle_operador[0]")
 	PARENT = "test_buffer_secundario_controle_operador";
 }
 
+SIGNAL("op_clr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("Nac_7segmentos[3]")
 {
 	NODE
@@ -1483,6 +1497,15 @@ TRANSITION_LIST("test_buffer_secundario_controle_operador[0]")
 	}
 }
 
+TRANSITION_LIST("op_clr")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clock_50mhz";
@@ -1745,7 +1768,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "op";
+	CHANNEL = "op_clr";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
@@ -1754,7 +1777,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "start_stop";
+	CHANNEL = "op";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
@@ -1763,12 +1786,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "test_buffer_principal";
+	CHANNEL = "start_stop";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
 	TREE_LEVEL = 0;
-	CHILDREN = 30, 31, 32, 33, 34;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_buffer_principal";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 0;
+	CHILDREN = 31, 32, 33, 34, 35;
 }
 
 DISPLAY_LINE
@@ -1776,9 +1808,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_principal[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 30;
+	TREE_INDEX = 31;
 	TREE_LEVEL = 1;
-	PARENT = 29;
+	PARENT = 30;
 }
 
 DISPLAY_LINE
@@ -1786,9 +1818,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_principal[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 31;
+	TREE_INDEX = 32;
 	TREE_LEVEL = 1;
-	PARENT = 29;
+	PARENT = 30;
 }
 
 DISPLAY_LINE
@@ -1796,9 +1828,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_principal[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 32;
+	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
-	PARENT = 29;
+	PARENT = 30;
 }
 
 DISPLAY_LINE
@@ -1806,9 +1838,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_principal[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 33;
+	TREE_INDEX = 34;
 	TREE_LEVEL = 1;
-	PARENT = 29;
+	PARENT = 30;
 }
 
 DISPLAY_LINE
@@ -1816,9 +1848,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_principal[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 34;
+	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
-	PARENT = 29;
+	PARENT = 30;
 }
 
 DISPLAY_LINE
@@ -1826,9 +1858,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 35;
+	TREE_INDEX = 36;
 	TREE_LEVEL = 0;
-	CHILDREN = 36, 37, 38, 39, 40, 41, 42;
+	CHILDREN = 37, 38, 39, 40, 41, 42, 43;
 }
 
 DISPLAY_LINE
@@ -1836,9 +1868,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 36;
+	TREE_INDEX = 37;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1846,9 +1878,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 37;
+	TREE_INDEX = 38;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1856,9 +1888,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 38;
+	TREE_INDEX = 39;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1866,9 +1898,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 39;
+	TREE_INDEX = 40;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1876,9 +1908,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 40;
+	TREE_INDEX = 41;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1886,9 +1918,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 41;
+	TREE_INDEX = 42;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1896,9 +1928,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 42;
+	TREE_INDEX = 43;
 	TREE_LEVEL = 1;
-	PARENT = 35;
+	PARENT = 36;
 }
 
 DISPLAY_LINE
@@ -1906,9 +1938,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 43;
+	TREE_INDEX = 44;
 	TREE_LEVEL = 0;
-	CHILDREN = 44, 45, 46, 47, 48;
+	CHILDREN = 45, 46, 47, 48, 49;
 }
 
 DISPLAY_LINE
@@ -1916,9 +1948,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 44;
+	TREE_INDEX = 45;
 	TREE_LEVEL = 1;
-	PARENT = 43;
+	PARENT = 44;
 }
 
 DISPLAY_LINE
@@ -1926,9 +1958,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 45;
+	TREE_INDEX = 46;
 	TREE_LEVEL = 1;
-	PARENT = 43;
+	PARENT = 44;
 }
 
 DISPLAY_LINE
@@ -1936,9 +1968,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 46;
+	TREE_INDEX = 47;
 	TREE_LEVEL = 1;
-	PARENT = 43;
+	PARENT = 44;
 }
 
 DISPLAY_LINE
@@ -1946,9 +1978,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 47;
+	TREE_INDEX = 48;
 	TREE_LEVEL = 1;
-	PARENT = 43;
+	PARENT = 44;
 }
 
 DISPLAY_LINE
@@ -1956,9 +1988,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_min_rolhas[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 48;
+	TREE_INDEX = 49;
 	TREE_LEVEL = 1;
-	PARENT = 43;
+	PARENT = 44;
 }
 
 DISPLAY_LINE
@@ -1966,9 +1998,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 49;
+	TREE_INDEX = 50;
 	TREE_LEVEL = 0;
-	CHILDREN = 50, 51, 52, 53, 54, 55, 56;
+	CHILDREN = 51, 52, 53, 54, 55, 56, 57;
 }
 
 DISPLAY_LINE
@@ -1976,9 +2008,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 50;
+	TREE_INDEX = 51;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -1986,9 +2018,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 51;
+	TREE_INDEX = 52;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -1996,9 +2028,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 52;
+	TREE_INDEX = 53;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -2006,9 +2038,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 53;
+	TREE_INDEX = 54;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -2016,9 +2048,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 54;
+	TREE_INDEX = 55;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -2026,9 +2058,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 55;
+	TREE_INDEX = 56;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 DISPLAY_LINE
@@ -2036,9 +2068,9 @@ DISPLAY_LINE
 	CHANNEL = "test_buffer_secundario_controle_operador[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 56;
+	TREE_INDEX = 57;
 	TREE_LEVEL = 1;
-	PARENT = 49;
+	PARENT = 50;
 }
 
 TIME_BAR
