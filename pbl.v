@@ -1,12 +1,5 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_rolhas_entrada_secundario);
-	
-	output [6:0] test_buffer_secundario = buffer_secundario;
-	output [4:0] test_buffer_secundario_controle_min_rolhas = buffer_secundario_controle_min_rolhas;
-	output [6:0] test_buffer_secundario_controle_operador = buffer_secundario_controle_operador;
-	output [4:0] test_buffer_principal = buffer_principal;
-	output [6:0] test_rolhas_entrada_secundario = rolhas_entrada_secundario;
-	
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr);
 	input start_stop,pg,ch,cq,clock_50mhz,op_c,op,op_clr;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;

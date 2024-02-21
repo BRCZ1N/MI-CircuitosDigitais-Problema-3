@@ -1,5 +1,5 @@
 Flow report for MI-CircuitosDigitais-Problema-3
-Wed Feb 21 13:06:36 2024
+Wed Feb 21 13:24:28 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Feb 21 13:06:36 2024       ;
+; Flow Status           ; Successful - Wed Feb 21 13:24:26 2024       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name ; pbl                                         ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 209 / 240 ( 87 % )                          ;
-; Total pins            ; 58 / 80 ( 73 % )                            ;
+; Total logic elements  ; 224 / 240 ( 93 % )                          ;
+; Total pins            ; 27 / 80 ( 34 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------------------+
 ; Option            ; Setting                         ;
 +-------------------+---------------------------------+
-; Start date & time ; 02/21/2024 13:06:08             ;
+; Start date & time ; 02/21/2024 13:24:10             ;
 ; Main task         ; Compilation                     ;
 ; Revision Name     ; MI-CircuitosDigitais-Problema-3 ;
 +-------------------+---------------------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+-------------------------------+---------------------------------+-------------+------------+
 ; Assignment Name                       ; Value                         ; Default Value                   ; Entity Name ; Section Id ;
 +---------------------------------------+-------------------------------+---------------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 2499175950293.170853156818972 ; --                              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 2499175950293.170853265002824 ; --                              ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --                              ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                             ; --                              ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                          ; --                              ; --          ; --         ;
@@ -85,13 +85,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4713 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:02     ; 1.2                     ; 5884 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4711 MB             ; 00:00:11                           ;
+; Fitter               ; 00:00:02     ; 1.2                     ; 5890 MB             ; 00:00:02                           ;
 ; Assembler            ; 00:00:00     ; 1.0                     ; 4653 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4672 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4605 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4615 MB             ; 00:00:01                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:16                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4696 MB             ; 00:00:01                           ;
+; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,8 +102,6 @@ refer to the applicable agreement for further details.
 ; Fitter               ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -116,8 +112,6 @@ quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigi
 quartus_fit --read_settings_files=off --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 quartus_asm --read_settings_files=off --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 quartus_sta MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3 --vector_source=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/Waveform12.vwf --testbench_file=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/Waveform12.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/simulation/qsim/ MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 
 
 

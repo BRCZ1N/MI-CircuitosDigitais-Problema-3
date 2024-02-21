@@ -2,108 +2,236 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -10.402
-TNS   : -294.173
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q'
+Slack : -11.648
+TNS   : -308.616
 
 Type  : Setup 'LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1|q'
-Slack : -4.174
-TNS   : -20.363
+Slack : -3.412
+TNS   : -19.350
 
 Type  : Setup 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : -1.846
-TNS   : -6.674
+Slack : -1.902
+TNS   : -6.900
 
 Type  : Setup 'cq'
-Slack : -1.706
-TNS   : -6.246
+Slack : -1.832
+TNS   : -6.445
 
-Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4|q'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9|q'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12|q'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6|q'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18|q'
 Slack : 0.469
 TNS   : 0.000
 
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : 0.572
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16|q'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13|q'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7|q'
+Slack : 0.892
+TNS   : 0.000
+
 Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : 1.758
+Slack : 1.016
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11|q'
+Slack : 1.140
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10|q'
+Slack : 1.182
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8|q'
+Slack : 1.280
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14|q'
+Slack : 1.378
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15|q'
+Slack : 1.416
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17|q'
+Slack : 1.974
+TNS   : 0.000
+
+Type  : Setup 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5|q'
+Slack : 2.211
 TNS   : 0.000
 
 Type  : Setup 'clock_50mhz'
-Slack : 2.870
+Slack : 2.246
 TNS   : 0.000
 
 Type  : Hold 'cq'
-Slack : -4.064
-TNS   : -8.124
+Slack : -5.067
+TNS   : -9.838
 
 Type  : Hold 'clock_50mhz'
-Slack : -2.924
-TNS   : -2.924
+Slack : -2.300
+TNS   : -2.300
 
-Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -2.097
-TNS   : -5.144
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5|q'
+Slack : -2.265
+TNS   : -2.265
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q'
+Slack : -2.140
+TNS   : -6.812
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17|q'
+Slack : -2.028
+TNS   : -2.028
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15|q'
+Slack : -1.470
+TNS   : -1.470
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14|q'
+Slack : -1.432
+TNS   : -1.432
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8|q'
+Slack : -1.334
+TNS   : -1.334
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10|q'
+Slack : -1.236
+TNS   : -1.236
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11|q'
+Slack : -1.194
+TNS   : -1.194
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2|q'
-Slack : -1.812
-TNS   : -1.812
+Slack : -1.070
+TNS   : -1.070
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7|q'
+Slack : -0.946
+TNS   : -0.946
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13|q'
+Slack : -0.907
+TNS   : -0.907
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16|q'
+Slack : -0.896
+TNS   : -0.896
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : -0.626
+TNS   : -0.626
 
 Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
+Slack : -0.532
+TNS   : -0.532
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18|q'
 Slack : -0.523
 TNS   : -0.523
 
-Type  : Hold 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : 1.650
-TNS   : 0.000
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6|q'
+Slack : -0.513
+TNS   : -0.513
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12|q'
+Slack : -0.511
+TNS   : -0.511
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9|q'
+Slack : -0.510
+TNS   : -0.510
+
+Type  : Hold 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4|q'
+Slack : -0.274
+TNS   : -0.274
 
 Type  : Hold 'LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1|q'
-Slack : 2.174
+Slack : 1.935
 TNS   : 0.000
 
-Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : -8.394
-TNS   : -70.990
+Type  : Hold 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
+Slack : 1.968
+TNS   : 0.000
+
+Type  : Recovery 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q'
+Slack : -7.971
+TNS   : -71.771
 
 Type  : Recovery 'cq'
-Slack : -6.006
-TNS   : -24.024
-
-Type  : Recovery 'LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_1|q'
-Slack : -5.282
-TNS   : -5.282
+Slack : -7.193
+TNS   : -28.772
 
 Type  : Recovery 'LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_1|q'
-Slack : -3.936
-TNS   : -3.936
+Slack : -5.335
+TNS   : -5.335
+
+Type  : Recovery 'LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_1|q'
+Slack : -3.986
+TNS   : -3.986
 
 Type  : Recovery 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : -3.259
-TNS   : -13.036
+Slack : -3.399
+TNS   : -13.596
 
 Type  : Recovery 'LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1|q'
-Slack : -3.137
-TNS   : -17.737
+Slack : -2.999
+TNS   : -20.280
 
 Type  : Removal 'cq'
-Slack : -0.539
-TNS   : -2.156
+Slack : -0.064
+TNS   : -0.256
 
 Type  : Removal 'LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1|q'
-Slack : 2.528
+Slack : 2.362
+TNS   : 0.000
+
+Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q'
+Slack : 3.753
 TNS   : 0.000
 
 Type  : Removal 'modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3|q'
-Slack : 3.389
-TNS   : 0.000
-
-Type  : Removal 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
-Slack : 3.780
-TNS   : 0.000
-
-Type  : Removal 'LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_1|q'
-Slack : 4.035
+Slack : 3.770
 TNS   : 0.000
 
 Type  : Removal 'LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_1|q'
-Slack : 5.363
+Slack : 3.783
+TNS   : 0.000
+
+Type  : Removal 'LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_1|q'
+Slack : 5.418
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clock_50mhz'
@@ -130,6 +258,46 @@ Type  : Minimum Pulse Width 'modulo_contador_sync_4_bits_ascendente:contador_duz
 Slack : 0.234
 TNS   : 0.000
 
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_13|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_14|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q'
+Slack : 0.234
+TNS   : 0.000
+
 Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1|q'
 Slack : 0.234
 TNS   : 0.000
@@ -139,6 +307,30 @@ Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_8|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_9|q'
 Slack : 0.234
 TNS   : 0.000
 
