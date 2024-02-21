@@ -201,6 +201,8 @@ quit -f
 
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -219,6 +221,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 
@@ -1017,6 +1021,46 @@ SIGNAL("op_clr")
 	PARENT = "";
 }
 
+SIGNAL("test_clk_div")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_op_c_deboucing")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_op_clr_deboucing")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_op_deboucing")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("Nac_7segmentos[3]")
 {
 	NODE
@@ -1248,8 +1292,8 @@ TRANSITION_LIST("op")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5120.0;
-		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 5160.0;
+		LEVEL 0 FOR 600.0;
 		LEVEL 1 FOR 94240.0;
 	}
 }
@@ -1503,6 +1547,42 @@ TRANSITION_LIST("op_clr")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_clk_div")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_op_c_deboucing")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_op_clr_deboucing")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_op_deboucing")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -2071,6 +2151,42 @@ DISPLAY_LINE
 	TREE_INDEX = 57;
 	TREE_LEVEL = 1;
 	PARENT = 50;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_clk_div";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_op_c_deboucing";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_op_clr_deboucing";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 60;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_op_deboucing";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 61;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

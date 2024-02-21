@@ -4,39 +4,38 @@ pg => pg.IN1
 ch => ch.IN1
 cq => cq.IN1
 clock_50mhz => clock_50mhz.IN1
-m << modulo_mef_enchimento_vedacao:mef_1.m
-ve << ve.DB_MAX_OUTPUT_PORT_TYPE
-al << modulo_mef_enchimento_vedacao:mef_1.al
-Nal << modulo_mef_enchimento_vedacao:mef_1.al
-ev << modulo_mef_enchimento_vedacao:mef_1.ev
-mef_estado[0] << modulo_mef_enchimento_vedacao:mef_1.q0
-mef_estado[1] << modulo_mef_enchimento_vedacao:mef_1.q1
-Nout_7seg[0] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[1] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[2] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[3] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[4] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[5] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[6] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nout_7seg[7] << modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
-Nac_7segmentos[0] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[1] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[2] << modulo_demux1_4:demux_1.out
-Nac_7segmentos[3] << modulo_demux1_4:demux_1.out
+m <= modulo_mef_enchimento_vedacao:mef_1.m
+ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
+al <= modulo_mef_enchimento_vedacao:mef_1.al
+Nal <= modulo_mef_enchimento_vedacao:mef_1.al
+ev <= modulo_mef_enchimento_vedacao:mef_1.ev
+mef_estado[0] <= modulo_mef_enchimento_vedacao:mef_1.q0
+mef_estado[1] <= modulo_mef_enchimento_vedacao:mef_1.q1
+Nout_7seg[0] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[1] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[2] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[3] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[4] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[5] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[6] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nout_7seg[7] <= modulo_decodificadorBCD_7Segmentos:bcd_1.ABCDEFGDP
+Nac_7segmentos[0] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[1] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[2] <= modulo_demux1_4:demux_1.out
+Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c => Nop_c.IN1
-op => WideAnd1.IN3
 op => Nop.IN1
 op_clr => Nop_clr.IN1
 
 
-|pbl|LevelToPulseMealy:pulsador_3
-Clock => Clock.IN1
-Reset => Reset.IN1
+|pbl|LevelToPulseMoore:pulsador_3
+Clock => Clock.IN2
+Reset => ~NO_FANOUT~
 Level => Level.IN1
 Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_3|modulo_ff_d:ff_1
+|pbl|LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -50,14 +49,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_4
-Clock => Clock.IN1
-Reset => Reset.IN1
-Level => Level.IN1
-Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|pbl|LevelToPulseMealy:pulsador_4|modulo_ff_d:ff_1
+|pbl|LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_2
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -71,14 +63,63 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_5
-Clock => Clock.IN1
-Reset => Reset.IN1
+|pbl|LevelToPulseMoore:pulsador_4
+Clock => Clock.IN2
+Reset => ~NO_FANOUT~
 Level => Level.IN1
 Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_5|modulo_ff_d:ff_1
+|pbl|LevelToPulseMoore:pulsador_4|modulo_ff_d:ff_1
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.IN0
+prst => nq~reg0.ACLR
+prst => q~reg0.PRESET
+prst => q.IN1
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_4|modulo_ff_d:ff_2
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.IN0
+prst => nq~reg0.ACLR
+prst => q~reg0.PRESET
+prst => q.IN1
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_5
+Clock => Clock.IN2
+Reset => ~NO_FANOUT~
+Level => Level.IN1
+Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_5|modulo_ff_d:ff_1
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.IN0
+prst => nq~reg0.ACLR
+prst => q~reg0.PRESET
+prst => q.IN1
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_5|modulo_ff_d:ff_2
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -95,7 +136,7 @@ nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |pbl|modulo_divisor_frequencia:divisor_f
 prst => prst.IN19
 clr => clr.IN19
-clk_div <= modulo_ff_t:ff_19.q
+clk_div <= q[16].DB_MAX_OUTPUT_PORT_TYPE
 clk => clk.IN1
 
 
@@ -697,14 +738,14 @@ B => comb.IN1
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_1
-Clock => Clock.IN1
-Reset => Reset.IN1
+|pbl|LevelToPulseMoore:pulsador_1
+Clock => Clock.IN2
+Reset => ~NO_FANOUT~
 Level => Level.IN1
 Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1
+|pbl|LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_1
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK
@@ -718,14 +759,42 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_2
-Clock => Clock.IN1
-Reset => Reset.IN1
+|pbl|LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_2
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.IN0
+prst => nq~reg0.ACLR
+prst => q~reg0.PRESET
+prst => q.IN1
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_2
+Clock => Clock.IN2
+Reset => ~NO_FANOUT~
 Level => Level.IN1
 Pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pbl|LevelToPulseMealy:pulsador_2|modulo_ff_d:ff_1
+|pbl|LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_1
+d => q~reg0.DATAIN
+clk => nq~reg0.CLK
+clk => q~reg0.CLK
+clr => q.IN0
+prst => nq~reg0.ACLR
+prst => q~reg0.PRESET
+prst => q.IN1
+enable => q~reg0.ENA
+enable => nq~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pbl|LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_2
 d => q~reg0.DATAIN
 clk => nq~reg0.CLK
 clk => q~reg0.CLK

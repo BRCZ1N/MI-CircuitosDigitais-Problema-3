@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MI-CircuitosDigitais-Problema-3
-Mon Feb 19 21:40:11 2024
+Tue Feb 20 21:47:51 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,8 +63,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  55. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_2"
  56. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas|modulo_ff_t:ff_1"
  57. Port Connectivity Checks: "modulo_contador_sync_7_bits_ascendente:contador_entrada_rolhas"
- 58. Port Connectivity Checks: "LevelToPulseMealy:pulsador_2"
- 59. Port Connectivity Checks: "LevelToPulseMealy:pulsador_1"
+ 58. Port Connectivity Checks: "LevelToPulseMoore:pulsador_2"
+ 59. Port Connectivity Checks: "LevelToPulseMoore:pulsador_1"
  60. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_dezenas_duzias"
  61. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_4"
  62. Port Connectivity Checks: "modulo_contador_sync_4_bits_ascendente:contador_duzias|modulo_ff_t:ff_3"
@@ -93,11 +93,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  85. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2"
  86. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1"
  87. Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f"
- 88. Port Connectivity Checks: "LevelToPulseMealy:pulsador_5"
- 89. Port Connectivity Checks: "LevelToPulseMealy:pulsador_4"
- 90. Port Connectivity Checks: "LevelToPulseMealy:pulsador_3|modulo_ff_d:ff_1"
- 91. Port Connectivity Checks: "LevelToPulseMealy:pulsador_3"
- 92. Analysis & Synthesis Messages
+ 88. Port Connectivity Checks: "LevelToPulseMoore:pulsador_5"
+ 89. Port Connectivity Checks: "LevelToPulseMoore:pulsador_4"
+ 90. Port Connectivity Checks: "LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_2"
+ 91. Port Connectivity Checks: "LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1"
+ 92. Port Connectivity Checks: "LevelToPulseMoore:pulsador_3"
+ 93. Analysis & Synthesis Messages
 
 
 
@@ -123,12 +124,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Feb 19 21:40:11 2024       ;
+; Analysis & Synthesis Status ; Successful - Tue Feb 20 21:47:51 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name       ; pbl                                         ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 236                                         ;
+; Total logic elements        ; 242                                         ;
 ; Total pins                  ; 27                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -211,8 +212,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -227,6 +228,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                   ; Library ;
 +------------------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; LevelToPulseMoore.v                                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v                                  ;         ;
 ; pbl.v                                                ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v                                                ;         ;
 ; modulo_comparador1bit.v                              ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador1bit.v                              ;         ;
 ; modulo_comparador7bits.v                             ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_comparador7bits.v                             ;         ;
@@ -250,7 +252,6 @@ refer to the applicable agreement for further details.
 ; modulo_somador_subtrator_completo_7bits.v            ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo_7bits.v            ;         ;
 ; modulo_somador_subtrator_completo.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v                  ;         ;
 ; modulo_mef_controle_contador.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v                       ;         ;
-; LevelToPulseMealy.v                                  ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v                                  ;         ;
 ; modulo_divisor_frequencia.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v                          ;         ;
 ; modulo_mux4_1.v                                      ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mux4_1.v                                      ;         ;
 ; modulo_demux1_4.v                                    ; yes             ; User Verilog HDL File  ; C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_demux1_4.v                                    ;         ;
@@ -267,32 +268,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------------+
 ; Resource                                    ; Usage                                                   ;
 +---------------------------------------------+---------------------------------------------------------+
-; Total logic elements                        ; 236                                                     ;
-;     -- Combinational with no register       ; 136                                                     ;
+; Total logic elements                        ; 242                                                     ;
+;     -- Combinational with no register       ; 137                                                     ;
 ;     -- Register only                        ; 17                                                      ;
-;     -- Combinational with a register        ; 83                                                      ;
+;     -- Combinational with a register        ; 88                                                      ;
 ;                                             ;                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                         ;
 ;     -- 4 input functions                    ; 86                                                      ;
 ;     -- 3 input functions                    ; 53                                                      ;
-;     -- 2 input functions                    ; 37                                                      ;
+;     -- 2 input functions                    ; 43                                                      ;
 ;     -- 1 input functions                    ; 41                                                      ;
 ;     -- 0 input functions                    ; 2                                                       ;
 ;                                             ;                                                         ;
 ; Logic elements by mode                      ;                                                         ;
-;     -- normal mode                          ; 230                                                     ;
+;     -- normal mode                          ; 236                                                     ;
 ;     -- arithmetic mode                      ; 6                                                       ;
 ;     -- qfbk mode                            ; 0                                                       ;
 ;     -- register cascade mode                ; 0                                                       ;
 ;     -- synchronous clear/load mode          ; 0                                                       ;
 ;     -- asynchronous clear/load mode         ; 29                                                      ;
 ;                                             ;                                                         ;
-; Total registers                             ; 100                                                     ;
+; Total registers                             ; 105                                                     ;
 ; Total logic cells in carry chains           ; 7                                                       ;
 ; I/O pins                                    ; 27                                                      ;
-; Maximum fan-out node                        ; modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19|q ;
-; Maximum fan-out                             ; 51                                                      ;
-; Total fan-out                               ; 797                                                     ;
+; Maximum fan-out node                        ; modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17|q ;
+; Maximum fan-out                             ; 58                                                      ;
+; Total fan-out                               ; 814                                                     ;
 ; Average fan-out                             ; 3.03                                                    ;
 +---------------------------------------------+---------------------------------------------------------+
 
@@ -302,15 +303,22 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                   ; Entity Name                                        ; Library Name ;
 +--------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+--------------+
-; |pbl                                                                                                   ; 236 (11)    ; 100          ; 0          ; 27   ; 0            ; 136 (11)     ; 17 (0)            ; 83 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                                                                  ; pbl                                                ; work         ;
-;    |LevelToPulseMealy:pulsador_1|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_1                                                                                                     ; LevelToPulseMealy                                  ; work         ;
-;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_1|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
-;    |LevelToPulseMealy:pulsador_2|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_2                                                                                                     ; LevelToPulseMealy                                  ; work         ;
-;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_2|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
-;    |LevelToPulseMealy:pulsador_3|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_3                                                                                                     ; LevelToPulseMealy                                  ; work         ;
-;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_3|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
-;    |LevelToPulseMealy:pulsador_5|                                                                      ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_5                                                                                                     ; LevelToPulseMealy                                  ; work         ;
-;       |modulo_ff_d:ff_1|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMealy:pulsador_5|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+; |pbl                                                                                                   ; 242 (11)    ; 105          ; 0          ; 27   ; 0            ; 137 (11)     ; 17 (0)            ; 88 (0)           ; 7 (0)           ; 0 (0)      ; |pbl                                                                                                                                  ; pbl                                                ; work         ;
+;    |LevelToPulseMoore:pulsador_1|                                                                      ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_1                                                                                                     ; LevelToPulseMoore                                  ; work         ;
+;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+;       |modulo_ff_d:ff_2|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_1|modulo_ff_d:ff_2                                                                                    ; modulo_ff_d                                        ; work         ;
+;    |LevelToPulseMoore:pulsador_2|                                                                      ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_2                                                                                                     ; LevelToPulseMoore                                  ; work         ;
+;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+;       |modulo_ff_d:ff_2|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_2|modulo_ff_d:ff_2                                                                                    ; modulo_ff_d                                        ; work         ;
+;    |LevelToPulseMoore:pulsador_3|                                                                      ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_3                                                                                                     ; LevelToPulseMoore                                  ; work         ;
+;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+;       |modulo_ff_d:ff_2|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_2                                                                                    ; modulo_ff_d                                        ; work         ;
+;    |LevelToPulseMoore:pulsador_4|                                                                      ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_4                                                                                                     ; LevelToPulseMoore                                  ; work         ;
+;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_4|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+;       |modulo_ff_d:ff_2|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_4|modulo_ff_d:ff_2                                                                                    ; modulo_ff_d                                        ; work         ;
+;    |LevelToPulseMoore:pulsador_5|                                                                      ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_5                                                                                                     ; LevelToPulseMoore                                  ; work         ;
+;       |modulo_ff_d:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_5|modulo_ff_d:ff_1                                                                                    ; modulo_ff_d                                        ; work         ;
+;       |modulo_ff_d:ff_2|                                                                               ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |pbl|LevelToPulseMoore:pulsador_5|modulo_ff_d:ff_2                                                                                    ; modulo_ff_d                                        ; work         ;
 ;    |and_gate_2_inputs:gate_1|                                                                          ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|and_gate_2_inputs:gate_1                                                                                                         ; and_gate_2_inputs                                  ; work         ;
 ;    |modulo_codificador_unidade_garrafas:codificador_garrafas_2|                                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_codificador_unidade_garrafas:codificador_garrafas_2                                                                       ; modulo_codificador_unidade_garrafas                ; work         ;
 ;       |and_gate_2_inputs:gate_1|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_codificador_unidade_garrafas:codificador_garrafas_2|and_gate_2_inputs:gate_1                                              ; and_gate_2_inputs                                  ; work         ;
@@ -389,7 +397,7 @@ refer to the applicable agreement for further details.
 ;    |modulo_demux1_4:demux_1|                                                                           ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:demux_1                                                                                                          ; modulo_demux1_4                                    ; work         ;
 ;       |and_gate_3_inputs:gate_1|                                                                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_1                                                                                 ; and_gate_3_inputs                                  ; work         ;
 ;       |and_gate_3_inputs:gate_3|                                                                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_demux1_4:demux_1|and_gate_3_inputs:gate_3                                                                                 ; and_gate_3_inputs                                  ; work         ;
-;    |modulo_divisor_frequencia:divisor_f|                                                               ; 19 (0)      ; 19           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f                                                                                              ; modulo_divisor_frequencia                          ; work         ;
+;    |modulo_divisor_frequencia:divisor_f|                                                               ; 17 (0)      ; 17           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 17 (0)           ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f                                                                                              ; modulo_divisor_frequencia                          ; work         ;
 ;       |modulo_ff_t:ff_10|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_10                                                                            ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_11|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_11                                                                            ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_12|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_12                                                                            ; modulo_ff_t                                        ; work         ;
@@ -398,8 +406,6 @@ refer to the applicable agreement for further details.
 ;       |modulo_ff_t:ff_15|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_15                                                                            ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_16|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_16                                                                            ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_17|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_17                                                                            ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_18|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_18                                                                            ; modulo_ff_t                                        ; work         ;
-;       |modulo_ff_t:ff_19|                                                                              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19                                                                            ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_1|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1                                                                             ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_2|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_2                                                                             ; modulo_ff_t                                        ; work         ;
 ;       |modulo_ff_t:ff_3|                                                                               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |pbl|modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_3                                                                             ; modulo_ff_t                                        ; work         ;
@@ -493,7 +499,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 100   ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 27    ;
@@ -993,7 +999,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_2" ;
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_2" ;
 +-------+-------+----------+-------------------------------+
 ; Port  ; Type  ; Severity ; Details                       ;
 +-------+-------+----------+-------------------------------+
@@ -1002,7 +1008,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_1" ;
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_1" ;
 +-------+-------+----------+-------------------------------+
 ; Port  ; Type  ; Severity ; Details                       ;
 +-------+-------+----------+-------------------------------+
@@ -1087,15 +1093,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+---------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19" ;
-+--------+--------+----------+------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                              ;
-+--------+--------+----------+------------------------------------------------------+
-; t      ; Input  ; Info     ; Stuck at VCC                                         ;
-; enable ; Input  ; Info     ; Stuck at VCC                                         ;
-; q_bar  ; Output ; Info     ; Explicitly unconnected                               ;
-+--------+--------+----------+------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_19"                                ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; t      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q_bar  ; Output ; Info     ; Explicitly unconnected                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -1307,7 +1314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_5" ;
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_5" ;
 +-------+-------+----------+-------------------------------+
 ; Port  ; Type  ; Severity ; Details                       ;
 +-------+-------+----------+-------------------------------+
@@ -1315,29 +1322,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+-------+----------+-------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_4"                                                        ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Reset ; Input  ; Info     ; Explicitly unconnected                                                              ;
-; Pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_4" ;
++-------+-------+----------+-------------------------------+
+; Port  ; Type  ; Severity ; Details                       ;
++-------+-------+----------+-------------------------------+
+; Reset ; Input ; Info     ; Explicitly unconnected        ;
++-------+-------+----------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_3|modulo_ff_d:ff_1"                                                                                                 ;
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_2"                                                                                                 ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; enable ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clr    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; prst   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1"                                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; nq     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; clr    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; prst   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------+
-; Port Connectivity Checks: "LevelToPulseMealy:pulsador_3" ;
+; Port Connectivity Checks: "LevelToPulseMoore:pulsador_3" ;
 +-------+-------+----------+-------------------------------+
 ; Port  ; Type  ; Severity ; Details                       ;
 +-------+-------+----------+-------------------------------+
@@ -1351,10 +1370,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 19 21:40:04 2024
+    Info: Processing started: Tue Feb 20 21:47:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MI-CircuitosDigitais-Problema-3 -c MI-CircuitosDigitais-Problema-3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file leveltopulsemoore.v
+    Info (12023): Found entity 1: LevelToPulseMoore File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file pbl.v
     Info (12023): Found entity 1: pbl File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_comparador1bit.v
@@ -1401,8 +1422,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file modulo_
     Info (12023): Found entity 1: modulo_somador_subtrator_completo File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_somador_subtrator_completo.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mef_controle_contador.v
     Info (12023): Found entity 1: modulo_mef_controle_contador File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_mef_controle_contador.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file leveltopulsemealy.v
-    Info (12023): Found entity 1: LevelToPulseMealy File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_divisor_frequencia.v
     Info (12023): Found entity 1: modulo_divisor_frequencia File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_mux4_1.v
@@ -1431,8 +1450,8 @@ Info (12021): Found 12 design units, including 12 entities, in source file modul
     Info (12023): Found entity 11: and_gate_2_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 98
     Info (12023): Found entity 12: and_gate_5_inputs File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/module_gates.v Line: 108
 Info (12127): Elaborating entity "pbl" for the top level hierarchy
-Info (12128): Elaborating entity "LevelToPulseMealy" for hierarchy "LevelToPulseMealy:pulsador_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 74
-Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "LevelToPulseMealy:pulsador_3|modulo_ff_d:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMealy.v Line: 14
+Info (12128): Elaborating entity "LevelToPulseMoore" for hierarchy "LevelToPulseMoore:pulsador_3" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 74
+Info (12128): Elaborating entity "modulo_ff_d" for hierarchy "LevelToPulseMoore:pulsador_3|modulo_ff_d:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/LevelToPulseMoore.v Line: 15
 Info (12128): Elaborating entity "modulo_divisor_frequencia" for hierarchy "modulo_divisor_frequencia:divisor_f" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 78
 Info (12128): Elaborating entity "modulo_ff_t" for hierarchy "modulo_divisor_frequencia:divisor_f|modulo_ff_t:ff_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_divisor_frequencia.v Line: 12
 Info (12128): Elaborating entity "modulo_mef_enchimento_vedacao" for hierarchy "modulo_mef_enchimento_vedacao:mef_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 80
@@ -1470,18 +1489,18 @@ Info (12128): Elaborating entity "modulo_codificador_unidade_rolhas" for hierarc
 Info (12128): Elaborating entity "modulo_mux4_1" for hierarchy "modulo_mux4_1:mux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 146
 Info (12128): Elaborating entity "modulo_demux1_4" for hierarchy "modulo_demux1_4:demux_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 151
 Info (12128): Elaborating entity "modulo_decodificadorBCD_7Segmentos" for hierarchy "modulo_decodificadorBCD_7Segmentos:bcd_1" File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 153
-Warning (12241): 27 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 28 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Nout_7seg[0]" is stuck at VCC File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/pbl.v Line: 7
 Info (18000): Registers with preset signals will power-up high File: C:/Users/Bruno/OneDrive/Documentos/GitHub/MI-CircuitosDigitais-Problema-3/modulo_ff_t.v Line: 4
-Info (21057): Implemented 263 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 269 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 236 logic cells
+    Info (21061): Implemented 242 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4714 megabytes
-    Info: Processing ended: Mon Feb 19 21:40:11 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Tue Feb 20 21:47:51 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:12
 
 

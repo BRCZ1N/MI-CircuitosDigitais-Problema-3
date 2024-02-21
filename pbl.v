@@ -71,9 +71,9 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	not(Nout_7seg[1],out_7seg[1]);
 	not(Nout_7seg[0],out_7seg[0]);
 	
-	LevelToPulseMealy pulsador_3(.Clock(clk_div),.Reset(),.Level(Nop_c),.Pulse(op_c_deboucing));
-	LevelToPulseMealy pulsador_4(.Clock(clk_div),.Reset(),.Level(Nop),.Pulse(op_deboucing));
-	LevelToPulseMealy pulsador_5(.Clock(clk_div),.Reset(),.Level(Nop_clr),.Pulse(op_clr_deboucing));
+	LevelToPulseMoore pulsador_3(.Clock(clk_div),.Reset(),.Level(Nop_c),.Pulse(op_c_deboucing));
+	LevelToPulseMoore pulsador_4(.Clock(clk_div),.Reset(),.Level(Nop),.Pulse(op_deboucing));
+	LevelToPulseMoore pulsador_5(.Clock(clk_div),.Reset(),.Level(Nop_clr),.Pulse(op_clr_deboucing));
 	
 	modulo_divisor_frequencia divisor_f(.prst(1'b1),.clr(1'b1),.clk(clock_50mhz),.clk_div(clk_div));
 	
@@ -94,13 +94,13 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	//Circuito auxiliar de contagem de rolhas
 	
 	or(comparator_aux, out_comparador[1], out_comparador[0]);
-	and(load_aux[1],start_stop,Nop,Nout_range_buffer);
-	and(load_aux[0],start_stop,op,comparator_aux,signal_min_rolhas,min_trans_rolhas);
+	and(load_aux[1],start_stop,op_deboucing,Nout_range_buffer);
+	and(load_aux[0],start_stop,Nop_deboucing,comparator_aux,signal_min_rolhas,min_trans_rolhas);
 	
-	LevelToPulseMealy pulsador_1(.Clock(clk_div),.Reset(),.Level(load_aux[0]),.Pulse(load_input_pulse[0]));
-	LevelToPulseMealy pulsador_2(.Clock(clk_div),.Reset(),.Level(load_aux[1]),.Pulse(load_input_pulse[1]));
+	LevelToPulseMoore pulsador_1(.Clock(clk_div),.Reset(),.Level(load_aux[0]),.Pulse(load_input_pulse[0]));
+	LevelToPulseMoore pulsador_2(.Clock(clk_div),.Reset(),.Level(load_aux[1]),.Pulse(load_input_pulse[1]));
 	
-	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b1),.clr(Nop_clr_deboucing),.enable(1'b1),.clk(Nop_c_deboucing),.q(rolhas_entrada_secundario));
+	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b1),.clr(Nop_clr_deboucing),.enable(1'b1),.clk(op_c_deboucing),.q(rolhas_entrada_secundario));
 	
 	modulo_registrador_rolhas registrador_1(.m_in(buffer_secundario),.clk(load_input_pulse[1]),.m_out(buffer_secundario_aux),.enable(1'b1));
 	modulo_somador_subtrator_completo_7bits somador_1(.op_aritmetica(1'b0),.a(buffer_secundario_aux),.b(rolhas_entrada_secundario),.sum(buffer_secundario_atual_sum_op));
