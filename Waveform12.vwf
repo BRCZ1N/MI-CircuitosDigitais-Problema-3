@@ -203,6 +203,15 @@ quit -f
 
 
 
+
+
+
+
+
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -221,6 +230,15 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1061,6 +1079,86 @@ SIGNAL("test_op_deboucing")
 	PARENT = "";
 }
 
+SIGNAL("test_rolhas_entrada_secundario")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
+SIGNAL("test_rolhas_entrada_secundario[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "test_rolhas_entrada_secundario";
+}
+
 TRANSITION_LIST("Nac_7segmentos[3]")
 {
 	NODE
@@ -1276,14 +1374,22 @@ TRANSITION_LIST("op_c")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 120.0;
 		NODE
 		{
-			REPEAT = 19;
-			LEVEL 0 FOR 120.0;
-			LEVEL 1 FOR 120.0;
+			REPEAT = 255;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
-		LEVEL 0 FOR 95320.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 2565.0;
+		NODE
+		{
+			REPEAT = 255;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 92325.0;
 	}
 }
 
@@ -1292,9 +1398,11 @@ TRANSITION_LIST("op")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5160.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 94240.0;
+		LEVEL 0 FOR 16000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 1200.0;
+		LEVEL 1 FOR 1920.0;
+		LEVEL 0 FOR 78880.0;
 	}
 }
 
@@ -1578,6 +1686,69 @@ TRANSITION_LIST("test_op_clr_deboucing")
 }
 
 TRANSITION_LIST("test_op_deboucing")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("test_rolhas_entrada_secundario[0]")
 {
 	NODE
 	{
@@ -2187,6 +2358,86 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 61;
 	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 62;
+	TREE_LEVEL = 0;
+	CHILDREN = 63, 64, 65, 66, 67, 68, 69;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 63;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 64;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 65;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 66;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 67;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 68;
+	TREE_LEVEL = 1;
+	PARENT = 62;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "test_rolhas_entrada_secundario[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 69;
+	TREE_LEVEL = 1;
+	PARENT = 62;
 }
 
 TIME_BAR

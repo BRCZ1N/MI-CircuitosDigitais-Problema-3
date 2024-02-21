@@ -1,12 +1,18 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr, test_buffer_secundario, test_buffer_secundario_controle_min_rolhas, test_buffer_secundario_controle_operador, test_buffer_principal, test_rolhas_entrada_secundario);
+	
+	output [6:0] test_buffer_secundario = buffer_secundario;
+	output [4:0] test_buffer_secundario_controle_min_rolhas = buffer_secundario_controle_min_rolhas;
+	output [6:0] test_buffer_secundario_controle_operador = buffer_secundario_controle_operador;
+	output [4:0] test_buffer_principal = buffer_principal;
+	output [6:0] test_rolhas_entrada_secundario = rolhas_entrada_secundario;
 	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c,op,op_clr;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
-	wire estado_vedacao, enable_buffer_principal, Nenable_count_operador, enable_count_min_rolhas_aux, reset_ff_operador, reset_ff_rolhas, controle_reset_aux_min_rolhas;
+	wire Nf_rolha_input, f_rolha_input, estado_vedacao, enable_buffer_principal, Nenable_count_operador, enable_count_min_rolhas_aux, reset_ff_operador, reset_ff_rolhas, controle_reset_aux_min_rolhas;
 	wire load_count_operador, enable_count_operador, enable_count_min_rolhas, load_count_min_rolhas, enable_buffer_secundario, Nop_c_deboucing, controle_reset_aux_operador; 
 	wire Nestado_vedacao, Nout_range_buffer, Nop_deboucing, Nstart_stop, comparator_aux, clk_div, enable_count_operador_aux;
 	wire op_clr_deboucing, op_c_deboucing,op_deboucing,Nsinal_dezenas_duzias_reset, Nsinal_duzias_reset, out_range_buffer, sinal_duzias_reset, conta_duzias, sinal_dezenas_duzias_reset_aux;
@@ -14,12 +20,16 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire [3:0] out_4_bits_duzias,out_4_bits_dezena_duzias,display_in, ac_7segmentos, codificacao_4bits_d_garrafas;
 	wire [3:0] codificacao_4bits_u_garrafas, codificacao_4bits_d_rolhas,codificacao_4bits_u_rolhas;
 	wire [6:0] min_rolhas, Nbuffer_secundario_controle_operador, buffer_secundario_controle_operador, buffer_secundario;
-	wire [6:0] buffer_secundario_atual_sum_op, buffer_secundario_aux, buffer_entrada_aux_secundario_out, rolhas_entrada_secundario;
+	wire [6:0] Nrolhas_entrada_secundario, buffer_secundario_atual_sum_op, buffer_secundario_aux, buffer_entrada_aux_secundario_out, rolhas_entrada_secundario;
 	wire [2:0] out_comparador;
 	wire [7:0] out_7seg;
 	wire [1:0] Nmef_estado, load_input_pulse, contador_mef_controle_state_rolha, contador_mef_controle_state_operador;
 	wire [1:0] load_reg, Nload_reg, sel_mux_display, load_aux;
 	wire [4:0] buffer_principal, Nbuffer_secundario_controle_min_rolhas, buffer_secundario_controle_min_rolhas;
+	
+	
+	not(Nf_rolha_input,f_rolha_input);
+	and(f_rolha_input,Nrolhas_entrada_secundario[6],Nrolhas_entrada_secundario[5],Nrolhas_entrada_secundario[4],Nrolhas_entrada_secundario[3],Nrolhas_entrada_secundario[2],Nrolhas_entrada_secundario[1],Nrolhas_entrada_secundario[0]);
 	
 	and(min_rolhas[6],1'b1,1'b0);
 	and(min_rolhas[5],1'b1,1'b0);
@@ -29,6 +39,14 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	and(min_rolhas[1],1'b1,1'b0);
 	and(min_rolhas[0],1'b1,1'b0);
 	
+	not(Nrolhas_entrada_secundario[6],rolhas_entrada_secundario[6]);
+	not(Nrolhas_entrada_secundario[5],rolhas_entrada_secundario[5]);
+	not(Nrolhas_entrada_secundario[4],rolhas_entrada_secundario[4]);
+	not(Nrolhas_entrada_secundario[3],rolhas_entrada_secundario[3]);
+	not(Nrolhas_entrada_secundario[2],rolhas_entrada_secundario[2]);
+	not(Nrolhas_entrada_secundario[1],rolhas_entrada_secundario[1]);
+	not(Nrolhas_entrada_secundario[0],rolhas_entrada_secundario[0]);
+		
 	not(Nop_clr,op_clr);
 	not(Nop,op);
 	not(Nop_c,op_c);
@@ -94,7 +112,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	//Circuito auxiliar de contagem de rolhas
 	
 	or(comparator_aux, out_comparador[1], out_comparador[0]);
-	and(load_aux[1],start_stop,op_deboucing,Nout_range_buffer);
+	and(load_aux[1],start_stop,Nf_rolha_input,op_deboucing,Nout_range_buffer);
 	and(load_aux[0],start_stop,Nop_deboucing,comparator_aux,signal_min_rolhas,min_trans_rolhas);
 	
 	LevelToPulseMoore pulsador_1(.Clock(clk_div),.Reset(),.Level(load_aux[0]),.Pulse(load_input_pulse[0]));
@@ -102,9 +120,9 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_contador_sync_7_bits_ascendente contador_entrada_rolhas(.prst(1'b1),.clr(Nop_clr_deboucing),.enable(1'b1),.clk(op_c_deboucing),.q(rolhas_entrada_secundario));
 	
-	modulo_registrador_rolhas registrador_1(.m_in(buffer_secundario),.clk(load_input_pulse[1]),.m_out(buffer_secundario_aux),.enable(1'b1));
-	modulo_somador_subtrator_completo_7bits somador_1(.op_aritmetica(1'b0),.a(buffer_secundario_aux),.b(rolhas_entrada_secundario),.sum(buffer_secundario_atual_sum_op));
-	modulo_registrador_rolhas registrador_2(.m_in(buffer_secundario_atual_sum_op),.clk(load_input_pulse[1]),.m_out(buffer_entrada_aux_secundario_out),.enable(1'b1));
+	modulo_registrador_rolhas registrador_1(.m_in(buffer_secundario),.clk(clk_div),.m_out(buffer_secundario_aux),.enable(1'b1));
+	modulo_somador_subtrator_completo_7bits somador_1(.op_aritmetica(1'b0),.a(buffer_secundario),.b(rolhas_entrada_secundario),.sum(buffer_secundario_atual_sum_op));
+	modulo_registrador_rolhas registrador_2(.m_in(buffer_secundario_atual_sum_op),.clk(clk_div),.m_out(buffer_entrada_aux_secundario_out),.enable(1'b1));
 	
 	modulo_comparador7bits comparador_1(.A(buffer_secundario),.B(min_rolhas),.AltB_out(out_comparador[2]),.AeqB_out(out_comparador[1]),.AgtB_out(out_comparador[0]));
 	
@@ -126,7 +144,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	
 	modulo_contador_sync_7_bits_ascendente_descendente contador_1_buffer_secundario(.clk(clk_div),.enable(enable_buffer_secundario),.q(buffer_secundario),.up_down(load_reg[1]));
 	modulo_contador_sync_5_bits_ascendente_descendente contador_2_buffer_secundario_controle_rolhas(.clk(clk_div),.enable(enable_count_min_rolhas),.q(buffer_secundario_controle_min_rolhas),.load(load_count_min_rolhas),.e_load(min_rolhas[4:0]),.up_down(1'b0));
-	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario_controle_operador(.clk(clk_div),.enable(enable_count_operador),.q(buffer_secundario_controle_operador),.load(load_count_operador),.e_load(buffer_entrada_aux_secundario_out),.up_down(1'b0));
+	modulo_contador_sync_7_bits_ascendente_descendente contador_3_buffer_secundario_controle_operador(.clk(clk_div),.enable(enable_count_operador),.q(buffer_secundario_controle_operador),.load(load_count_operador),.e_load(rolhas_entrada_secundario),.up_down(1'b0));
 	
 	or(enable_buffer_principal,estado_vedacao,enable_count_min_rolhas);
 	
