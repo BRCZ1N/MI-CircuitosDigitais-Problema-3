@@ -115,20 +115,20 @@ op_clr                       : 50        : input  : 3.3-V LVTTL       :         
 GND*                         : 51        :        :                   :         : 1         :                
 GND*                         : 52        :        :                   :         : 2         :                
 GND*                         : 53        :        :                   :         : 2         :                
-GND*                         : 54        :        :                   :         : 2         :                
-GND*                         : 55        :        :                   :         : 2         :                
+buffer_principal[0]          : 54        : output : 3.3-V LVTTL       :         : 2         : Y              
+buffer_principal[1]          : 55        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 56        :        :                   :         : 2         :                
-GND*                         : 57        :        :                   :         : 2         :                
+buffer_principal[2]          : 57        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
-GND*                         : 61        :        :                   :         : 2         :                
+buffer_principal[3]          : 61        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 62        :        :                   :         : 2         :                
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
 Nac_7segmentos[2]            : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 67        :        :                   :         : 2         :                
+buffer_principal[4]          : 67        : output : 3.3-V LVTTL       :         : 2         : Y              
 Nac_7segmentos[1]            : 68        : output : 3.3-V LVTTL       :         : 2         : Y              
 mef_estado[0]                : 69        : output : 3.3-V LVTTL       :         : 2         : Y              
 Nout_7seg[6]                 : 70        : output : 3.3-V LVTTL       :         : 2         : Y              

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/19/2024 21:39:19"
+// Generated on "02/21/2024 13:06:35"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          pbl
 // 
@@ -45,6 +45,11 @@ wire al;
 wire ev;
 wire m;
 wire [1:0] mef_estado;
+wire [4:0] test_buffer_principal;
+wire [6:0] test_buffer_secundario;
+wire [4:0] test_buffer_secundario_controle_min_rolhas;
+wire [6:0] test_buffer_secundario_controle_operador;
+wire [6:0] test_rolhas_entrada_secundario;
 wire ve;
 
 // assign statements (if any)                          
@@ -65,6 +70,11 @@ pbl i1 (
 	.op_clr(op_clr),
 	.pg(pg),
 	.start_stop(start_stop),
+	.test_buffer_principal(test_buffer_principal),
+	.test_buffer_secundario(test_buffer_secundario),
+	.test_buffer_secundario_controle_min_rolhas(test_buffer_secundario_controle_min_rolhas),
+	.test_buffer_secundario_controle_operador(test_buffer_secundario_controle_operador),
+	.test_rolhas_entrada_secundario(test_rolhas_entrada_secundario),
 	.ve(ve)
 );
 initial 
@@ -107,15 +117,23 @@ end
 // op_c
 initial
 begin
-	op_c = 1'b1;
-	# 120000;
-	repeat(19)
+	repeat(255)
 	begin
 		op_c = 1'b0;
-		op_c = #120000 1'b1;
-		# 120000;
+		op_c = #5000 1'b1;
+		# 5000;
 	end
 	op_c = 1'b0;
+	op_c = #5000 1'b1;
+	# 2565000;
+	repeat(255)
+	begin
+		op_c = 1'b0;
+		op_c = #5000 1'b1;
+		# 5000;
+	end
+	op_c = 1'b0;
+	op_c = #5000 1'b1;
 end 
 
 // op_clr
@@ -127,9 +145,11 @@ end
 // op
 initial
 begin
-	op = 1'b1;
-	op = #5120000 1'b0;
-	op = #640000 1'b1;
+	op = 1'b0;
+	op = #16000000 1'b1;
+	op = #2000000 1'b0;
+	op = #1200000 1'b1;
+	op = #1920000 1'b0;
 end 
 
 // start_stop
