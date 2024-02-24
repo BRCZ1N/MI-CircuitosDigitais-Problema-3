@@ -151,3 +151,8 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform40.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform41.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform42.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform43.vwf
+set_location_assignment PIN_67 -to buffer_principal[4]
+set_location_assignment PIN_61 -to buffer_principal[3]
+set_location_assignment PIN_57 -to buffer_principal[2]
+set_location_assignment PIN_55 -to buffer_principal[1]
+set_location_assignment PIN_54 -to buffer_principal[0]

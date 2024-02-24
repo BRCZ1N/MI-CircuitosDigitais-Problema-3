@@ -26,6 +26,11 @@ Nac_7segmentos[3] <= modulo_demux1_4:demux_1.out
 op_c => Nop_c.IN1
 op => Nop.IN1
 op_clr => Nop_clr.IN1
+buffer_principal[0] <= buffer_principal[0].DB_MAX_OUTPUT_PORT_TYPE
+buffer_principal[1] <= buffer_principal[1].DB_MAX_OUTPUT_PORT_TYPE
+buffer_principal[2] <= buffer_principal[2].DB_MAX_OUTPUT_PORT_TYPE
+buffer_principal[3] <= buffer_principal[3].DB_MAX_OUTPUT_PORT_TYPE
+buffer_principal[4] <= buffer_principal[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |pbl|LevelToPulseMoore:pulsador_3
@@ -136,7 +141,7 @@ nq <= nq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |pbl|modulo_divisor_frequencia:divisor_f
 prst => prst.IN19
 clr => clr.IN19
-clk_div <= modulo_ff_t:ff_19.q
+clk_div <= q[16].DB_MAX_OUTPUT_PORT_TYPE
 clk => clk.IN1
 
 

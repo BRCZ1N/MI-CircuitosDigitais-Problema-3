@@ -1,5 +1,5 @@
 Flow report for MI-CircuitosDigitais-Problema-3
-Wed Feb 21 13:24:28 2024
+Fri Feb 23 21:36:00 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Feb 21 13:24:26 2024       ;
+; Flow Status           ; Successful - Fri Feb 23 21:35:58 2024       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; MI-CircuitosDigitais-Problema-3             ;
 ; Top-level Entity Name ; pbl                                         ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 224 / 240 ( 93 % )                          ;
-; Total pins            ; 27 / 80 ( 34 % )                            ;
+; Total logic elements  ; 222 / 240 ( 93 % )                          ;
+; Total pins            ; 32 / 80 ( 40 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -59,25 +59,25 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------------------+
 ; Option            ; Setting                         ;
 +-------------------+---------------------------------+
-; Start date & time ; 02/21/2024 13:24:10             ;
+; Start date & time ; 02/23/2024 21:35:47             ;
 ; Main task         ; Compilation                     ;
 ; Revision Name     ; MI-CircuitosDigitais-Problema-3 ;
 +-------------------+---------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                   ;
-+---------------------------------------+-------------------------------+---------------------------------+-------------+------------+
-; Assignment Name                       ; Value                         ; Default Value                   ; Entity Name ; Section Id ;
-+---------------------------------------+-------------------------------+---------------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 2499175950293.170853265002824 ; --                              ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --                              ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                             ; --                              ; --          ; --         ;
-; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                          ; --                              ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air   ; --                              ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY              ; output_files                  ; --                              ; --          ; --         ;
-; TOP_LEVEL_ENTITY                      ; pbl                           ; MI-CircuitosDigitais-Problema-3 ; --          ; --         ;
-+---------------------------------------+-------------------------------+---------------------------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++---------------------------------------+--------------------------------+---------------------------------+-------------+------------+
+; Assignment Name                       ; Value                          ; Default Value                   ; Entity Name ; Section Id ;
++---------------------------------------+--------------------------------+---------------------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 66504338632076.170873494710080 ; --                              ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --                              ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --                              ; --          ; --         ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --                              ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air    ; --                              ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                   ; --                              ; --          ; --         ;
+; TOP_LEVEL_ENTITY                      ; pbl                            ; MI-CircuitosDigitais-Problema-3 ; --          ; --         ;
++---------------------------------------+--------------------------------+---------------------------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -85,11 +85,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4711 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:02     ; 1.2                     ; 5890 MB             ; 00:00:02                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4653 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4696 MB             ; 00:00:01                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4714 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:02     ; 1.3                     ; 6184 MB             ; 00:00:01                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -98,10 +98,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-JB3OEPC  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; BrunoPC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; BrunoPC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; BrunoPC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; BrunoPC          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

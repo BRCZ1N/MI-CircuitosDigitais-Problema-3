@@ -1,10 +1,13 @@
 //Finalizado
-module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr);
+module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,Nac_7segmentos,op_c,op,op_clr,buffer_principal);
+	
 	input start_stop,pg,ch,cq,clock_50mhz,op_c,op,op_clr;
 	output m,ve,al,ev,Nal;
 	output [1:0] mef_estado;
 	output [7:0] Nout_7seg;
 	output [3:0] Nac_7segmentos;
+	output [4:0] buffer_principal;
+	
 	wire Nf_rolha_input, f_rolha_input, estado_vedacao, enable_buffer_principal, Nenable_count_operador, enable_count_min_rolhas_aux, reset_ff_operador, reset_ff_rolhas, controle_reset_aux_min_rolhas;
 	wire load_count_operador, enable_count_operador, enable_count_min_rolhas, load_count_min_rolhas, enable_buffer_secundario, Nop_c_deboucing, controle_reset_aux_operador; 
 	wire Nestado_vedacao, Nout_range_buffer, Nop_deboucing, Nstart_stop, comparator_aux, clk_div, enable_count_operador_aux;
@@ -18,8 +21,7 @@ module pbl(start_stop,pg,ch,cq,clock_50mhz,m,ve,al,Nal,ev,mef_estado,Nout_7seg,N
 	wire [7:0] out_7seg;
 	wire [1:0] Nmef_estado, load_input_pulse, contador_mef_controle_state_rolha, contador_mef_controle_state_operador;
 	wire [1:0] load_reg, Nload_reg, sel_mux_display, load_aux;
-	wire [4:0] buffer_principal, Nbuffer_secundario_controle_min_rolhas, buffer_secundario_controle_min_rolhas;
-	
+	wire [4:0] Nbuffer_secundario_controle_min_rolhas, buffer_secundario_controle_min_rolhas;
 	
 	not(Nf_rolha_input,f_rolha_input);
 	and(f_rolha_input,Nrolhas_entrada_secundario[6],Nrolhas_entrada_secundario[5],Nrolhas_entrada_secundario[4],Nrolhas_entrada_secundario[3],Nrolhas_entrada_secundario[2],Nrolhas_entrada_secundario[1],Nrolhas_entrada_secundario[0]);
